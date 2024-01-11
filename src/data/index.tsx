@@ -1,0 +1,1 @@
+export { intolerances } from "./intolerances";
