@@ -11,4 +11,7 @@ export {
   useMutationDelete,
 } from "./template.query";
 
-export { useQueryRetrieveFoodByBarcode } from "./openFoodFacts.query";
+export {
+  useQueryRetrieveFoodByBarcode,
+  useQuerySearchFood,
+} from "./openFoodFacts.query";

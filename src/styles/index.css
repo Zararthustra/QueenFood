@@ -147,3 +147,18 @@
 .ant-modal-content {
   @apply shadow-none dark:bg-slate-900 dark:text-white !important;
 }
+
+.ant-input-search-button {
+  @apply bg-slate-100;
+}
+.ant-empty-description {
+  @apply dark:text-slate-100;
+}
+.ant-pagination .ant-pagination-item-link,
+.ant-pagination .ant-pagination-item-link .ant-pagination-item-ellipsis,
+.ant-pagination li :not(.ant-pagination-item-active) {
+  @apply dark:text-slate-100;
+}
+.ant-pagination .ant-pagination-item-active a {
+  @apply dark:text-slate-800;
+}

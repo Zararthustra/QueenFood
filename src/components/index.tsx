@@ -1,6 +1,7 @@
-export { ComponentTemplate } from "./ComponentTemplate";
-
 // Modals
+
+// Food
+export { FoodItem } from "./FoodItem";
 
 // Miscellaneous
 export { Button } from "./Button";

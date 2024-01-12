@@ -4,8 +4,19 @@ import {
   IconError,
   IconInfo,
   IconLoader,
+  IconNutriScoreA,
+  IconNutriScoreB,
+  IconNutriScoreC,
+  IconNutriScoreD,
+  IconNutriScoreE,
+  IconNutriScoreNull,
   IconSuccess,
   IconWarning,
+  NOVA1,
+  NOVA2,
+  NOVA3,
+  NOVA4,
+  NOVANULL,
 } from "@assets/index";
 
 export const capitalizeFirstLetter = (string: string) =>
@@ -124,4 +135,87 @@ export const messageObject = (
     icon: icon,
     content: content,
   };
+};
+
+export const labelShortener = (label: string, limit: number) => {
+  if (label.length > limit) return label.slice(0, limit - 3) + "...";
+  return label;
+};
+
+export const getNutriScoreSvg = (nutriscore: string) => {
+  switch (nutriscore) {
+    case "a":
+      return <IconNutriScoreA />;
+    case "b":
+      return <IconNutriScoreB />;
+    case "c":
+      return <IconNutriScoreC />;
+    case "d":
+      return <IconNutriScoreD />;
+    case "e":
+      return <IconNutriScoreE />;
+
+    default:
+      return <IconNutriScoreNull />;
+  }
+};
+
+export const getNovaGroupImg = (novaGroup: number) => {
+  switch (novaGroup) {
+    case 1:
+      return (
+        <img
+          className="w-[17px] object-cover"
+          src={NOVA1}
+          alt={`NOVA group ${novaGroup}`}
+        />
+      );
+    case 2:
+      return (
+        <img
+          className="w-[17px] object-cover"
+          src={NOVA2}
+          alt={`NOVA group ${novaGroup}`}
+        />
+      );
+    case 3:
+      return (
+        <img
+          className="w-[17px] object-cover"
+          src={NOVA3}
+          alt={`NOVA group ${novaGroup}`}
+        />
+      );
+    case 4:
+      return (
+        <img
+          className="w-[17px] object-cover"
+          src={NOVA4}
+          alt={`NOVA group ${novaGroup}`}
+        />
+      );
+
+    default:
+      return (
+        <img
+          className="w-[17px] object-cover"
+          src={NOVANULL}
+          alt={`No NOVA group`}
+        />
+      );
+  }
+};
+
+export const getNutrientLevelColor = (nutrientLevel: string) => {
+  switch (nutrientLevel) {
+    case "low":
+      return <div className="h-[10px] w-[10px] rounded-full bg-green-500" />;
+    case "moderate":
+      return <div className="h-[10px] w-[10px] rounded-full bg-yellow-500" />;
+    case "high":
+      return <div className="h-[10px] w-[10px] rounded-full bg-red-500" />;
+
+    default:
+      return <div className="h-[10px] w-[10px] rounded-full bg-slate-200" />;
+  }
 };

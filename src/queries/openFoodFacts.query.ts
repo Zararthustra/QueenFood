@@ -1,9 +1,9 @@
 import { App } from "antd";
 import axios, { AxiosError } from "axios";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 
-import { IOFFBarcode } from "@interfaces/index";
-import { toastObject, messageObject } from "@utils/formatters";
+import { toastObject } from "@utils/formatters";
+import { IOFFBarcode, IOFFSearch } from "@interfaces/index";
 
 // =====
 // Axios
@@ -18,6 +18,26 @@ export const retrieveByBarCode = async (
   return data;
 };
 
+export const search = async (
+  page: number,
+  category?: string,
+): Promise<IOFFSearch> => {
+  const { data } = await axios.get(
+    "https://world.openfoodfacts.org/api/v2/search",
+    {
+      params: {
+        categories_tags: category,
+        sort_by: "popularity_key ",
+        page: page,
+        countries_tags_en: "france",
+        // brands_tags: brand,
+        // fields: "nutriments,selected_images",
+      },
+    },
+  );
+  return data;
+};
+
 // ==========
 // ReactQuery
 // ==========
@@ -26,12 +46,43 @@ export const useQueryRetrieveFoodByBarcode = (barcode?: number) => {
   const { notification } = App.useApp();
 
   return useQuery(
-    ["openfoodfacts", "v3", barcode],
+    ["openfoodfacts", "barcode", "v3", barcode],
     () => retrieveByBarCode(barcode),
     {
       // Stale 5min
       staleTime: 60_000 * 5,
       enabled: !!barcode,
+      retry: false,
+      onError: (error: AxiosError) =>
+        notification.error(
+          toastObject(
+            "error",
+            "Impossible de récupérer les données",
+            `Une erreur est survenue : ${
+              error.response ? error.response.status : error.message
+            }`,
+          ),
+        ),
+    },
+  );
+};
+
+export const useQuerySearchFood = ({
+  page,
+  category,
+}: {
+  page: number;
+  category?: string;
+}) => {
+  const { notification } = App.useApp();
+
+  return useQuery(
+    ["openfoodfacts", "search", "v2", category, page],
+    () => search(page, category),
+    {
+      // Stale 5min
+      staleTime: 60_000 * 5,
+      enabled: !!category,
       onError: (error: AxiosError) =>
         notification.error(
           toastObject(

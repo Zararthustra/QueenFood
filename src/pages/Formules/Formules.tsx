@@ -15,9 +15,8 @@ export const Formules = () => {
 
   const [IMC, setIMC] = useState<number>();
   const onSubmitHandler = async (values: IIMC) => {
-    console.log(values);
     if (!!values.age && !!values.weight && !!values.height)
-      setIMC((values.weight / (values.height / 10) ** 2) * 100);
+      setIMC(values.weight / (values.height / 100) ** 2);
   };
 
   const {
