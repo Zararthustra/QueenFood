@@ -1,4 +1,5 @@
-import { khayat } from "@data/index";
+import { khayatList } from "@data/index";
+import { KhayatItem } from "@components/index";
 
 export const Khayat = () => {
   return (
@@ -7,11 +8,8 @@ export const Khayat = () => {
         <h1 className="my-5 text-center dark:text-slate-100">Fiches Khayat</h1>
 
         <div>
-          {khayat.map((fiche, index) => (
-            <div key={index}>
-              <h2>{fiche.name}</h2>
-              <img src={fiche.img} alt={fiche.name} className="w-[200px]" />
-            </div>
+          {khayatList.map((fiche, index) => (
+            <KhayatItem key={index} fiche={fiche} />
           ))}
         </div>
       </main>
