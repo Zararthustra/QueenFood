@@ -41,7 +41,13 @@ interface IProduct {
     fiber_100g: number;
     fiber_serving: number;
     fiber_unit: string;
+
+    alcohol_100g: number;
+    alcohol_serving: number;
+    alcohol_unit: string;
   };
+  serving_quantity: number;
+  serving_size: string;
   nova_group: number;
   nutrient_levels: {
     fat: "low" | "moderate" | "high";

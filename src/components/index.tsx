@@ -1,4 +1,5 @@
 // Modals
+export { ModalFoodItem } from "./modals/ModalFoodItem";
 
 // Food
 export { FoodItem } from "./FoodItem";

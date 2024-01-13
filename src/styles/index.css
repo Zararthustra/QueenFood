@@ -127,6 +127,10 @@
   .bubble--info {
     @apply border-[1px] border-solid border-blue-200 bg-blue-50 text-slate-900;
   }
+
+  .tag {
+    @apply h-fit rounded-full border-[1px] border-slate-500 bg-slate-200 px-2 text-xs/[18px] text-slate-500 dark:border-slate-200  dark:bg-slate-700 dark:text-slate-200;
+  }
 }
 
 @layer utilities {
@@ -141,19 +145,26 @@
 }
 
 /* Antd */
+
+/* Toast */
 .ant-message-custom-content {
   @apply flex items-center gap-2 !important;
 }
-.ant-modal-content {
-  @apply shadow-none dark:bg-slate-900 dark:text-white !important;
+/* Modal */
+.ant-modal-content,
+.ant-modal-title,
+.ant-modal-close-x {
+  @apply shadow-none dark:bg-slate-900 dark:text-white;
 }
-
+/* Input */
 .ant-input-search-button {
   @apply bg-slate-100;
 }
+/* Empty */
 .ant-empty-description {
   @apply dark:text-slate-100;
 }
+/* Pagination */
 .ant-pagination .ant-pagination-item-link,
 .ant-pagination .ant-pagination-item-link .ant-pagination-item-ellipsis,
 .ant-pagination li :not(.ant-pagination-item-active) {

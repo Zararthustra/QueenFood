@@ -2,13 +2,14 @@ import { useState } from "react";
 import { Input, Empty, Pagination } from "antd";
 
 import { IconInfo } from "@assets/index";
-import { FoodItem } from "@components/index";
 import { foodCategories } from "@data/index";
 import { labelShortener } from "@utils/formatters";
 import { useQuerySearchFood } from "@queries/index";
+import { Button, FoodItem } from "@components/index";
 
 export const Food = () => {
   const { Search } = Input;
+  const [showCategories, setShowCategories] = useState<boolean>(false);
   const [typing, setTyping] = useState<string>("");
   const [category, setCategory] = useState<string>("");
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -26,15 +27,7 @@ export const Food = () => {
     category,
     page: currentPage,
   });
-  console.log("successSearch", successSearch);
-  console.log("searchStatus", searchStatus);
-  console.log(filteredCategories.length);
-  console.log(
-    "condition: ",
-    !successSearch &&
-      searchStatus !== "fetching" &&
-      !!filteredCategories.length,
-  );
+
   return (
     <>
       <main className="mb-[50px] flex flex-col items-center px-2">
@@ -76,37 +69,50 @@ export const Food = () => {
           searchStatus !== "fetching" &&
           !!filteredCategories.length && (
             <>
-              <div className="bubble--info flex items-center gap-2 rounded p-2">
-                <IconInfo size={20} className="text-blue-700" />
-                <p>Cliquez sur une catégorie pour voir les produits</p>
-              </div>
-              <table className="border-collapse border-spacing-x-5 dark:text-slate-100">
-                <thead>
-                  <tr>
-                    <th className="py-5">Produits</th>
-                    <th className="py-5">
-                      Catégorie ({filteredCategories.length})
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {filteredCategories.map((cat) => (
-                    <tr
-                      key={cat.id}
-                      onClick={() => {
-                        setCategory(cat.name);
-                        setTyping(cat.name);
-                      }}
-                      className="hover cursor-pointer transition-all hover:bg-slate-200  hover:text-primary-500"
-                    >
-                      <td className="pb-1 pl-1 pr-1">{cat.products}</td>
-                      <td className="pb-1 pl-2 pr-1">
-                        {labelShortener(cat.name, 35)}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+              <Button
+                className="mb-5"
+                onClick={() => setShowCategories(!showCategories)}
+                primary
+              >
+                {showCategories ? "Masquer" : "Afficher"} les catégories
+              </Button>
+
+              {showCategories && (
+                <>
+                  <div className="bubble--info flex items-center gap-2 rounded p-2">
+                    <IconInfo size={20} className="text-blue-700" />
+                    <p>Cliquez sur une catégorie pour voir les produits</p>
+                  </div>
+                  <table className="border-collapse border-spacing-x-5 dark:text-slate-100">
+                    <thead>
+                      <tr>
+                        <th className="py-5">Produits</th>
+                        <th className="py-5">
+                          Catégorie ({filteredCategories.length})
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {filteredCategories.map((cat) => (
+                        <tr
+                          key={cat.id}
+                          onClick={() => {
+                            setCategory(cat.name);
+                            setTyping(cat.name);
+                            setCurrentPage(1);
+                          }}
+                          className="hover cursor-pointer transition-all hover:bg-slate-200  hover:text-primary-500"
+                        >
+                          <td className="pb-1 pl-1 pr-1">{cat.products}</td>
+                          <td className="pb-1 pl-2 pr-1">
+                            {labelShortener(cat.name, 35)}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </>
+              )}
             </>
           )}
         {!!!filteredCategories.length && (
