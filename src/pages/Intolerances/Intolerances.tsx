@@ -29,12 +29,12 @@ export const Intolerances = () => {
         <h1 className="my-5 text-center dark:text-slate-100">Intolérances</h1>
         <Search
           id="search"
-          placeholder="Rechercher"
+          placeholder="Rechercher une intolérance"
           allowClear
           onChange={(event) => setSearchValue(event.target.value)}
           onSearch={() => searchRef.current.blur()}
           className="my-5"
-          style={{ width: 200 }}
+          style={{ width: 240 }}
           ref={searchRef}
         />
 

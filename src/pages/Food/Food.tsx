@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Input, Empty, Pagination } from "antd";
 
+import { IconInfo } from "@assets/index";
 import { FoodItem } from "@components/index";
 import { foodCategories } from "@data/index";
 import { labelShortener } from "@utils/formatters";
@@ -25,7 +26,15 @@ export const Food = () => {
     category,
     page: currentPage,
   });
-
+  console.log("successSearch", successSearch);
+  console.log("searchStatus", searchStatus);
+  console.log(filteredCategories.length);
+  console.log(
+    "condition: ",
+    !successSearch &&
+      searchStatus !== "fetching" &&
+      !!filteredCategories.length,
+  );
   return (
     <>
       <main className="mb-[50px] flex flex-col items-center px-2">
@@ -35,11 +44,11 @@ export const Food = () => {
 
         <Search
           id="search"
-          placeholder="Rechercher par catégorie"
+          placeholder="Rechercher une catégorie"
           allowClear
-          onChange={(value) => {
-            setTyping(value.target.value);
-            if (!!!typing) setCurrentPage(1);
+          onChange={(e) => {
+            setTyping(e.target.value);
+            if (!!!e.target.value) setCategory("");
           }}
           onSearch={(value) => {
             if (value === category) {
@@ -49,14 +58,28 @@ export const Food = () => {
           }}
           value={typing}
           className="mb-10 mt-5"
-          style={{ width: 270 }}
+          style={{ width: 240 }}
         />
+
+        {/* ========================================= Loading ========================================= */}
+        {searchStatus === "fetching" && (
+          <div className="dark:text-slate-100">Chargement ...</div>
+        )}
+
+        {/* ========================================== Error ========================================== */}
+        {errorSearch && (
+          <div className="dark:text-slate-100">Une erreur est survenue.</div>
+        )}
 
         {/* ===================================== Category filter ===================================== */}
         {!successSearch &&
           searchStatus !== "fetching" &&
-          (!!typing ? (
-            !!filteredCategories.length ? (
+          !!filteredCategories.length && (
+            <>
+              <div className="bubble--info flex items-center gap-2 rounded p-2">
+                <IconInfo size={20} className="text-blue-700" />
+                <p>Cliquez sur une catégorie pour voir les produits</p>
+              </div>
               <table className="border-collapse border-spacing-x-5 dark:text-slate-100">
                 <thead>
                   <tr>
@@ -84,21 +107,10 @@ export const Food = () => {
                   ))}
                 </tbody>
               </table>
-            ) : (
-              <Empty description={`Aucune catégorie contenant "${typing}"`} />
-            )
-          ) : (
-            <Empty description="Entrez le nom d'une catégorie (e.g. céréales)." />
-          ))}
-
-        {/* ========================================= Loading ========================================= */}
-        {searchStatus === "fetching" && (
-          <div className="dark:text-slate-100">Chargement ...</div>
-        )}
-
-        {/* ========================================== Error ========================================== */}
-        {errorSearch && (
-          <div className="dark:text-slate-100">Une erreur est survenue.</div>
+            </>
+          )}
+        {!!!filteredCategories.length && (
+          <Empty description={`Aucune catégorie contenant "${typing}"`} />
         )}
 
         {/* ========================================= Success ========================================= */}
@@ -136,7 +148,7 @@ export const Food = () => {
               />
             </>
           ) : (
-            <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />
+            <Empty description="Aucun produit trouvé" />
           ))}
       </main>
     </>
