@@ -32,4 +32,43 @@ export const khayatList: IKhayat[] = [
     ],
     micronutriments: "moyen",
   },
+  {
+    catégorie: "Petit dejeuner",
+    titre: "Croissant au beurre ",
+    nutriSanté: 5,
+    portions: {
+      seniors: "1 Croissant",
+      adultes: "1 Croissant",
+      enfants: "1 Mini-Croissant",
+    },
+    énergie: {
+      "100g": "440kcal",
+      portion: "200kcal ",
+    },
+    dépenses: ["1h de marche ", "20min de natation", "30min de footing"],
+    nutriScore: "d",
+    nova: 3,
+    avantages: "Succulent, un bonheur pour vos papilles ",
+    inconvénients: "Apport en calories ",
+    astuces: "Le croissant ne mérire pas le classement D du Nutri-Score ",
+    macronutriments: [
+      {
+        nutriments: "Glucide",
+        valeur: 48,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 26,
+      },
+      {
+        nutriments: "Protéines",
+        valeur: 10,
+      },
+      {
+        nutriments: "Lipides",
+        valeur: 16,
+      },
+    ],
+    micronutriments: "faible",
+  },
 ];
