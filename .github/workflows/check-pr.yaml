@@ -22,6 +22,11 @@ jobs:
 
       # - name: Build 🛠️
       #   run: npm run build
+      - name: Debug:
+        run: |
+          git branch
+          git fetch --all
+          git branch
 
       - name: Merge 🔀
         if: success()
