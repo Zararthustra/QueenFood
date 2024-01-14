@@ -11,7 +11,7 @@ export const khayatList: IKhayat[] = [
       enfants: "1 Tartine",
     },
     énergie: {
-      "100g": "à partir de 250kcal, 100g beurre : 700kcal",
+      "100g": "À partir de 250kcal, 100g beurre : 700kcal",
       portion: [
         "Tartine blanc de 30g (80kcal) + 5g de beurre (40kcal) = 120kcal",
         "Tartine céréales de 30g (90kcal) + 5g de beurre (40kcal) = 130kcal",

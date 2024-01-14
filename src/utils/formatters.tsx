@@ -142,30 +142,30 @@ export const labelShortener = (label: string, limit: number) => {
   return label;
 };
 
-export const getNutriScoreSvg = (nutriscore: string) => {
+export const getNutriScoreSvg = (nutriscore: string, width: number) => {
   switch (nutriscore) {
     case "a":
-      return <IconNutriScoreA />;
+      return <IconNutriScoreA width={width} />;
     case "b":
-      return <IconNutriScoreB />;
+      return <IconNutriScoreB width={width} />;
     case "c":
-      return <IconNutriScoreC />;
+      return <IconNutriScoreC width={width} />;
     case "d":
-      return <IconNutriScoreD />;
+      return <IconNutriScoreD width={width} />;
     case "e":
-      return <IconNutriScoreE />;
+      return <IconNutriScoreE width={width} />;
 
     default:
-      return <IconNutriScoreNull />;
+      return <IconNutriScoreNull width={width} />;
   }
 };
 
-export const getNovaGroupImg = (novaGroup: number) => {
+export const getNovaGroupImg = (novaGroup: number, width: number) => {
   switch (novaGroup) {
     case 1:
       return (
         <img
-          className="w-[17px] object-cover"
+          className={`w-[${width}px] object-cover`}
           src={NOVA1}
           alt={`NOVA group ${novaGroup}`}
         />
@@ -173,7 +173,7 @@ export const getNovaGroupImg = (novaGroup: number) => {
     case 2:
       return (
         <img
-          className="w-[17px] object-cover"
+          className={`w-[${width}px] object-cover`}
           src={NOVA2}
           alt={`NOVA group ${novaGroup}`}
         />
@@ -181,7 +181,7 @@ export const getNovaGroupImg = (novaGroup: number) => {
     case 3:
       return (
         <img
-          className="w-[17px] object-cover"
+          className={`w-[${width}px] object-contain`}
           src={NOVA3}
           alt={`NOVA group ${novaGroup}`}
         />
@@ -189,7 +189,7 @@ export const getNovaGroupImg = (novaGroup: number) => {
     case 4:
       return (
         <img
-          className="w-[17px] object-cover"
+          className={`w-[${width}px] object-cover`}
           src={NOVA4}
           alt={`NOVA group ${novaGroup}`}
         />
@@ -198,7 +198,7 @@ export const getNovaGroupImg = (novaGroup: number) => {
     default:
       return (
         <img
-          className="w-[17px] object-cover"
+          className={`w-[${width}px] object-cover`}
           src={NOVANULL}
           alt={`No NOVA group`}
         />

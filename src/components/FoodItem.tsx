@@ -82,7 +82,7 @@ export const FoodItem = ({ product }: IFoodItemProps) => {
 
           {/* Footer */}
           <div className="flex items-center justify-between">
-            {getNovaGroupImg(product.nova_group)}
+            {getNovaGroupImg(product.nova_group, 17)}
             {product.nutriscore ? (
               (!["not-applicable", "unknown"].includes(
                 product.nutriscore["2023"].grade,
@@ -90,11 +90,15 @@ export const FoodItem = ({ product }: IFoodItemProps) => {
                 <>
                   {getNutriScoreSvg(
                     product.nutriscore["2023"].grade.toLowerCase(),
+                    50,
                   )}
                   {/* <p className="text-xs font-bold text-slate-400">2023</p> */}
                 </>
               )) ||
-              getNutriScoreSvg(product.nutriscore["2021"].grade.toLowerCase())
+              getNutriScoreSvg(
+                product.nutriscore["2021"].grade.toLowerCase(),
+                50,
+              )
             ) : (
               <IconNutriScoreNull />
             )}
