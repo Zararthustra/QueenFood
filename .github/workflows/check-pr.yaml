@@ -3,7 +3,7 @@ name: Test & Build
 on:
   push:
     branches:
-      - malou
+      - MalouQueen-patch-1
 
 jobs:
   PR_Checks:
@@ -23,6 +23,3 @@ jobs:
       # - name: Build 🛠️
       #   run: npm run build
 
-      - name: Merge 🔀
-        run: |
-          echo "youpi"
