@@ -12,6 +12,7 @@ import {
   IconFormula,
   IconKhayat,
   logo,
+  IconLogo,
 } from "@assets/index";
 import { DarkModeToggle } from "./DarkModeToggle";
 import { clearLS } from "@services/localStorageService";
@@ -88,18 +89,20 @@ export const Sidebar = ({ isOpenSidebar, setIsOpenSidebar }: ISidebarProps) => {
       >
         {isOpenSidebar ? (
           <IconSidebarClose
-            className="shrink-0 cursor-pointer text-primary-500"
+            className="my-2 shrink-0 cursor-pointer text-primary-500"
             size={32}
             onClick={() => setIsOpenSidebar(!isOpenSidebar)}
           />
         ) : (
           <IconSidebarOpen
-            className="shrink-0 cursor-pointer text-primary-500"
+            className="my-2 shrink-0 cursor-pointer text-primary-500"
             size={32}
             onClick={() => setIsOpenSidebar(!isOpenSidebar)}
           />
         )}
-        {isOpenSidebar && <img src={logo} className="w-[45px]" />}
+        {isOpenSidebar && (
+          <IconLogo className="dark:text-slate-100" width={50} height={50} />
+        )}
       </header>
 
       <ul className="mt-5">
