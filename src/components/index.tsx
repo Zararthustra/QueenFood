@@ -6,6 +6,8 @@ export { FoodItem } from "./FoodItem";
 
 // Khayat
 export { KhayatItem } from "./KhayatItem";
+export { MicroNutrimentLevel } from "./MicroNutrimentLevel";
+export { NutriSanteScore } from "./NutriSanteScore";
 
 // Miscellaneous
 export { Button } from "./Button";

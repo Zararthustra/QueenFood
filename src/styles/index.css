@@ -131,6 +131,17 @@
   .tag {
     @apply h-fit rounded-full border-[1px] border-slate-500 bg-slate-200 px-2 text-xs/[18px] text-slate-500 dark:border-slate-200  dark:bg-slate-700 dark:text-slate-200;
   }
+
+  .khayat-gradient {
+    background: linear-gradient(
+      90deg,
+      rgba(223, 28, 13, 1) 0%,
+      rgba(246, 88, 103, 1) 25%,
+      rgb(176, 195, 231) 50%,
+      rgb(103, 155, 214) 75%,
+      rgb(45, 26, 82) 100%
+    );
+  }
 }
 
 @layer utilities {

@@ -160,12 +160,14 @@ export const getNutriScoreSvg = (nutriscore: string, width: number) => {
   }
 };
 
-export const getNovaGroupImg = (novaGroup: number, width: number) => {
+export const getNovaGroupImg = (novaGroup: number, small?: boolean) => {
   switch (novaGroup) {
     case 1:
       return (
         <img
-          className={`w-[${width}px] object-cover`}
+          className={
+            small ? "w-[17px] object-contain" : "w-[30px] object-contain"
+          }
           src={NOVA1}
           alt={`NOVA group ${novaGroup}`}
         />
@@ -173,7 +175,9 @@ export const getNovaGroupImg = (novaGroup: number, width: number) => {
     case 2:
       return (
         <img
-          className={`w-[${width}px] object-cover`}
+          className={
+            small ? "w-[17px] object-contain" : "w-[30px] object-contain"
+          }
           src={NOVA2}
           alt={`NOVA group ${novaGroup}`}
         />
@@ -181,7 +185,9 @@ export const getNovaGroupImg = (novaGroup: number, width: number) => {
     case 3:
       return (
         <img
-          className={`w-[${width}px] object-contain`}
+          className={
+            small ? "w-[17px] object-contain" : "w-[30px] object-contain"
+          }
           src={NOVA3}
           alt={`NOVA group ${novaGroup}`}
         />
@@ -189,7 +195,9 @@ export const getNovaGroupImg = (novaGroup: number, width: number) => {
     case 4:
       return (
         <img
-          className={`w-[${width}px] object-cover`}
+          className={
+            small ? "w-[17px] object-contain" : "w-[30px] object-contain"
+          }
           src={NOVA4}
           alt={`NOVA group ${novaGroup}`}
         />
@@ -198,7 +206,9 @@ export const getNovaGroupImg = (novaGroup: number, width: number) => {
     default:
       return (
         <img
-          className={`w-[${width}px] object-cover`}
+          className={
+            small ? "w-[17px] object-contain" : "w-[30px] object-contain"
+          }
           src={NOVANULL}
           alt={`No NOVA group`}
         />

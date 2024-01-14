@@ -15,7 +15,7 @@ export const Formules = () => {
 
   const [IMC, setIMC] = useState<number>();
   const onSubmitHandler = async (values: IIMC) => {
-    if (!!values.age && !!values.weight && !!values.height)
+    if (!!values.weight && !!values.height)
       setIMC(values.weight / (values.height / 100) ** 2);
   };
 
@@ -29,13 +29,11 @@ export const Formules = () => {
     getFieldProps,
   } = useFormik({
     initialValues: {
-      age: undefined,
       weight: undefined,
       height: undefined,
     },
     onSubmit: onSubmitHandler,
     validationSchema: object({
-      age: number().required("Indiquez l'âge"),
       weight: number().required("Indiquez le poids"),
       height: number().required("Indiquez la taille"),
     }),
@@ -61,32 +59,6 @@ export const Formules = () => {
               onSubmit={handleSubmit}
             >
               <div className="flex h-full flex-col justify-center gap-2">
-                {/* Age */}
-                <div>
-                  <div className={fieldStyle}>
-                    <label className={labelStyle} htmlFor="age">
-                      Age
-                    </label>
-                    <InputNumber
-                      id="age"
-                      name="age"
-                      type="number"
-                      className={inputStyle}
-                      status={touched?.age && errors?.age ? "error" : ""}
-                      min={0}
-                      onBlur={handleBlur}
-                      onChange={(value: number | null) => {
-                        if (!!!value || value < 0) return;
-                        setFieldValue("age", value);
-                      }}
-                      value={getFieldProps("age").value}
-                    />
-                  </div>
-                  {touched?.age && errors?.age && (
-                    <p className={errorStyle}>{errors.age}</p>
-                  )}
-                </div>
-
                 {/* Weight */}
                 <div>
                   <div className={fieldStyle}>

@@ -2,6 +2,7 @@ import { Input } from "antd";
 import { useRef, useState } from "react";
 
 import { intolerances } from "@data/index";
+import { IconArrowRight } from "@assets/index";
 
 export const Intolerances = () => {
   const { Search } = Input;
@@ -53,6 +54,15 @@ export const Intolerances = () => {
                 <p className="text-justify indent-4">
                   {getHighlightedText(intolerance.description, searchValue)}
                 </p>
+                <div className="flex gap-2">
+                  <IconArrowRight
+                    width={15}
+                    className="text-slate-500 dark:text-slate-400"
+                  />
+                  <p className="text-slate-500 dark:text-slate-400">
+                    {getHighlightedText(intolerance.examples, searchValue)}
+                  </p>
+                </div>
               </div>
             ))}
         </div>

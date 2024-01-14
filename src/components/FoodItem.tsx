@@ -82,7 +82,7 @@ export const FoodItem = ({ product }: IFoodItemProps) => {
 
           {/* Footer */}
           <div className="flex items-center justify-between">
-            {getNovaGroupImg(product.nova_group, 17)}
+            {getNovaGroupImg(product.nova_group, true)}
             {product.nutriscore ? (
               (!["not-applicable", "unknown"].includes(
                 product.nutriscore["2023"].grade,

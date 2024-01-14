@@ -1,3 +1,6 @@
+import { Doughnut } from "react-chartjs-2";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+
 import {
   IconDepense,
   IconEnergie,
@@ -8,19 +11,43 @@ import {
 } from "@assets/index";
 import { IKhayat } from "@interfaces/index";
 import { getNovaGroupImg, getNutriScoreSvg } from "@utils/formatters";
+import { MicroNutrimentLevel, NutriSanteScore } from "@components/index";
 
 interface IKhayatItemProps {
   fiche: IKhayat;
 }
 export const KhayatItem = ({ fiche }: IKhayatItemProps) => {
-  const tierStyle = "w-full px-4 bg-white rounded-sm py-10 relative mt-7";
+  const tierStyle =
+    "w-full shadow-md px-4 bg-white dark:bg-slate-800 rounded-sm py-10 relative mt-7";
   const iconStyle =
-    "h-[70px] w-[70px] bg-white flex shadow items-center text-primary-500 justify-center rounded-full top-[-35px] left-[50%] translate-x-[-50%] absolute";
-  return (
-    <div className="max-w-[700px] rounded border-[1px] bg-slate-50 px-5 py-10 shadow">
-      <h2 className="text-center">{fiche.titre}</h2>
+    "h-[70px] w-[70px] bg-white flex dark:bg-slate-800 items-center text-primary-500 dark:text-primary-300 justify-center rounded-full top-[-35px] left-[50%] translate-x-[-50%] absolute";
+  ChartJS.register(ArcElement, Tooltip, Legend);
+  const colors = [
+    "#FFCB0F",
+    "#FF7024",
+    "#FF194F",
+    "#C02668",
+    "#381546",
+    "#95C92C",
+    "#26A699",
+    "#D60000",
+  ];
+  const chartData = {
+    labels: fiche.macronutriments.map((macro) => macro.nutriments),
+    datasets: [
+      {
+        data: fiche.macronutriments.map((macro) => macro.valeur),
+        backgroundColor: fiche.macronutriments.map((_, index) => colors[index]),
+        hoverOffset: 10,
+      },
+    ],
+  };
 
-      <div className="my-2 bg-slate-200">{fiche.nutriSanté}</div>
+  return (
+    <div className="h-fit max-w-[600px] rounded bg-slate-50 px-3 py-10 shadow dark:border-[1px] dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100">
+      <h1 className="text-center">{fiche.titre}</h1>
+
+      <NutriSanteScore score={fiche.nutriSanté} />
 
       <div className="my-4 flex justify-center gap-4 tsm:flex-wrap">
         {/* Portions */}
@@ -29,18 +56,24 @@ export const KhayatItem = ({ fiche }: IKhayatItemProps) => {
             <IconPortion width={40} height={40} />
           </div>
           <h3 className="mb-5 text-center">Portions</h3>
-          <div className="flex h-full flex-col items-center gap-2">
-            <div className="flex flex-wrap gap-2">
-              <p className="font-bold">Seniors:</p>
-              <p>{fiche.portions.seniors}</p>
+          <div className="flex flex-col gap-2">
+            <div>
+              <p className="font-bold text-slate-600 dark:text-slate-400">
+                Seniors
+              </p>
+              <p className="text-center">{fiche.portions.seniors}</p>
             </div>
-            <div className="flex flex-wrap gap-2">
-              <p className="font-bold">Adultes:</p>
-              <p>{fiche.portions.adultes}</p>
+            <div>
+              <p className="font-bold text-slate-600 dark:text-slate-400">
+                Adultes
+              </p>
+              <p className="text-center">{fiche.portions.adultes}</p>
             </div>
-            <div className="flex flex-wrap gap-2">
-              <p className="font-bold">Enfants:</p>
-              <p>{fiche.portions.enfants}</p>
+            <div>
+              <p className="font-bold text-slate-600 dark:text-slate-400">
+                Enfants
+              </p>
+              <p className="text-center">{fiche.portions.enfants}</p>
             </div>
           </div>
         </div>
@@ -51,16 +84,18 @@ export const KhayatItem = ({ fiche }: IKhayatItemProps) => {
             <IconEnergie width={40} height={40} />
           </div>
           <h3 className="mb-5 text-center">Énergie</h3>
-          <div className="gap-2">
-            <p className="font-bold">Pour 100g</p>
-            <p>{fiche.énergie["100g"]}</p>
-          </div>
-          <div className="mt-2 gap-2">
-            <p className="font-bold">Par portion</p>
+          <div className="flex flex-col gap-2">
             <div>
-              {fiche.énergie.portion.map((portion, index) => (
-                <p key={index}>{portion}</p>
-              ))}
+              <p className="font-bold text-slate-600 dark:text-slate-400">
+                Pour 100g
+              </p>
+              <p className="text-center">{fiche.énergie["100g"]}</p>
+            </div>
+            <div>
+              <p className="font-bold text-slate-600 dark:text-slate-400">
+                Par portion
+              </p>
+              <p className="text-center">{fiche.énergie.portion}</p>
             </div>
           </div>
         </div>
@@ -86,37 +121,69 @@ export const KhayatItem = ({ fiche }: IKhayatItemProps) => {
 
       {/* Avantages/Inconvénients */}
       <div className="flex justify-between fsm:gap-5 tsm:flex-wrap">
-        <div className="my-2 flex w-full items-center gap-4 rounded bg-green-50 p-2 text-green-800">
+        <div className="my-2 flex w-full items-center gap-4 rounded bg-green-50 p-2 text-green-800 dark:bg-green-800 dark:text-green-300">
           <IconThumbOK className="shrink-0" />
           <p>{fiche.avantages}</p>
         </div>
-        <div className="my-2 flex w-full items-center gap-4 rounded bg-red-50 p-2 text-red-800">
+        <div className="my-2 flex w-full items-center gap-4 rounded bg-red-50 p-2 text-red-800 dark:bg-red-800 dark:text-red-300">
           <IconThumbKO className="shrink-0" />
           <p>{fiche.inconvénients}</p>
         </div>
       </div>
 
-      {/* Scores */}
-      <div className="flex flex-wrap justify-between gap-5">
-        {getNutriScoreSvg(fiche.nutriScore, 100)}
-        {getNovaGroupImg(fiche.nova, 35)}
-        {/* Astuces*/}
-        <div className="my-2 flex w-full max-w-[380px] items-center gap-4 rounded bg-yellow-50 p-2 text-yellow-800">
-          <IconIdea className="shrink-0" />
-          <p>{fiche.astuces}</p>
-        </div>
-      </div>
+      <div className="flex flex-wrap justify-between gap-5"></div>
 
       {/* Nutriments*/}
-      <div className="my-2 w-full max-w-[300px]">
-        <h3>Nutriments</h3>
-        <div className="flex gap-2">
-          <p>Micronutriments:</p>
-          <p>{fiche.micronutriments}</p>
-        </div>
+      <div className="mb-2 mt-5 flex fsm:justify-evenly tsm:flex-wrap">
         <div>
-          <p>Macronutriments</p>
-          <div>GRAPH</div>
+          <h4>Macronutriments</h4>
+          <Doughnut
+            data={chartData}
+            options={{
+              plugins: {
+                legend: {
+                  title: {
+                    display: true,
+                    text: "Pour 100 grammes",
+                  },
+                  labels: {
+                    generateLabels: function (chart) {
+                      const labels = chart.config.data.labels as string[];
+                      const colors = chart.config.data.datasets[0]
+                        .backgroundColor as string[];
+                      const values = chart.config.data.datasets[0]
+                        .data as number[];
+
+                      if (!!labels.length && !!colors.length && !!values.length)
+                        return labels.map((label, index: number) => ({
+                          text: `${label}: ${values[index]}g`,
+                          fillStyle: colors[index],
+                          borderRadius: 1,
+                          lineWidth: 0,
+                        }));
+                      return [{ text: "error" }];
+                    },
+                  },
+                },
+              },
+            }}
+          />
+        </div>
+        <div className="flex flex-wrap justify-between gap-10 fsm:w-[280px]">
+          <div className="h-fit">
+            <h4>Micronutriments</h4>
+            <MicroNutrimentLevel level={fiche.micronutriments} />
+          </div>
+
+          {/* Scores */}
+          {getNutriScoreSvg(fiche.nutriScore, 100)}
+          {getNovaGroupImg(fiche.nova)}
+
+          {/* Astuces*/}
+          <div className="my-2 flex w-full  items-center gap-4 rounded bg-yellow-50 p-2 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-200">
+            <IconIdea className="shrink-0" />
+            <p>{fiche.astuces}</p>
+          </div>
         </div>
       </div>
     </div>

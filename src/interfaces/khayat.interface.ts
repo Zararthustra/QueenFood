@@ -11,7 +11,7 @@ interface IKhayat {
   };
   énergie: {
     "100g": string;
-    portion: string[];
+    portion: string;
   };
   dépenses: string[];
   nutriScore: "a" | "b" | "c" | "d" | "e";

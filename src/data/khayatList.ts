@@ -12,10 +12,8 @@ export const khayatList: IKhayat[] = [
     },
     énergie: {
       "100g": "À partir de 250kcal, 100g beurre : 700kcal",
-      portion: [
-        "Tartine blanc de 30g (80kcal) + 5g de beurre (40kcal) = 120kcal",
-        "Tartine céréales de 30g (90kcal) + 5g de beurre (40kcal) = 130kcal",
-      ],
+      portion:
+        "Tartine blanc de 30g (80kcal) + 5g de beurre (40kcal) = 120kcal. Tartine céréales de 30g (90kcal) + 5g de beurre (40kcal) = 130kcal",
     },
     dépenses: ["30min de marche", "15min de natation", "15min de footing"],
     nutriScore: "b",
