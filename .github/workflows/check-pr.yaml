@@ -1,13 +1,13 @@
-name: Test, Build & Deploy
+name: Test, Build & Merge
 
 on:
   push:
     branches:
-      - patch-1
+      - malou
 
 jobs:
   deploy:
-    name: Test & Build
+    name: Test, Build & Merge
     runs-on: ubuntu-latest
 
     steps:
@@ -22,3 +22,13 @@ jobs:
 
       - name: Build 🛠️
         run: npm run build
+
+      - name: Merge 🔀
+        if: success()
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git fetch
+          git checkout main
+          git merge --no-ff ${{ github.event.before }}
+          git push origin main
