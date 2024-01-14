@@ -31,11 +31,11 @@ export const khayatList: IKhayat[] = [
     },
     {
       "nutriments": "Autres",
-      "valeur": 18,6
+      "valeur": 18.6
     },
     {
       "nutriments": "Protéines",
-      "valeur": 0,4
+      "valeur": 0.4
     }
   ],
   "micronutriments": "moyen"
