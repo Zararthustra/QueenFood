@@ -131,7 +131,7 @@ export const khayatList: IKhayat[] = [
     inconvénients:
       "Apport énorme en calories, surtout dans sa version double chocolat. A réserver pour des petits déjeuners festifs ",
     astuces:
-      "Attention le pain au chocolat est bien plus calorique que le croissant ou la brioche! A consommer avec du lait pour faire baisser l'index glycémique ",
+      "Attention le pain au chocolat est bien plus calorique que le croissant ou la brioche! À consommer avec du lait pour faire baisser l'index glycémique ",
     macronutriments: [
       {
         nutriments: "Glucide",
