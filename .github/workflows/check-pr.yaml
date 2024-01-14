@@ -22,7 +22,7 @@ jobs:
 
       # - name: Build 🛠️
       #   run: npm run build
-      - name: Debug:
+      - name: Debug
         run: |
           git branch
           git fetch --all
