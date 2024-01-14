@@ -50,7 +50,7 @@ export const khayatList: IKhayat[] = [
     nova: 3,
     avantages: "Succulent, un bonheur pour vos papilles ",
     inconvénients: "Apport en calories ",
-    astuces: "Le croissant ne mérire pas le classement D du Nutri-Score ",
+    astuces: "Le croissant ne mérire pas le classement D du Nutri-Score.",
     macronutriments: [
       {
         nutriments: "Glucide",
