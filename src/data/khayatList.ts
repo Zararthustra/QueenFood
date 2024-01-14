@@ -33,7 +33,7 @@ export const khayatList: IKhayat[] = [
     micronutriments: "moyen",
   },
   {
-    catégorie: "Petit dejeuner",
+    catégorie: "Petit déjeuner",
     titre: "Croissant au beurre ",
     nutriSanté: 5,
     portions: {
@@ -72,7 +72,7 @@ export const khayatList: IKhayat[] = [
     micronutriments: "faible",
   },
   {
-    catégorie: "Petit dejeuner",
+    catégorie: "Petit déjeuner",
     titre: "Brioche Tranchée (Boulangerie)",
     nutriSanté: 5,
     portions: {
@@ -112,7 +112,7 @@ export const khayatList: IKhayat[] = [
     micronutriments: "faible",
   },
   {
-    catégorie: "Petit dejeuner",
+    catégorie: "Petit déjeuner",
     titre: "Pain au chocolat ",
     nutriSanté: 4,
     portions: {
@@ -153,7 +153,7 @@ export const khayatList: IKhayat[] = [
     micronutriments: "faible",
   },
   {
-    catégorie: "Petit dejeuner",
+    catégorie: "Petit déjeuner",
     titre: "Confiture",
     nutriSanté: 7,
     portions: {
