@@ -1,4 +1,4 @@
-name: Test, Build & Merge
+name: Test & Build
 
 on:
   push:
@@ -6,8 +6,8 @@ on:
       - malou
 
 jobs:
-  deploy:
-    name: Test, Build & Merge
+  PR_Checks:
+    name: Test & Build
     runs-on: ubuntu-latest
 
     steps:
@@ -24,11 +24,5 @@ jobs:
       #   run: npm run build
 
       - name: Merge 🔀
-        if: success()
         run: |
-          git config user.name "${{ github.actor }}"
-          git config user.email "${{ github.actor }}@users.noreply.github.com"
-          git fetch
-          git checkout main
-          git merge malou --allow-unrelated-histories
-          git push origin main
+          echo "youpi"
