@@ -1,6 +1,7 @@
 import { IKhayat } from "@interfaces/index";
 
 export const khayatList: IKhayat[] = [
+  {}
   {
     catégorie: "Petit déjeuner",
     titre: "Tartine au beurre",
