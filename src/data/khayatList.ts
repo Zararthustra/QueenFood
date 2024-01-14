@@ -2,6 +2,45 @@ import { IKhayat } from "@interfaces/index";
 
 export const khayatList: IKhayat[] = [
   {
+  "catégorie": "Petit déjeuner",
+  "titre": "Miel",
+  "nutriSanté": 8,
+  "portions": {
+    "seniors": "1 ou 2 càc",
+    "adultes": "1 ou 2 càc",
+    "enfants": "1 càc"
+  },
+  "énergie": {
+    "100g": "320kcal",
+    "portion": "1càc = 32kcal"
+  },
+  "dépenses": [
+    "10min de danse",
+    "10min de marche",
+    "10min de vélo"
+  ],
+  "nutriScore": "d",
+  "nova": 2,
+  "avantages": "Produit de fabrication naturelle aux nuances gustatives variées. Apport des micronutriments ",
+  "inconvénients": "Bien vérifier la provenance car il y a beaucoup de fraudes d'origine étrangère et donc de transformation des produits ",
+  "astuces": "Le Nutri-Score donne une moins bonne note au miel qu'à la confiture! Or les bienfaits du miel ne sont plus à rappeler. A associer au pain!",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 81
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 18.6
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 0.4
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
     catégorie: "Petit déjeuner",
     titre: "Tartine au beurre",
     nutriSanté: 8,
