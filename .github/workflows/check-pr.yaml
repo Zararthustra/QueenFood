@@ -3,7 +3,7 @@ name: Test, Build & Deploy
 on:
   push:
     branches:
-      - patch-1
+      - malou
 
 jobs:
   deploy:
