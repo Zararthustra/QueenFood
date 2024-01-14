@@ -3,6 +3,49 @@ import { IKhayat } from "@interfaces/index";
 export const khayatList: IKhayat[] = [
   {
   "catégorie": "Petit déjeuner",
+  "titre": "Céréales Fourrées Au Chocolat",
+  "nutriSanté": 1,
+  "portions": {
+    "seniors": "40g",
+    "adultes": "55g",
+    "enfants": "45g"
+  },
+  "énergie": {
+    "100g": "450kcal",
+    "portion": "250kcal"
+  },
+  "dépenses": [
+    "25min de natation",
+    "1h15 de marche",
+    "25min de vélo"
+  ],
+  "nutriScore": "b",
+  "nova": 4,
+  "avantages": "Pure gourmandise ",
+  "inconvénients": "Produit très sucré, très gras, ultra-transformé et très calorique. très faible apport en micronutriments",
+  "astuces": "Le pire choix que vous pouvre faire pour votre petit déjeuner. Avec ce type de produit, les recommandations quotidiennes de 35 à 50g de sucres simples sont souvent dépassées",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 71
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 15
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 7
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 7
+    }
+  ],
+  "micronutriments": "élevé"
+},
+  {
+  "catégorie": "Petit déjeuner",
   "titre": "Corn Flakes",
   "nutriSanté": 4,
   "portions": {
