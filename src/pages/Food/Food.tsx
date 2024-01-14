@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Input, Empty, Pagination } from "antd";
 
-import { IconInfo } from "@assets/index";
 import { foodCategories } from "@data/index";
 import { labelShortener } from "@utils/formatters";
 import { useQuerySearchFood } from "@queries/index";
+import { IconCrown, IconInfo } from "@assets/index";
 import { Button, FoodItem } from "@components/index";
 
 export const Food = () => {
@@ -56,7 +56,7 @@ export const Food = () => {
 
         {/* ========================================= Loading ========================================= */}
         {searchStatus === "fetching" && (
-          <div className="dark:text-slate-100">Chargement ...</div>
+          <IconCrown width={100} height={100} className="animate-pulse" />
         )}
 
         {/* ========================================== Error ========================================== */}

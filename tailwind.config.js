@@ -24,7 +24,17 @@ export default {
     },
     extend: {
       animation: {
-        spin: "spin 0.7s linear infinite"
+        spin: "spin 0.7s linear infinite",
+        wiggle: "wiggle 0.7s linear infinite",
+        "dot-1": "wink 1.5s linear infinite",
+        "dot-2": "wink 1.5s linear 0.3s infinite",
+        "dot-3": "wink 1.5s linear 0.6s infinite",
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        }
       },
       height: {
         screen: ["100dvh", "100vh"],

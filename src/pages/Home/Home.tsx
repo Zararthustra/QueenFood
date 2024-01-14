@@ -1,4 +1,4 @@
-import { IconLogo, logo } from "@assets/index";
+import { IconLogo } from "@assets/index";
 import { useMediaQuery } from "react-responsive";
 
 export const Home = () => {
