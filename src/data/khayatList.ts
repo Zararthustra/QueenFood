@@ -3,6 +3,91 @@ import { IKhayat } from "@interfaces/index";
 export const khayatList: IKhayat[] = [
   {
   "catégorie": "Petit déjeuner",
+  "titre": "Corn Flakes",
+  "nutriSanté": 4,
+  "portions": {
+    "seniors": "40g",
+    "adultes": "55g",
+    "enfants": "45g"
+  },
+  "énergie": {
+    "100g": "378kcal",
+    "portion": "200kcal"
+  },
+  "dépenses": [
+    "20min de natation",
+    "1h de marche"
+  ],
+  "nutriScore": "b",
+  "nova": 4,
+  "avantages": "Sans gluten",
+  "inconvénients": "N'apporte pas d'énergie à long terme (attention à la fringale!). Produit ultra-transformé. Faible intérêt nutritionnel.",
+  "astuces": "Attention, l'astuce marketing de ces produits est dans les recommandations de portion (30g). C'est très sous-estimé par rapport à la réalité ",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 84
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 0.9
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 8.1
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 7
+    }
+  ],
+  "micronutriments": "moyen"
+},
+{
+  "catégorie": "Petit déjeuner",
+  "titre": "Céréales, Blé Complet Pétales De Chocolat",
+  "nutriSanté": 5,
+  "portions": {
+    "seniors": "40g",
+    "adultes": "55g",
+    "enfants": "45g"
+  },
+  "énergie": {
+    "100g": "388kcal",
+    "portion": "213kcal"
+  },
+  "dépenses": [
+    "45min de curling ",
+    "1h de marche",
+    "20min de natation"
+  ],
+  "nutriScore": "a",
+  "nova": 4,
+  "avantages": "Gustativement exquis. Les céréales au blé complet sont plus riches en fibres",
+  "inconvénients": "Produit très sucré. Risque de fringale car apport en énergie à court terme",
+  "astuces": "Là aussi, attention au portion réelles mises dans nos bols! Avec 388 calories pour 100g, ces céréales sont plus calorique que le pain!",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 73.6
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 4.8
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 12.8
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 8.8
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Petit déjeuner",
   "titre": "Pâte à Tartiner Végétale",
   "nutriSanté": 6,
   "portions": {
