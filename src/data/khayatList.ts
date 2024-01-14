@@ -3,6 +3,49 @@ import { IKhayat } from "@interfaces/index";
 export const khayatList: IKhayat[] = [
   {
   "catégorie": "Petit déjeuner",
+  "titre": "Pâte à Tartiner Végétale",
+  "nutriSanté": 6,
+  "portions": {
+    "seniors": "10g",
+    "adultes": "10g",
+    "enfants": "10g"
+  },
+  "énergie": {
+    "100g": "300kcal",
+    "portion": "1càc = 30kcal"
+  },
+  "dépenses": [
+    "10min de natation",
+    "5min de tennis",
+    "10min de vélo"
+  ],
+  "nutriScore": "a",
+  "nova": 2,
+  "avantages": "Goût nouveau. Sans additifs et sans huile de palme. 100% vétégale!",
+  "inconvénients": "Valeur calorique élevée.",
+  "astuces": "Cette alternative à base de féveroles ou d'autres légumineuses est bonne pour votre corps et pour la planète. Attention aux portions",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 40
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 10
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 40
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 10
+    }
+  ],
+  "micronutriments": "élevé"
+},
+  {
+  "catégorie": "Petit déjeuner",
   "titre": "Pâte à Tartiner",
   "nutriSanté": 1,
   "portions": {
@@ -135,7 +178,7 @@ export const khayatList: IKhayat[] = [
     astuces: "Le croissant ne mérire pas le classement D du Nutri-Score ",
     macronutriments: [
       {
-        nutriments: "Glucide",
+        nutriments: "Glucides",
         valeur: 48,
       },
       {
@@ -158,8 +201,8 @@ export const khayatList: IKhayat[] = [
     titre: "Brioche Tranchée (Boulangerie)",
     nutriSanté: 5,
     portions: {
-      seniors: "2 Tranches ",
-      adultes: "2 Tranches ",
+      seniors: "2 Tranches",
+      adultes: "2 Tranches",
       enfants: "1 Tranche",
     },
     énergie: {
@@ -175,7 +218,7 @@ export const khayatList: IKhayat[] = [
       "Attention, l'ajout de garniture grasses ou sucrées peut dégrader le score Nuri-Santé de la brioche. Pensez à les varier ",
     macronutriments: [
       {
-        nutriments: "Glucide",
+        nutriments: "Glucides",
         valeur: 48,
       },
       {
@@ -216,7 +259,7 @@ export const khayatList: IKhayat[] = [
       "Attention le pain au chocolat est bien plus calorique que le croissant ou la brioche! A consommer avec du lait pour faire baisser l'index glycémique ",
     macronutriments: [
       {
-        nutriments: "Glucide",
+        nutriments: "Glucides",
         valeur: 48,
       },
       {
@@ -257,7 +300,7 @@ export const khayatList: IKhayat[] = [
       "Le Nutri-Score C est lié au calcul sur 100g. Notre score est plus raisonnable : il autorise une conssomation régulière. A associer au pain ou au yaourt : des duos parfaits!",
     macronutriments: [
       {
-        nutriments: "Glucide",
+        nutriments: "Glucides",
         valeur: 60,
       },
       {
