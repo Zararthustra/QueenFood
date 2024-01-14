@@ -3,6 +3,49 @@ import { IKhayat } from "@interfaces/index";
 export const khayatList: IKhayat[] = [
   {
   "catégorie": "Petit déjeuner",
+  "titre": "Pâte à Tartiner",
+  "nutriSanté": 1,
+  "portions": {
+    "seniors": "10g",
+    "adultes": "10g",
+    "enfants": "10g"
+  },
+  "énergie": {
+    "100g": "539kcal",
+    "portion": "1càc = 54kcal"
+  },
+  "dépenses": [
+    "10min de natation",
+    "15min de marche",
+    "15min de vélo"
+  ],
+  "nutriScore": "d",
+  "nova": 4,
+  "avantages": "Pure gourmandise",
+  "inconvénients": "Très calorique et très pauvre en micronutriments. Fabrication à base d'huile de palme",
+  "astuces": "Une cuillière à café n'équivaut \"qu'à\" 54 calories mais on en consomme souvent beacoup plus! Préfèrez d'autres garnitures sur vos tartines (confiture, miel, pâtes à tartiner végétal)",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 57.5
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 31
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 5.2
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 6.3
+    }
+  ],
+  "micronutriments": "faible"
+},
+  {
+  "catégorie": "Petit déjeuner",
   "titre": "Miel",
   "nutriSanté": 8,
   "portions": {
