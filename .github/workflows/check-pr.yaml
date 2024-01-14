@@ -14,12 +14,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      # - name: Install 🏗️
-      #   run: npm install
+      - name: Install 🏗️
+        run: npm install
 
-      # - name: Test 🧪
-      #   run: npm run test
+      - name: Test 🧪
+        run: npm run test
 
-      # - name: Build 🛠️
-      #   run: npm run build
+      - name: Build 🛠️
+        run: npm run build
 
