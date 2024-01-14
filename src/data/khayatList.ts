@@ -19,7 +19,7 @@ export const khayatList: IKhayat[] = [
     "5min de tennis",
     "10min de vélo"
   ],
-  "nutriScore": "A",
+  "nutriScore": "a",
   "nova": 2,
   "avantages": "Goût nouveau. Sans additifs et sans huile de palme. 100% vétégale!",
   "inconvénients": "Valeur calorique élevée.",
