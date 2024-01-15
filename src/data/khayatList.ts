@@ -3,91 +3,38 @@ import { IKhayat } from "@interfaces/index";
 export const khayatList: IKhayat[] = [
   {
   "catégorie": "Petit dejeuner",
-  "titre": "Poudre 100% Pur Cacao",
-  "boisson" : false, 
-  "nutriSanté": 4,
+  "titre": "Nectar D'Abricot",
+  "boisson": true,
+  "nutriSanté": 1,
   "portions": {
-    "seniors": "1 ou 2càc",
-    "adultes": "1 ou 2càc",
-    "enfants": "1 ou 2càc"
+    "seniors": "150ml",
+    "adultes": "200ml",
+    "enfants": "125ml"
   },
   "énergie": {
-    "100g": "387kcal",
-    "portion": "1 càc = 40kcal"
+    "100g": "58kcal",
+    "portion": "116kcal"
   },
   "dépenses": [
-    "4min de corde à sauter",
-    "15min de vélo",
-    "15min de marche"
+    "30min de musculation",
+    "15min de jogging"
   ],
-  "nutriScore": "c",
-  "nova": 1,
-  "avantages": "Riche en magnésium, en anti-oxydants, en minéraux et vitamine E. Apport élevé en protéines.",
-  "inconvénients": "Riche en acides gras saturés. Produit à valeur énergétique élevée.",
-  "astuces": "Le réconfort d'un bon chocolat chaud d'hiver est indéniable! Par ailleurs, le goût prononcé de la poudre évite les surdosages ",
+  "nutriScore": "d",
+  "nova": 2,
+  "avantages": "Souvent plus onctueux pour les enfants afin de les aider à découvrir les fruits ",
+  "inconvénients": "Perte d'anti-oxydant par rapport à un fruit frais",
+  "astuces": "Le nectar paraît souvent meilleur que le jus de fruits! Or, il n'en est rien : ce produit est fabriqué à partir de purée de fruits à laquelle de l'eau et du sucre sont ajoutés.",
   "macronutriments": [
     {
       "nutriments": "Glucides",
-      "valeur": 11
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 21
+      "valeur": 14
     },
     {
       "nutriments": "Autres",
-      "valeur": 48
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 20
+      "valeur": 86
     }
   ],
   "micronutriments": "moyen"
-},
-  {
-  "catégorie": "Petit dejeuner",
-  "titre": "Poudre \"Chocolatée\" Sucrée",
-  "boisson" : false,  
-  "nutriSanté": 1,
-  "portions": {
-    "seniors": "1 ou 2càc",
-    "adultes": "1 ou 2càc",
-    "enfants": "1 ou 2càc"
-  },
-  "énergie": {
-    "100g": "386kcal",
-    "portion": "1 càc = 40kcal"
-  },
-  "dépenses": [
-    "10min de volley",
-    "monter-descendre 5fois les escaliers sur 3 étages",
-    "10min de marche"
-  ],
-  "nutriScore": "e",
-  "nova": 4,
-  "avantages": "Bonne teneur en magnésium (ce qui a une action anti-stress et permet d'éviter les crampes.",
-  "inconvénients": "Très sucré (attention à la quantité). Produites industriel, ultra-transformé, calorique, pauvre en micronutriments.",
-  "astuces": "Attention, certaines marques calculent le Nutri-Score de leurs poudres avec un verre de lait! Avec cette baguette magique, il passe de E à B",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 79
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 3.6
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 12.3
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 5.1
-    }
-  ],
-  "micronutriments": "faible"
 },
   {
   "catégorie": "Petit dejeuner",
