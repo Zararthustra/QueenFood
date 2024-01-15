@@ -68,7 +68,7 @@ export const Khayat = () => {
                       label: (
                         <h3 className="mb-[3px]">
                           {isMobile
-                            ? labelShortener(fiche.titre, 32)
+                            ? labelShortener(fiche.titre, 30)
                             : fiche.titre}
                         </h3>
                       ),
@@ -84,10 +84,11 @@ export const Khayat = () => {
                           )}
                           <p
                             className={
-                              "rounded-full border-2 border-white px-[3px] py-[5px] text-xs font-bold text-white " +
+                              "rounded-full border-2 border-white px-[4px] py-[7px] text-xs font-bold text-white " +
                               (fiche.boisson
                                 ? nutriSantéDrinkColors[fiche.nutriSanté - 1]
-                                : nutriSantéColors[fiche.nutriSanté - 1])
+                                : nutriSantéColors[fiche.nutriSanté - 1]) +
+                              (isMobile ? "" : " -tracking-[1px]")
                             }
                           >
                             {fiche.nutriSanté}
