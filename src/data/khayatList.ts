@@ -2,6 +2,258 @@ import { IKhayat } from "@interfaces/index";
 
 export const khayatList: IKhayat[] = [
   {
+  "catégorie": "Déjeuner",
+  "titre": "Wrap Poulet",
+  "boisson": false,
+  "nutriSanté": 5,
+  "portions": {
+    "seniors": "1 Wrap",
+    "adultes": "1 Wrap",
+    "enfants": "1/2 Wrap"
+  },
+  "énergie": {
+    "100g": "200cal",
+    "portion": "500kcal"
+  },
+  "dépenses": [
+    "1h de squash",
+    "2h30 de marche"
+  ],
+  "nutriScore": "b",
+  "nova": 4,
+  "avantages": "Protéines de bonne qualité. Apport en fibres et en vitamines.",
+  "inconvénients": "Présence d'additifs dans les sauces et les galettes de blé industrielles.",
+  "astuces": "Malgré l'image healthy et le Nutri-Score B du wrap, celui-ci est très ultra-transformé et ses portions sont caloriques (environ 500 calories par portion!). Attention au poids de votre wrap! Je vous suggère de le réaliser vous-même",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 26
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 10
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 13
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 51
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Déjeuner",
+  "titre": "Panini Boeuf-Fromage",
+  "boisson": false,
+  "nutriSanté": 4,
+  "portions": {
+    "seniors": "1 Sandwich",
+    "adultes": "1 Sandwich",
+    "enfants": "1/2 Sandwich"
+  },
+  "énergie": {
+    "100g": "260kcal",
+    "portion": "520kcal"
+  },
+  "dépenses": [
+    "50min de tennis",
+    "2h30 de marche"
+  ],
+  "nutriScore": "d",
+  "nova": 3,
+  "avantages": "Apport en calcium et en protéines.",
+  "inconvénients": "Plus d'acides gras saturés que dans le panini jambon-cheddar. Absence de fibres et de vitamines.",
+  "astuces": "En raison de l'apport calorique élevé et de son impact environnemental, nous ne recommandons pas ce panini. A associer à de la salade et/ou des fruits.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 23
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 18
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 19
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 40
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Déjeuner",
+  "titre": "Panini Jambon-Cheddar",
+  "boisson": false,
+  "nutriSanté": 5,
+  "portions": {
+    "seniors": "1 Sandwich",
+    "adultes": "1 Sandwich",
+    "enfants": "1/2 Sandwich"
+  },
+  "énergie": {
+    "100g": "243kcal",
+    "portion": "466kcal"
+  },
+  "dépenses": [
+    "1h de badminton",
+    "2h15 de marche"
+  ],
+  "nutriScore": "d",
+  "nova": 4,
+  "avantages": "Rasassiant. Apport en protéines de bonne qualité et en calcium.",
+  "inconvénients": "Présence élevée d'acides gras saturés. Pas d'apport en fibres et en vitamines",
+  "astuces": "Attention, souvent proposé en portion de 200g! A associer sans modération à de la salade ou des fruits!",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 30
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 9
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 11
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 50
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Déjeuner",
+  "titre": "Sandwich Jambon-Fromage",
+  "boisson": false,
+  "nutriSanté": 4,
+  "portions": {
+    "seniors": "1 Sandwich",
+    "adultes": "1 Sandwich",
+    "enfants": "1/2 Sandwich"
+  },
+  "énergie": {
+    "100g": "309kcal",
+    "portion": "610kcal"
+  },
+  "dépenses": [
+    "1h de natation",
+    "3h de marche"
+  ],
+  "nutriScore": "c",
+  "nova": 4,
+  "avantages": "Apport en calcium et en protéines de bonne qualité.",
+  "inconvénients": "Pas d'apport en légumes, donc peu de fibres.",
+  "astuces": "Pour accompagner, votre tanche de jambonn, choisissez plutôt de l'emmental ou du camembert. Pensez à varier la garniture de vos sandwichs.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 30
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 14
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 14
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 42
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Déjeuner",
+  "titre": "Sandwich Jambon-Beurre",
+  "boisson": false,
+  "nutriSanté": 4,
+  "portions": {
+    "seniors": "1 Sandwich",
+    "adultes": "1 Sandwich",
+    "enfants": "1/2 Sandwich"
+  },
+  "énergie": {
+    "100g": "280kcal",
+    "portion": "560kcal"
+  },
+  "dépenses": [
+    "1h de tennis",
+    "50min de judo",
+    "2h40 de marche"
+  ],
+  "nutriScore": "b",
+  "nova": 4,
+  "avantages": "Bon apport en protéines de bonne qualité. Fournit de l'énergie sur le long terme",
+  "inconvénients": "Risque de consommation excessive de pain. Absence de légumes et de fruits",
+  "astuces": "Il ne doit pas devenir votre menu quotidien. Il est souvent avalé trop vite. Méfiez-vous de la quantité de beurre et de la taille du morceau de pain",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 35
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 10
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 12
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 43
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Petit déjeuner",
+  "titre": "Pur Jus de Pamplemousse",
+  "boisson": true,
+  "nutriSanté": 2,
+  "portions": {
+    "seniors": "150ml",
+    "adultes": "200ml",
+    "enfants": "125ml"
+  },
+  "énergie": {
+    "100g": "35kcal",
+    "portion": "70kcal"
+  },
+  "dépenses": [
+    "25min de ménage ",
+    "10min de jogging",
+    "20min de marche "
+  ],
+  "nutriScore": "b",
+  "nova": 1,
+  "avantages": "Source de vitamine C. Propriétés diurétiques",
+  "inconvénients": "Perte en vitamines, minéraux et fibres présents dans le fruit",
+  "astuces": "Comme le jus de citron, l'un des moins caloriques ",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 8
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 92
+    }
+  ],
+  "micronutriments": "élevé"
+},
+  {
   "catégorie": "Petit déjeuner",
   "titre": "Pur Jus de Citron",
   "boisson": true,
