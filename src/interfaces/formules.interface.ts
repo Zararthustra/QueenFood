@@ -1,6 +1,8 @@
-export type { IIMC };
+export type { IFormulesForm };
 
-interface IIMC {
+interface IFormulesForm {
+  age?: number;
+  gender?: "male" | "female";
   weight?: number;
   height?: number;
 }

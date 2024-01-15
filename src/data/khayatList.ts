@@ -2,217 +2,214 @@ import { IKhayat } from "@interfaces/index";
 
 export const khayatList: IKhayat[] = [
   {
-  "catégorie": "Déjeuner",
-  "titre": "Fish and Chips",
-  "boisson": false,
-  "nutriSanté": 4,
-  "portions": {
-    "seniors": "300g",
-    "adultes": "300g",
-    "enfants": "200g"
+    catégorie: "Déjeuner",
+    titre: "Fish and Chips",
+    boisson: false,
+    nutriSanté: 4,
+    portions: {
+      seniors: "300g",
+      adultes: "300g",
+      enfants: "200g",
+    },
+    énergie: {
+      "100g": "255cal",
+      portion: "765kcal",
+    },
+    dépenses: ["1h30 de jogging", "1h10 de corde à sauter", "3h40 de marche"],
+    nutriScore: "e",
+    nova: 2,
+    avantages:
+      "Un bon moyen de faire aimer le poisson aux enfants ou aux adolescents!",
+    inconvénients: "Cuisson à l'huile pour le poisson et les frites.",
+    astuces:
+      "Attention à bien vérifier l'origine des ingrédients, à calibrer les portions et à éviter de consommer trop de mayonnaise ou de frites!",
+    macronutriments: [
+      {
+        nutriments: "Lipides",
+        valeur: 14,
+      },
+      {
+        nutriments: "Glucides",
+        valeur: 21,
+      },
+      {
+        nutriments: "Protéines",
+        valeur: 10,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 55,
+      },
+    ],
+    micronutriments: "faible",
   },
-  "énergie": {
-    "100g": "255cal",
-    "portion": "765kcal"
-  },
-  "dépenses": [
-    "1h30 de jogging",
-    "1h10 de corde à sauter",
-    "3h40 de marche"
-  ],
-  "nutriScore": "e",
-  "nova": 2,
-  "avantages": "Un bon moyen de faire aimer le poisson aux enfants ou aux adolescents!",
-  "inconvénients": "Cuisson à l'huile pour le poisson et les frites.",
-  "astuces": "Attention à bien vérifier l'origine des ingrédients, à calibrer les portions et à éviter de consommer trop de mayonnaise ou de frites!",
-  "macronutriments": [
-    {
-      "nutriments": "Lipides",
-      "valeur": 14
-    },
-    {
-      "nutriments": "Glucides",
-      "valeur": 21
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 10
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 55
-    }
-  ],
-  "micronutriments": "faible"
-},
   {
-  "catégorie": "Déjeuner",
-  "titre": "Tartare De Boeuf",
-  "boisson": false,
-  "nutriSanté": 4,
-  "portions": {
-    "seniors": "150g",
-    "adultes": "150g",
-    "enfants": "100g"
+    catégorie: "Déjeuner",
+    titre: "Tartare De Boeuf",
+    boisson: false,
+    nutriSanté: 4,
+    portions: {
+      seniors: "150g",
+      adultes: "150g",
+      enfants: "100g",
+    },
+    énergie: {
+      "100g": "170cal",
+      portion: "255kcal",
+    },
+    dépenses: ["30min de rameur ", "1h30 de marche"],
+    nutriScore: "a",
+    nova: 1,
+    avantages:
+      "Le mélange viande-oeuf est une source de protéines de bonne qualité et de fer assimilable.",
+    inconvénients:
+      "Vigilance pour les femmes enceintes et les personnes à immunité affaiblie. Faites attention à la conversation de votre viande crue.",
+    astuces:
+      "Attention à la préparation (oeuf, épices mais aussi quantité d'huile à modérer) et à l'accompagnement \"frites\". Préférez un mix salade ou des légumes.",
+    macronutriments: [
+      {
+        nutriments: "Lipides",
+        valeur: 12,
+      },
+      {
+        nutriments: "Glucides",
+        valeur: 1.5,
+      },
+      {
+        nutriments: "Protéines",
+        valeur: 14,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 72.5,
+      },
+    ],
+    micronutriments: "moyen",
   },
-  "énergie": {
-    "100g": "170cal",
-    "portion": "255kcal"
-  },
-  "dépenses": [
-    "30min de rameur ",
-    "1h30 de marche"
-  ],
-  "nutriScore": "a",
-  "nova": 1,
-  "avantages": "Le mélange viande-oeuf est une source de protéines de bonne qualité et de fer assimilable.",
-  "inconvénients": "Vigilance pour les femmes enceintes et les personnes à immunité affaiblie. Faites attention à la conversation de votre viande crue.",
-  "astuces": "Attention à la préparation (oeuf, épices mais aussi quantité d'huile à modérer) et à l'accompagnement \"frites\". Préférez un mix salade ou des légumes.",
-  "macronutriments": [
-    {
-      "nutriments": "Lipides",
-      "valeur": 12
-    },
-    {
-      "nutriments": "Glucides",
-      "valeur": 1.5
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 14
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 72.5
-    }
-  ],
-  "micronutriments": "moyen"
-},
   {
-  "catégorie": "Déjeuner",
-  "titre": "Risotto Végétarien",
-  "boisson": false,
-  "nutriSanté": 5,
-  "portions": {
-    "seniors": "300g",
-    "adultes": "300g",
-    "enfants": "200g"
+    catégorie: "Déjeuner",
+    titre: "Risotto Végétarien",
+    boisson: false,
+    nutriSanté: 5,
+    portions: {
+      seniors: "300g",
+      adultes: "300g",
+      enfants: "200g",
+    },
+    énergie: {
+      "100g": "190cal",
+      portion: "570kcal",
+    },
+    dépenses: ["1h15 de jogging", "2h40 de marche"],
+    nutriScore: "a",
+    nova: 2,
+    avantages:
+      "Plat végétarien ou accompagnement assez rassasiant. Riche en fibres.",
+    inconvénients: "Attention à la crème fraîche et aux glucides.",
+    astuces:
+      "Il faut rester vigilant sur votre portion, en particulier lorsqu'il est utilisé en accompagnement car malgré les apparences, ce plat est très riche. Ne lésinez pas sur les légumes.",
+    macronutriments: [
+      {
+        nutriments: "Lipides",
+        valeur: 4,
+      },
+      {
+        nutriments: "Glucides",
+        valeur: 19,
+      },
+      {
+        nutriments: "Protéines",
+        valeur: 2.8,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 74.2,
+      },
+    ],
+    micronutriments: "moyen",
   },
-  "énergie": {
-    "100g": "190cal",
-    "portion": "570kcal"
-  },
-  "dépenses": [
-    "1h15 de jogging",
-    "2h40 de marche"
-  ],
-  "nutriScore": "a",
-  "nova": 2,
-  "avantages": "Plat végétarien ou accompagnement assez rassasiant. Riche en fibres.",
-  "inconvénients": "Attention à la crème fraîche et aux glucides.",
-  "astuces": "Il faut rester vigilant sur votre portion, en particulier lorsqu'il est utilisé en accompagnement car malgré les apparences, ce plat est très riche. Ne lésinez pas sur les légumes.",
-  "macronutriments": [
-    {
-      "nutriments": "Lipides",
-      "valeur": 4
-    },
-    {
-      "nutriments": "Glucides",
-      "valeur": 19
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 2.8
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 74.2
-    }
-  ],
-  "micronutriments": "moyen"
-},
   {
-  "catégorie": "Déjeuner",
-  "titre": "Poulet Rôti",
-  "boisson": false,
-  "nutriSanté": 7,
-  "portions": {
-    "seniors": "100g",
-    "adultes": "100g",
-    "enfants": "60g"
-  },
-  "énergie": {
-    "100g": "200cal",
-    "portion": "200kcal"
-  },
-  "dépenses": [
-    "20min de natation",
-    "1h de marche"
-  ],
-  "nutriScore": "c",
-  "nova": 2,
-  "avantages": "Riches en protéines. Présence de potassium et de magnésium qui réduisent les risques cardiovasculaires.",
-  "inconvénients": "Acides gras saturés, surtout si l'on mange la peau du poulet.",
-  "astuces": "Choisissez bien votre volaille (grâce aux labels) et privilégiez des légumes en accompagnement. De temps en temps, un poulet frites dominical est le bienvenu!",
-  "macronutriments": [
-    {
-      "nutriments": "Lipides",
-      "valeur": 9
+    catégorie: "Déjeuner",
+    titre: "Poulet Rôti",
+    boisson: false,
+    nutriSanté: 7,
+    portions: {
+      seniors: "100g",
+      adultes: "100g",
+      enfants: "60g",
     },
-    {
-      "nutriments": "Protéines",
-      "valeur": 30
+    énergie: {
+      "100g": "200cal",
+      portion: "200kcal",
     },
-    {
-      "nutriments": "Autres",
-      "valeur": 61
-    }
-  ],
-  "micronutriments": "moyen"
-},
+    dépenses: ["20min de natation", "1h de marche"],
+    nutriScore: "c",
+    nova: 2,
+    avantages:
+      "Riches en protéines. Présence de potassium et de magnésium qui réduisent les risques cardiovasculaires.",
+    inconvénients:
+      "Acides gras saturés, surtout si l'on mange la peau du poulet.",
+    astuces:
+      "Choisissez bien votre volaille (grâce aux labels) et privilégiez des légumes en accompagnement. De temps en temps, un poulet frites dominical est le bienvenu!",
+    macronutriments: [
+      {
+        nutriments: "Lipides",
+        valeur: 9,
+      },
+      {
+        nutriments: "Protéines",
+        valeur: 30,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 61,
+      },
+    ],
+    micronutriments: "moyen",
+  },
   {
-  "catégorie": "Déjeuner",
-  "titre": "Croque Monsieur",
-  "boisson": false,
-  "nutriSanté": 5,
-  "portions": {
-    "seniors": "1 Croque + 1/2",
-    "adultes": "1 Croque + 1/2",
-    "enfants": "1 Croque"
+    catégorie: "Déjeuner",
+    titre: "Croque Monsieur",
+    boisson: false,
+    nutriSanté: 5,
+    portions: {
+      seniors: "1 Croque + 1/2",
+      adultes: "1 Croque + 1/2",
+      enfants: "1 Croque",
+    },
+    énergie: {
+      "100g": "290cal",
+      portion: "435kcal",
+    },
+    dépenses: ["40min de tennis", "2h15 de marche"],
+    nutriScore: "d",
+    nova: 4,
+    avantages:
+      "Un classique assez équilibré qui constitue un bon repas rapide.",
+    inconvénients:
+      "Sa version classique (pain de mie, beurre, jambon, fromage) est assez riche, surtout sion y ajoute de la béchamel.",
+    astuces:
+      "Variez les pains de mie, testez les semi-complets ou les multi-céréales. A accompagner d'une salade et de fruits.",
+    macronutriments: [
+      {
+        nutriments: "Glucides",
+        valeur: 25.5,
+      },
+      {
+        nutriments: "Lipides",
+        valeur: 15,
+      },
+      {
+        nutriments: "Protéines",
+        valeur: 14.5,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 45,
+      },
+    ],
+    micronutriments: "moyen",
   },
-  "énergie": {
-    "100g": "290cal",
-    "portion": "435kcal"
-  },
-  "dépenses": [
-    "40min de tennis",
-    "2h15 de marche"
-  ],
-  "nutriScore": "d",
-  "nova": 4,
-  "avantages": "Un classique assez équilibré qui constitue un bon repas rapide.",
-  "inconvénients": "Sa version classique (pain de mie, beurre, jambon, fromage) est assez riche, surtout sion y ajoute de la béchamel.",
-  "astuces": "Variez les pains de mie, testez les semi-complets ou les multi-céréales. A accompagner d'une salade et de fruits.",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 25.5
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 15
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 14.5
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 45
-    }
-  ],
-  "micronutriments": "moyen"
-},
   {
     catégorie: "Déjeuner",
     titre: "Bowls Hawaï (Saumon, Avocat, Mangue, Riz)",
