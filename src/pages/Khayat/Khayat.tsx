@@ -21,16 +21,7 @@ export const Khayat = () => {
     "bg-[#352B64]",
   ];
   // Set categories
-  let categoryTmp: string;
-  const categories = khayatList
-    .filter((fiche) => {
-      if (fiche.catégorie !== categoryTmp) {
-        categoryTmp = fiche.catégorie;
-        return true;
-      }
-      return false;
-    })
-    .map((fiche) => fiche.catégorie);
+  const categories = [...new Set(khayatList.map((fiche) => fiche.catégorie))];
 
   return (
     <>
