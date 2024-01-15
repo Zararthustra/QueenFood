@@ -3,6 +3,49 @@ import { IKhayat } from "@interfaces/index";
 export const khayatList: IKhayat[] = [
   {
   "catégorie": "Déjeuner",
+  "titre": "Salade César",
+  "boisson": false,
+  "nutriSanté": 1,
+  "portions": {
+    "seniors": "300g",
+    "adultes": "300g",
+    "enfants": "200g"
+  },
+  "énergie": {
+    "100g": "150cal",
+    "portion": "450kcal"
+  },
+  "dépenses": [
+    "1h30 de golf",
+    "2h15 de marche"
+  ],
+  "nutriScore": "b",
+  "nova": 4,
+  "avantages": "Bon apport en fibres. Protéines de bonne qualité.",
+  "inconvénients": "Ne fournit pas d'énergie sur le long terme, car pas assez de gluides complexes. Additifs dans les salades industrielles (surtout dans la sauce).",
+  "astuces": "Salade bien équilibrée! Vigilance sur l'origine et la quantité de la sauce.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 12
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 8
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 10
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 70
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Déjeuner",
   "titre": "Cheese-Burger",
   "boisson": false,
   "nutriSanté": 1,
