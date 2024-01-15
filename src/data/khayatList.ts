@@ -3,6 +3,93 @@ import { IKhayat } from "@interfaces/index";
 export const khayatList: IKhayat[] = [
   {
   "catégorie": "Déjeuner",
+  "titre": "Fish and Chips",
+  "boisson": false,
+  "nutriSanté": 4,
+  "portions": {
+    "seniors": "300g",
+    "adultes": "300g",
+    "enfants": "200g"
+  },
+  "énergie": {
+    "100g": "255cal",
+    "portion": "765kcal"
+  },
+  "dépenses": [
+    "1h30 de jogging",
+    "1h10 de corde à sauter",
+    "3h40 de marche"
+  ],
+  "nutriScore": "e",
+  "nova": 2,
+  "avantages": "Un bon moyen de faire aimer le poisson aux enfants ou aux adolescents!",
+  "inconvénients": "Cuisson à l'huile pour le poisson et les frites.",
+  "astuces": "Attention à bien vérifier l'origine des ingrédients, à calibrer les portions et à éviter de consommer trop de mayonnaise ou de frites!",
+  "macronutriments": [
+    {
+      "nutriments": "Lipides",
+      "valeur": 14
+    },
+    {
+      "nutriments": "Glucides",
+      "valeur": 21
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 10
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 55
+    }
+  ],
+  "micronutriments": "faible"
+},
+  {
+  "catégorie": "Déjeuner",
+  "titre": "Tartare De Boeuf",
+  "boisson": false,
+  "nutriSanté": 4,
+  "portions": {
+    "seniors": "150g",
+    "adultes": "150g",
+    "enfants": "100g"
+  },
+  "énergie": {
+    "100g": "170cal",
+    "portion": "255kcal"
+  },
+  "dépenses": [
+    "30min de rameur ",
+    "1h30 de marche"
+  ],
+  "nutriScore": "a",
+  "nova": 1,
+  "avantages": "Le mélange viande-oeuf est une source de protéines de bonne qualité et de fer assimilable.",
+  "inconvénients": "Vigilance pour les femmes enceintes et les personnes à immunité affaiblie. Faites attention à la conversation de votre viande crue.",
+  "astuces": "Attention à la préparation (oeuf, épices mais aussi quantité d'huile à modérer) et à l'accompagnement \"frites\". Préférez un mix salade ou des légumes.",
+  "macronutriments": [
+    {
+      "nutriments": "Lipides",
+      "valeur": 12
+    },
+    {
+      "nutriments": "Glucides",
+      "valeur": 1.5
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 14
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 72.5
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Déjeuner",
   "titre": "Risotto Végétarien",
   "boisson": false,
   "nutriSanté": 5,
