@@ -2,7 +2,46 @@ import { IKhayat } from "@interfaces/index";
 
 export const khayatList: IKhayat[] = [
   {
-    catégorie: "Petit dejeuner",
+  "catégorie": "Petit déjeuner",
+  "titre": "Pur Jus D'Orange Pressé",
+  "boisson": true,
+  "nutriSanté": 2,
+  "portions": {
+    "seniors": "200ml",
+    "adultes": "200ml",
+    "enfants": "150ml"
+  },
+  "énergie": {
+    "100g": "42kcal",
+    "portion": "80kcal"
+  },
+  "dépenses": [
+    "10min de natation",
+    "25min de marche"
+  ],
+  "nutriScore": "c",
+  "nova": 1,
+  "avantages": "Stimule l'appétit (positif pour les personnes en risque de dénutrition)",
+  "inconvénients": "Nutritionnellement pauvre comparé aux fruits entiers (la conservation et la pasteurisation détruisent la plupart des vitamines)",
+  "astuces": "Qu'il soit fait maison ou industriel, son ordonnance alimentaire reste la même. Toutes les calories apportées par les boissons sucrées sont mal intégrées par notre organisme. Pas de sentiment de satiété",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 10
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 0.6
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 89.4
+    }
+  ],
+  "micronutriments": "élevé"
+},
+  {
+    catégorie: "Petit déjeuner",
     titre: "Nectar D'Abricot",
     boisson: true,
     nutriSanté: 1,
@@ -79,7 +118,7 @@ export const khayatList: IKhayat[] = [
     micronutriments: "moyen",
   },
   {
-    catégorie: "Petit dejeuner",
+    catégorie: "Petit déjeuner",
     titre: "Granola Fruits Rouges (Avoine Complète)",
     boisson: false,
     nutriSanté: 6,
