@@ -3,6 +3,93 @@ import { IKhayat } from "@interfaces/index";
 export const khayatList: IKhayat[] = [
   {
   "catégorie": "Déjeuner",
+  "titre": "Kebab",
+  "boisson": false,
+  "nutriSanté": 2,
+  "portions": {
+    "seniors": "1 Kebab",
+    "adultes": "1 Kebab",
+    "enfants": "1/3 Kebab"
+  },
+  "énergie": {
+    "100g": "400cal",
+    "portion": "800kcal"
+  },
+  "dépenses": [
+    "2h de basket",
+    "1h10 d'escalade",
+    "4h de marche rapide"
+  ],
+  "nutriScore": "d",
+  "nova": 4,
+  "avantages": "Nourrissant. Protéines de bonne qualité. Produit plaisir.",
+  "inconvénients": "Taille des portions de pain, de viande et de sauce trop importantes. Sauces trop sucrées, comportant beaucoup d'additifs et d'acides gras saturés",
+  "astuces": "Bon avec des ingrédients de qualité! Reste un produit riche et ultra-transformé, à ne consommer qu'à de rares occasions.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 25
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 30
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 20
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 25
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Déjeuner",
+  "titre": "Pasta Box Jambon Et Parmesan",
+  "boisson": false,
+  "nutriSanté": 5,
+  "portions": {
+    "seniors": "1 Pasta Box",
+    "adultes": "1 Pasta Box",
+    "enfants": 0
+  },
+  "énergie": {
+    "100g": "149cal",
+    "portion": "417kcal"
+  },
+  "dépenses": [
+    "40min de tennis",
+    "2h de marche rapide"
+  ],
+  "nutriScore": "b",
+  "nova": 4,
+  "avantages": "Rassasiant. Variété des recettes.",
+  "inconvénients": "Présence d'additifs et de matières grasses ajoutées. Pauvre en vitamines et en minéraux",
+  "astuces": "Attention aux portions de 300g rassasiantes mais potentiellement caloriques (vérifier sur l'emballage)! Elles doivent rester un plat de dépannage!",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 16
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 6
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 8
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 70
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Déjeuner",
   "titre": "Wrap Poulet",
   "boisson": false,
   "nutriSanté": 5,
@@ -433,7 +520,7 @@ export const khayatList: IKhayat[] = [
     micronutriments: "moyen",
   },
   {
-    catégorie: "Petit dejeuner",
+    catégorie: "Petit déjeuner",
     titre: "Poudre 100% Pur Cacao",
     boisson: false,
     nutriSanté: 4,
