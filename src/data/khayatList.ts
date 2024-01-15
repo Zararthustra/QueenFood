@@ -3,9 +3,139 @@ import { IKhayat } from "@interfaces/index";
 export const khayatList: IKhayat[] = [
   {
   "catégorie": "Déjeuner",
+  "titre": "Bowls Hawaï (Saumon, Avocat, Mangue, Riz)",
+  "boisson": false,
+  "nutriSanté": 4,
+  "portions": {
+    "seniors": "1 Bowl",
+    "adultes": "1 Bowl",
+    "enfants": "1/2 Bowl"
+  },
+  "énergie": {
+    "100g": "200cal",
+    "portion": "600kcal"
+  },
+  "dépenses": [
+    "1h30 de jogging",
+    "3h de marche"
+  ],
+  "nutriScore": "b",
+  "nova": 3,
+  "avantages": "Bon apport en fibres, en vitamines et en minéraux. Acides gras et protéines de bonne qualité. Aliments variés",
+  "inconvénients": "Attention aux composants, en particulier produits frits et/ou riches en graisse",
+  "astuces": "Malgré son image healthy et moderne, le poké bowls est un piège! Attention en particulier à certains ingrédients (avocat), très riches et à l'impact négatif sur la planète.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 50
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 15
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 12
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 23
+    }
+  ],
+  "micronutriments": "élevé"
+},
+  {
+  "catégorie": "Déjeuner",
+  "titre": "Salade Chèvre-Lardon",
+  "boisson": false,
+  "nutriSanté": 4,
+  "portions": {
+    "seniors": "300g",
+    "adultes": "300g",
+    "enfants": "200g"
+  },
+  "énergie": {
+    "100g": "200cal",
+    "portion": "600kcal"
+  },
+  "dépenses": [
+    "1h de natation",
+    "3h de ménage"
+  ],
+  "nutriScore": "b",
+  "nova": 4,
+  "avantages": "Apport en calcium, fibres, vitamines et minéraux",
+  "inconvénients": "Faible apport en protéines. Présence d'acides gras saturés (lardons, fromage).",
+  "astuces": "Une salade équilibrée mais qui peut se révéler très calorique! A consommer de manière modérée. Préférez la salade César, plus légère.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 12
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 8
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 10
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 70
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Déjeuner",
+  "titre": "Salade Parisienne",
+  "boisson": false,
+  "nutriSanté": 6,
+  "portions": {
+    "seniors": "300g",
+    "adultes": "300g",
+    "enfants": "200g"
+  },
+  "énergie": {
+    "100g": "130cal",
+    "portion": "390kcal"
+  },
+  "dépenses": [
+    "2h15 de ménage ",
+    "1h15 de basket-ball récréatif ",
+    "1h50 de marche "
+  ],
+  "nutriScore": "b",
+  "nova": 4,
+  "avantages": "Riche en fibres et en minéraux. Apport en protéines de bonne qualité.",
+  "inconvénients": "Ne fournit pas d'énergie au long terme (car il n'y a pas assez de glucides complexes). La sauce peut contenir des additifs.",
+  "astuces": "Excellente offre. Attention à la dose de sauce!",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 5
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 9
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 6
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 80
+    }
+  ],
+  "micronutriments": "élevé"
+},
+  {
+  "catégorie": "Déjeuner",
   "titre": "Salade César",
   "boisson": false,
-  "nutriSanté": 1,
+  "nutriSanté": 5,
   "portions": {
     "seniors": "300g",
     "adultes": "300g",
