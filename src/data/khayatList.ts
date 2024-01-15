@@ -4,7 +4,7 @@ export const khayatList: IKhayat[] = [
   {
   "catégorie": "Petit dejeuner",
   "titre": "Granola Fruits Rouges (Avoine Complète)",
-  "boisson": false  
+  "boisson": false,  
   "nutriSanté": 6,
   "portions": {
     "seniors": "40g",
