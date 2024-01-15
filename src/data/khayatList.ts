@@ -2,129 +2,125 @@ import { IKhayat } from "@interfaces/index";
 
 export const khayatList: IKhayat[] = [
   {
-  "catégorie": "Petit dejeuner",
-  "titre": "Nectar D'Abricot",
-  "boisson": true,
-  "nutriSanté": 1,
-  "portions": {
-    "seniors": "150ml",
-    "adultes": "200ml",
-    "enfants": "125ml"
-  },
-  "énergie": {
-    "100g": "58kcal",
-    "portion": "116kcal"
-  },
-  "dépenses": [
-    "30min de musculation",
-    "15min de jogging"
-  ],
-  "nutriScore": "d",
-  "nova": 2,
-  "avantages": "Souvent plus onctueux pour les enfants afin de les aider à découvrir les fruits ",
-  "inconvénients": "Perte d'anti-oxydant par rapport à un fruit frais",
-  "astuces": "Le nectar paraît souvent meilleur que le jus de fruits! Or, il n'en est rien : ce produit est fabriqué à partir de purée de fruits à laquelle de l'eau et du sucre sont ajoutés.",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 14
+    catégorie: "Petit dejeuner",
+    titre: "Nectar D'Abricot",
+    boisson: true,
+    nutriSanté: 1,
+    portions: {
+      seniors: "150ml",
+      adultes: "200ml",
+      enfants: "125ml",
     },
-    {
-      "nutriments": "Autres",
-      "valeur": 86
-    }
-  ],
-  "micronutriments": "moyen"
-},
+    énergie: {
+      "100g": "58kcal",
+      portion: "116kcal",
+    },
+    dépenses: ["30min de musculation", "15min de jogging"],
+    nutriScore: "d",
+    nova: 2,
+    avantages:
+      "Souvent plus onctueux pour les enfants afin de les aider à découvrir les fruits ",
+    inconvénients: "Perte d'anti-oxydant par rapport à un fruit frais",
+    astuces:
+      "Le nectar paraît souvent meilleur que le jus de fruits! Or, il n'en est rien : ce produit est fabriqué à partir de purée de fruits à laquelle de l'eau et du sucre sont ajoutés.",
+    macronutriments: [
+      {
+        nutriments: "Glucides",
+        valeur: 14,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 86,
+      },
+    ],
+    micronutriments: "moyen",
+  },
   {
-  "catégorie": "Petit dejeuner",
-  "titre": "Poudre 100% Pur Cacao",
-  "boisson" : false,
-  "nutriSanté": 4,
-  "portions": {
-    "seniors": "1 ou 2càc",
-    "adultes": "1 ou 2càc",
-    "enfants": "1 ou 2càc"
+    catégorie: "Petit dejeuner",
+    titre: "Poudre 100% Pur Cacao",
+    boisson: false,
+    nutriSanté: 4,
+    portions: {
+      seniors: "1 ou 2càc",
+      adultes: "1 ou 2càc",
+      enfants: "1 ou 2càc",
+    },
+    énergie: {
+      "100g": "387kcal",
+      portion: "1 càc = 40kcal",
+    },
+    dépenses: ["4min de corde à sauter", "15min de vélo", "15min de marche"],
+    nutriScore: "c",
+    nova: 1,
+    avantages:
+      "Riche en magnésium, en anti-oxydants, en minéraux et vitamine E. Apport élevé en protéines.",
+    inconvénients:
+      "Riche en acides gras saturés. Produit à valeur énergétique élevée.",
+    astuces:
+      "Le réconfort d'un bon chocolat chaud d'hiver est indéniable! Par ailleurs, le goût prononcé de la poudre évite les surdosages ",
+    macronutriments: [
+      {
+        nutriments: "Glucides",
+        valeur: 11,
+      },
+      {
+        nutriments: "Lipides",
+        valeur: 21,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 48,
+      },
+      {
+        nutriments: "Protéines",
+        valeur: 20,
+      },
+    ],
+    micronutriments: "moyen",
   },
-  "énergie": {
-    "100g": "387kcal",
-    "portion": "1 càc = 40kcal"
-  },
-  "dépenses": [
-    "4min de corde à sauter",
-    "15min de vélo",
-    "15min de marche"
-  ],
-  "nutriScore": "c",
-  "nova": 1,
-  "avantages": "Riche en magnésium, en anti-oxydants, en minéraux et vitamine E. Apport élevé en protéines.",
-  "inconvénients": "Riche en acides gras saturés. Produit à valeur énergétique élevée.",
-  "astuces": "Le réconfort d'un bon chocolat chaud d'hiver est indéniable! Par ailleurs, le goût prononcé de la poudre évite les surdosages ",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 11
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 21
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 48
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 20
-    }
-  ],
-  "micronutriments": "moyen"
-},  
   {
-  "catégorie": "Petit dejeuner",
-  "titre": "Granola Fruits Rouges (Avoine Complète)",
-  "boisson": false,  
-  "nutriSanté": 6,
-  "portions": {
-    "seniors": "40g",
-    "adultes": "55g",
-    "enfants": "45g"
+    catégorie: "Petit dejeuner",
+    titre: "Granola Fruits Rouges (Avoine Complète)",
+    boisson: false,
+    nutriSanté: 6,
+    portions: {
+      seniors: "40g",
+      adultes: "55g",
+      enfants: "45g",
+    },
+    énergie: {
+      "100g": "410kcal",
+      portion: "225kcal",
+    },
+    dépenses: ["1h de yoga", "1h de marche", "1h de vélo"],
+    nutriScore: "a",
+    nova: 3,
+    avantages:
+      "Contient des acides gras essentiels, des oligo-éléments (calcium, magnésium, zinc) ainsi que des protéines végétales",
+    inconvénients: "Attention à la quantité de sucre ",
+    astuces:
+      "Un produit qui n'est pas néfaste pour la santé mais reste très calorique malgré la présence de fruits rouges (410 calories pour 100g)! A alterner avec le muesli ",
+    macronutriments: [
+      {
+        nutriments: "Glucides",
+        valeur: 61,
+      },
+      {
+        nutriments: "Lipides",
+        valeur: 12,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 17,
+      },
+      {
+        nutriments: "Protéines",
+        valeur: 10,
+      },
+    ],
+    micronutriments: "moyen",
   },
-  "énergie": {
-    "100g": "410kcal",
-    "portion": "225kcal"
-  },
-  "dépenses": [
-    "1h de yoga",
-    "1h de marche",
-    "1h de vélo"
-  ],
-  "nutriScore": "a",
-  "nova": 3,
-  "avantages": "Contient des acides gras essentiels, des oligo-éléments (calcium, magnésium, zinc) ainsi que des protéines végétales",
-  "inconvénients": "Attention à la quantité de sucre ",
-  "astuces": "Un produit qui n'est pas néfaste pour la santé mais reste très calorique malgré la présence de fruits rouges (410 calories pour 100g)! A alterner avec le muesli ",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 61
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 12
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 17
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 10
-    }
-  ],
-  "micronutriments": "moyen"
-},  
-{
+  {
     catégorie: "Petit déjeuner",
     titre: "Céréales Fourrées Au Chocolat",
     boisson: false,

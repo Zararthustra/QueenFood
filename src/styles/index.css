@@ -208,3 +208,7 @@
 .ant-collapse-expand-icon {
   @apply dark:text-slate-100;
 }
+.ant-collapse-header {
+  display: flex;
+  align-items: center !important;
+}
