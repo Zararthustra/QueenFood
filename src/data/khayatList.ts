@@ -2,6 +2,131 @@ import { IKhayat } from "@interfaces/index";
 
 export const khayatList: IKhayat[] = [
   {
+  "catégorie": "Déjeuner",
+  "titre": "Risotto Végétarien",
+  "boisson": false,
+  "nutriSanté": 5,
+  "portions": {
+    "seniors": "300g",
+    "adultes": "300g",
+    "enfants": "200g"
+  },
+  "énergie": {
+    "100g": "190cal",
+    "portion": "570kcal"
+  },
+  "dépenses": [
+    "1h15 de jogging",
+    "2h40 de marche"
+  ],
+  "nutriScore": "a",
+  "nova": 2,
+  "avantages": "Plat végétarien ou accompagnement assez rassasiant. Riche en fibres.",
+  "inconvénients": "Attention à la crème fraîche et aux glucides.",
+  "astuces": "Il faut rester vigilant sur votre portion, en particulier lorsqu'il est utilisé en accompagnement car malgré les apparences, ce plat est très riche. Ne lésinez pas sur les légumes.",
+  "macronutriments": [
+    {
+      "nutriments": "Lipides",
+      "valeur": 4
+    },
+    {
+      "nutriments": "Glucides",
+      "valeur": 19
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 2.8
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 74.2
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Déjeuner",
+  "titre": "Poulet Rôti",
+  "boisson": false,
+  "nutriSanté": 7,
+  "portions": {
+    "seniors": "100g",
+    "adultes": "100g",
+    "enfants": "60g"
+  },
+  "énergie": {
+    "100g": "200cal",
+    "portion": "200kcal"
+  },
+  "dépenses": [
+    "20min de natation",
+    "1h de marche"
+  ],
+  "nutriScore": "c",
+  "nova": 2,
+  "avantages": "Riches en protéines. Présence de potassium et de magnésium qui réduisent les risques cardiovasculaires.",
+  "inconvénients": "Acides gras saturés, surtout si l'on mange la peau du poulet.",
+  "astuces": "Choisissez bien votre volaille (grâce aux labels) et privilégiez des légumes en accompagnement. De temps en temps, un poulet frites dominical est le bienvenu!",
+  "macronutriments": [
+    {
+      "nutriments": "Lipides",
+      "valeur": 9
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 30
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 61
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Déjeuner",
+  "titre": "Croque Monsieur",
+  "boisson": false,
+  "nutriSanté": 5,
+  "portions": {
+    "seniors": "1 Croque + 1/2",
+    "adultes": "1 Croque + 1/2",
+    "enfants": "1 Croque"
+  },
+  "énergie": {
+    "100g": "290cal",
+    "portion": "435kcal"
+  },
+  "dépenses": [
+    "40min de tennis",
+    "2h15 de marche"
+  ],
+  "nutriScore": "d",
+  "nova": 4,
+  "avantages": "Un classique assez équilibré qui constitue un bon repas rapide.",
+  "inconvénients": "Sa version classique (pain de mie, beurre, jambon, fromage) est assez riche, surtout sion y ajoute de la béchamel.",
+  "astuces": "Variez les pains de mie, testez les semi-complets ou les multi-céréales. A accompagner d'une salade et de fruits.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 25.5
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 15
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 14.5
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 45
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
     catégorie: "Déjeuner",
     titre: "Bowls Hawaï (Saumon, Avocat, Mangue, Riz)",
     boisson: false,
