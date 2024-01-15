@@ -109,7 +109,7 @@ export const KhayatItem = ({ fiche }: IKhayatItemProps) => {
           <div className="flex flex-col items-center gap-1">
             {fiche.dépenses.map((dépense, index) => (
               <div key={index}>
-                <p>{dépense}</p>
+                <p className="text-center">{dépense}</p>
                 {index + 1 !== fiche.dépenses.length && (
                   <p className="text-center text-xs">ou</p>
                 )}

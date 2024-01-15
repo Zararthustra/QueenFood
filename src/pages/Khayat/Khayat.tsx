@@ -1,4 +1,5 @@
-import { Collapse } from "antd";
+import { Collapse, Input } from "antd";
+import { useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 import { khayatList } from "@data/index";
@@ -7,7 +8,11 @@ import { labelShortener } from "@utils/formatters";
 import { IconCrown, IconCrownOutlined, IconDrink } from "@assets/index";
 
 export const Khayat = () => {
+  const { Search } = Input;
+  const searchRef = useRef<any>();
+  const [searchValue, setSearchValue] = useState<string>("");
   const isMobile = useMediaQuery({ query: "(max-width: 450px)" });
+  const categories = [...new Set(khayatList.map((fiche) => fiche.catégorie))];
   const nutriSantéColors = [
     "bg-[#df1c0d]",
     "bg-[#EF454A]",
@@ -26,13 +31,22 @@ export const Khayat = () => {
     "bg-[#8EB0DF]",
     "bg-[#5574AE]",
   ];
-  // Set categories
-  const categories = [...new Set(khayatList.map((fiche) => fiche.catégorie))];
 
   return (
     <>
       <main className="mb-[50px] flex flex-col items-center gap-10 px-2 dark:text-slate-100">
         <h1 className="my-5 text-center ">Fiches du Pr Khayat</h1>
+
+        <Search
+          id="search"
+          placeholder="Rechercher une fiche"
+          allowClear
+          onChange={(event) => setSearchValue(event.target.value)}
+          onSearch={() => searchRef.current.blur()}
+          className="my-5"
+          style={{ width: 240 }}
+          ref={searchRef}
+        />
 
         <div className="flex w-full max-w-[650px] flex-col flex-wrap justify-center gap-5">
           {/* List categories */}
@@ -44,7 +58,13 @@ export const Khayat = () => {
                 items={
                   // List fiches
                   khayatList
-                    .filter((item) => item.catégorie === categorie)
+                    .filter(
+                      (item) =>
+                        item.catégorie === categorie &&
+                        item.titre
+                          .toLowerCase()
+                          .includes(searchValue.toLowerCase()),
+                    )
                     .map((fiche, indexx) => ({
                       key: indexx + 1,
                       label: (
