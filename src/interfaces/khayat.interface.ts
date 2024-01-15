@@ -3,6 +3,7 @@ export type { IKhayat };
 interface IKhayat {
   catégorie: string;
   titre: string;
+  boisson: boolean;
   nutriSanté: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
   portions: {
     seniors: string;

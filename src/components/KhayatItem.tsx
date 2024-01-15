@@ -44,8 +44,8 @@ export const KhayatItem = ({ fiche }: IKhayatItemProps) => {
   };
 
   return (
-    <div className="h-fit max-w-[600px] rounded bg-slate-50 px-3 py-10 shadow dark:border-[1px] dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100">
-      <h1 className="text-center">{fiche.titre}</h1>
+    <div className="h-fit max-w-[600px] rounded bg-slate-50 pb-2 dark:bg-slate-900 dark:text-slate-100">
+      {/* <h1 className="text-center">{fiche.titre}</h1> */}
 
       <NutriSanteScore score={fiche.nutriSanté} />
 

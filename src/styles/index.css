@@ -202,3 +202,9 @@
 .ant-pagination .ant-pagination-item-active a {
   @apply dark:text-slate-800;
 }
+
+.ant-collapse-header-text,
+.ant-collapse-extra,
+.ant-collapse-expand-icon {
+  @apply dark:text-slate-100;
+}

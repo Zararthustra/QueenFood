@@ -3,7 +3,7 @@ interface INutriSanteScoreProps {
 }
 export const NutriSanteScore = ({ score }: INutriSanteScoreProps) => {
   return (
-    <div className="khayat-gradient my-10 rounded-xl p-[2px]">
+    <div className="khayat-gradient mb-5 rounded-xl p-[2px]">
       <div className="rounded-lg bg-white dark:bg-slate-800">
         <div className="flex items-center justify-evenly px-2 py-3">
           <p className="text-center text-base font-bold text-[#df1c0d] tsm:text-sm">

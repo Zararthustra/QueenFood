@@ -21,6 +21,12 @@ const App = () => {
           colorPrimary: "#17919A",
           borderRadius: 3,
         },
+        components: {
+          Collapse: {
+            headerPadding: 0,
+            contentPadding: 0,
+          },
+        },
       }}
     >
       <AntApp>

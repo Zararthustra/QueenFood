@@ -1,4 +1,4 @@
-import { HTMLAttributes } from 'react';
+import { HTMLAttributes } from "react";
 
 export type { IIcon };
 
@@ -11,5 +11,6 @@ interface IIcon extends HTMLAttributes<HTMLOrSVGElement> {
   strokeWidth?: number;
   noColor?: boolean;
   color?: string;
+  loader?: boolean;
   onClick?: () => void;
 }
