@@ -3,6 +3,50 @@ import { IKhayat } from "@interfaces/index";
 export const khayatList: IKhayat[] = [
   {
   "catégorie": "Petit dejeuner",
+  "titre": "Poudre \"Chocolatée\" Sucrée",
+  "boisson" : false,  
+  "nutriSanté": 1,
+  "portions": {
+    "seniors": "1 ou 2càc",
+    "adultes": "1 ou 2càc",
+    "enfants": "1 ou 2càc"
+  },
+  "énergie": {
+    "100g": "386kcal",
+    "portion": "1 càc = 40kcal"
+  },
+  "dépenses": [
+    "10min de volley",
+    "monter-descendre 5fois les escaliers sur 3 étages",
+    "10min de marche"
+  ],
+  "nutriScore": "e",
+  "nova": 4,
+  "avantages": "Bonne teneur en magnésium (ce qui a une action anti-stress et permet d'éviter les crampes.",
+  "inconvénients": "Très sucré (attention à la quantité). Produites industriel, ultra-transformé, calorique, pauvre en micronutriments.",
+  "astuces": "Attention, certaines marques calculent le Nutri-Score de leurs poudres avec un verre de lait! Avec cette baguette magique, il passe de E à B",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 79
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 3.6
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 12.3
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 5.1
+    }
+  ],
+  "micronutriments": "faible"
+},
+  {
+  "catégorie": "Petit dejeuner",
   "titre": "Poudre 100% Pur Cacao",
   "boisson" : false,
   "nutriSanté": 4,
