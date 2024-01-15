@@ -8,7 +8,6 @@ import { labelShortener } from "@utils/formatters";
 import { IconCrown, IconCrownOutlined, IconDrink } from "@assets/index";
 
 export const Khayat = () => {
-  const { Search } = Input;
   const searchRef = useRef<any>();
   const [searchValue, setSearchValue] = useState<string>("");
   const isMobile = useMediaQuery({ query: "(max-width: 450px)" });
@@ -34,17 +33,16 @@ export const Khayat = () => {
 
   return (
     <>
-      <main className="mb-[50px] flex flex-col items-center gap-10 px-2 dark:text-slate-100">
+      <main className="mb-[50px] flex flex-col items-center px-2 dark:text-slate-100">
         <h1 className="my-5 text-center ">Fiches du Pr Khayat</h1>
 
-        <Search
+        <Input
           id="search"
           placeholder="Rechercher une fiche"
           allowClear
           onChange={(event) => setSearchValue(event.target.value)}
-          onSearch={() => searchRef.current.blur()}
           className="my-5"
-          style={{ width: 240 }}
+          style={{ width: 220 }}
           ref={searchRef}
         />
 

@@ -9,6 +9,20 @@ import { IOFFBarcode, IOFFSearch } from "@interfaces/index";
 // Axios
 // =====
 
+export const retrieveCategories = async (): Promise<
+  {
+    id: string;
+    name: string;
+    products: number;
+  }[]
+> => {
+  const { data } = await axios.get(
+    `https://world.openfoodfacts.org/categories.json`,
+  );
+  if (!!data) return data.tags;
+  return data;
+};
+
 export const retrieveByBarCode = async (
   barcode?: number,
 ): Promise<IOFFBarcode> => {
@@ -41,6 +55,26 @@ export const search = async (
 // ==========
 // ReactQuery
 // ==========
+
+export const useQueryRetrieveCategories = () => {
+  const { notification } = App.useApp();
+
+  return useQuery(["openfoodfacts", "categories"], () => retrieveCategories(), {
+    // Stale 5min
+    staleTime: 60_000 * 5,
+    retry: false,
+    onError: (error: AxiosError) =>
+      notification.error(
+        toastObject(
+          "error",
+          "Impossible de récupérer les données",
+          `Une erreur est survenue : ${
+            error.response ? error.response.status : error.message
+          }`,
+        ),
+      ),
+  });
+};
 
 export const useQueryRetrieveFoodByBarcode = (barcode?: number) => {
   const { notification } = App.useApp();

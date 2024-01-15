@@ -12,6 +12,7 @@ export {
 } from "./template.query";
 
 export {
-  useQueryRetrieveFoodByBarcode,
   useQuerySearchFood,
+  useQueryRetrieveCategories,
+  useQueryRetrieveFoodByBarcode,
 } from "./openFoodFacts.query";

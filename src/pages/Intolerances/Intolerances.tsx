@@ -5,7 +5,6 @@ import { intolerances } from "@data/index";
 import { IconArrowRight } from "@assets/index";
 
 export const Intolerances = () => {
-  const { Search } = Input;
   const searchRef = useRef<any>();
   const [searchValue, setSearchValue] = useState<string>("");
 
@@ -28,14 +27,13 @@ export const Intolerances = () => {
     <>
       <main className="mb-[50px] flex flex-col items-center px-2">
         <h1 className="my-5 text-center dark:text-slate-100">Intolérances</h1>
-        <Search
+        <Input
           id="search"
           placeholder="Rechercher une intolérance"
           allowClear
           onChange={(event) => setSearchValue(event.target.value)}
-          onSearch={() => searchRef.current.blur()}
           className="my-5"
-          style={{ width: 240 }}
+          style={{ width: 220 }}
           ref={searchRef}
         />
 

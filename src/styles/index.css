@@ -127,6 +127,9 @@
   .bubble--info {
     @apply border-[1px] border-solid border-blue-200 bg-blue-50 text-slate-900;
   }
+  .bubble--error {
+    @apply border-[1px] border-solid border-red-200 bg-red-50 text-red-900;
+  }
 
   .tag {
     @apply h-fit rounded-full border-[1px] border-slate-500 bg-slate-200 px-2 text-xs/[18px] text-slate-500 dark:border-slate-200  dark:bg-slate-700 dark:text-slate-200;
