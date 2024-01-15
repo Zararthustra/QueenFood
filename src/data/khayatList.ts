@@ -3,6 +3,50 @@ import { IKhayat } from "@interfaces/index";
 export const khayatList: IKhayat[] = [
   {
   "catégorie": "Petit dejeuner",
+  "titre": "Poudre 100% Pur Cacao",
+  "boisson" : false,
+  "nutriSanté": 4,
+  "portions": {
+    "seniors": "1 ou 2càc",
+    "adultes": "1 ou 2càc",
+    "enfants": "1 ou 2càc"
+  },
+  "énergie": {
+    "100g": "387kcal",
+    "portion": "1 càc = 40kcal"
+  },
+  "dépenses": [
+    "4min de corde à sauter",
+    "15min de vélo",
+    "15min de marche"
+  ],
+  "nutriScore": "c",
+  "nova": 1,
+  "avantages": "Riche en magnésium, en anti-oxydants, en minéraux et vitamine E. Apport élevé en protéines.",
+  "inconvénients": "Riche en acides gras saturés. Produit à valeur énergétique élevée.",
+  "astuces": "Le réconfort d'un bon chocolat chaud d'hiver est indéniable! Par ailleurs, le goût prononcé de la poudre évite les surdosages ",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 11
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 21
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 48
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 20
+    }
+  ],
+  "micronutriments": "moyen  "
+},  
+  {
+  "catégorie": "Petit dejeuner",
   "titre": "Granola Fruits Rouges (Avoine Complète)",
   "boisson": false,  
   "nutriSanté": 6,
