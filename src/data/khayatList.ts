@@ -3,6 +3,49 @@ import { IKhayat } from "@interfaces/index";
 export const khayatList: IKhayat[] = [
   {
   "catégorie": "Déjeuner",
+  "titre": "Cheese-Burger",
+  "boisson": false,
+  "nutriSanté": 1,
+  "portions": {
+    "seniors": "1 Cheese",
+    "adultes": "1 Cheese",
+    "enfants": "1/2 Cheese"
+  },
+  "énergie": {
+    "100g": "250cal",
+    "portion": "300kcal"
+  },
+  "dépenses": [
+    "1h de roller",
+    "1h30 de marche"
+  ],
+  "nutriScore": "d",
+  "nova": 4,
+  "avantages": "Donne une sensation de satiété. Protéines de bonne qualité.",
+  "inconvénients": "Sauces trop sucrées. Présence d'additifs en grande quantité.",
+  "astuces": "Calorique, ultra-transformé, fort impact sur la planète : le cheeseburger concentre tous les défauts. Mais, suivant la qualité des ingrédients, il peut rester un plaisir occasionnel, surtout fait maison",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 26
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 10
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 13
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 51
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Déjeuner",
   "titre": "Wrap Poulet",
   "boisson": false,
   "nutriSanté": 5,
@@ -433,7 +476,7 @@ export const khayatList: IKhayat[] = [
     micronutriments: "moyen",
   },
   {
-    catégorie: "Petit dejeuner",
+    catégorie: "Petit déjeuner",
     titre: "Poudre 100% Pur Cacao",
     boisson: false,
     nutriSanté: 4,
