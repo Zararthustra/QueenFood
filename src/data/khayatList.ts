@@ -3,6 +3,112 @@ import { IKhayat } from "@interfaces/index";
 export const khayatList: IKhayat[] = [
   {
   "catégorie": "Petit déjeuner",
+  "titre": "Pur Jus de Citron",
+  "boisson": true,
+  "nutriSanté": 2,
+  "portions": {
+    "seniors": "150ml",
+    "adultes": "200ml",
+    "enfants": "125ml"
+  },
+  "énergie": {
+    "100g": "27kcal",
+    "portion": "54kcal"
+  },
+  "dépenses": [
+    "15min de vélo",
+    "15min de yoga",
+    "6min de tennis"
+  ],
+  "nutriScore": "b",
+  "nova": 1,
+  "avantages": "Source de vitamine C : antioxydant",
+  "inconvénients": "Perte en vitamines, minéraux et fibres présents dans le fruit",
+  "astuces": "Le jus de citron est le moins calorique de tous (avec celui de pamplemousse)",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 2.8
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 97.2
+    }
+  ],
+  "micronutriments": "élevé"
+},
+  {
+  "catégorie": "Petit déjeuner",
+  "titre": "Jus D'Orange Haute Pression A Froid",
+  "boisson": true,
+  "nutriSanté": 2,
+  "portions": {
+    "seniors": "150ml",
+    "adultes": "200ml",
+    "enfants": "125ml"
+  },
+  "énergie": {
+    "100g": "35kcal",
+    "portion": "106kcal"
+  },
+  "dépenses": [
+    "10min de natation",
+    "30min de marche"
+  ],
+  "nutriScore": "c",
+  "nova": 1,
+  "avantages": "Il conserve les vitamines et les minéraux grâce à la pression à froid ",
+  "inconvénients": "Source de sucre non négligeable ",
+  "astuces": "A privilégier pour les moments festifs. Cette technique de fabrication permet une meilleur densité nutritionnelle, mais ce jus reste riche en sucres ",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 10
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 90
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Petit déjeuner",
+  "titre": "Jus D'Orange A Base De Concentré",
+  "boisson": true,
+  "nutriSanté": 1,
+  "portions": {
+    "seniors": "150ml",
+    "adultes": "200ml",
+    "enfants": "125ml"
+  },
+  "énergie": {
+    "100g": "38kcal",
+    "portion": "76kcal"
+  },
+  "dépenses": [
+    "10min de badminton",
+    "20min de marche"
+  ],
+  "nutriScore": "c",
+  "nova": 2,
+  "avantages": "Présence de vitamine C. Sentiment de reprise d'énergie.",
+  "inconvénients": "Produit sucré (sucres simples uniquement). Faible teneur en micro-nutriments",
+  "astuces": "Attention, comme le jus perd les vitamines, les minéreaux et les fibres présents dans le fruit au mieux et en préserver l'essentiel!",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 9
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 91
+    }
+  ],
+  "micronutriments": "faible"
+},
+  {
+  "catégorie": "Petit déjeuner",
   "titre": "Pur Jus D'Orange Pressé",
   "boisson": true,
   "nutriSanté": 2,
