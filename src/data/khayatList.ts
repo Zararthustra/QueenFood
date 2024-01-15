@@ -53,7 +53,7 @@ export const khayatList: IKhayat[] = [
   "portions": {
     "seniors": "1 Pasta Box",
     "adultes": "1 Pasta Box",
-    "enfants": 0
+    "enfants": "0"
   },
   "énergie": {
     "100g": "149cal",
