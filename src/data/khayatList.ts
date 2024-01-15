@@ -2,6 +2,50 @@ import { IKhayat } from "@interfaces/index";
 
 export const khayatList: IKhayat[] = [
   {
+  "catégorie": "Petit dejeuner",
+  "titre": "Granola Fruits Rouges (Avoine Complète)",
+  "boisson": false,  
+  "nutriSanté": 6,
+  "portions": {
+    "seniors": "40g",
+    "adultes": "55g",
+    "enfants": "45g"
+  },
+  "énergie": {
+    "100g": "410kcal",
+    "portion": "225kcal"
+  },
+  "dépenses": [
+    "1h de yoga",
+    "1h de marche",
+    "1h de vélo"
+  ],
+  "nutriScore": "a",
+  "nova": 3,
+  "avantages": "Contient des acides gras essentiels, des oligo-éléments (calcium, magnésium, zinc) ainsi que des protéines végétales",
+  "inconvénients": "Attention à la quantité de sucre ",
+  "astuces": "Un produit qui n'est pas néfaste pour la santé mais reste très calorique malgré la présence de fruits rouges (410 calories pour 100g)! A alterner avec le muesli ",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 61
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 12
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 17
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 10
+    }
+  ],
+  "micronutriments": "moyen"
+},  
+{
     catégorie: "Petit déjeuner",
     titre: "Céréales Fourrées Au Chocolat",
     boisson: false,
