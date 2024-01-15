@@ -43,7 +43,7 @@ export const khayatList: IKhayat[] = [
       "valeur": 20
     }
   ],
-  "micronutriments": "moyen  "
+  "micronutriments": "moyen"
 },  
   {
   "catégorie": "Petit dejeuner",
