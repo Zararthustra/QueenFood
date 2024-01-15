@@ -55,3 +55,4 @@ export { IconThumbKO } from "./svg/IconThumbKO";
 export { IconIdea } from "./svg/IconIdea";
 export { IconCrown } from "./svg/IconCrown";
 export { IconCrownOutlined } from "./svg/IconCrownOutlined";
+export { IconDrink } from "./svg/IconDrink";

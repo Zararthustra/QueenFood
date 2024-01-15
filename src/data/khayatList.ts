@@ -2,704 +2,689 @@ import { IKhayat } from "@interfaces/index";
 
 export const khayatList: IKhayat[] = [
   {
-  "catégorie": "Déjeuner",
-  "titre": "Bowls Hawaï (Saumon, Avocat, Mangue, Riz)",
-  "boisson": false,
-  "nutriSanté": 4,
-  "portions": {
-    "seniors": "1 Bowl",
-    "adultes": "1 Bowl",
-    "enfants": "1/2 Bowl"
-  },
-  "énergie": {
-    "100g": "200cal",
-    "portion": "600kcal"
-  },
-  "dépenses": [
-    "1h30 de jogging",
-    "3h de marche"
-  ],
-  "nutriScore": "b",
-  "nova": 3,
-  "avantages": "Bon apport en fibres, en vitamines et en minéraux. Acides gras et protéines de bonne qualité. Aliments variés",
-  "inconvénients": "Attention aux composants, en particulier produits frits et/ou riches en graisse",
-  "astuces": "Malgré son image healthy et moderne, le poké bowls est un piège! Attention en particulier à certains ingrédients (avocat), très riches et à l'impact négatif sur la planète.",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 50
+    catégorie: "Déjeuner",
+    titre: "Bowls Hawaï (Saumon, Avocat, Mangue, Riz)",
+    boisson: false,
+    nutriSanté: 4,
+    portions: {
+      seniors: "1 Bowl",
+      adultes: "1 Bowl",
+      enfants: "1/2 Bowl",
     },
-    {
-      "nutriments": "Lipides",
-      "valeur": 15
+    énergie: {
+      "100g": "200cal",
+      portion: "600kcal",
     },
-    {
-      "nutriments": "Protéines",
-      "valeur": 12
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 23
-    }
-  ],
-  "micronutriments": "élevé"
-},
-  {
-  "catégorie": "Déjeuner",
-  "titre": "Salade Chèvre-Lardon",
-  "boisson": false,
-  "nutriSanté": 4,
-  "portions": {
-    "seniors": "300g",
-    "adultes": "300g",
-    "enfants": "200g"
-  },
-  "énergie": {
-    "100g": "200cal",
-    "portion": "600kcal"
-  },
-  "dépenses": [
-    "1h de natation",
-    "3h de ménage"
-  ],
-  "nutriScore": "b",
-  "nova": 4,
-  "avantages": "Apport en calcium, fibres, vitamines et minéraux",
-  "inconvénients": "Faible apport en protéines. Présence d'acides gras saturés (lardons, fromage).",
-  "astuces": "Une salade équilibrée mais qui peut se révéler très calorique! A consommer de manière modérée. Préférez la salade César, plus légère.",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 12
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 8
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 10
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 70
-    }
-  ],
-  "micronutriments": "moyen"
-},
-  {
-  "catégorie": "Déjeuner",
-  "titre": "Salade Parisienne",
-  "boisson": false,
-  "nutriSanté": 6,
-  "portions": {
-    "seniors": "300g",
-    "adultes": "300g",
-    "enfants": "200g"
-  },
-  "énergie": {
-    "100g": "130cal",
-    "portion": "390kcal"
-  },
-  "dépenses": [
-    "2h15 de ménage ",
-    "1h15 de basket-ball récréatif ",
-    "1h50 de marche "
-  ],
-  "nutriScore": "b",
-  "nova": 4,
-  "avantages": "Riche en fibres et en minéraux. Apport en protéines de bonne qualité.",
-  "inconvénients": "Ne fournit pas d'énergie au long terme (car il n'y a pas assez de glucides complexes). La sauce peut contenir des additifs.",
-  "astuces": "Excellente offre. Attention à la dose de sauce!",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 5
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 9
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 6
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 80
-    }
-  ],
-  "micronutriments": "élevé"
-},
-  {
-  "catégorie": "Déjeuner",
-  "titre": "Salade César",
-  "boisson": false,
-  "nutriSanté": 5,
-  "portions": {
-    "seniors": "300g",
-    "adultes": "300g",
-    "enfants": "200g"
-  },
-  "énergie": {
-    "100g": "150cal",
-    "portion": "450kcal"
-  },
-  "dépenses": [
-    "1h30 de golf",
-    "2h15 de marche"
-  ],
-  "nutriScore": "b",
-  "nova": 4,
-  "avantages": "Bon apport en fibres. Protéines de bonne qualité.",
-  "inconvénients": "Ne fournit pas d'énergie sur le long terme, car pas assez de gluides complexes. Additifs dans les salades industrielles (surtout dans la sauce).",
-  "astuces": "Salade bien équilibrée! Vigilance sur l'origine et la quantité de la sauce.",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 12
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 8
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 10
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 70
-    }
-  ],
-  "micronutriments": "moyen"
-},
-  {
-  "catégorie": "Déjeuner",
-  "titre": "Cheese-Burger",
-  "boisson": false,
-  "nutriSanté": 1,
-  "portions": {
-    "seniors": "1 Cheese",
-    "adultes": "1 Cheese",
-    "enfants": "1/2 Cheese"
-  },
-  "énergie": {
-    "100g": "250cal",
-    "portion": "300kcal"
-  },
-  "dépenses": [
-    "1h de roller",
-    "1h30 de marche"
-  ],
-  "nutriScore": "d",
-  "nova": 4,
-  "avantages": "Donne une sensation de satiété. Protéines de bonne qualité.",
-  "inconvénients": "Sauces trop sucrées. Présence d'additifs en grande quantité.",
-  "astuces": "Calorique, ultra-transformé, fort impact sur la planète : le cheeseburger concentre tous les défauts. Mais, suivant la qualité des ingrédients, il peut rester un plaisir occasionnel, surtout fait maison",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 26
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 10
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 13
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 51
-    }],
-    "micronutriments": "moyen"
+    dépenses: ["1h30 de jogging", "3h de marche"],
+    nutriScore: "b",
+    nova: 3,
+    avantages:
+      "Bon apport en fibres, en vitamines et en minéraux. Acides gras et protéines de bonne qualité. Aliments variés",
+    inconvénients:
+      "Attention aux composants, en particulier produits frits et/ou riches en graisse",
+    astuces:
+      "Malgré son image healthy et moderne, le poké bowls est un piège! Attention en particulier à certains ingrédients (avocat), très riches et à l'impact négatif sur la planète.",
+    macronutriments: [
+      {
+        nutriments: "Glucides",
+        valeur: 50,
+      },
+      {
+        nutriments: "Lipides",
+        valeur: 15,
+      },
+      {
+        nutriments: "Protéines",
+        valeur: 12,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 23,
+      },
+    ],
+    micronutriments: "élevé",
   },
   {
-  "catégorie": "Déjeuner",
-  "titre": "Kebab",
-  "boisson": false,
-  "nutriSanté": 2,
-  "portions": {
-    "seniors": "1 Kebab",
-    "adultes": "1 Kebab",
-    "enfants": "1/3 Kebab"
+    catégorie: "Déjeuner",
+    titre: "Salade Chèvre-Lardon",
+    boisson: false,
+    nutriSanté: 4,
+    portions: {
+      seniors: "300g",
+      adultes: "300g",
+      enfants: "200g",
+    },
+    énergie: {
+      "100g": "200cal",
+      portion: "600kcal",
+    },
+    dépenses: ["1h de natation", "3h de ménage"],
+    nutriScore: "b",
+    nova: 4,
+    avantages: "Apport en calcium, fibres, vitamines et minéraux",
+    inconvénients:
+      "Faible apport en protéines. Présence d'acides gras saturés (lardons, fromage).",
+    astuces:
+      "Une salade équilibrée mais qui peut se révéler très calorique! A consommer de manière modérée. Préférez la salade César, plus légère.",
+    macronutriments: [
+      {
+        nutriments: "Glucides",
+        valeur: 12,
+      },
+      {
+        nutriments: "Lipides",
+        valeur: 8,
+      },
+      {
+        nutriments: "Protéines",
+        valeur: 10,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 70,
+      },
+    ],
+    micronutriments: "moyen",
   },
-  "énergie": {
-    "100g": "400cal",
-    "portion": "800kcal"
-  },
-  "dépenses": [
-    "2h de basket",
-    "1h10 d'escalade",
-    "4h de marche rapide"
-  ],
-  "nutriScore": "d",
-  "nova": 4,
-  "avantages": "Nourrissant. Protéines de bonne qualité. Produit plaisir.",
-  "inconvénients": "Taille des portions de pain, de viande et de sauce trop importantes. Sauces trop sucrées, comportant beaucoup d'additifs et d'acides gras saturés",
-  "astuces": "Bon avec des ingrédients de qualité! Reste un produit riche et ultra-transformé, à ne consommer qu'à de rares occasions.",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 25
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 30
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 20
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 25
-    }
-  ],
-  "micronutriments": "moyen"
-},
   {
-  "catégorie": "Déjeuner",
-  "titre": "Pasta Box Jambon Et Parmesan",
-  "boisson": false,
-  "nutriSanté": 5,
-  "portions": {
-    "seniors": "1 Pasta Box",
-    "adultes": "1 Pasta Box",
-    "enfants": "0"
+    catégorie: "Déjeuner",
+    titre: "Salade Parisienne",
+    boisson: false,
+    nutriSanté: 6,
+    portions: {
+      seniors: "300g",
+      adultes: "300g",
+      enfants: "200g",
+    },
+    énergie: {
+      "100g": "130cal",
+      portion: "390kcal",
+    },
+    dépenses: [
+      "2h15 de ménage ",
+      "1h15 de basket-ball récréatif ",
+      "1h50 de marche ",
+    ],
+    nutriScore: "b",
+    nova: 4,
+    avantages:
+      "Riche en fibres et en minéraux. Apport en protéines de bonne qualité.",
+    inconvénients:
+      "Ne fournit pas d'énergie au long terme (car il n'y a pas assez de glucides complexes). La sauce peut contenir des additifs.",
+    astuces: "Excellente offre. Attention à la dose de sauce!",
+    macronutriments: [
+      {
+        nutriments: "Glucides",
+        valeur: 5,
+      },
+      {
+        nutriments: "Lipides",
+        valeur: 9,
+      },
+      {
+        nutriments: "Protéines",
+        valeur: 6,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 80,
+      },
+    ],
+    micronutriments: "élevé",
   },
-  "énergie": {
-    "100g": "149cal",
-    "portion": "417kcal"
-  },
-  "dépenses": [
-    "40min de tennis",
-    "2h de marche rapide"
-  ],
-  "nutriScore": "b",
-  "nova": 4,
-  "avantages": "Rassasiant. Variété des recettes.",
-  "inconvénients": "Présence d'additifs et de matières grasses ajoutées. Pauvre en vitamines et en minéraux",
-  "astuces": "Attention aux portions de 300g rassasiantes mais potentiellement caloriques (vérifier sur l'emballage)! Elles doivent rester un plat de dépannage!",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 16
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 6
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 8
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 70
-    }
-  ],
-  "micronutriments": "moyen"
-},
   {
-  "catégorie": "Déjeuner",
-  "titre": "Wrap Poulet",
-  "boisson": false,
-  "nutriSanté": 5,
-  "portions": {
-    "seniors": "1 Wrap",
-    "adultes": "1 Wrap",
-    "enfants": "1/2 Wrap"
+    catégorie: "Déjeuner",
+    titre: "Salade César",
+    boisson: false,
+    nutriSanté: 5,
+    portions: {
+      seniors: "300g",
+      adultes: "300g",
+      enfants: "200g",
+    },
+    énergie: {
+      "100g": "150cal",
+      portion: "450kcal",
+    },
+    dépenses: ["1h30 de golf", "2h15 de marche"],
+    nutriScore: "b",
+    nova: 4,
+    avantages: "Bon apport en fibres. Protéines de bonne qualité.",
+    inconvénients:
+      "Ne fournit pas d'énergie sur le long terme, car pas assez de gluides complexes. Additifs dans les salades industrielles (surtout dans la sauce).",
+    astuces:
+      "Salade bien équilibrée! Vigilance sur l'origine et la quantité de la sauce.",
+    macronutriments: [
+      {
+        nutriments: "Glucides",
+        valeur: 12,
+      },
+      {
+        nutriments: "Lipides",
+        valeur: 8,
+      },
+      {
+        nutriments: "Protéines",
+        valeur: 10,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 70,
+      },
+    ],
+    micronutriments: "moyen",
   },
-  "énergie": {
-    "100g": "200cal",
-    "portion": "500kcal"
-  },
-  "dépenses": [
-    "1h de squash",
-    "2h30 de marche"
-  ],
-  "nutriScore": "b",
-  "nova": 4,
-  "avantages": "Protéines de bonne qualité. Apport en fibres et en vitamines.",
-  "inconvénients": "Présence d'additifs dans les sauces et les galettes de blé industrielles.",
-  "astuces": "Malgré l'image healthy et le Nutri-Score B du wrap, celui-ci est très ultra-transformé et ses portions sont caloriques (environ 500 calories par portion!). Attention au poids de votre wrap! Je vous suggère de le réaliser vous-même",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 26
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 10
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 13
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 51
-    }
-  ],
-  "micronutriments": "moyen"
-},
   {
-  "catégorie": "Déjeuner",
-  "titre": "Panini Boeuf-Fromage",
-  "boisson": false,
-  "nutriSanté": 4,
-  "portions": {
-    "seniors": "1 Sandwich",
-    "adultes": "1 Sandwich",
-    "enfants": "1/2 Sandwich"
+    catégorie: "Déjeuner",
+    titre: "Cheese-Burger",
+    boisson: false,
+    nutriSanté: 1,
+    portions: {
+      seniors: "1 Cheese",
+      adultes: "1 Cheese",
+      enfants: "1/2 Cheese",
+    },
+    énergie: {
+      "100g": "250cal",
+      portion: "300kcal",
+    },
+    dépenses: ["1h de roller", "1h30 de marche"],
+    nutriScore: "d",
+    nova: 4,
+    avantages: "Donne une sensation de satiété. Protéines de bonne qualité.",
+    inconvénients:
+      "Sauces trop sucrées. Présence d'additifs en grande quantité.",
+    astuces:
+      "Calorique, ultra-transformé, fort impact sur la planète : le cheeseburger concentre tous les défauts. Mais, suivant la qualité des ingrédients, il peut rester un plaisir occasionnel, surtout fait maison",
+    macronutriments: [
+      {
+        nutriments: "Glucides",
+        valeur: 26,
+      },
+      {
+        nutriments: "Lipides",
+        valeur: 10,
+      },
+      {
+        nutriments: "Protéines",
+        valeur: 13,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 51,
+      },
+    ],
+    micronutriments: "moyen",
   },
-  "énergie": {
-    "100g": "260kcal",
-    "portion": "520kcal"
-  },
-  "dépenses": [
-    "50min de tennis",
-    "2h30 de marche"
-  ],
-  "nutriScore": "d",
-  "nova": 3,
-  "avantages": "Apport en calcium et en protéines.",
-  "inconvénients": "Plus d'acides gras saturés que dans le panini jambon-cheddar. Absence de fibres et de vitamines.",
-  "astuces": "En raison de l'apport calorique élevé et de son impact environnemental, nous ne recommandons pas ce panini. A associer à de la salade et/ou des fruits.",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 23
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 18
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 19
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 40
-    }
-  ],
-  "micronutriments": "moyen"
-},
   {
-  "catégorie": "Déjeuner",
-  "titre": "Panini Jambon-Cheddar",
-  "boisson": false,
-  "nutriSanté": 5,
-  "portions": {
-    "seniors": "1 Sandwich",
-    "adultes": "1 Sandwich",
-    "enfants": "1/2 Sandwich"
+    catégorie: "Déjeuner",
+    titre: "Kebab",
+    boisson: false,
+    nutriSanté: 2,
+    portions: {
+      seniors: "1 Kebab",
+      adultes: "1 Kebab",
+      enfants: "1/3 Kebab",
+    },
+    énergie: {
+      "100g": "400cal",
+      portion: "800kcal",
+    },
+    dépenses: ["2h de basket", "1h10 d'escalade", "4h de marche rapide"],
+    nutriScore: "d",
+    nova: 4,
+    avantages: "Nourrissant. Protéines de bonne qualité. Produit plaisir.",
+    inconvénients:
+      "Taille des portions de pain, de viande et de sauce trop importantes. Sauces trop sucrées, comportant beaucoup d'additifs et d'acides gras saturés",
+    astuces:
+      "Bon avec des ingrédients de qualité! Reste un produit riche et ultra-transformé, à ne consommer qu'à de rares occasions.",
+    macronutriments: [
+      {
+        nutriments: "Glucides",
+        valeur: 25,
+      },
+      {
+        nutriments: "Lipides",
+        valeur: 30,
+      },
+      {
+        nutriments: "Protéines",
+        valeur: 20,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 25,
+      },
+    ],
+    micronutriments: "moyen",
   },
-  "énergie": {
-    "100g": "243kcal",
-    "portion": "466kcal"
-  },
-  "dépenses": [
-    "1h de badminton",
-    "2h15 de marche"
-  ],
-  "nutriScore": "d",
-  "nova": 4,
-  "avantages": "Rasassiant. Apport en protéines de bonne qualité et en calcium.",
-  "inconvénients": "Présence élevée d'acides gras saturés. Pas d'apport en fibres et en vitamines",
-  "astuces": "Attention, souvent proposé en portion de 200g! A associer sans modération à de la salade ou des fruits!",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 30
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 9
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 11
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 50
-    }
-  ],
-  "micronutriments": "moyen"
-},
   {
-  "catégorie": "Déjeuner",
-  "titre": "Sandwich Jambon-Fromage",
-  "boisson": false,
-  "nutriSanté": 4,
-  "portions": {
-    "seniors": "1 Sandwich",
-    "adultes": "1 Sandwich",
-    "enfants": "1/2 Sandwich"
+    catégorie: "Déjeuner",
+    titre: "Pasta Box Jambon Et Parmesan",
+    boisson: false,
+    nutriSanté: 5,
+    portions: {
+      seniors: "1 Pasta Box",
+      adultes: "1 Pasta Box",
+      enfants: "0",
+    },
+    énergie: {
+      "100g": "149cal",
+      portion: "417kcal",
+    },
+    dépenses: ["40min de tennis", "2h de marche rapide"],
+    nutriScore: "b",
+    nova: 4,
+    avantages: "Rassasiant. Variété des recettes.",
+    inconvénients:
+      "Présence d'additifs et de matières grasses ajoutées. Pauvre en vitamines et en minéraux",
+    astuces:
+      "Attention aux portions de 300g rassasiantes mais potentiellement caloriques (vérifier sur l'emballage)! Elles doivent rester un plat de dépannage!",
+    macronutriments: [
+      {
+        nutriments: "Glucides",
+        valeur: 16,
+      },
+      {
+        nutriments: "Lipides",
+        valeur: 6,
+      },
+      {
+        nutriments: "Protéines",
+        valeur: 8,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 70,
+      },
+    ],
+    micronutriments: "moyen",
   },
-  "énergie": {
-    "100g": "309kcal",
-    "portion": "610kcal"
-  },
-  "dépenses": [
-    "1h de natation",
-    "3h de marche"
-  ],
-  "nutriScore": "c",
-  "nova": 4,
-  "avantages": "Apport en calcium et en protéines de bonne qualité.",
-  "inconvénients": "Pas d'apport en légumes, donc peu de fibres.",
-  "astuces": "Pour accompagner, votre tanche de jambonn, choisissez plutôt de l'emmental ou du camembert. Pensez à varier la garniture de vos sandwichs.",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 30
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 14
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 14
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 42
-    }
-  ],
-  "micronutriments": "moyen"
-},
   {
-  "catégorie": "Déjeuner",
-  "titre": "Sandwich Jambon-Beurre",
-  "boisson": false,
-  "nutriSanté": 4,
-  "portions": {
-    "seniors": "1 Sandwich",
-    "adultes": "1 Sandwich",
-    "enfants": "1/2 Sandwich"
+    catégorie: "Déjeuner",
+    titre: "Wrap Poulet",
+    boisson: false,
+    nutriSanté: 5,
+    portions: {
+      seniors: "1 Wrap",
+      adultes: "1 Wrap",
+      enfants: "1/2 Wrap",
+    },
+    énergie: {
+      "100g": "200cal",
+      portion: "500kcal",
+    },
+    dépenses: ["1h de squash", "2h30 de marche"],
+    nutriScore: "b",
+    nova: 4,
+    avantages: "Protéines de bonne qualité. Apport en fibres et en vitamines.",
+    inconvénients:
+      "Présence d'additifs dans les sauces et les galettes de blé industrielles.",
+    astuces:
+      "Malgré l'image healthy et le Nutri-Score B du wrap, celui-ci est très ultra-transformé et ses portions sont caloriques (environ 500 calories par portion!). Attention au poids de votre wrap! Je vous suggère de le réaliser vous-même",
+    macronutriments: [
+      {
+        nutriments: "Glucides",
+        valeur: 26,
+      },
+      {
+        nutriments: "Lipides",
+        valeur: 10,
+      },
+      {
+        nutriments: "Protéines",
+        valeur: 13,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 51,
+      },
+    ],
+    micronutriments: "moyen",
   },
-  "énergie": {
-    "100g": "280kcal",
-    "portion": "560kcal"
-  },
-  "dépenses": [
-    "1h de tennis",
-    "50min de judo",
-    "2h40 de marche"
-  ],
-  "nutriScore": "b",
-  "nova": 4,
-  "avantages": "Bon apport en protéines de bonne qualité. Fournit de l'énergie sur le long terme",
-  "inconvénients": "Risque de consommation excessive de pain. Absence de légumes et de fruits",
-  "astuces": "Il ne doit pas devenir votre menu quotidien. Il est souvent avalé trop vite. Méfiez-vous de la quantité de beurre et de la taille du morceau de pain",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 35
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 10
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 12
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 43
-    }
-  ],
-  "micronutriments": "moyen"
-},
   {
-  "catégorie": "Petit déjeuner",
-  "titre": "Pur Jus de Pamplemousse",
-  "boisson": true,
-  "nutriSanté": 2,
-  "portions": {
-    "seniors": "150ml",
-    "adultes": "200ml",
-    "enfants": "125ml"
-  },
-  "énergie": {
-    "100g": "35kcal",
-    "portion": "70kcal"
-  },
-  "dépenses": [
-    "25min de ménage ",
-    "10min de jogging",
-    "20min de marche "
-  ],
-  "nutriScore": "b",
-  "nova": 1,
-  "avantages": "Source de vitamine C. Propriétés diurétiques",
-  "inconvénients": "Perte en vitamines, minéraux et fibres présents dans le fruit",
-  "astuces": "Comme le jus de citron, l'un des moins caloriques ",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 8
+    catégorie: "Déjeuner",
+    titre: "Panini Boeuf-Fromage",
+    boisson: false,
+    nutriSanté: 4,
+    portions: {
+      seniors: "1 Sandwich",
+      adultes: "1 Sandwich",
+      enfants: "1/2 Sandwich",
     },
-    {
-      "nutriments": "Autres",
-      "valeur": 92
-    }
-  ],
-  "micronutriments": "élevé"
-},
+    énergie: {
+      "100g": "260kcal",
+      portion: "520kcal",
+    },
+    dépenses: ["50min de tennis", "2h30 de marche"],
+    nutriScore: "d",
+    nova: 3,
+    avantages: "Apport en calcium et en protéines.",
+    inconvénients:
+      "Plus d'acides gras saturés que dans le panini jambon-cheddar. Absence de fibres et de vitamines.",
+    astuces:
+      "En raison de l'apport calorique élevé et de son impact environnemental, nous ne recommandons pas ce panini. A associer à de la salade et/ou des fruits.",
+    macronutriments: [
+      {
+        nutriments: "Glucides",
+        valeur: 23,
+      },
+      {
+        nutriments: "Lipides",
+        valeur: 18,
+      },
+      {
+        nutriments: "Protéines",
+        valeur: 19,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 40,
+      },
+    ],
+    micronutriments: "moyen",
+  },
   {
-  "catégorie": "Petit déjeuner",
-  "titre": "Pur Jus de Citron",
-  "boisson": true,
-  "nutriSanté": 2,
-  "portions": {
-    "seniors": "150ml",
-    "adultes": "200ml",
-    "enfants": "125ml"
-  },
-  "énergie": {
-    "100g": "27kcal",
-    "portion": "54kcal"
-  },
-  "dépenses": [
-    "15min de vélo",
-    "15min de yoga",
-    "6min de tennis"
-  ],
-  "nutriScore": "b",
-  "nova": 1,
-  "avantages": "Source de vitamine C : antioxydant",
-  "inconvénients": "Perte en vitamines, minéraux et fibres présents dans le fruit",
-  "astuces": "Le jus de citron est le moins calorique de tous (avec celui de pamplemousse)",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 2.8
+    catégorie: "Déjeuner",
+    titre: "Panini Jambon-Cheddar",
+    boisson: false,
+    nutriSanté: 5,
+    portions: {
+      seniors: "1 Sandwich",
+      adultes: "1 Sandwich",
+      enfants: "1/2 Sandwich",
     },
-    {
-      "nutriments": "Autres",
-      "valeur": 97.2
-    }
-  ],
-  "micronutriments": "élevé"
-},
+    énergie: {
+      "100g": "243kcal",
+      portion: "466kcal",
+    },
+    dépenses: ["1h de badminton", "2h15 de marche"],
+    nutriScore: "d",
+    nova: 4,
+    avantages:
+      "Rasassiant. Apport en protéines de bonne qualité et en calcium.",
+    inconvénients:
+      "Présence élevée d'acides gras saturés. Pas d'apport en fibres et en vitamines",
+    astuces:
+      "Attention, souvent proposé en portion de 200g! A associer sans modération à de la salade ou des fruits!",
+    macronutriments: [
+      {
+        nutriments: "Glucides",
+        valeur: 30,
+      },
+      {
+        nutriments: "Lipides",
+        valeur: 9,
+      },
+      {
+        nutriments: "Protéines",
+        valeur: 11,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 50,
+      },
+    ],
+    micronutriments: "moyen",
+  },
   {
-  "catégorie": "Petit déjeuner",
-  "titre": "Jus D'Orange Haute Pression A Froid",
-  "boisson": true,
-  "nutriSanté": 2,
-  "portions": {
-    "seniors": "150ml",
-    "adultes": "200ml",
-    "enfants": "125ml"
-  },
-  "énergie": {
-    "100g": "35kcal",
-    "portion": "106kcal"
-  },
-  "dépenses": [
-    "10min de natation",
-    "30min de marche"
-  ],
-  "nutriScore": "c",
-  "nova": 1,
-  "avantages": "Il conserve les vitamines et les minéraux grâce à la pression à froid ",
-  "inconvénients": "Source de sucre non négligeable ",
-  "astuces": "A privilégier pour les moments festifs. Cette technique de fabrication permet une meilleur densité nutritionnelle, mais ce jus reste riche en sucres ",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 10
+    catégorie: "Déjeuner",
+    titre: "Sandwich Jambon-Fromage",
+    boisson: false,
+    nutriSanté: 4,
+    portions: {
+      seniors: "1 Sandwich",
+      adultes: "1 Sandwich",
+      enfants: "1/2 Sandwich",
     },
-    {
-      "nutriments": "Autres",
-      "valeur": 90
-    }
-  ],
-  "micronutriments": "moyen"
-},
+    énergie: {
+      "100g": "309kcal",
+      portion: "610kcal",
+    },
+    dépenses: ["1h de natation", "3h de marche"],
+    nutriScore: "c",
+    nova: 4,
+    avantages: "Apport en calcium et en protéines de bonne qualité.",
+    inconvénients: "Pas d'apport en légumes, donc peu de fibres.",
+    astuces:
+      "Pour accompagner, votre tanche de jambonn, choisissez plutôt de l'emmental ou du camembert. Pensez à varier la garniture de vos sandwichs.",
+    macronutriments: [
+      {
+        nutriments: "Glucides",
+        valeur: 30,
+      },
+      {
+        nutriments: "Lipides",
+        valeur: 14,
+      },
+      {
+        nutriments: "Protéines",
+        valeur: 14,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 42,
+      },
+    ],
+    micronutriments: "moyen",
+  },
   {
-  "catégorie": "Petit déjeuner",
-  "titre": "Jus D'Orange A Base De Concentré",
-  "boisson": true,
-  "nutriSanté": 1,
-  "portions": {
-    "seniors": "150ml",
-    "adultes": "200ml",
-    "enfants": "125ml"
-  },
-  "énergie": {
-    "100g": "38kcal",
-    "portion": "76kcal"
-  },
-  "dépenses": [
-    "10min de badminton",
-    "20min de marche"
-  ],
-  "nutriScore": "c",
-  "nova": 2,
-  "avantages": "Présence de vitamine C. Sentiment de reprise d'énergie.",
-  "inconvénients": "Produit sucré (sucres simples uniquement). Faible teneur en micro-nutriments",
-  "astuces": "Attention, comme le jus perd les vitamines, les minéreaux et les fibres présents dans le fruit au mieux et en préserver l'essentiel!",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 9
+    catégorie: "Déjeuner",
+    titre: "Sandwich Jambon-Beurre",
+    boisson: false,
+    nutriSanté: 4,
+    portions: {
+      seniors: "1 Sandwich",
+      adultes: "1 Sandwich",
+      enfants: "1/2 Sandwich",
     },
-    {
-      "nutriments": "Autres",
-      "valeur": 91
-    }
-  ],
-  "micronutriments": "faible"
-},
+    énergie: {
+      "100g": "280kcal",
+      portion: "560kcal",
+    },
+    dépenses: ["1h de tennis", "50min de judo", "2h40 de marche"],
+    nutriScore: "b",
+    nova: 4,
+    avantages:
+      "Bon apport en protéines de bonne qualité. Fournit de l'énergie sur le long terme",
+    inconvénients:
+      "Risque de consommation excessive de pain. Absence de légumes et de fruits",
+    astuces:
+      "Il ne doit pas devenir votre menu quotidien. Il est souvent avalé trop vite. Méfiez-vous de la quantité de beurre et de la taille du morceau de pain",
+    macronutriments: [
+      {
+        nutriments: "Glucides",
+        valeur: 35,
+      },
+      {
+        nutriments: "Lipides",
+        valeur: 10,
+      },
+      {
+        nutriments: "Protéines",
+        valeur: 12,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 43,
+      },
+    ],
+    micronutriments: "moyen",
+  },
   {
-  "catégorie": "Petit déjeuner",
-  "titre": "Pur Jus D'Orange Pressé",
-  "boisson": true,
-  "nutriSanté": 2,
-  "portions": {
-    "seniors": "200ml",
-    "adultes": "200ml",
-    "enfants": "150ml"
-  },
-  "énergie": {
-    "100g": "42kcal",
-    "portion": "80kcal"
-  },
-  "dépenses": [
-    "10min de natation",
-    "25min de marche"
-  ],
-  "nutriScore": "c",
-  "nova": 1,
-  "avantages": "Stimule l'appétit (positif pour les personnes en risque de dénutrition)",
-  "inconvénients": "Nutritionnellement pauvre comparé aux fruits entiers (la conservation et la pasteurisation détruisent la plupart des vitamines)",
-  "astuces": "Qu'il soit fait maison ou industriel, son ordonnance alimentaire reste la même. Toutes les calories apportées par les boissons sucrées sont mal intégrées par notre organisme. Pas de sentiment de satiété",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 10
+    catégorie: "Petit déjeuner",
+    titre: "Pur Jus de Pamplemousse",
+    boisson: true,
+    nutriSanté: 2,
+    portions: {
+      seniors: "150ml",
+      adultes: "200ml",
+      enfants: "125ml",
     },
-    {
-      "nutriments": "Protéines",
-      "valeur": 0.6
+    énergie: {
+      "100g": "35kcal",
+      portion: "70kcal",
     },
-    {
-      "nutriments": "Autres",
-      "valeur": 89.4
-    }
-  ],
-  "micronutriments": "élevé"
-},
+    dépenses: ["25min de ménage ", "10min de jogging", "20min de marche "],
+    nutriScore: "b",
+    nova: 1,
+    avantages: "Source de vitamine C. Propriétés diurétiques",
+    inconvénients:
+      "Perte en vitamines, minéraux et fibres présents dans le fruit",
+    astuces: "Comme le jus de citron, l'un des moins caloriques ",
+    macronutriments: [
+      {
+        nutriments: "Glucides",
+        valeur: 8,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 92,
+      },
+    ],
+    micronutriments: "élevé",
+  },
+  {
+    catégorie: "Petit déjeuner",
+    titre: "Pur Jus de Citron",
+    boisson: true,
+    nutriSanté: 2,
+    portions: {
+      seniors: "150ml",
+      adultes: "200ml",
+      enfants: "125ml",
+    },
+    énergie: {
+      "100g": "27kcal",
+      portion: "54kcal",
+    },
+    dépenses: ["15min de vélo", "15min de yoga", "6min de tennis"],
+    nutriScore: "b",
+    nova: 1,
+    avantages: "Source de vitamine C : antioxydant",
+    inconvénients:
+      "Perte en vitamines, minéraux et fibres présents dans le fruit",
+    astuces:
+      "Le jus de citron est le moins calorique de tous (avec celui de pamplemousse)",
+    macronutriments: [
+      {
+        nutriments: "Glucides",
+        valeur: 2.8,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 97.2,
+      },
+    ],
+    micronutriments: "élevé",
+  },
+  {
+    catégorie: "Petit déjeuner",
+    titre: "Jus D'Orange Haute Pression A Froid",
+    boisson: true,
+    nutriSanté: 2,
+    portions: {
+      seniors: "150ml",
+      adultes: "200ml",
+      enfants: "125ml",
+    },
+    énergie: {
+      "100g": "35kcal",
+      portion: "106kcal",
+    },
+    dépenses: ["10min de natation", "30min de marche"],
+    nutriScore: "c",
+    nova: 1,
+    avantages:
+      "Il conserve les vitamines et les minéraux grâce à la pression à froid ",
+    inconvénients: "Source de sucre non négligeable ",
+    astuces:
+      "A privilégier pour les moments festifs. Cette technique de fabrication permet une meilleur densité nutritionnelle, mais ce jus reste riche en sucres ",
+    macronutriments: [
+      {
+        nutriments: "Glucides",
+        valeur: 10,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 90,
+      },
+    ],
+    micronutriments: "moyen",
+  },
+  {
+    catégorie: "Petit déjeuner",
+    titre: "Jus D'Orange A Base De Concentré",
+    boisson: true,
+    nutriSanté: 1,
+    portions: {
+      seniors: "150ml",
+      adultes: "200ml",
+      enfants: "125ml",
+    },
+    énergie: {
+      "100g": "38kcal",
+      portion: "76kcal",
+    },
+    dépenses: ["10min de badminton", "20min de marche"],
+    nutriScore: "c",
+    nova: 2,
+    avantages: "Présence de vitamine C. Sentiment de reprise d'énergie.",
+    inconvénients:
+      "Produit sucré (sucres simples uniquement). Faible teneur en micro-nutriments",
+    astuces:
+      "Attention, comme le jus perd les vitamines, les minéreaux et les fibres présents dans le fruit au mieux et en préserver l'essentiel!",
+    macronutriments: [
+      {
+        nutriments: "Glucides",
+        valeur: 9,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 91,
+      },
+    ],
+    micronutriments: "faible",
+  },
+  {
+    catégorie: "Petit déjeuner",
+    titre: "Pur Jus D'Orange Pressé",
+    boisson: true,
+    nutriSanté: 2,
+    portions: {
+      seniors: "200ml",
+      adultes: "200ml",
+      enfants: "150ml",
+    },
+    énergie: {
+      "100g": "42kcal",
+      portion: "80kcal",
+    },
+    dépenses: ["10min de natation", "25min de marche"],
+    nutriScore: "c",
+    nova: 1,
+    avantages:
+      "Stimule l'appétit (positif pour les personnes en risque de dénutrition)",
+    inconvénients:
+      "Nutritionnellement pauvre comparé aux fruits entiers (la conservation et la pasteurisation détruisent la plupart des vitamines)",
+    astuces:
+      "Qu'il soit fait maison ou industriel, son ordonnance alimentaire reste la même. Toutes les calories apportées par les boissons sucrées sont mal intégrées par notre organisme. Pas de sentiment de satiété",
+    macronutriments: [
+      {
+        nutriments: "Glucides",
+        valeur: 10,
+      },
+      {
+        nutriments: "Protéines",
+        valeur: 0.6,
+      },
+      {
+        nutriments: "Autres",
+        valeur: 89.4,
+      },
+    ],
+    micronutriments: "élevé",
+  },
   {
     catégorie: "Petit déjeuner",
     titre: "Nectar D'Abricot",

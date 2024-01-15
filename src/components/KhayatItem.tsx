@@ -47,7 +47,7 @@ export const KhayatItem = ({ fiche }: IKhayatItemProps) => {
     <div className="h-fit max-w-[600px] rounded bg-slate-50 pb-2 dark:bg-slate-900 dark:text-slate-100">
       {/* <h1 className="text-center">{fiche.titre}</h1> */}
 
-      <NutriSanteScore score={fiche.nutriSanté} />
+      <NutriSanteScore score={fiche.nutriSanté} isDrink={fiche.boisson} />
 
       <div className="my-4 flex justify-center gap-4 tsm:flex-wrap">
         {/* Portions */}

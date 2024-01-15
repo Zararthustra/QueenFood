@@ -4,7 +4,7 @@ import { useMediaQuery } from "react-responsive";
 import { khayatList } from "@data/index";
 import { KhayatItem } from "@components/index";
 import { labelShortener } from "@utils/formatters";
-import { IconCrown, IconCrownOutlined } from "@assets/index";
+import { IconCrown, IconCrownOutlined, IconDrink } from "@assets/index";
 
 export const Khayat = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 450px)" });
@@ -19,6 +19,12 @@ export const Khayat = () => {
     "bg-[#7BA6DB]",
     "bg-[#5F8AC5]",
     "bg-[#352B64]",
+  ];
+  const nutriSantéDrinkColors = [
+    "bg-[#F0484F]",
+    "bg-[#D18AA3]",
+    "bg-[#8EB0DF]",
+    "bg-[#5574AE]",
   ];
   // Set categories
   const categories = [...new Set(khayatList.map((fiche) => fiche.catégorie))];
@@ -54,14 +60,21 @@ export const Khayat = () => {
                         </div>
                       ),
                       extra: (
-                        <p
-                          className={
-                            "mb-[3px] rounded-full border-2 border-white px-[3px] py-[5px] text-xs font-bold text-white " +
-                            nutriSantéColors[fiche.nutriSanté - 1]
-                          }
-                        >
-                          {fiche.nutriSanté}
-                        </p>
+                        <div className="mb-[3px] flex items-center gap-2">
+                          {fiche.boisson && (
+                            <IconDrink width={17} height={17} />
+                          )}
+                          <p
+                            className={
+                              "rounded-full border-2 border-white px-[3px] py-[5px] text-xs font-bold text-white " +
+                              (fiche.boisson
+                                ? nutriSantéDrinkColors[fiche.nutriSanté - 1]
+                                : nutriSantéColors[fiche.nutriSanté - 1])
+                            }
+                          >
+                            {fiche.nutriSanté}
+                          </p>
+                        </div>
                       ),
                     }))
                 }
