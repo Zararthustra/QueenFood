@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/Zararthustra/QueenFood/compare/v0.3.0...v1.0.0) (2024-01-16)
+
+
+### Features
+
+* **Food:** Http call for categories instead of static file, switch search into input fields, enrich loading & error states, ([967aae9](https://github.com/Zararthustra/QueenFood/commit/967aae9c2d2de953108b47b04d9079a31c907a82))
+* **Formules:** add Metabolisme basal ([359e67c](https://github.com/Zararthustra/QueenFood/commit/359e67c7059422a201ef067612b28753334b566c))
+* **Home:** add pages links ([acf3dad](https://github.com/Zararthustra/QueenFood/commit/acf3dad9a657c4b5395848ecbec84bf96eeadc22))
+* **Home:** update layout & add links ([4a0856f](https://github.com/Zararthustra/QueenFood/commit/4a0856feefe8a299c525018c0ea19a142413fe3f))
+* **Khayat:** add drinks option ([915f459](https://github.com/Zararthustra/QueenFood/commit/915f459a5e6c0c056f547cb59218fd22d33d6e50))
+* **Khayat:** add fiche ([44e32a7](https://github.com/Zararthustra/QueenFood/commit/44e32a71213009c60859255fff51865fa19b429b))
+* **Khayat:** add fiches ([c31410d](https://github.com/Zararthustra/QueenFood/commit/c31410d1080b2f94d0b448dd8b2c08672d534023))
+* **Khayat:** add search ([33ec88b](https://github.com/Zararthustra/QueenFood/commit/33ec88b0a860f1ad96d4a64c356c5b2395e732f9))
+* **Khayat:** pimp accordion ([cd33e27](https://github.com/Zararthustra/QueenFood/commit/cd33e27812f37fcce2b25589b469fc440a6700d8))
+* **Khayat:** Sort fiche by category & put them in accordion ([6fac505](https://github.com/Zararthustra/QueenFood/commit/6fac50572ef64646831b7692ee5710be16c6d60e))
+* **Loader:** add crown loading icon ([defcb9a](https://github.com/Zararthustra/QueenFood/commit/defcb9a0f2d741a5b8233033eb3fc805901f5442))
+* **Logo:** update logo ([f6febd0](https://github.com/Zararthustra/QueenFood/commit/f6febd0af8181fa02ac511919a51e183d74f50ba))
+* **PR:** add PR pipeline ([aaed033](https://github.com/Zararthustra/QueenFood/commit/aaed0334011c93804840aff28be9b77721a7e37b))
+
+
+### Bug Fixes
+
+* Khayat categories filter ([8396ddc](https://github.com/Zararthustra/QueenFood/commit/8396ddc97a5abb9a74908c2bd4bbcc3b293e6d8a))
+* MB bar chart layout, gender label accessibility, micronutriment contrast on darkmode ([8541e87](https://github.com/Zararthustra/QueenFood/commit/8541e8713d5066fa9928b27286dc80932da24f20))
+* nutriSanté score in collapse, componentize Formules ([eec1dac](https://github.com/Zararthustra/QueenFood/commit/eec1dacbaf2a057f350a0d53bae45c6362587ad5))
+
 ## [0.3.0](https://github.com/Zararthustra/QueenFood/compare/v0.2.0...v0.3.0) (2024-01-14)
 
 
