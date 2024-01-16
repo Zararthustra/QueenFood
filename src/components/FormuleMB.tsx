@@ -30,28 +30,33 @@ export const FormuleMB = ({ MB }: { MB: number }) => {
   };
 
   return (
-    <div className="flex w-[500px] flex-col">
-      <h2 className="mb-5 dark:text-slate-100">Métabolisme Basal</h2>
-      <Bar
-        data={chartData}
-        options={{
-          indexAxis: "y" as const,
-          elements: {
-            bar: {
-              borderWidth: 1,
+    <div className="flex w-full max-w-[500px] flex-col">
+      <h3 className="mb-5 dark:text-slate-100">Métabolisme Basal</h3>
+      <div className="flex flex-col gap-2">
+        <p className="text-xl font-bold text-primary-500">
+          Résultat: {MB ? MB.toFixed(1) : "x"}
+        </p>
+        <Bar
+          data={chartData}
+          options={{
+            indexAxis: "y" as const,
+            elements: {
+              bar: {
+                borderWidth: 1,
+              },
             },
-          },
-          responsive: true,
-          plugins: {
-            legend: {
-              position: "right" as const,
+            responsive: true,
+            plugins: {
+              legend: {
+                position: "top" as const,
+              },
             },
-          },
-        }}
-      />
-      <p className="mt-2 self-end text-xs text-slate-400">
-        * Harris et Benedict (1994)
-      </p>
+          }}
+        />
+        <p className="mt-2 self-end text-xs text-slate-400">
+          * Harris et Benedict (1994)
+        </p>
+      </div>
     </div>
   );
 };

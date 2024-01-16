@@ -64,8 +64,8 @@ export const Formules = () => {
   });
   return (
     <>
-      <main className="mb-[50px] flex flex-col items-center px-2">
-        <h1 className="my-5 text-center dark:text-slate-100">Formules</h1>
+      <main className="mb-[50px] flex flex-col items-center px-2 dark:text-slate-100">
+        <h1 className="my-5 text-center">Formules</h1>
 
         <form
           className="my-5 flex flex-col justify-between"
@@ -75,47 +75,47 @@ export const Formules = () => {
             {/* Gender */}
             <div>
               <div className={fieldStyle}>
-                <label className={labelStyle} htmlFor="gender">
+                <label className={labelStyle + " flex w-full justify-between"}>
                   Genre
+                  <Radio.Group
+                    id="gender"
+                    name="gender"
+                    options={[
+                      {
+                        label: (
+                          <div className="flex h-full flex-col justify-center px-[4px] pl-[5px]">
+                            <IconMale
+                              width={21}
+                              height={21}
+                              className="shrink-0"
+                            />
+                          </div>
+                        ),
+                        value: "male",
+                      },
+                      {
+                        label: (
+                          <div className="flex h-full flex-col justify-center px-[4px]">
+                            <IconFemale
+                              width={21}
+                              height={21}
+                              className="shrink-0"
+                            />
+                          </div>
+                        ),
+                        value: "female",
+                      },
+                    ]}
+                    onChange={({ target: { value } }) => {
+                      setFieldValue("gender", value);
+                    }}
+                    onBlur={handleBlur}
+                    value={getFieldProps("gender").value}
+                    optionType="button"
+                    buttonStyle="solid"
+                    size="small"
+                  />
                 </label>
-                <Radio.Group
-                  id="gender"
-                  name="gender"
-                  options={[
-                    {
-                      label: (
-                        <div className="flex h-full flex-col justify-center px-[4px]">
-                          <IconMale
-                            width={21}
-                            height={21}
-                            className="shrink-0"
-                          />
-                        </div>
-                      ),
-                      value: "male",
-                    },
-                    {
-                      label: (
-                        <div className="flex h-full flex-col justify-center px-[4px]">
-                          <IconFemale
-                            width={21}
-                            height={21}
-                            className="shrink-0"
-                          />
-                        </div>
-                      ),
-                      value: "female",
-                    },
-                  ]}
-                  onChange={({ target: { value } }) => {
-                    setFieldValue("gender", value);
-                  }}
-                  onBlur={handleBlur}
-                  value={getFieldProps("gender").value}
-                  optionType="button"
-                  buttonStyle="solid"
-                  size="small"
-                />
               </div>
               {errors?.gender && <p className={errorStyle}>{errors.gender}</p>}
             </div>

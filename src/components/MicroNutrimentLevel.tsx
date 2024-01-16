@@ -8,7 +8,7 @@ export const MicroNutrimentLevel = ({ level }: IMicroNutrimentLevelProps) => (
     <p
       className={
         "absolute left-[8%] top-[-20px] text-slate-300 dark:text-slate-400 " +
-        (level === "faible" && "font-bold text-slate-800 dark:text-blue-100")
+        (level === "faible" && "font-bold text-slate-800 dark:text-white")
       }
     >
       Faible
@@ -16,7 +16,7 @@ export const MicroNutrimentLevel = ({ level }: IMicroNutrimentLevelProps) => (
     <p
       className={
         "absolute left-[38%] top-[-20px] text-slate-300 dark:text-slate-400 " +
-        (level === "moyen" && "font-bold text-slate-800 dark:text-blue-100")
+        (level === "moyen" && "font-bold text-slate-800 dark:text-white")
       }
     >
       Moyen
@@ -24,7 +24,7 @@ export const MicroNutrimentLevel = ({ level }: IMicroNutrimentLevelProps) => (
     <p
       className={
         "absolute left-[73%] top-[-20px] text-slate-300 dark:text-slate-400 " +
-        (level === "élevé" && "font-bold text-slate-800 dark:text-blue-100")
+        (level === "élevé" && "font-bold text-slate-800 dark:text-white")
       }
     >
       Élevé

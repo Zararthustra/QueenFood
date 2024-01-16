@@ -7,9 +7,9 @@ export const FormuleIMC = ({ IMC }: { IMC: number }) => {
 
   return (
     <div className="flex flex-col">
-      <h2 className="mb-5 dark:text-slate-100">
+      <h3 className="mb-5 dark:text-slate-100">
         Indice de Masse Corporelle (IMC)
-      </h2>
+      </h3>
       <div className="flex flex-col gap-2">
         <p className="text-xl font-bold text-primary-500">
           Résultat: {IMC ? IMC.toFixed(1) : "x"}
