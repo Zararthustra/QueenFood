@@ -50,7 +50,20 @@ export const Khayat = () => {
           {/* List categories */}
           {categories.map((categorie, index) => (
             <div key={index}>
-              <h2 className="mb-2">{categorie}</h2>
+              <div className="flex items-center justify-between">
+                <h2 className="mb-2">{categorie}</h2>
+                <p className="pr-[2px] font-bold text-slate-400">
+                  {
+                    khayatList.filter(
+                      (item) =>
+                        item.catégorie === categorie &&
+                        item.titre
+                          .toLowerCase()
+                          .includes(searchValue.toLowerCase()),
+                    ).length
+                  }
+                </p>
+              </div>
               <Collapse
                 ghost
                 items={
