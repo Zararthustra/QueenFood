@@ -33,7 +33,10 @@ export const FormuleMB = ({ MB }: { MB: number }) => {
     <div className="flex w-full max-w-[500px] flex-col">
       <h3 className="mb-5 dark:text-slate-100">Métabolisme Basal</h3>
       <div className="flex flex-col gap-2">
-        <p className="text-xl font-bold text-primary-500">
+        <p
+          data-testid="formules-result-mb"
+          className="text-xl font-bold text-primary-500"
+        >
           Résultat: {MB ? MB.toFixed(1) : "x"}
         </p>
         <Bar

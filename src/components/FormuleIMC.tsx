@@ -11,7 +11,10 @@ export const FormuleIMC = ({ IMC }: { IMC: number }) => {
         Indice de Masse Corporelle (IMC)
       </h3>
       <div className="flex flex-col gap-2">
-        <p className="text-xl font-bold text-primary-500">
+        <p
+          data-testid="formules-result-imc"
+          className="text-xl font-bold text-primary-500"
+        >
           Résultat: {IMC ? IMC.toFixed(1) : "x"}
         </p>
         <table className="border-separate border-spacing-x-0 dark:text-slate-100">

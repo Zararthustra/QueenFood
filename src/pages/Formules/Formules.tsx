@@ -64,10 +64,14 @@ export const Formules = () => {
   });
   return (
     <>
-      <main className="mb-[50px] flex flex-col items-center px-2 dark:text-slate-100">
+      <main
+        data-testid="formules"
+        className="mb-[50px] flex flex-col items-center px-2 dark:text-slate-100"
+      >
         <h1 className="my-5 text-center">Formules</h1>
 
         <form
+          data-testid="formules-form"
           className="my-5 flex flex-col justify-between"
           onSubmit={handleSubmit}
         >
@@ -83,7 +87,10 @@ export const Formules = () => {
                     options={[
                       {
                         label: (
-                          <div className="flex h-full flex-col justify-center px-[4px] pl-[5px]">
+                          <div
+                            data-testid="formules-form-gender-male"
+                            className="flex h-full flex-col justify-center px-[4px] pl-[5px]"
+                          >
                             <IconMale
                               width={21}
                               height={21}
@@ -117,7 +124,11 @@ export const Formules = () => {
                   />
                 </label>
               </div>
-              {errors?.gender && <p className={errorStyle}>{errors.gender}</p>}
+              {errors?.gender && (
+                <p data-testid="formules-form-error" className={errorStyle}>
+                  {errors.gender}
+                </p>
+              )}
             </div>
 
             {/* Age */}
@@ -141,7 +152,9 @@ export const Formules = () => {
                 />
               </div>
               {touched?.age && errors?.age && (
-                <p className={errorStyle}>{errors.age}</p>
+                <p data-testid="formules-form-error" className={errorStyle}>
+                  {errors.age}
+                </p>
               )}
             </div>
 
@@ -166,7 +179,9 @@ export const Formules = () => {
                 />
               </div>
               {touched?.weight && errors?.weight && (
-                <p className={errorStyle}>{errors.weight}</p>
+                <p data-testid="formules-form-error" className={errorStyle}>
+                  {errors.weight}
+                </p>
               )}
             </div>
 
@@ -191,7 +206,9 @@ export const Formules = () => {
                 />
               </div>
               {touched?.height && errors?.height && (
-                <p className={errorStyle}>{errors.height}</p>
+                <p data-testid="formules-form-error" className={errorStyle}>
+                  {errors.height}
+                </p>
               )}
             </div>
           </div>
