@@ -3,6 +3,281 @@ import { IKhayat } from "@interfaces/index";
 export const khayatList: IKhayat[] = [
   {
   "catégorie": "Déjeuner",
+  "titre": "Flan",
+  "boisson": false,
+  "nutriSanté": 6,
+  "portions": {
+    "seniors": "125g",
+    "adultes": "125g",
+    "enfants": "90g"
+  },
+  "énergie": {
+    "100g": "200kcal",
+    "portion": "250kcal"
+  },
+  "dépenses": [
+    "1h de volley-ball",
+    "1h de yoga"
+  ],
+  "nutriScore": "c",
+  "nova": 3,
+  "avantages": "Riche en calcium et en protéines de bonne qualité.",
+  "inconvénients": "Produit riche en sucre et en graisse.",
+  "astuces": "Le flan est un dessert consensuel! A vous de trouver la meilleure recette maison ou de boulangerie (moi, celle de Mamiche!). Attention, les portions proposées sont souvent plus importantes que celles qui sont recommandées.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 30
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 4
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 7
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 59
+    }
+  ],
+  "micronutriments": "faible"
+},
+  {
+  "catégorie": "Déjeuner",
+  "titre": "Mousse au Chocolat",
+  "boisson": false,
+  "nutriSanté": 4,
+  "portions": {
+    "seniors": "80g",
+    "adultes": "80g",
+    "enfants": "50g"
+  },
+  "énergie": {
+    "100g": "160kcal",
+    "portion": "130kcal"
+  },
+  "dépenses": [
+    "40min de marche"
+  ],
+  "nutriScore": "d",
+  "nova": 3,
+  "avantages": "Plaisir gustatif avec un bon apport en magnésium.",
+  "inconvénients": "Riche en matières grasses. Produit sucré. Impact négatif sur la planète à cause du cacao.",
+  "astuces": "Un dessert incontournable à la maison ou au restaurant, mais attention à limiter les portions. A associer à des fruits, par exemple des suprêmes d'agrumes.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 16
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 5
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 8
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 69
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Déjeuner",
+  "titre": "Crème Brûlée",
+  "boisson": false,
+  "nutriSanté": 3,
+  "portions": {
+    "seniors": "180g",
+    "adultes": "180g",
+    "enfants": "125g"
+  },
+  "énergie": {
+    "100g": "300kcal",
+    "portion": "500kcal"
+  },
+  "dépenses": [
+    "2h30 de musculation",
+    "1h15 de jogging"
+  ],
+  "nutriScore": "d",
+  "nova": 3,
+  "avantages": "C'est un produit plaisir qui comprend des protéines de bonne qualité.",
+  "inconvénients": "Riche en matières grasses et en sucre.",
+  "astuces": "Une meilleure option gourmande de fin de repas à choisir à la place d'une patisserie.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 16
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 4
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 25
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 55
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Déjeuner",
+  "titre": "Thé Glacé Sans Sucre",
+  "boisson": true,
+  "nutriSanté": 3,
+  "portions": {
+    "seniors": "250ml",
+    "adultes": "250ml",
+    "enfants": "150ml"
+  },
+  "énergie": {
+    "100g": "2kcal",
+    "portion": "5kcal"
+  },
+  "dépenses": [
+    "5min de marche",
+    "15min de danse aérobique "
+  ],
+  "nutriScore": "d",
+  "nova": 4,
+  "avantages": "Contient des pigments antioxydants, du potassium et du magnésium (qui réduisent les risques cardiovasculaires).",
+  "inconvénients": "Produit contenant de ma théine.",
+  "astuces": "Attention à la consommation de théine et aux versions industrielles très sucrées. A reéliser plutôt soi-même!",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 0.5
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 99.5
+    }
+  ],
+  "micronutriments": "faible"
+},
+  {
+  "catégorie": "Déjeuner",
+  "titre": "Soda Aux Fruits",
+  "boisson": true,
+  "nutriSanté": 1,
+  "portions": {
+    "seniors": "200ml",
+    "adultes": "200ml",
+    "enfants": "200ml"
+  },
+  "énergie": {
+    "100g": "41kcal",
+    "portion": "80kcal"
+  },
+  "dépenses": [
+    "25min de marche",
+    "15min de natation"
+  ],
+  "nutriScore": "e",
+  "nova": 4,
+  "avantages": "Hydratation.",
+  "inconvénients": "Contient énormément de sucre (un verre = 20g de sucre, soit 4 morceaux)!",
+  "astuces": "A consommer occasionnellement pour l'apéritif!",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 11
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 89
+    }
+  ],
+  "micronutriments": "faible"
+},
+  {
+  "catégorie": "Déjeuner",
+  "titre": "Cola",
+  "boisson": true,
+  "nutriSanté": 1,
+  "portions": {
+    "seniors": "250ml",
+    "adultes": "250ml",
+    "enfants": "250g"
+  },
+  "énergie": {
+    "100g": "42kcal",
+    "portion": "100kcal"
+  },
+  "dépenses": [
+    "1h de ménage "
+  ],
+  "nutriScore": "e",
+  "nova": 4,
+  "avantages": "Energisant (présence de caféine) à limiter pour les enfantes et les femmes enceintes.",
+  "inconvénients": "Produit sucré (une canette de 33cl contient 34g de sucre).\nPrésence d'additifs.",
+  "astuces": "A consommer avec une très grande modération, en apéritif par exemple, car cette boisson est dangereuse pour la santé.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 10
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 90
+    }
+  ],
+  "micronutriments": "faible"
+},
+  {
+  "catégorie": "Déjeuner",
+  "titre": "Escalope De Volaille A La Crème + Riz",
+  "boisson": false,
+  "nutriSanté": 5,
+  "portions": {
+    "seniors": "300g",
+    "adultes": "300g",
+    "enfants": "200g"
+  },
+  "énergie": {
+    "100g": "130kcal",
+    "portion": "390kcal"
+  },
+  "dépenses": [
+    "1h50 de vélo",
+    "1h50 de marche"
+  ],
+  "nutriScore": "a",
+  "nova": 2,
+  "avantages": "Un plat que vous pouvez manger toutes les semaines (en variant la viande).",
+  "inconvénients": "Ne pas mettre trop de crème. Préférez les versions complètes du riz (blanc, basmati ou thaï).",
+  "astuces": "Attention à la consommation excessive de riz. Vous pouvez équilibrer avec des légumes et des fruits en dessert aux repas suivants!",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 20
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 3
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 6
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 71
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Déjeuner",
   "titre": "Chili con carne",
   "boisson": false,
   "nutriSanté": 7,
