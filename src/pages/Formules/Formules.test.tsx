@@ -9,13 +9,11 @@ describe("Page Formules", () => {
 
     const main = screen.queryByTestId("formules");
     const form = screen.getByTestId("formules-form");
-    const pErrors = screen.findAllByTestId("formules-form-error");
     const submitButton = screen.getByRole("button", { name: "Calculer" });
 
     return {
       main,
       form,
-      pErrors,
       submitButton,
       ...utils,
     };
@@ -58,7 +56,7 @@ describe("Page Formules", () => {
   });
 
   test("Form partially filled with a wrong value", async () => {
-    const { form, pErrors, submitButton, getByLabelText, getByTestId } =
+    const { form, submitButton, getByLabelText, getByTestId, findAllByTestId } =
       setup();
 
     const genderButton = getByTestId("formules-form-gender-male");
@@ -71,6 +69,8 @@ describe("Page Formules", () => {
 
     fireEvent.click(submitButton);
 
+    const pErrors = await findAllByTestId("formules-form-error");
+
     expect(form).toHaveFormValues({
       gender: "male",
       age: 55,
@@ -78,13 +78,14 @@ describe("Page Formules", () => {
       height: null, // String instead of number
     });
 
-    expect(await pErrors).toHaveLength(2);
+    expect(pErrors).toHaveLength(2);
   });
 
   test("Form KO", async () => {
-    const { submitButton, pErrors } = setup();
+    const { submitButton, findAllByTestId } = setup();
     fireEvent.click(submitButton);
-    expect(await pErrors).toHaveLength(4);
+    const pErrors = await findAllByTestId("formules-form-error");
+    expect(pErrors).toHaveLength(4);
   });
 
   test("Results", async () => {
