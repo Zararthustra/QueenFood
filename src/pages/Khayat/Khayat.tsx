@@ -1,5 +1,5 @@
+import { useState } from "react";
 import { Collapse, Input } from "antd";
-import { useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 import { khayatList } from "@data/index";
@@ -8,7 +8,6 @@ import { labelShortener } from "@utils/formatters";
 import { IconCrown, IconCrownOutlined, IconDrink } from "@assets/index";
 
 export const Khayat = () => {
-  const searchRef = useRef<any>();
   const [searchValue, setSearchValue] = useState<string>("");
   const isMobile = useMediaQuery({ query: "(max-width: 450px)" });
   const categories = [...new Set(khayatList.map((fiche) => fiche.catégorie))];
@@ -33,7 +32,10 @@ export const Khayat = () => {
 
   return (
     <>
-      <main className="mb-[50px] flex flex-col items-center px-2 dark:text-slate-100">
+      <main
+        data-testid="khayat"
+        className="mb-[50px] flex flex-col items-center px-2 dark:text-slate-100"
+      >
         <h1 className="my-5 text-center ">Fiches du Pr Khayat</h1>
 
         <Input
@@ -43,7 +45,7 @@ export const Khayat = () => {
           onChange={(event) => setSearchValue(event.target.value)}
           className="my-5"
           style={{ width: 220 }}
-          ref={searchRef}
+          data-testid="khayat-input"
         />
 
         <div className="flex w-full max-w-[650px] flex-col flex-wrap justify-center gap-5">
@@ -51,7 +53,9 @@ export const Khayat = () => {
           {categories.map((categorie, index) => (
             <div key={index}>
               <div className="flex items-center justify-between">
-                <h2 className="mb-2">{categorie}</h2>
+                <h2 data-testid="khayat-category-name" className="mb-2">
+                  {categorie}
+                </h2>
                 <p className="pr-[2px] font-bold text-slate-400">
                   {
                     khayatList.filter(
@@ -79,7 +83,10 @@ export const Khayat = () => {
                     .map((fiche, indexx) => ({
                       key: indexx + 1,
                       label: (
-                        <h3 className="mb-[3px]">
+                        <h3
+                          data-testid="khayat-fiche-name"
+                          className="mb-[3px]"
+                        >
                           {isMobile
                             ? labelShortener(fiche.titre, 30)
                             : fiche.titre}
