@@ -1,7 +1,7 @@
 import { HttpResponse, http } from "msw";
 
 import { baseURL } from "@queries/axios";
-import { userMock, loginResponseMock } from "@mocks/index";
+import { categoriesMock, alimentsMock } from "@mocks/index";
 
 export const endpoint = (endpoint: string): string => baseURL + endpoint;
 
@@ -24,17 +24,9 @@ export const handlers = [
   }),
   // FOOD
   http.get("https://world.openfoodfacts.org/categories.json", () => {
-    return HttpResponse.json({
-      count: 57566,
-      tags: [
-        {
-          id: "en:plant-based-foods-and-beverages",
-          known: 1,
-          name: "Plant-based foods and beverages",
-          products: 419948,
-          url: "https://world.openfoodfacts.org/category/plant-based-foods-and-beverages",
-        },
-      ],
-    });
+    return HttpResponse.json(categoriesMock);
+  }),
+  http.get("https://world.openfoodfacts.org/api/v2/search", () => {
+    return HttpResponse.json(alimentsMock);
   }),
 ];

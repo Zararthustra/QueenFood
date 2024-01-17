@@ -31,9 +31,10 @@ export const ModalFoodItem = ({
       footer={false}
       open={showModal}
       onCancel={() => setShowModal(false)}
+      data-testid="aliments-aliments-details"
     >
       {/* Infos Nutritionnelles */}
-      <h3 className="">Nutriments</h3>
+      <h3>Nutriments</h3>
       {!!Object.keys(product.nutriments).length ? (
         <table className="border-separate border-spacing-x-0 dark:text-slate-100">
           <thead>

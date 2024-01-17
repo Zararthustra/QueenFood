@@ -48,6 +48,7 @@ export const Food = () => {
           value={searchValue}
           className="mb-10 mt-5"
           style={{ width: 220 }}
+          data-testid="aliments-input"
         />
 
         {/* ========================================= Loading ========================================= */}
@@ -164,6 +165,7 @@ export const Food = () => {
             cat.name.toLowerCase().includes(searchValue.toLowerCase()),
           ).length && (
             <Empty
+              data-testid="aliments-categories-empty"
               description={`Aucune catégorie contenant "${searchValue}"`}
             />
           )}
@@ -184,7 +186,10 @@ export const Food = () => {
                 responsive
               />
 
-              <div className="mt-2 flex flex-col gap-3 dark:text-slate-100">
+              <div
+                data-testid="aliments-aliments"
+                className="mt-2 flex flex-col gap-3 dark:text-slate-100"
+              >
                 {searchFood.products.map((product, index) => (
                   <FoodItem key={index} product={product} />
                 ))}

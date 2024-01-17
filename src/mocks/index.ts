@@ -1,1 +1,1 @@
-export { loginRequestMock, loginResponseMock, userMock } from "./user";
+export { categoriesMock, alimentsMock } from "./food";
