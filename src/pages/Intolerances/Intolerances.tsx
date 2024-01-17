@@ -25,7 +25,7 @@ export const Intolerances = () => {
   return (
     <>
       <main
-        data-testid="intolerance"
+        data-testid="intolerances"
         className="mb-[50px] flex flex-col items-center px-2"
       >
         <h1 className="my-5 text-center dark:text-slate-100">Intolérances</h1>
@@ -36,7 +36,7 @@ export const Intolerances = () => {
           onChange={(event) => setSearchValue(event.target.value)}
           className="my-5"
           style={{ width: 220 }}
-          data-testid="intolerance-input"
+          data-testid="intolerances-input"
         />
 
         <div className="mt-2 flex max-w-prose flex-col gap-3 dark:text-slate-100">
@@ -51,7 +51,7 @@ export const Intolerances = () => {
             )
             .map((intolerance, index) => (
               <div key={index}>
-                <h2 data-testid="intolerance-name">
+                <h2 data-testid="intolerances-name">
                   {getHighlightedText(intolerance.name, searchValue)}
                 </h2>
                 <p className="text-justify indent-4">

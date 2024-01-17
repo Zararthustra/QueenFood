@@ -8,9 +8,9 @@ describe("Page Intolérances", () => {
   const setup = () => {
     const utils = render(<Intolerances />);
 
-    const main = screen.queryByTestId("intolerance");
-    const input = screen.getByTestId("intolerance-input");
-    const intolerancesH3 = screen.queryAllByTestId("intolerance-name");
+    const main = screen.queryByTestId("intolerances");
+    const input = screen.getByTestId("intolerances-input");
+    const intolerancesH3 = screen.queryAllByTestId("intolerances-name");
 
     const { intoleranceNames, intoleranceDescription, intoleranceExample } = {
       intoleranceNames: intolerances.map((item) => item.name),
@@ -50,7 +50,7 @@ describe("Page Intolérances", () => {
 
     fireEvent.change(input, { target: { value: intoleranceNames[0] } });
     const intolerancesH3Awaited =
-      await screen.findAllByTestId("intolerance-name");
+      await screen.findAllByTestId("intolerances-name");
 
     expect(intolerancesH3Awaited.length).toBeGreaterThanOrEqual(1);
     expect(intolerancesH3Awaited.length).toBeLessThan(intoleranceNames.length);
@@ -64,7 +64,7 @@ describe("Page Intolérances", () => {
 
     fireEvent.change(input, { target: { value: intoleranceDescription } });
     const intolerancesH3Awaited =
-      await screen.findAllByTestId("intolerance-name");
+      await screen.findAllByTestId("intolerances-name");
 
     expect(intolerancesH3Awaited.length).toBeGreaterThanOrEqual(1);
     expect(intolerancesH3Awaited.length).toBeLessThan(intoleranceNames.length);
@@ -75,7 +75,7 @@ describe("Page Intolérances", () => {
 
     fireEvent.change(input, { target: { value: intoleranceExample } });
     const intolerancesH3Awaited =
-      await screen.findAllByTestId("intolerance-name");
+      await screen.findAllByTestId("intolerances-name");
 
     expect(intolerancesH3Awaited.length).toBeGreaterThanOrEqual(1);
     expect(intolerancesH3Awaited.length).toBeLessThan(intoleranceNames.length);
@@ -86,7 +86,7 @@ describe("Page Intolérances", () => {
 
     fireEvent.change(input, { target: { value: intoleranceNames[0] } });
     const intolerancesH3Awaited =
-      await screen.findAllByTestId("intolerance-name");
+      await screen.findAllByTestId("intolerances-name");
 
     const mark = intolerancesH3Awaited[0].parentNode?.querySelector("mark");
 

@@ -29,7 +29,10 @@ export const Food = () => {
 
   return (
     <>
-      <main className="mb-[50px] flex flex-col items-center px-2">
+      <main
+        data-testid="aliments"
+        className="mb-[50px] flex flex-col items-center px-2"
+      >
         <h1 className="my-5 text-center dark:text-slate-100">
           Aliments {successSearch ? `(${searchFood.count})` : ""}
         </h1>

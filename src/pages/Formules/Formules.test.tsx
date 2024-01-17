@@ -3,7 +3,7 @@ import { fireEvent, render, screen } from "@testing-library/react";
 
 import { Formules } from "./Formules";
 
-describe("Page Intolérances", () => {
+describe("Page Formules", () => {
   const setup = () => {
     const utils = render(<Formules />);
 

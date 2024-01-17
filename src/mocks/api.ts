@@ -22,17 +22,19 @@ export const handlers = [
   http.delete(endpoint("/endpoint/:id"), () => {
     return HttpResponse.json(undefined);
   }),
-  // USER
-  http.get(endpoint("/users/:userId"), () => {
-    return HttpResponse.json(userMock);
-  }),
-  http.post(endpoint("/token/"), () => {
-    return HttpResponse.json(loginResponseMock);
-  }),
-  http.post(endpoint("/token/refresh/"), () => {
-    return HttpResponse.json(loginResponseMock);
-  }),
-  http.post(endpoint("/register"), () => {
-    return HttpResponse.json({ message: "User created successfully" });
+  // FOOD
+  http.get("https://world.openfoodfacts.org/categories.json", () => {
+    return HttpResponse.json({
+      count: 57566,
+      tags: [
+        {
+          id: "en:plant-based-foods-and-beverages",
+          known: 1,
+          name: "Plant-based foods and beverages",
+          products: 419948,
+          url: "https://world.openfoodfacts.org/category/plant-based-foods-and-beverages",
+        },
+      ],
+    });
   }),
 ];

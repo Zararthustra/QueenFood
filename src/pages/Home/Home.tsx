@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
+
 import {
   IconFood,
   IconFormula,
@@ -5,9 +8,6 @@ import {
   IconKhayat,
   IconLogo,
 } from "@assets/index";
-import { Button } from "@components/index";
-import { useMediaQuery } from "react-responsive";
-import { Link } from "react-router-dom";
 
 export const Home = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
@@ -19,7 +19,10 @@ export const Home = () => {
 
   return (
     <>
-      <main className="flex h-[80vh] flex-col items-center justify-evenly px-2 dark:text-slate-100">
+      <main
+        data-testid="home"
+        className="flex h-[80vh] flex-col items-center justify-evenly px-2 dark:text-slate-100"
+      >
         <IconLogo
           className="shrink-0"
           width={isMobile ? 200 : 300}
