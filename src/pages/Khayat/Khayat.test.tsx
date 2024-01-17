@@ -47,7 +47,7 @@ describe("Page Khayat", () => {
   });
 
   test("Fiches", () => {
-    const { fichesTitleData, fichesH3, input } = setup();
+    const { fichesTitleData, fichesH3 } = setup();
 
     // Length
     expect(fichesH3).toHaveLength(fichesTitleData.length);

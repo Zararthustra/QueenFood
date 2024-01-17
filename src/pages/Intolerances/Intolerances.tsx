@@ -24,7 +24,10 @@ export const Intolerances = () => {
 
   return (
     <>
-      <main className="mb-[50px] flex flex-col items-center px-2">
+      <main
+        data-testid="intolerance"
+        className="mb-[50px] flex flex-col items-center px-2"
+      >
         <h1 className="my-5 text-center dark:text-slate-100">Intolérances</h1>
         <Input
           id="search"
@@ -33,6 +36,7 @@ export const Intolerances = () => {
           onChange={(event) => setSearchValue(event.target.value)}
           className="my-5"
           style={{ width: 220 }}
+          data-testid="intolerance-input"
         />
 
         <div className="mt-2 flex max-w-prose flex-col gap-3 dark:text-slate-100">
@@ -42,11 +46,14 @@ export const Intolerances = () => {
                 item.name.toLowerCase().includes(searchValue.toLowerCase()) ||
                 item.description
                   .toLowerCase()
-                  .includes(searchValue.toLowerCase()),
+                  .includes(searchValue.toLowerCase()) ||
+                item.examples.toLowerCase().includes(searchValue.toLowerCase()),
             )
             .map((intolerance, index) => (
               <div key={index}>
-                <h2>{getHighlightedText(intolerance.name, searchValue)}</h2>
+                <h2 data-testid="intolerance-name">
+                  {getHighlightedText(intolerance.name, searchValue)}
+                </h2>
                 <p className="text-justify indent-4">
                   {getHighlightedText(intolerance.description, searchValue)}
                 </p>
