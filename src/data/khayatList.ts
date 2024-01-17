@@ -2,6 +2,92 @@ import { IKhayat } from "@interfaces/index";
 
 export const khayatList: IKhayat[] = [
   {
+  "catégorie": "Déjeuner",
+  "titre": "Chili con carne",
+  "boisson": false,
+  "nutriSanté": 7,
+  "portions": {
+    "seniors": "400g",
+    "adultes": "300-400g",
+    "enfants": "300g"
+  },
+  "énergie": {
+    "100g": "110kcal",
+    "portion": "440kcal"
+  },
+  "dépenses": [
+    "1h de football",
+    "2h25 de marche"
+  ],
+  "nutriScore": "a",
+  "nova": 2,
+  "avantages": "Plat bien équilibré composé de haricots, légumineuses riches en protéines.",
+  "inconvénients": "Impact sur la planète lié à l'élevage du boeuf.",
+  "astuces": "A tester en version végétarienne de temps en temps! Avec des légumes (des carottes, des courgettes, des tomates pelées) à la place de la viande.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 11
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 3
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 9
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 71
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Déjeuner",
+  "titre": "Paëlla",
+  "boisson": false,
+  "nutriSanté": 4,
+  "portions": {
+    "seniors": "400g",
+    "adultes": "400g",
+    "enfants": "300g"
+  },
+  "énergie": {
+    "100g": "160kcal",
+    "portion": "640kcal"
+  },
+  "dépenses": [
+    "1h15 de natation",
+    "3h10 de marche"
+  ],
+  "nutriScore": "c",
+  "nova": 2,
+  "avantages": "Plat complet qui permet de faire découvrir les fruits de mer aux enfants. Très riche en micronutriments!",
+  "inconvénients": "Ne pas avoir la main trop lourde sur l'huile d'olive.",
+  "astuces": "Facile à cuisiner et saine, la paëlla est un plat convivial comme le coucous ou le pot au feu, à déguster entre amis. A alterner avec des choucroutes de la mer et des bouillabaisses!",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 22
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 4
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 9
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 65
+    }
+  ],
+  "micronutriments": "élevé"
+},
+  {
     catégorie: "Déjeuner",
     titre: "Fish and Chips",
     boisson: false,
@@ -1439,7 +1525,7 @@ export const khayatList: IKhayat[] = [
       "Réduit les risques cardiovasculaires. Source de nutriments. Energie facilement disponible",
     inconvénients: "Produit très sucré",
     astuces:
-      "Le Nutri-Score C est lié au calcul sur 100g. Notre score est plus raisonnable : il autorise une conssomation régulière. A associer au pain ou au yaourt : des duos parfaits!",
+      "Le Nutri-Score C est lié au calcul sur 100g. Notre score est plus raisonnable : il autorise une consomation régulière. A associer au pain ou au yaourt : des duos parfaits!",
     macronutriments: [
       {
         nutriments: "Glucides",
