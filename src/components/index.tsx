@@ -4,8 +4,9 @@ export { ModalFoodItem } from "./modals/ModalFoodItem";
 // Food
 export { FoodItem } from "./FoodItem";
 
-// Food
+// Formules
 export { FormuleIMC } from "./FormuleIMC";
+export { FormuleIMG } from "./FormuleIMG";
 export { FormuleMB } from "./FormuleMB";
 
 // Khayat

@@ -6,10 +6,8 @@ export const FormuleIMC = ({ IMC }: { IMC: number }) => {
   };
 
   return (
-    <div className="flex flex-col">
-      <h3 className="mb-5 dark:text-slate-100">
-        Indice de Masse Corporelle (IMC)
-      </h3>
+    <div className="flex w-full max-w-[500px] flex-col">
+      <h3 className="dark:text-slate-100">Indice de Masse Corporelle (IMC)</h3>
       <div className="flex flex-col gap-2">
         <p
           data-testid="formules-result-imc"

@@ -5,7 +5,7 @@ import { number, object, string } from "yup";
 
 import { IFormulesForm } from "@interfaces/index";
 import { IconFemale, IconMale } from "@assets/index";
-import { Button, FormuleIMC, FormuleMB } from "@components/index";
+import { Button, FormuleIMC, FormuleIMG, FormuleMB } from "@components/index";
 
 export const Formules = () => {
   const labelStyle = "font-bold";
@@ -13,30 +13,35 @@ export const Formules = () => {
   const fieldStyle =
     "flex gap-3 justify-between items-center dark:text-slate-100";
 
+  const [genderState, setGenderState] = useState<
+    "male" | "female" | undefined
+  >();
   const [MB, setMB] = useState<number>(0);
   const [IMC, setIMC] = useState<number>(0);
+  const [IMG, setIMG] = useState<number>(0);
   const onSubmitHandler = async (values: IFormulesForm) => {
-    if (!values.weight || !values.height || !values.age || !values.gender)
-      return;
+    const { gender, age, weight, height } = {
+      gender: values.gender,
+      age: values.age,
+      weight: values.weight,
+      height: values.height,
+    };
 
+    if (!!!weight || !!!height || !!!age || !!!gender) return;
+
+    setGenderState(gender);
     // MB
-    if (values.gender === "female")
-      setMB(
-        9.74 * values.weight +
-          172.9 * (values.height / 100) -
-          4.737 * values.age +
-          667.051,
-      );
-    if (values.gender === "male")
-      setMB(
-        13.707 * values.weight +
-          492.3 * (values.height / 100) -
-          6.673 * values.age +
-          77.607,
-      );
+    if (gender === "female")
+      setMB(9.74 * weight + 172.9 * (height / 100) - 4.737 * age + 667.051);
+    if (gender === "male")
+      setMB(13.707 * weight + 492.3 * (height / 100) - 6.673 * age + 77.607);
 
     // IMC
-    setIMC(values.weight / (values.height / 100) ** 2);
+    const imc = weight / (height / 100) ** 2;
+    setIMC(imc);
+
+    // IMG
+    setIMG(1.2 * imc + 0.23 * age - 10.8 * (gender === "male" ? 1 : 0) - 5.4);
   };
 
   const {
@@ -218,8 +223,9 @@ export const Formules = () => {
           </Button>
         </form>
 
-        <div className="flex w-full flex-wrap justify-center gap-10">
+        <div className="flex w-full flex-wrap justify-evenly gap-5">
           <FormuleIMC IMC={IMC} />
+          <FormuleIMG IMG={IMG} gender={genderState} />
           <FormuleMB MB={MB} />
         </div>
       </main>

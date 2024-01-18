@@ -31,7 +31,7 @@ export const FormuleMB = ({ MB }: { MB: number }) => {
 
   return (
     <div className="flex w-full max-w-[500px] flex-col">
-      <h3 className="mb-5 dark:text-slate-100">Métabolisme Basal</h3>
+      <h3 className="dark:text-slate-100">Métabolisme Basal</h3>
       <div className="flex flex-col gap-2">
         <p
           data-testid="formules-result-mb"

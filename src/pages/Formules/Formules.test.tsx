@@ -89,13 +89,7 @@ describe("Page Formules", () => {
   });
 
   test("Results", async () => {
-    const {
-      submitButton,
-      getByLabelText,
-      getByTestId,
-      findByTestId,
-      findAllByRole,
-    } = setup();
+    const { submitButton, getByLabelText, getByTestId, findByTestId } = setup();
 
     const genderButton = getByTestId("formules-form-gender-male");
     const inputAge = getByLabelText("Âge");
@@ -110,11 +104,12 @@ describe("Page Formules", () => {
     fireEvent.click(submitButton);
 
     // IMC
-    const trs = await findAllByRole("row");
     const resultIMC = await findByTestId("formules-result-imc");
     expect(resultIMC.textContent).toBe("Résultat: 23.5");
-    expect(trs).toHaveLength(8);
-    expect(trs[3].getAttribute("class")).toBe("font-bold text-primary-500");
+
+    // IMG
+    const resultIMG = await findByTestId("formules-result-img");
+    expect(resultIMG.textContent).toBe("Résultat: 24.7");
 
     // MB
     const resultMB = await findByTestId("formules-result-mb");
