@@ -21,7 +21,7 @@ export const Home = () => {
     <>
       <main
         data-testid="home"
-        className="flex h-[80vh] flex-col items-center justify-evenly px-2 dark:text-slate-100"
+        className="flex min-h-[80vh] flex-col items-center justify-evenly px-2 dark:text-slate-100"
       >
         <IconLogo
           className="shrink-0"
