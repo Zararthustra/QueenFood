@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/Zararthustra/QueenFood/compare/v1.1.0...v1.2.0) (2024-01-18)
+
+
+### Features
+
+* **Formules:** add IMA + test ([e11dfe0](https://github.com/Zararthustra/QueenFood/commit/e11dfe00fe8fdbda19db0ff3407402ecfbe7f1d5))
+
 ## [1.1.0](https://github.com/Zararthustra/QueenFood/compare/v1.0.0...v1.1.0) (2024-01-18)
 
 
