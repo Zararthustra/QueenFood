@@ -1,4 +1,5 @@
 export const FormuleIMC = ({ IMC }: { IMC: number }) => {
+  const tdStyle = "px-1 text-center text-[11px]/4 ";
   const highlightOnThreshold = (low: number, high: number) => {
     if (!!!IMC) return;
     if (IMC >= low && IMC < high) return "font-extrabold text-primary-500";
@@ -13,7 +14,7 @@ export const FormuleIMC = ({ IMC }: { IMC: number }) => {
           data-testid="formules-result-imc"
           className="text-xl font-bold text-primary-500"
         >
-          Résultat: {IMC ? IMC.toFixed(1) : "x"}
+          Résultat: {IMC ? IMC.toFixed(1) : "𝑥"}
         </p>
         <table className="border-separate border-spacing-x-0 dark:text-slate-100">
           <thead>
@@ -26,40 +27,38 @@ export const FormuleIMC = ({ IMC }: { IMC: number }) => {
           <tbody>
             <tr className={highlightOnThreshold(0, 16.5)}>
               <td>Maigreur extrême</td>
-              <td className="px-4 text-center">x {"<"} 16.5</td>
+              <td className={tdStyle}>𝑥 {"<"} 16.5</td>
               <td>Elevé</td>
             </tr>
             <tr className={highlightOnThreshold(16.5, 18.5)}>
               <td>Maigreur</td>
-              <td className="px-4 text-center">16.5 {"=> x <"} 18.5</td>
+              <td className={tdStyle}>16.5 {"≥ 𝑥 <"} 18.5</td>
               <td>Accru</td>
             </tr>
             <tr className={highlightOnThreshold(18.5, 25)}>
               <td>Corpulence normale</td>
-              <td className="px-4 text-center">18.5 {"=> x <"} 25</td>
+              <td className={tdStyle}>18.5 {"≥ 𝑥 <"} 25</td>
               <td>Faible</td>
             </tr>
             <tr className={highlightOnThreshold(25, 30)}>
               <td>Surpoids</td>
-              <td className="px-4 text-center">25 {"=> x <"} 30</td>
+              <td className={tdStyle}>25 {"≥ 𝑥 <"} 30</td>
               <td>Accru</td>
             </tr>
             <tr className={highlightOnThreshold(30, 35)}>
               <td>Obésité modérée</td>
-              <td className="px-4 text-center">30 {"=> x <"} 35</td>
+              <td className={tdStyle}>30 {"≥ 𝑥 <"} 35</td>
               <td>Elevé</td>
             </tr>
             <tr className={highlightOnThreshold(35, 40)}>
               <td>Obésité sévère</td>
-              <td className="px-4 text-center">35 {"=> x <"} 40</td>
+              <td className={tdStyle}>35 {"≥ 𝑥 <"} 40</td>
               <td>Très élevé</td>
             </tr>
             <tr className={highlightOnThreshold(40, 999)}>
               <td>Obésité morbide</td>
-              <td className="px-4 text-center">40 {"<"} x</td>
-              <td>
-                <p>Extrêmement élevé</p>
-              </td>
+              <td className={tdStyle}>40 {"<"} 𝑥</td>
+              <td>Extrêmement élevé</td>
             </tr>
           </tbody>
         </table>

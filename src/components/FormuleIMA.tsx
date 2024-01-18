@@ -7,7 +7,7 @@ export const FormuleIMA = ({
   age: number;
   gender?: "male" | "female";
 }) => {
-  const tdStyle = "px-1 text-center text-xs ";
+  const tdStyle = "px-1 text-center text-[11px]/4 ";
   const highlightOnThreshold = (
     low: number,
     high: number,
@@ -28,7 +28,7 @@ export const FormuleIMA = ({
           data-testid="formules-result-ima"
           className="text-xl font-bold text-primary-500"
         >
-          Résultat: {IMA ? IMA.toFixed(1) : "x"}
+          Résultat: {IMA ? IMA.toFixed(1) : "𝑥"}
         </p>
 
         <table className="border-separate border-spacing-x-0 dark:text-slate-100">
@@ -63,7 +63,7 @@ export const FormuleIMA = ({
                   highlightOnThreshold(0, gender === "male" ? 8 : 21, 20, 40)
                 }
               >
-                20 {"=> x <="} 40
+                20 {"≥ 𝑥 ≤"} 40
               </td>
               <td
                 className={
@@ -71,7 +71,7 @@ export const FormuleIMA = ({
                   highlightOnThreshold(0, gender === "male" ? 8 : 0, 20, 40)
                 }
               >
-                x {"<"} 8%
+                𝑥 {"<"} 8%
               </td>
               <td
                 className={
@@ -79,7 +79,7 @@ export const FormuleIMA = ({
                   highlightOnThreshold(0, gender === "female" ? 21 : 0, 20, 40)
                 }
               >
-                x {"<"} 21%
+                𝑥 {"<"} 21%
               </td>
             </tr>
             <tr>
@@ -90,7 +90,7 @@ export const FormuleIMA = ({
                   highlightOnThreshold(0, gender === "male" ? 11 : 23, 41, 60)
                 }
               >
-                41 {"=> x <="} 60
+                41 {"≥ 𝑥 ≤"} 60
               </td>
               <td
                 className={
@@ -98,7 +98,7 @@ export const FormuleIMA = ({
                   highlightOnThreshold(0, gender === "male" ? 11 : 0, 41, 60)
                 }
               >
-                x {"<"} 11%
+                𝑥 {"<"} 11%
               </td>
               <td
                 className={
@@ -106,7 +106,7 @@ export const FormuleIMA = ({
                   highlightOnThreshold(0, gender === "female" ? 23 : 0, 41, 60)
                 }
               >
-                x {"<"} 23%
+                𝑥 {"<"} 23%
               </td>
             </tr>
             <tr>
@@ -117,7 +117,7 @@ export const FormuleIMA = ({
                   highlightOnThreshold(0, gender === "male" ? 13 : 24, 61, 79)
                 }
               >
-                61 {"=> x <="} 79
+                61 {"≥ 𝑥 ≤"} 79
               </td>
               <td
                 className={
@@ -125,7 +125,7 @@ export const FormuleIMA = ({
                   highlightOnThreshold(0, gender === "male" ? 13 : 0, 61, 79)
                 }
               >
-                x {"<"} 13%
+                𝑥 {"<"} 13%
               </td>
               <td
                 className={
@@ -133,7 +133,7 @@ export const FormuleIMA = ({
                   highlightOnThreshold(0, gender === "female" ? 24 : 0, 61, 79)
                 }
               >
-                x {"<"} 24%
+                𝑥 {"<"} 24%
               </td>
             </tr>
 
@@ -174,7 +174,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                20 {"=> x <="} 40
+                20 {"≥ 𝑥 ≤"} 40
               </td>
               <td
                 className={
@@ -187,7 +187,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                8% {"=> x <"} 19%
+                8% {"≥ 𝑥 <"} 19%
               </td>
               <td
                 className={
@@ -200,7 +200,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                21% {"=> x <"} 33%
+                21% {"≥ 𝑥 <"} 33%
               </td>
             </tr>
             <tr>
@@ -216,7 +216,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                41 {"=> x <="} 60
+                41 {"≥ 𝑥 ≤"} 60
               </td>
               <td
                 className={
@@ -229,7 +229,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                11% {"=> x <"} 22%
+                11% {"≥ 𝑥 <"} 22%
               </td>
               <td
                 className={
@@ -242,7 +242,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                23% {"=> x <"} 35%
+                23% {"≥ 𝑥 <"} 35%
               </td>
             </tr>
             <tr>
@@ -258,10 +258,10 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                61 {"=> x <="} 79
+                61 {"≥ 𝑥 ≤"} 79
               </td>
-              <td className={tdStyle}>13% {"=> x <"} 25%</td>
-              <td className={tdStyle}>24% {"=> x <"} 36%</td>
+              <td className={tdStyle}>13% {"≥ 𝑥 <"} 25%</td>
+              <td className={tdStyle}>24% {"≥ 𝑥 <"} 36%</td>
             </tr>
 
             {/* En surpoids */}
@@ -301,7 +301,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                20 {"=> x <="} 40
+                20 {"≥ 𝑥 ≤"} 40
               </td>
               <td
                 className={
@@ -314,7 +314,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                19% {"=> x <="} 25%
+                19% {"≥ 𝑥 ≤"} 25%
               </td>
               <td
                 className={
@@ -327,7 +327,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                33% {"=> x <="} 39%
+                33% {"≥ 𝑥 ≤"} 39%
               </td>
             </tr>
             <tr>
@@ -343,7 +343,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                41 {"=> x <="} 60
+                41 {"≥ 𝑥 ≤"} 60
               </td>
               <td
                 className={
@@ -356,7 +356,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                22% {"=> x <="} 27%
+                22% {"≥ 𝑥 ≤"} 27%
               </td>
               <td
                 className={
@@ -369,7 +369,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                35% {"=> x <="} 40%
+                35% {"≥ 𝑥 ≤"} 40%
               </td>
             </tr>
             <tr>
@@ -385,7 +385,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                61 {"=> x <="} 79
+                61 {"≥ 𝑥 ≤"} 79
               </td>
               <td
                 className={
@@ -398,7 +398,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                25% {"=> x <="} 30%
+                25% {"≥ 𝑥 ≤"} 30%
               </td>
               <td
                 className={
@@ -411,7 +411,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                36% {"=> x <="} 42%
+                36% {"≥ 𝑥 ≤"} 42%
               </td>
             </tr>
 
@@ -442,7 +442,7 @@ export const FormuleIMA = ({
                   highlightOnThreshold(gender === "male" ? 25 : 39, 999, 20, 40)
                 }
               >
-                20 {"=> x <="} 40
+                20 {"≥ 𝑥 ≤"} 40
               </td>
               <td
                 className={
@@ -455,7 +455,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                25 {"<"} x
+                25 {"<"} 𝑥
               </td>
               <td
                 className={
@@ -468,7 +468,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                39 {"<"} x
+                39 {"<"} 𝑥
               </td>
             </tr>
             <tr>
@@ -479,7 +479,7 @@ export const FormuleIMA = ({
                   highlightOnThreshold(gender === "male" ? 27 : 40, 999, 41, 60)
                 }
               >
-                41 {"=> x <="} 60
+                41 {"≥ 𝑥 ≤"} 60
               </td>
               <td
                 className={
@@ -492,7 +492,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                27 {"<"} x
+                27 {"<"} 𝑥
               </td>
               <td
                 className={
@@ -505,7 +505,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                40 {"<"} x
+                40 {"<"} 𝑥
               </td>
             </tr>
             <tr>
@@ -516,7 +516,7 @@ export const FormuleIMA = ({
                   highlightOnThreshold(gender === "male" ? 30 : 42, 999, 61, 79)
                 }
               >
-                61 {"=> x <="} 79
+                61 {"≥ 𝑥 ≤"} 79
               </td>
               <td
                 className={
@@ -529,7 +529,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                30 {"<"} x
+                30 {"<"} 𝑥
               </td>
               <td
                 className={
@@ -542,7 +542,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                42 {"<"} x
+                42 {"<"} 𝑥
               </td>
             </tr>
           </tbody>

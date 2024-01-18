@@ -37,7 +37,7 @@ export const FormuleMB = ({ MB }: { MB: number }) => {
           data-testid="formules-result-mb"
           className="text-xl font-bold text-primary-500"
         >
-          Résultat: {MB ? MB.toFixed(1) : "x"}
+          Résultat: {MB ? MB.toFixed(1) : "𝑥"}
         </p>
         <Bar
           data={chartData}

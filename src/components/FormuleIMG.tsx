@@ -5,6 +5,7 @@ export const FormuleIMG = ({
   IMG: number;
   gender?: "male" | "female";
 }) => {
+  const tdStyle = "px-1 text-center text-[11px]/4 ";
   const highlightOnThreshold = (low: number, high: number) => {
     if (!!!IMG) return;
     if (IMG >= low && IMG < high) return "font-extrabold text-primary-500";
@@ -19,7 +20,7 @@ export const FormuleIMG = ({
           data-testid="formules-result-img"
           className="text-xl font-bold text-primary-500"
         >
-          Résultat: {IMG ? IMG.toFixed(1) : "x"}
+          Résultat: {IMG ? IMG.toFixed(1) : "𝑥"}
         </p>
 
         <table className="border-separate border-spacing-x-0 dark:text-slate-100">
@@ -39,19 +40,19 @@ export const FormuleIMG = ({
               </td>
               <td
                 className={
-                  "px-4 text-center " +
+                  tdStyle +
                   (gender === "male" ? highlightOnThreshold(0, 15) : "")
                 }
               >
-                x {"<"} 15%
+                𝑥 {"<"} 15%
               </td>
               <td
                 className={
-                  "px-4 text-center " +
+                  tdStyle +
                   (gender === "female" ? highlightOnThreshold(0, 25) : "")
                 }
               >
-                x {"<"} 25%
+                𝑥 {"<"} 25%
               </td>
             </tr>
             <tr>
@@ -65,19 +66,19 @@ export const FormuleIMG = ({
               </td>
               <td
                 className={
-                  "px-4 text-center " +
+                  tdStyle +
                   (gender === "male" ? highlightOnThreshold(15, 20) : "")
                 }
               >
-                15% {"=> x <="} 20%
+                15% {"≥ 𝑥 ≤"} 20%
               </td>
               <td
                 className={
-                  "px-4 text-center " +
+                  tdStyle +
                   (gender === "female" ? highlightOnThreshold(25, 30) : "")
                 }
               >
-                25% {"=> x <="} 30%
+                25% {"≥ 𝑥 ≤"} 30%
               </td>
             </tr>
             <tr>
@@ -91,19 +92,19 @@ export const FormuleIMG = ({
               </td>
               <td
                 className={
-                  "px-4 text-center " +
+                  tdStyle +
                   (gender === "male" ? highlightOnThreshold(20, 999) : "")
                 }
               >
-                20 {"<"} x
+                20 {"<"} 𝑥
               </td>
               <td
                 className={
-                  "px-4 text-center " +
+                  tdStyle +
                   (gender === "female" ? highlightOnThreshold(30, 999) : "")
                 }
               >
-                30 {"<"} x
+                30 {"<"} 𝑥
               </td>
             </tr>
           </tbody>
