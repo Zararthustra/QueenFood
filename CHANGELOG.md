@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/Zararthustra/QueenFood/compare/v1.0.0...v1.1.0) (2024-01-18)
+
+
+### Features
+
+* **Food:** add tests ([dd88b43](https://github.com/Zararthustra/QueenFood/commit/dd88b4392226756093a3f85f5743652ff749c8ab))
+* **Formules:** add IMG + test ([6fa1c8e](https://github.com/Zararthustra/QueenFood/commit/6fa1c8eceb1630930fa81dd2d8f2cee58cfde66b))
+* **Formules:** add tests ([a7450b3](https://github.com/Zararthustra/QueenFood/commit/a7450b33e5077495958815f7a39aac5db203604d))
+* **Home:** add tests ([8a51674](https://github.com/Zararthustra/QueenFood/commit/8a51674971b41c945b590fc891866de16b4ce2b4))
+* **Intolerances:** add tests ([3537c96](https://github.com/Zararthustra/QueenFood/commit/3537c96883278b90ae20e259c12626028a775ab3))
+* **Khayat:** add counter ([b1c8d61](https://github.com/Zararthustra/QueenFood/commit/b1c8d615094aa38dc1263c9d9cd88513ca744477))
+* **Khayat:** add tests ([8a0cdb1](https://github.com/Zararthustra/QueenFood/commit/8a0cdb1a71204129ff02becfc7fa46c219b2dd5c))
+
+
+### Bug Fixes
+
+* Formules test ([10d9a79](https://github.com/Zararthustra/QueenFood/commit/10d9a792e794377ebecdc72fd4eeb79f27a90698))
+
 ## [1.0.0](https://github.com/Zararthustra/QueenFood/compare/v0.3.0...v1.0.0) (2024-01-16)
 
 
