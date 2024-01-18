@@ -547,7 +547,7 @@ export const FormuleIMA = ({
             </tr>
           </tbody>
         </table>
-        <p className="mt-2 max-w-prose text-xs text-slate-400">
+        <p className="mt-2 text-[10px]/4 text-slate-400">
           * A better index of body adiposity. Bergman RN1, Stefanovski D,
           Buchanan TA, Sumner AE, Reynolds JC, Sebring NG, Xiang AH, Watanabe
           RM. Obesity (Silver Spring). 2011 May;19(5):1083-9. doi:

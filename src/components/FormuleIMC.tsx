@@ -62,7 +62,7 @@ export const FormuleIMC = ({ IMC }: { IMC: number }) => {
             </tr>
           </tbody>
         </table>
-        <p className="mt-2 text-xs text-slate-400">
+        <p className="mt-2 text-[10px]/4 text-slate-400">
           * Classification selon l’OMS et l’International Obesity Task Force
           (1998)
         </p>

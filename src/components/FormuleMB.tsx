@@ -56,8 +56,10 @@ export const FormuleMB = ({ MB }: { MB: number }) => {
             },
           }}
         />
-        <p className="mt-2 self-end text-xs text-slate-400">
-          * Harris et Benedict (1994)
+        <p className="mt-2 self-end text-[10px]/4 text-slate-400">
+          * A M Roza, H M Shizgal, The Harris Benedict equation reevaluated:
+          resting energy requirements and the body cell mass, The American
+          Journal of Clinical Nutrition, Volume 40, Issue 1, 1984
         </p>
       </div>
     </div>

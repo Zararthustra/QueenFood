@@ -109,7 +109,7 @@ export const FormuleIMG = ({
             </tr>
           </tbody>
         </table>
-        <p className="mt-2 max-w-prose text-xs text-slate-400">
+        <p className="mt-2 text-[10px]/4 text-slate-400">
           * Body mass index as a measure of body fatness: age- and sex-specific
           prediction formulas. Deurenberg P1, Weststrate JA, Seidell JC. Br J
           Nutr. 1991 Mar;65(2):105-14. PMID 2043597
