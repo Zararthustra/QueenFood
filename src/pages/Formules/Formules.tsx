@@ -5,7 +5,13 @@ import { number, object, string } from "yup";
 
 import { IFormulesForm } from "@interfaces/index";
 import { IconFemale, IconMale } from "@assets/index";
-import { Button, FormuleIMC, FormuleIMG, FormuleMB } from "@components/index";
+import {
+  Button,
+  FormuleIMA,
+  FormuleIMC,
+  FormuleIMG,
+  FormuleMB,
+} from "@components/index";
 
 export const Formules = () => {
   const labelStyle = "font-bold";
@@ -13,40 +19,50 @@ export const Formules = () => {
   const fieldStyle =
     "flex gap-3 justify-between items-center dark:text-slate-100";
 
+  const [ageState, setAgeState] = useState<number>(0);
   const [genderState, setGenderState] = useState<
     "male" | "female" | undefined
   >();
+
   const [MB, setMB] = useState<number>(0);
+  const [IMA, setIMA] = useState<number>(0);
   const [IMC, setIMC] = useState<number>(0);
   const [IMG, setIMG] = useState<number>(0);
+
   const onSubmitHandler = async (values: IFormulesForm) => {
-    const { gender, age, weight, height } = {
+    const { gender, age, weight, height, hip } = {
       gender: values.gender,
       age: values.age,
       weight: values.weight,
-      height: values.height,
+      height: values.height ? values.height / 100 : 0,
+      hip: values.hip,
     };
 
-    if (!!!weight || !!!height || !!!age || !!!gender) return;
+    if (!!!weight || !!!height || !!!age || !!!gender || !!!hip) return;
 
+    // Set states
     setGenderState(gender);
+    setAgeState(age);
+
     // MB
     if (gender === "female")
-      setMB(9.74 * weight + 172.9 * (height / 100) - 4.737 * age + 667.051);
+      setMB(9.74 * weight + 172.9 * height - 4.737 * age + 667.051);
     if (gender === "male")
-      setMB(13.707 * weight + 492.3 * (height / 100) - 6.673 * age + 77.607);
+      setMB(13.707 * weight + 492.3 * height - 6.673 * age + 77.607);
 
     // IMC
-    const imc = weight / (height / 100) ** 2;
+    const imc = weight / height ** 2;
     setIMC(imc);
 
     // IMG
     setIMG(1.2 * imc + 0.23 * age - 10.8 * (gender === "male" ? 1 : 0) - 5.4);
+
+    // IMA
+    setIMA(hip / (height * Math.sqrt(height)) - 18);
   };
 
   const {
     touched,
-    values,
     errors,
     handleBlur,
     handleSubmit,
@@ -58,6 +74,7 @@ export const Formules = () => {
       gender: undefined,
       weight: undefined,
       height: undefined,
+      hip: undefined,
     },
     onSubmit: onSubmitHandler,
     validationSchema: object({
@@ -65,6 +82,7 @@ export const Formules = () => {
       gender: string().required("Indiquez le genre"),
       weight: number().required("Indiquez le poids"),
       height: number().required("Indiquez la taille"),
+      hip: number().required("Indiquez le tour de taille"),
     }),
   });
   return (
@@ -216,6 +234,33 @@ export const Formules = () => {
                 </p>
               )}
             </div>
+
+            {/* Hip */}
+            <div>
+              <div className={fieldStyle}>
+                <label className={labelStyle} htmlFor="hip">
+                  Tour de taille (cm)
+                </label>
+                <InputNumber
+                  id="hip"
+                  name="hip"
+                  type="number"
+                  status={touched?.hip && errors?.hip ? "error" : ""}
+                  min={0}
+                  onBlur={handleBlur}
+                  onChange={(value: number | null) => {
+                    if (!!!value || value < 0) return;
+                    setFieldValue("hip", value);
+                  }}
+                  value={getFieldProps("hip").value}
+                />
+              </div>
+              {touched?.hip && errors?.hip && (
+                <p data-testid="formules-form-error" className={errorStyle}>
+                  {errors.hip}
+                </p>
+              )}
+            </div>
           </div>
 
           <Button primary type="submit" className="mt-2">
@@ -226,6 +271,7 @@ export const Formules = () => {
         <div className="flex w-full flex-wrap justify-evenly gap-5">
           <FormuleIMC IMC={IMC} />
           <FormuleIMG IMG={IMG} gender={genderState} />
+          <FormuleIMA IMA={IMA} gender={genderState} age={ageState} />
           <FormuleMB MB={MB} />
         </div>
       </main>

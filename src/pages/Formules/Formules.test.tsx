@@ -37,11 +37,13 @@ describe("Page Formules", () => {
     const inputAge = getByLabelText("Âge");
     const inputWeight = getByLabelText("Poids (kg)");
     const inputHeight = getByLabelText("Taille (cm)");
+    const inputHip = getByLabelText("Tour de taille (cm)");
 
     fireEvent.click(genderButton);
     fireEvent.change(inputAge, { target: { value: 55 } });
     fireEvent.change(inputWeight, { target: { value: 72 } });
     fireEvent.change(inputHeight, { target: { value: 175 } });
+    fireEvent.change(inputHip, { target: { value: 85 } });
 
     fireEvent.click(submitButton);
     const pErrorsQuery = queryAllByTestId("formules-form-error");
@@ -51,6 +53,7 @@ describe("Page Formules", () => {
       age: 55,
       weight: 72,
       height: 175,
+      hip: 85,
     });
     expect(pErrorsQuery).toHaveLength(0);
   });
@@ -76,16 +79,17 @@ describe("Page Formules", () => {
       age: 55,
       weight: null, // Not filled
       height: null, // String instead of number
+      hip: null, // Not filled
     });
 
-    expect(pErrors).toHaveLength(2);
+    expect(pErrors).toHaveLength(3);
   });
 
   test("Form KO", async () => {
     const { submitButton, findAllByTestId } = setup();
     fireEvent.click(submitButton);
     const pErrors = await findAllByTestId("formules-form-error");
-    expect(pErrors).toHaveLength(4);
+    expect(pErrors).toHaveLength(5);
   });
 
   test("Results", async () => {
@@ -95,11 +99,13 @@ describe("Page Formules", () => {
     const inputAge = getByLabelText("Âge");
     const inputWeight = getByLabelText("Poids (kg)");
     const inputHeight = getByLabelText("Taille (cm)");
+    const inputHip = getByLabelText("Tour de taille (cm)");
 
     fireEvent.click(genderButton);
     fireEvent.change(inputAge, { target: { value: 55 } });
     fireEvent.change(inputWeight, { target: { value: 72 } });
     fireEvent.change(inputHeight, { target: { value: 175 } });
+    fireEvent.change(inputHip, { target: { value: 85 } });
 
     fireEvent.click(submitButton);
 
@@ -110,6 +116,10 @@ describe("Page Formules", () => {
     // IMG
     const resultIMG = await findByTestId("formules-result-img");
     expect(resultIMG.textContent).toBe("Résultat: 24.7");
+
+    // IMA
+    const resultIMA = await findByTestId("formules-result-ima");
+    expect(resultIMA.textContent).toBe("Résultat: 18.7");
 
     // MB
     const resultMB = await findByTestId("formules-result-mb");

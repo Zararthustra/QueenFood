@@ -8,6 +8,7 @@ export { FoodItem } from "./FoodItem";
 export { FormuleIMC } from "./FormuleIMC";
 export { FormuleIMG } from "./FormuleIMG";
 export { FormuleMB } from "./FormuleMB";
+export { FormuleIMA } from "./FormuleIMA";
 
 // Khayat
 export { KhayatItem } from "./KhayatItem";

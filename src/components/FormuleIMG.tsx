@@ -7,7 +7,7 @@ export const FormuleIMG = ({
 }) => {
   const highlightOnThreshold = (low: number, high: number) => {
     if (!!!IMG) return;
-    if (IMG >= low && IMG < high) return "font-bold text-primary-500";
+    if (IMG >= low && IMG < high) return "font-extrabold text-primary-500";
     return;
   };
 

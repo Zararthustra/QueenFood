@@ -5,4 +5,5 @@ interface IFormulesForm {
   gender?: "male" | "female";
   weight?: number;
   height?: number;
+  hip?: number;
 }

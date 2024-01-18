@@ -1,7 +1,7 @@
 export const FormuleIMC = ({ IMC }: { IMC: number }) => {
   const highlightOnThreshold = (low: number, high: number) => {
     if (!!!IMC) return;
-    if (IMC >= low && IMC < high) return "font-bold text-primary-500";
+    if (IMC >= low && IMC < high) return "font-extrabold text-primary-500";
     return;
   };
 
