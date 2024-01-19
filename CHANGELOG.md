@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/Zararthustra/QueenFood/compare/v1.2.0...v1.3.0) (2024-01-19)
+
+
+### Features
+
+* **Formules:** add graph + fix MB graph on darkmode ([480abfa](https://github.com/Zararthustra/QueenFood/commit/480abfa090089cd8723b2660be82215fc5787f07))
+* **Formules:** change math unicode signs & font size ([858d830](https://github.com/Zararthustra/QueenFood/commit/858d830feecf9004edf2a98413eb33566f85d6c2))
+* **Formules:** save values to local storage & add reset button with icon ([d74d9c0](https://github.com/Zararthustra/QueenFood/commit/d74d9c0c548217782548e536abc872c6748cbe80))
+
+
+### Bug Fixes
+
+* Home height ([ea68946](https://github.com/Zararthustra/QueenFood/commit/ea689464569ce5ced3c4126007c32939327284ba))
+* smaller studies citations + correct MB one ([0ec4edd](https://github.com/Zararthustra/QueenFood/commit/0ec4eddeca6ca85b336c2a5ba3d2941e4aaf8bfc))
+* use BrowserRouter in Formules tests (useNavigate needs) & test Form KO BEFORE OMFGQSFQSDFFFFFFFF BEFORE Form OK ([554365b](https://github.com/Zararthustra/QueenFood/commit/554365bfa1c95f932ce837a3463d4c38b982162f))
+
 ## [1.2.0](https://github.com/Zararthustra/QueenFood/compare/v1.1.0...v1.2.0) (2024-01-18)
 
 
