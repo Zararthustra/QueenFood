@@ -82,7 +82,7 @@ export const khayatList: IKhayat[] = [
     },
     {
       "nutriments": "Autres",
-      "valeur": "10"
+      "valeur": 10
     }
   ],
   "micronutriments": "moyen"
@@ -137,9 +137,9 @@ export const khayatList: IKhayat[] = [
   "boisson": false,
   "nutriSanté": 5,
   "portions": {
-    "seniors": "1 ou 2",
-    "adultes": "1 ou 2",
-    "enfants": 1
+    "seniors": "1 ou 2 Madeleines",
+    "adultes": "1 ou 2 Madeleines",
+    "enfants": "1 Madeleine"
   },
   "énergie": {
     "100g": "459kcal",
