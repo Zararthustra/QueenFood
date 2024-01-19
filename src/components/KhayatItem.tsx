@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 
@@ -10,6 +11,7 @@ import {
   IconThumbOK,
 } from "@assets/index";
 import { IKhayat } from "@interfaces/index";
+import AppContext, { IAppContext } from "@services/AppContext";
 import { getNovaGroupImg, getNutriScoreSvg } from "@utils/formatters";
 import { MicroNutrimentLevel, NutriSanteScore } from "@components/index";
 
@@ -17,6 +19,7 @@ interface IKhayatItemProps {
   fiche: IKhayat;
 }
 export const KhayatItem = ({ fiche }: IKhayatItemProps) => {
+  const { darkMode } = useContext<IAppContext>(AppContext);
   const tierStyle =
     "w-full shadow-md px-4 bg-white dark:bg-slate-800 rounded-sm py-10 relative mt-7";
   const iconStyle =
@@ -145,6 +148,7 @@ export const KhayatItem = ({ fiche }: IKhayatItemProps) => {
                   title: {
                     display: true,
                     text: "Pour 100 grammes",
+                    color: darkMode ? "#F3F4F6" : "#334155",
                   },
                   labels: {
                     generateLabels: function (chart) {
