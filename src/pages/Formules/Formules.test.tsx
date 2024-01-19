@@ -2,10 +2,15 @@ import { expect, test, describe } from "vitest";
 import { fireEvent, render, screen } from "@testing-library/react";
 
 import { Formules } from "./Formules";
+import { BrowserRouter } from "react-router-dom";
 
 describe("Page Formules", () => {
   const setup = () => {
-    const utils = render(<Formules />);
+    const utils = render(
+      <BrowserRouter>
+        <Formules />
+      </BrowserRouter>,
+    );
 
     const main = screen.queryByTestId("formules");
     const form = screen.getByTestId("formules-form");
@@ -22,6 +27,40 @@ describe("Page Formules", () => {
   test("Is present in DOM", () => {
     const { main } = setup();
     expect(main).toBeInTheDocument();
+  });
+
+  test("Form KO", async () => {
+    const { submitButton, findAllByTestId } = setup();
+    fireEvent.click(submitButton);
+    const pErrors = await findAllByTestId("formules-form-error");
+    expect(pErrors).toHaveLength(5);
+  });
+
+  test("Form partially filled with a wrong value", async () => {
+    const { form, submitButton, getByLabelText, getByTestId, findAllByTestId } =
+      setup();
+
+    const genderButton = getByTestId("formules-form-gender-male");
+    const inputAge = getByLabelText("Âge");
+    const inputHeight = getByLabelText("Taille (cm)");
+
+    fireEvent.click(genderButton);
+    fireEvent.change(inputAge, { target: { value: 55 } });
+    fireEvent.change(inputHeight, { target: { value: "string" } });
+
+    fireEvent.click(submitButton);
+
+    const pErrors = await findAllByTestId("formules-form-error");
+
+    expect(form).toHaveFormValues({
+      gender: "male",
+      age: 55,
+      weight: null, // Not filled
+      height: null, // String instead of number
+      hip: null, // Not filled
+    });
+
+    expect(pErrors).toHaveLength(3);
   });
 
   test("Form OK", () => {
@@ -56,40 +95,6 @@ describe("Page Formules", () => {
       hip: 85,
     });
     expect(pErrorsQuery).toHaveLength(0);
-  });
-
-  test("Form partially filled with a wrong value", async () => {
-    const { form, submitButton, getByLabelText, getByTestId, findAllByTestId } =
-      setup();
-
-    const genderButton = getByTestId("formules-form-gender-male");
-    const inputAge = getByLabelText("Âge");
-    const inputHeight = getByLabelText("Taille (cm)");
-
-    fireEvent.click(genderButton);
-    fireEvent.change(inputAge, { target: { value: 55 } });
-    fireEvent.change(inputHeight, { target: { value: "string" } });
-
-    fireEvent.click(submitButton);
-
-    const pErrors = await findAllByTestId("formules-form-error");
-
-    expect(form).toHaveFormValues({
-      gender: "male",
-      age: 55,
-      weight: null, // Not filled
-      height: null, // String instead of number
-      hip: null, // Not filled
-    });
-
-    expect(pErrors).toHaveLength(3);
-  });
-
-  test("Form KO", async () => {
-    const { submitButton, findAllByTestId } = setup();
-    fireEvent.click(submitButton);
-    const pErrors = await findAllByTestId("formules-form-error");
-    expect(pErrors).toHaveLength(5);
   });
 
   test("Results", async () => {
