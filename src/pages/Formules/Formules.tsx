@@ -10,6 +10,7 @@ import { InputNumber, Radio } from "antd";
 import { PolarArea } from "react-chartjs-2";
 import { useContext, useState } from "react";
 import { number, object, string } from "yup";
+import { useNavigate } from "react-router-dom";
 
 import {
   Button,
@@ -19,24 +20,32 @@ import {
   FormuleMB,
 } from "@components/index";
 import { IFormulesForm } from "@interfaces/index";
-import { IconFemale, IconMale } from "@assets/index";
 import AppContext, { IAppContext } from "@services/AppContext";
+import { getLS, setLS } from "@services/localStorageService";
+import { IconCalcul, IconFemale, IconMale, IconReset } from "@assets/index";
 
 export const Formules = () => {
+  const navigate = useNavigate();
   const labelStyle = "font-bold";
   const errorStyle = "font-bold text-red-500";
   const fieldStyle =
     "flex gap-3 justify-between items-center dark:text-slate-100";
 
-  const [ageState, setAgeState] = useState<number>(0);
-  const [genderState, setGenderState] = useState<
-    "male" | "female" | undefined
-  >();
+  const LSValues: IFormulesForm & {
+    imc: number;
+    img: number;
+    ima: number;
+    mb: number;
+  } = JSON.parse(getLS("FormulesForm") || "{}");
+  const [ageState, setAgeState] = useState<number>(LSValues.age || 0);
+  const [genderState, setGenderState] = useState<"male" | "female" | undefined>(
+    LSValues.gender || undefined,
+  );
 
-  const [MB, setMB] = useState<number>(0);
-  const [IMA, setIMA] = useState<number>(0);
-  const [IMC, setIMC] = useState<number>(0);
-  const [IMG, setIMG] = useState<number>(0);
+  const [MB, setMB] = useState<number>(LSValues.mb || 0);
+  const [IMA, setIMA] = useState<number>(LSValues.ima || 0);
+  const [IMC, setIMC] = useState<number>(LSValues.imc || 0);
+  const [IMG, setIMG] = useState<number>(LSValues.img || 0);
 
   const { darkMode } = useContext<IAppContext>(AppContext);
   ChartJS.register(ArcElement, RadialLinearScale, Tooltip, Legend);
@@ -67,21 +76,36 @@ export const Formules = () => {
     setGenderState(gender);
     setAgeState(age);
 
-    // MB
-    if (gender === "female")
-      setMB(9.74 * weight + 172.9 * height - 4.737 * age + 667.051);
-    if (gender === "male")
-      setMB(13.707 * weight + 492.3 * height - 6.673 * age + 77.607);
-
-    // IMC
+    // Formules
     const imc = weight / height ** 2;
+    const img =
+      1.2 * imc + 0.23 * age - 10.8 * (gender === "male" ? 1 : 0) - 5.4;
+    const ima = hip / (height * Math.sqrt(height)) - 18;
+    let mb;
+    if (gender === "female")
+      mb = 9.74 * weight + 172.9 * height - 4.737 * age + 667.051;
+    if (gender === "male")
+      mb = 13.707 * weight + 492.3 * height - 6.673 * age + 77.607;
+
+    // Set states
+    if (mb) setMB(mb);
     setIMC(imc);
-
-    // IMG
-    setIMG(1.2 * imc + 0.23 * age - 10.8 * (gender === "male" ? 1 : 0) - 5.4);
-
-    // IMA
-    setIMA(hip / (height * Math.sqrt(height)) - 18);
+    setIMG(img);
+    setIMA(ima);
+    setLS(
+      "FormulesForm",
+      JSON.stringify({
+        gender: values.gender,
+        age: values.age,
+        weight: values.weight,
+        height: values.height,
+        hip: values.hip,
+        imc: imc,
+        img: img,
+        ima: ima,
+        mb: mb,
+      }),
+    );
   };
 
   const {
@@ -93,11 +117,11 @@ export const Formules = () => {
     getFieldProps,
   } = useFormik({
     initialValues: {
-      age: undefined,
-      gender: undefined,
-      weight: undefined,
-      height: undefined,
-      hip: undefined,
+      age: LSValues.age,
+      gender: LSValues.gender,
+      weight: LSValues.weight,
+      height: LSValues.height,
+      hip: LSValues.hip,
     },
     onSubmit: onSubmitHandler,
     validationSchema: object({
@@ -289,9 +313,24 @@ export const Formules = () => {
               </div>
             </div>
 
-            <Button primary type="submit" className="mt-2">
-              Calculer
-            </Button>
+            <div className="mt-4 flex flex-col gap-1">
+              {!!Object.values(LSValues).length && (
+                <Button
+                  variant="ko"
+                  onClick={() => {
+                    setLS("FormulesForm", "{}");
+                    navigate(0);
+                  }}
+                >
+                  <IconReset width={18} height={18} />
+                  Reset
+                </Button>
+              )}
+              <Button primary type="submit">
+                <IconCalcul width={20} height={20} />
+                Calculer
+              </Button>
+            </div>
           </form>
 
           <div className="w-[300px]">

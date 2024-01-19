@@ -58,3 +58,5 @@ export { IconCrownOutlined } from "./svg/IconCrownOutlined";
 export { IconDrink } from "./svg/IconDrink";
 export { IconMale } from "./svg/IconMale";
 export { IconFemale } from "./svg/IconFemale";
+export { IconReset } from "./svg/IconReset";
+export { IconCalcul } from "./svg/IconCalcul";
