@@ -2,6 +2,266 @@ import { IKhayat } from "@interfaces/index";
 
 export const khayatList: IKhayat[] = [
   {
+  "catégorie": "Goûter",
+  "titre": "Cookies Start-Up",
+  "boisson": false,
+  "nutriSanté": 5,
+  "portions": {
+    "seniors": "2 Parts",
+    "adultes": "1 Part",
+    "enfants": "1 Part"
+  },
+  "énergie": {
+    "100g": "450kcal",
+    "portion": "280kcal"
+  },
+  "dépenses": [
+    "15min de volley",
+    "monter-descendre 5 fois les escaliers sur 2 étages"
+  ],
+  "nutriScore": "b",
+  "nova": 4,
+  "avantages": "Contiennent moins de matières grasses que les biscuits classiques.",
+  "inconvénients": "Attention à ne pas dépasser la portion indiquée.",
+  "astuces": "Ils ne sont pas moins caloriques en revanche ces cookies contiennent des ingrédients plus vertueux en particulier des légumineuses intéréssantes ",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 50
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 7
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 20
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 23
+    }
+  ],
+  "micronutriments": "élevé"
+},
+  {
+  "catégorie": "Goûter",
+  "titre": "Biscuits Diététiques",
+  "boisson": false,
+  "nutriSanté": 4,
+  "portions": {
+    "seniors": "1 ou 2 Biscuits",
+    "adultes": "2 ou 3 Biscuits",
+    "enfants": "1 ou 2 Biscuits"
+  },
+  "énergie": {
+    "100g": "450kcal",
+    "portion": "300kcal"
+  },
+  "dépenses": [
+    "25min de judo",
+    "30min de rameur"
+  ],
+  "nutriScore": "b",
+  "nova": 4,
+  "avantages": "Contiennent moins de matières grasses et/ou de sucre que son équivalent non allégé.",
+  "inconvénients": "Présence d'additifs.",
+  "astuces": "Il n'y a pas de différence calorique par rapport à des biscuits classiques mais ils sont souvent ultra-transformés pour obtenir une composition plus équilibrée. Evitez si vous n'avez pas d'allergies, de diabète ou d'intolérances.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 66
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 10
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 14
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": "10"
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Goûter",
+  "titre": "Petit Cake Fourré (Fruits)",
+  "boisson": false,
+  "nutriSanté": 6,
+  "portions": {
+    "seniors": "1 Cake",
+    "adultes": "1 ou 2 Cakes",
+    "enfants": "1 Cake"
+  },
+  "énergie": {
+    "100g": "400kcal",
+    "portion": "240kcal"
+  },
+  "dépenses": [
+    "1h de jardinage",
+    "25min de tennis",
+    "1h15 de marche"
+  ],
+  "nutriScore": "d",
+  "nova": 4,
+  "avantages": "Facile à transporter dans son sac.",
+  "inconvénients": "Calorique et ultra-transformé. Apporte peu de nutriments.",
+  "astuces": "Il vaut mieux les faire à la maison car les versions industrielles sont souvent ulta-transformées.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 66
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 5
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 12
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 17
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Goûter",
+  "titre": "Madeleine",
+  "boisson": false,
+  "nutriSanté": 5,
+  "portions": {
+    "seniors": "1 ou 2",
+    "adultes": "1 ou 2",
+    "enfants": 1
+  },
+  "énergie": {
+    "100g": "459kcal",
+    "portion": "225kcal"
+  },
+  "dépenses": [
+    "40min de jardinage",
+    "1h de basket",
+    "1h10 de marche"
+  ],
+  "nutriScore": "d",
+  "nova": 3,
+  "avantages": "Fournit de l'énergie à l'organisme. Apporte du plaisir gustatif.",
+  "inconvénients": "Produit sucré. Contient des acides gras saturés.",
+  "astuces": "Comme pour Marcel Proust, une gourmandise au parfum d'enfance. A associer avec une crème dessert, un fruit ou un verre de lait pour un trio parfaitement équilibré!",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 54
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 7
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 22
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 17
+    }
+  ],
+  "micronutriments": "faible"
+},
+  {
+  "catégorie": "Goûter",
+  "titre": "Galettes Pur Beurre",
+  "boisson": false,
+  "nutriSanté": 5,
+  "portions": {
+    "seniors": "2-3 Galettes",
+    "adultes": "3-4 Galettes",
+    "enfants": "2-3 Galettes "
+  },
+  "énergie": {
+    "100g": "470kcal",
+    "portion": "124kcal"
+  },
+  "dépenses": [
+    "40min de marche",
+    "40min de vélo",
+    "4min de corde à sauter"
+  ],
+  "nutriScore": "e",
+  "nova": 3,
+  "avantages": "Energie facilement disponible.",
+  "inconvénients": "Contiennent beaucoup d'acides gras saturés.",
+  "astuces": "Comme tous les biscuits, les galettes sont très caloriques, mais à préférer pour leur composition simple! Attention à la quantité. A associer avec une crème dessert ou une salade de fruits.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 74
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 3
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 16
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 7
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Déjeuner",
+  "titre": "Île Flottante",
+  "boisson": false,
+  "nutriSanté": 7,
+  "portions": {
+    "seniors": "125g",
+    "adultes": "125g",
+    "enfants": "100g"
+  },
+  "énergie": {
+    "100g": "140kcal",
+    "portion": "175kcal"
+  },
+  "dépenses": [
+    "45min de marche"
+  ],
+  "nutriScore": "c",
+  "nova": 3,
+  "avantages": "Contient des protéines de bonne qualité. Dessert gourmand non calorique.",
+  "inconvénients": "Produit sucré. Peu rassasiant.",
+  "astuces": "Très bon dessert grâce à une composition équilibrée en sucres et en protéines, finalement assez léger.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 21
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 5
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 4
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 70
+    }
+  ],
+  "micronutriments": "faible"
+},
+  {
   "catégorie": "Déjeuner",
   "titre": "Flan",
   "boisson": false,
