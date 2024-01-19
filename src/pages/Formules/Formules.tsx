@@ -1,10 +1,16 @@
-import { useState } from "react";
+import {
+  Chart as ChartJS,
+  ArcElement,
+  RadialLinearScale,
+  Tooltip,
+  Legend,
+} from "chart.js";
 import { useFormik } from "formik";
 import { InputNumber, Radio } from "antd";
+import { PolarArea } from "react-chartjs-2";
+import { useContext, useState } from "react";
 import { number, object, string } from "yup";
 
-import { IFormulesForm } from "@interfaces/index";
-import { IconFemale, IconMale } from "@assets/index";
 import {
   Button,
   FormuleIMA,
@@ -12,6 +18,9 @@ import {
   FormuleIMG,
   FormuleMB,
 } from "@components/index";
+import { IFormulesForm } from "@interfaces/index";
+import { IconFemale, IconMale } from "@assets/index";
+import AppContext, { IAppContext } from "@services/AppContext";
 
 export const Formules = () => {
   const labelStyle = "font-bold";
@@ -28,6 +37,20 @@ export const Formules = () => {
   const [IMA, setIMA] = useState<number>(0);
   const [IMC, setIMC] = useState<number>(0);
   const [IMG, setIMG] = useState<number>(0);
+
+  const { darkMode } = useContext<IAppContext>(AppContext);
+  ChartJS.register(ArcElement, RadialLinearScale, Tooltip, Legend);
+  const chartData = {
+    labels: ["IMC", "IMG", "IMA"],
+    datasets: [
+      {
+        data: [IMC, IMG, IMA],
+        backgroundColor: ["#ff218c79", "#ffd80079", "#21b1ff79"],
+        hoverOffset: 10,
+        borderWidth: 0.5,
+      },
+    ],
+  };
 
   const onSubmitHandler = async (values: IFormulesForm) => {
     const { gender, age, weight, height, hip } = {
@@ -89,190 +112,229 @@ export const Formules = () => {
     <>
       <main
         data-testid="formules"
-        className="mb-[50px] flex flex-col items-center px-2 dark:text-slate-100"
+        className="mb-[50px] flex flex-col items-center gap-10 px-2 dark:text-slate-100"
       >
-        <h1 className="my-5 text-center">Formules</h1>
+        <h1 className="mt-5 text-center">Formules</h1>
 
-        <form
-          data-testid="formules-form"
-          className="my-5 flex flex-col justify-between"
-          onSubmit={handleSubmit}
-        >
-          <div className="flex h-full flex-col justify-center gap-2">
-            {/* Gender */}
-            <div>
-              <div className={fieldStyle}>
-                <label className={labelStyle + " flex w-full justify-between"}>
-                  Genre
-                  <Radio.Group
-                    id="gender"
-                    name="gender"
-                    options={[
-                      {
-                        label: (
-                          <div
-                            data-testid="formules-form-gender-male"
-                            className="flex h-full flex-col justify-center px-[4px] pl-[5px]"
-                          >
-                            <IconMale
-                              width={21}
-                              height={21}
-                              className="shrink-0"
-                            />
-                          </div>
-                        ),
-                        value: "male",
-                      },
-                      {
-                        label: (
-                          <div className="flex h-full flex-col justify-center px-[4px]">
-                            <IconFemale
-                              width={21}
-                              height={21}
-                              className="shrink-0"
-                            />
-                          </div>
-                        ),
-                        value: "female",
-                      },
-                    ]}
-                    onChange={({ target: { value } }) => {
-                      setFieldValue("gender", value);
-                    }}
+        <div className="flex flex-wrap justify-center gap-10">
+          <form
+            data-testid="formules-form"
+            className="mt-3 flex flex-col justify-between"
+            onSubmit={handleSubmit}
+          >
+            <div className="flex flex-col justify-center gap-2">
+              {/* Gender */}
+              <div>
+                <div className={fieldStyle}>
+                  <label
+                    className={labelStyle + " flex w-full justify-between"}
+                  >
+                    Genre
+                    <Radio.Group
+                      id="gender"
+                      name="gender"
+                      options={[
+                        {
+                          label: (
+                            <div
+                              data-testid="formules-form-gender-male"
+                              className="flex h-full flex-col justify-center px-[4px] pl-[5px]"
+                            >
+                              <IconMale
+                                width={21}
+                                height={21}
+                                className="shrink-0"
+                              />
+                            </div>
+                          ),
+                          value: "male",
+                        },
+                        {
+                          label: (
+                            <div className="flex h-full flex-col justify-center px-[4px]">
+                              <IconFemale
+                                width={21}
+                                height={21}
+                                className="shrink-0"
+                              />
+                            </div>
+                          ),
+                          value: "female",
+                        },
+                      ]}
+                      onChange={({ target: { value } }) => {
+                        setFieldValue("gender", value);
+                      }}
+                      onBlur={handleBlur}
+                      value={getFieldProps("gender").value}
+                      optionType="button"
+                      buttonStyle="solid"
+                      size="small"
+                    />
+                  </label>
+                </div>
+                {errors?.gender && (
+                  <p data-testid="formules-form-error" className={errorStyle}>
+                    {errors.gender}
+                  </p>
+                )}
+              </div>
+
+              {/* Age */}
+              <div>
+                <div className={fieldStyle}>
+                  <label className={labelStyle} htmlFor="age">
+                    Âge
+                  </label>
+                  <InputNumber
+                    id="age"
+                    name="age"
+                    type="number"
+                    status={touched?.age && errors?.age ? "error" : ""}
+                    min={0}
                     onBlur={handleBlur}
-                    value={getFieldProps("gender").value}
-                    optionType="button"
-                    buttonStyle="solid"
-                    size="small"
+                    onChange={(value: number | null) => {
+                      if (!!!value || value < 0) return;
+                      setFieldValue("age", value);
+                    }}
+                    value={getFieldProps("age").value}
                   />
-                </label>
+                </div>
+                {touched?.age && errors?.age && (
+                  <p data-testid="formules-form-error" className={errorStyle}>
+                    {errors.age}
+                  </p>
+                )}
               </div>
-              {errors?.gender && (
-                <p data-testid="formules-form-error" className={errorStyle}>
-                  {errors.gender}
-                </p>
-              )}
+
+              {/* Weight */}
+              <div>
+                <div className={fieldStyle}>
+                  <label className={labelStyle} htmlFor="weight">
+                    Poids (kg)
+                  </label>
+                  <InputNumber
+                    id="weight"
+                    name="weight"
+                    type="number"
+                    status={touched?.weight && errors?.weight ? "error" : ""}
+                    min={0}
+                    onBlur={handleBlur}
+                    onChange={(value: number | null) => {
+                      if (!!!value || value < 0) return;
+                      setFieldValue("weight", value);
+                    }}
+                    value={getFieldProps("weight").value}
+                  />
+                </div>
+                {touched?.weight && errors?.weight && (
+                  <p data-testid="formules-form-error" className={errorStyle}>
+                    {errors.weight}
+                  </p>
+                )}
+              </div>
+
+              {/* Height */}
+              <div>
+                <div className={fieldStyle}>
+                  <label className={labelStyle} htmlFor="height">
+                    Taille (cm)
+                  </label>
+                  <InputNumber
+                    id="height"
+                    name="height"
+                    type="number"
+                    status={touched?.height && errors?.height ? "error" : ""}
+                    min={0}
+                    onBlur={handleBlur}
+                    onChange={(value: number | null) => {
+                      if (!!!value || value < 0) return;
+                      setFieldValue("height", value);
+                    }}
+                    value={getFieldProps("height").value}
+                  />
+                </div>
+                {touched?.height && errors?.height && (
+                  <p data-testid="formules-form-error" className={errorStyle}>
+                    {errors.height}
+                  </p>
+                )}
+              </div>
+
+              {/* Hip */}
+              <div>
+                <div className={fieldStyle}>
+                  <label className={labelStyle} htmlFor="hip">
+                    Tour de taille (cm)
+                  </label>
+                  <InputNumber
+                    id="hip"
+                    name="hip"
+                    type="number"
+                    status={touched?.hip && errors?.hip ? "error" : ""}
+                    min={0}
+                    onBlur={handleBlur}
+                    onChange={(value: number | null) => {
+                      if (!!!value || value < 0) return;
+                      setFieldValue("hip", value);
+                    }}
+                    value={getFieldProps("hip").value}
+                  />
+                </div>
+                {touched?.hip && errors?.hip && (
+                  <p data-testid="formules-form-error" className={errorStyle}>
+                    {errors.hip}
+                  </p>
+                )}
+              </div>
             </div>
 
-            {/* Age */}
-            <div>
-              <div className={fieldStyle}>
-                <label className={labelStyle} htmlFor="age">
-                  Âge
-                </label>
-                <InputNumber
-                  id="age"
-                  name="age"
-                  type="number"
-                  status={touched?.age && errors?.age ? "error" : ""}
-                  min={0}
-                  onBlur={handleBlur}
-                  onChange={(value: number | null) => {
-                    if (!!!value || value < 0) return;
-                    setFieldValue("age", value);
-                  }}
-                  value={getFieldProps("age").value}
-                />
-              </div>
-              {touched?.age && errors?.age && (
-                <p data-testid="formules-form-error" className={errorStyle}>
-                  {errors.age}
-                </p>
-              )}
-            </div>
+            <Button primary type="submit" className="mt-2">
+              Calculer
+            </Button>
+          </form>
 
-            {/* Weight */}
-            <div>
-              <div className={fieldStyle}>
-                <label className={labelStyle} htmlFor="weight">
-                  Poids (kg)
-                </label>
-                <InputNumber
-                  id="weight"
-                  name="weight"
-                  type="number"
-                  status={touched?.weight && errors?.weight ? "error" : ""}
-                  min={0}
-                  onBlur={handleBlur}
-                  onChange={(value: number | null) => {
-                    if (!!!value || value < 0) return;
-                    setFieldValue("weight", value);
-                  }}
-                  value={getFieldProps("weight").value}
-                />
-              </div>
-              {touched?.weight && errors?.weight && (
-                <p data-testid="formules-form-error" className={errorStyle}>
-                  {errors.weight}
-                </p>
-              )}
-            </div>
-
-            {/* Height */}
-            <div>
-              <div className={fieldStyle}>
-                <label className={labelStyle} htmlFor="height">
-                  Taille (cm)
-                </label>
-                <InputNumber
-                  id="height"
-                  name="height"
-                  type="number"
-                  status={touched?.height && errors?.height ? "error" : ""}
-                  min={0}
-                  onBlur={handleBlur}
-                  onChange={(value: number | null) => {
-                    if (!!!value || value < 0) return;
-                    setFieldValue("height", value);
-                  }}
-                  value={getFieldProps("height").value}
-                />
-              </div>
-              {touched?.height && errors?.height && (
-                <p data-testid="formules-form-error" className={errorStyle}>
-                  {errors.height}
-                </p>
-              )}
-            </div>
-
-            {/* Hip */}
-            <div>
-              <div className={fieldStyle}>
-                <label className={labelStyle} htmlFor="hip">
-                  Tour de taille (cm)
-                </label>
-                <InputNumber
-                  id="hip"
-                  name="hip"
-                  type="number"
-                  status={touched?.hip && errors?.hip ? "error" : ""}
-                  min={0}
-                  onBlur={handleBlur}
-                  onChange={(value: number | null) => {
-                    if (!!!value || value < 0) return;
-                    setFieldValue("hip", value);
-                  }}
-                  value={getFieldProps("hip").value}
-                />
-              </div>
-              {touched?.hip && errors?.hip && (
-                <p data-testid="formules-form-error" className={errorStyle}>
-                  {errors.hip}
-                </p>
-              )}
-            </div>
+          <div className="w-[300px]">
+            <PolarArea
+              data={chartData}
+              options={{
+                scales: {
+                  r: {
+                    ticks: {
+                      backdropColor: darkMode ? "#0F172A" : "#F8FAFC",
+                      color: darkMode ? "white" : "black",
+                    },
+                    grid: {
+                      lineWidth: 0.5,
+                      color: darkMode ? "#F3F4F6" : "#C1C1C1",
+                    },
+                    pointLabels: {
+                      display: true,
+                      centerPointLabels: true,
+                      color: darkMode ? "#F3F4F6" : "#334155",
+                      font: {
+                        size: 15,
+                      },
+                    },
+                  },
+                },
+                responsive: true,
+                plugins: {
+                  legend: {
+                    display: false,
+                    position: "top",
+                  },
+                },
+              }}
+            />
           </div>
+        </div>
 
-          <Button primary type="submit" className="mt-2">
-            Calculer
-          </Button>
-        </form>
-
-        <div className="flex w-full flex-wrap justify-evenly gap-5">
+        <div className="flex w-full flex-wrap justify-evenly gap-2">
           <FormuleIMC IMC={IMC} />
           <FormuleIMG IMG={IMG} gender={genderState} />
           <FormuleIMA IMA={IMA} gender={genderState} age={ageState} />
-          <FormuleMB MB={MB} />
+          <FormuleMB MB={MB} darkmode={darkMode} />
         </div>
       </main>
     </>

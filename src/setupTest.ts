@@ -45,8 +45,10 @@ beforeAll(() => {
   })();
   global.localStorage = localStorageMock;
 
+  // Mock chartjs Components
   vi.mock("react-chartjs-2", () => ({
     Bar: () => null,
+    PolarArea: () => null,
   }));
 
   server.listen({ onUnhandledRequest: "error" });

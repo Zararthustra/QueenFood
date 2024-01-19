@@ -2,17 +2,17 @@ export const FormuleIMC = ({ IMC }: { IMC: number }) => {
   const tdStyle = "px-1 text-center text-[11px]/4 ";
   const highlightOnThreshold = (low: number, high: number) => {
     if (!!!IMC) return;
-    if (IMC >= low && IMC < high) return "font-extrabold text-primary-500";
+    if (IMC >= low && IMC < high) return "font-extrabold text-[#ff218c]";
     return;
   };
 
   return (
-    <div className="flex w-full max-w-[500px] flex-col">
+    <div className="flex w-full max-w-[450px] flex-col">
       <h3 className="dark:text-slate-100">Indice de Masse Corporelle (IMC)</h3>
       <div className="flex flex-col gap-2">
         <p
           data-testid="formules-result-imc"
-          className="text-xl font-bold text-primary-500"
+          className="text-xl font-bold text-[#ff218c]"
         >
           Résultat: {IMC ? IMC.toFixed(1) : "𝑥"}
         </p>

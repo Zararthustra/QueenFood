@@ -8,17 +8,17 @@ export const FormuleIMG = ({
   const tdStyle = "px-1 text-center text-[11px]/4 ";
   const highlightOnThreshold = (low: number, high: number) => {
     if (!!!IMG) return;
-    if (IMG >= low && IMG < high) return "font-extrabold text-primary-500";
+    if (IMG >= low && IMG < high) return "font-extrabold text-[#ffd800]";
     return;
   };
 
   return (
-    <div className="flex w-full max-w-[500px] flex-col">
+    <div className="flex w-full max-w-[450px] flex-col">
       <h3 className="dark:text-slate-100">Indice de Masse Graisseuse (IMG)</h3>
       <div className="flex flex-col gap-2">
         <p
           data-testid="formules-result-img"
-          className="text-xl font-bold text-primary-500"
+          className="text-xl font-bold text-[#ffd800]"
         >
           Résultat: {IMG ? IMG.toFixed(1) : "𝑥"}
         </p>

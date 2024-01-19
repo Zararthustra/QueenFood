@@ -8,7 +8,13 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 
-export const FormuleMB = ({ MB }: { MB: number }) => {
+export const FormuleMB = ({
+  MB,
+  darkmode,
+}: {
+  MB: number;
+  darkmode: boolean;
+}) => {
   ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
   const chartData = {
     labels: [
@@ -30,7 +36,7 @@ export const FormuleMB = ({ MB }: { MB: number }) => {
   };
 
   return (
-    <div className="flex w-full max-w-[500px] flex-col">
+    <div className="flex w-full max-w-[450px] flex-col">
       <h3 className="dark:text-slate-100">Métabolisme Basal</h3>
       <div className="flex flex-col gap-2">
         <p
@@ -42,16 +48,35 @@ export const FormuleMB = ({ MB }: { MB: number }) => {
         <Bar
           data={chartData}
           options={{
-            indexAxis: "y" as const,
+            scales: {
+              y: {
+                grid: {
+                  color: darkmode ? "#F3F4F619" : "#33415519",
+                },
+                ticks: {
+                  color: darkmode ? "#F3F4F6" : "#334155",
+                },
+              },
+              x: {
+                grid: {
+                  color: darkmode ? "#F3F4F619" : "#33415519",
+                },
+                ticks: {
+                  color: darkmode ? "#F3F4F6" : "#334155",
+                },
+              },
+            },
+            indexAxis: "y",
             elements: {
               bar: {
                 borderWidth: 1,
               },
             },
+            color: darkmode ? "#F3F4F6" : "#334155",
             responsive: true,
             plugins: {
               legend: {
-                position: "top" as const,
+                position: "top",
               },
             },
           }}

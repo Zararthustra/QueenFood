@@ -16,17 +16,17 @@ export const FormuleIMA = ({
   ) => {
     if (!!!IMA) return "";
     if (IMA >= low && IMA < high && ageMin <= age && age <= ageMax)
-      return "font-extrabold text-primary-500";
+      return "font-extrabold text-[#21b1ff]";
     return "";
   };
 
   return (
-    <div className="flex w-full max-w-[500px] flex-col">
+    <div className="flex w-full max-w-[450px] flex-col">
       <h3 className="dark:text-slate-100">Indice de Masse Adipeuse (IMA)</h3>
       <div className="flex flex-col gap-2">
         <p
           data-testid="formules-result-ima"
-          className="text-xl font-bold text-primary-500"
+          className="text-xl font-bold text-[#21b1ff]"
         >
           Résultat: {IMA ? IMA.toFixed(1) : "𝑥"}
         </p>
