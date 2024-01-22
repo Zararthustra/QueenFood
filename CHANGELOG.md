@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/Zararthustra/QueenFood/compare/v1.3.0...v1.4.0) (2024-01-22)
+
+
+### Features
+
+* **Formules:** add ratios macro-nutriments ([8fbaf10](https://github.com/Zararthustra/QueenFood/commit/8fbaf10fc657b05df425de78259684bcb5f272e4))
+* **Khayat:** adjust legend color for darkmode ([517d5ba](https://github.com/Zararthustra/QueenFood/commit/517d5ba0757eeaab8d029a846d5a9cc70fcaf892))
+
 ## [1.3.0](https://github.com/Zararthustra/QueenFood/compare/v1.2.0...v1.3.0) (2024-01-19)
 
 
