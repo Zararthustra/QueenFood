@@ -18,6 +18,7 @@ import {
   FormuleIMC,
   FormuleIMG,
   FormuleMB,
+  FormuleMN,
 } from "@components/index";
 import { IFormulesForm } from "@interfaces/index";
 import AppContext, { IAppContext } from "@services/AppContext";
@@ -374,6 +375,7 @@ export const Formules = () => {
           <FormuleIMG IMG={IMG} gender={genderState} />
           <FormuleIMA IMA={IMA} gender={genderState} age={ageState} />
           <FormuleMB MB={MB} darkmode={darkMode} />
+          <FormuleMN MB={MB} darkmode={darkMode} />
         </div>
       </main>
     </>

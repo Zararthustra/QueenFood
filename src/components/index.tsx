@@ -9,6 +9,7 @@ export { FormuleIMC } from "./FormuleIMC";
 export { FormuleIMG } from "./FormuleIMG";
 export { FormuleMB } from "./FormuleMB";
 export { FormuleIMA } from "./FormuleIMA";
+export { FormuleMN } from "./FormuleMN";
 
 // Khayat
 export { KhayatItem } from "./KhayatItem";
