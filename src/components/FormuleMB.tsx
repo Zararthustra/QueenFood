@@ -9,26 +9,19 @@ import {
 import { Bar } from "react-chartjs-2";
 
 export const FormuleMB = ({
-  MB,
+  MBs,
   darkmode,
 }: {
-  MB: number;
+  MBs: { value: number; name: string }[];
   darkmode: boolean;
 }) => {
   ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
   const chartData = {
-    labels: [
-      "Métabolisme basal",
-      "Sédentaire",
-      "Légèrement actif",
-      "Actif",
-      "Très actif",
-      "Extrêmement actif",
-    ],
+    labels: MBs.map((mb) => mb.name),
     datasets: [
       {
         label: "Kcal/jour",
-        data: [MB, MB * 1.2, MB * 1.375, MB * 1.55, MB * 1.725, MB * 1.9],
+        data: MBs.map((mb) => mb.value),
         borderColor: "#17919A",
         backgroundColor: "#ace1e577",
       },
@@ -43,7 +36,7 @@ export const FormuleMB = ({
           data-testid="formules-result-mb"
           className="text-xl font-bold text-primary-500"
         >
-          Résultat: {MB ? MB.toFixed(1) : "𝑥"}
+          Résultat: {MBs[0].value ? MBs[0].value.toFixed(1) : "𝑥"}
         </p>
         <Bar
           data={chartData}

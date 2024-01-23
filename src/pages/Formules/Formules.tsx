@@ -21,8 +21,8 @@ import {
   FormuleMN,
 } from "@components/index";
 import { IFormulesForm } from "@interfaces/index";
-import AppContext, { IAppContext } from "@services/AppContext";
 import { getLS, setLS } from "@services/localStorageService";
+import AppContext, { IAppContext } from "@services/AppContext";
 import { IconCalcul, IconFemale, IconMale, IconReset } from "@assets/index";
 
 export const Formules = () => {
@@ -44,6 +44,32 @@ export const Formules = () => {
   );
 
   const [MB, setMB] = useState<number>(LSValues.mb || 0);
+  const MBs: { value: number; name: string }[] = [
+    {
+      value: MB,
+      name: "Métabolisme basal",
+    },
+    {
+      value: MB * 1.2,
+      name: "Sédentaire",
+    },
+    {
+      value: MB * 1.375,
+      name: "Légèrement actif",
+    },
+    {
+      value: MB * 1.55,
+      name: "Actif",
+    },
+    {
+      value: MB * 1.725,
+      name: "Très actif",
+    },
+    {
+      value: MB * 1.9,
+      name: "Extrêmement actif",
+    },
+  ];
   const [IMA, setIMA] = useState<number>(LSValues.ima || 0);
   const [IMC, setIMC] = useState<number>(LSValues.imc || 0);
   const [IMG, setIMG] = useState<number>(LSValues.img || 0);
@@ -371,11 +397,11 @@ export const Formules = () => {
         </div>
 
         <div className="flex w-full flex-wrap justify-evenly gap-2">
+          <FormuleMB MBs={MBs} darkmode={darkMode} />
+          <FormuleMN MBs={MBs} darkmode={darkMode} />
           <FormuleIMC IMC={IMC} />
           <FormuleIMG IMG={IMG} gender={genderState} />
           <FormuleIMA IMA={IMA} gender={genderState} age={ageState} />
-          <FormuleMB MB={MB} darkmode={darkMode} />
-          <FormuleMN MB={MB} darkmode={darkMode} />
         </div>
       </main>
     </>

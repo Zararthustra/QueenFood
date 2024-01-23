@@ -5,17 +5,26 @@ import {
   LinearScale,
   Tooltip,
   Legend,
+  TooltipItem,
 } from "chart.js";
+import { Select } from "antd";
 import { Bar } from "react-chartjs-2";
+import { useEffect, useState } from "react";
 
 export const FormuleMN = ({
-  MB,
+  MBs,
   darkmode,
 }: {
-  MB: number;
+  MBs: { value: number; name: string }[];
   darkmode: boolean;
 }) => {
-  const MBPercentage = (percent: number) => (percent * MB) / 100;
+  const [selectedMB, setSelectedMB] = useState<number>(MBs[0].value);
+  const MBPercentage = (percent: number) => (percent * selectedMB) / 100;
+
+  // Rerender if MB has changed
+  useEffect(() => {
+    setSelectedMB(MBs[0].value);
+  }, [MBs[0].value]);
 
   ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
   const chartData = {
@@ -70,12 +79,27 @@ export const FormuleMN = ({
     <div className="flex w-full max-w-[450px] flex-col">
       <h3 className="dark:text-slate-100">Ratios macro-nutritionnels</h3>
       <div className="flex flex-col gap-2">
-        {/* <p
-          data-testid="formules-result-mb"
-          className="text-xl font-bold text-primary-500"
-        >
-          Résultat: {MB ? MB.toFixed(1) : "𝑥"}
-        </p> */}
+        <Select
+          size="small"
+          className="my-2"
+          disabled={!!!selectedMB}
+          // defaultValue={selectedMB}
+          value={selectedMB}
+          style={{ width: 230 }}
+          onChange={(value) => setSelectedMB(value)}
+          options={MBs.map((mb, index) => ({
+            value: mb.value,
+            label: (
+              <div key={index} className="flex items-center justify-between">
+                <p className="">{mb.name}</p>
+                <p className="text-xs font-bold text-primary-500">
+                  {mb.value.toFixed(1)}
+                </p>
+              </div>
+            ),
+          }))}
+        />
+
         <Bar
           data={chartData}
           options={{
@@ -111,16 +135,20 @@ export const FormuleMN = ({
               legend: {
                 position: "top",
               },
-              //   tooltip: {
-              //     mode: "index",
-              //     intersect: false,
-              //     callbacks: {
-              //       label: function (tooltipItems: TooltipItem<"bar">) {
-              //         console.log(tooltipItems);
-              //         return tooltipItems.dataset.data + " %";
-              //       },
-              //     },
-              //   },
+              tooltip: {
+                mode: "index",
+                callbacks: {
+                  label: (tooltipItem: TooltipItem<"bar">) => {
+                    const value = tooltipItem.formattedValue;
+                    const percent = Math.round(
+                      ((tooltipItem.raw as number) * 100) / selectedMB,
+                    );
+                    const label = tooltipItem.dataset.label;
+
+                    return percent + "% de " + label + ": " + value + " Kcal";
+                  },
+                },
+              },
             },
           }}
         />
