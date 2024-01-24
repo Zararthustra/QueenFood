@@ -3,6 +3,127 @@ import { IKhayat } from "@interfaces/index";
 export const khayatList: IKhayat[] = [
   {
   "catégorie": "Goûter",
+  "titre": "Fruits Mixés",
+  "boisson": false,
+  "nutriSanté": 10,
+  "portions": {
+    "seniors": "150g",
+    "adultes": "150g",
+    "enfants": "100g "
+  },
+  "énergie": {
+    "100g": "40kcal",
+    "portion": "60kcal"
+  },
+  "dépenses": [
+    "10min de roller",
+    "20min de marche"
+  ],
+  "nutriScore": "a",
+  "nova": 1,
+  "avantages": "Tous les bénéfices des fruits (micronutriments, fibres).",
+  "inconvénients": "Satiété moins importante (absence de mastication).",
+  "astuces": "Vérifiez la provenance de vos fruits afin d'éviter les pesticides. Excellent score Nutri-Santé mais, en raison de la mastication, préférez les fruits entiers.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 12
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 88
+    }
+  ],
+  "micronutriments": "élevé"
+},
+  {
+  "catégorie": "Goûter",
+  "titre": "Barres De Céréales Complètes",
+  "boisson": false,
+  "nutriSanté": 7,
+  "portions": {
+    "seniors": "1 Barre",
+    "adultes": "2 Barres ",
+    "enfants": "1 Barre "
+  },
+  "énergie": {
+    "100g": "391kcal",
+    "portion": "200kcal"
+  },
+  "dépenses": [
+    "1h35 de ménage",
+    "1h de marche"
+  ],
+  "nutriScore": "a",
+  "nova": 4,
+  "avantages": "Plus rassasiante qu'une barre classique. Présence de fibres.",
+  "inconvénients": "Contient des additifs. Beaucoup de sucres",
+  "astuces": "En version céréales complètes, ces barres sont meilleures pour votre santé mais restent quand même caloriques et ultra-transformés.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 62
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 7
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 10
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 21
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Goûter",
+  "titre": "Barres De Céréales Au Chocolat",
+  "boisson": false,
+  "nutriSanté": 4,
+  "portions": {
+    "seniors": "1 Barre",
+    "adultes": "2 Barres ",
+    "enfants": "1 Barre "
+  },
+  "énergie": {
+    "100g": "530kcal",
+    "portion": "340kcal"
+  },
+  "dépenses": [
+    "30min de squash",
+    "1h40 de marche"
+  ],
+  "nutriScore": "d",
+  "nova": 4,
+  "avantages": "Energie facilement disponible",
+  "inconvénients": "Contient beaucoup de sucres. Présence d'additifs.",
+  "astuces": "Un  en-cas très concentré en calories, souvent trop sucré voire ultra-transformé. Vérifiez la composition et ne le consommez qu'en cas de réelle fringale!",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 42
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 13
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 33
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 12
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Goûter",
   "titre": "Cookies Start-Up",
   "boisson": false,
   "nutriSanté": 5,
