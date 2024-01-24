@@ -27,6 +27,39 @@ export const FormuleMB = ({
       },
     ],
   };
+  const chartOptions = {
+    scales: {
+      y: {
+        grid: {
+          color: darkmode ? "#F3F4F619" : "#33415519",
+        },
+        ticks: {
+          color: darkmode ? "#F3F4F6" : "#334155",
+        },
+      },
+      x: {
+        grid: {
+          color: darkmode ? "#F3F4F619" : "#33415519",
+        },
+        ticks: {
+          color: darkmode ? "#F3F4F6" : "#334155",
+        },
+      },
+    },
+    indexAxis: "y" as const,
+    elements: {
+      bar: {
+        borderWidth: 1,
+      },
+    },
+    color: darkmode ? "#F3F4F6" : "#334155",
+    responsive: true,
+    plugins: {
+      legend: {
+        position: "top" as const,
+      },
+    },
+  };
 
   return (
     <div className="flex w-full max-w-[450px] flex-col">
@@ -38,42 +71,7 @@ export const FormuleMB = ({
         >
           Résultat: {MBs[0].value ? MBs[0].value.toFixed(1) : "𝑥"}
         </p>
-        <Bar
-          data={chartData}
-          options={{
-            scales: {
-              y: {
-                grid: {
-                  color: darkmode ? "#F3F4F619" : "#33415519",
-                },
-                ticks: {
-                  color: darkmode ? "#F3F4F6" : "#334155",
-                },
-              },
-              x: {
-                grid: {
-                  color: darkmode ? "#F3F4F619" : "#33415519",
-                },
-                ticks: {
-                  color: darkmode ? "#F3F4F6" : "#334155",
-                },
-              },
-            },
-            indexAxis: "y",
-            elements: {
-              bar: {
-                borderWidth: 1,
-              },
-            },
-            color: darkmode ? "#F3F4F6" : "#334155",
-            responsive: true,
-            plugins: {
-              legend: {
-                position: "top",
-              },
-            },
-          }}
-        />
+        <Bar data={chartData} options={chartOptions} />
         <p className="mt-2 self-end text-[10px]/4 text-slate-400">
           * A M Roza, H M Shizgal, The Harris Benedict equation reevaluated:
           resting energy requirements and the body cell mass, The American

@@ -19,6 +19,7 @@ import {
   FormuleIMG,
   FormuleMB,
   FormuleMN,
+  FormulesToPDF,
 } from "@components/index";
 import { IFormulesForm } from "@interfaces/index";
 import { getLS, setLS } from "@services/localStorageService";
@@ -47,7 +48,7 @@ export const Formules = () => {
   const MBs: { value: number; name: string }[] = [
     {
       value: MB,
-      name: "Métabolisme basal",
+      name: "Basal",
     },
     {
       value: MB * 1.2,
@@ -70,6 +71,8 @@ export const Formules = () => {
       name: "Extrêmement actif",
     },
   ];
+  const [selectedMBLabel, setSelectedMBLabel] = useState<string>(MBs[0].name);
+  const [selectedMBValue, setSelectedMBValue] = useState<number>(MBs[0].value);
   const [IMA, setIMA] = useState<number>(LSValues.ima || 0);
   const [IMC, setIMC] = useState<number>(LSValues.imc || 0);
   const [IMG, setIMG] = useState<number>(LSValues.img || 0);
@@ -86,6 +89,35 @@ export const Formules = () => {
         borderWidth: 0.5,
       },
     ],
+  };
+  const chartOptions = {
+    scales: {
+      r: {
+        ticks: {
+          backdropColor: darkMode ? "#0F172A" : "#F8FAFC",
+          color: darkMode ? "white" : "black",
+        },
+        grid: {
+          lineWidth: 0.5,
+          color: darkMode ? "#F3F4F6" : "#C1C1C1",
+        },
+        pointLabels: {
+          display: true,
+          centerPointLabels: true,
+          color: darkMode ? "#F3F4F6" : "#334155",
+          font: {
+            size: 15,
+          },
+        },
+      },
+    },
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false,
+        position: "top" as "top",
+      },
+    },
   };
 
   const onSubmitHandler = async (values: IFormulesForm) => {
@@ -138,6 +170,7 @@ export const Formules = () => {
   const {
     touched,
     errors,
+    values,
     handleBlur,
     handleSubmit,
     setFieldValue,
@@ -359,50 +392,46 @@ export const Formules = () => {
               </Button>
             </div>
           </form>
-
-          <div className="w-[300px]">
-            <PolarArea
-              data={chartData}
-              options={{
-                scales: {
-                  r: {
-                    ticks: {
-                      backdropColor: darkMode ? "#0F172A" : "#F8FAFC",
-                      color: darkMode ? "white" : "black",
-                    },
-                    grid: {
-                      lineWidth: 0.5,
-                      color: darkMode ? "#F3F4F6" : "#C1C1C1",
-                    },
-                    pointLabels: {
-                      display: true,
-                      centerPointLabels: true,
-                      color: darkMode ? "#F3F4F6" : "#334155",
-                      font: {
-                        size: 15,
-                      },
-                    },
-                  },
-                },
-                responsive: true,
-                plugins: {
-                  legend: {
-                    display: false,
-                    position: "top",
-                  },
-                },
-              }}
-            />
-          </div>
         </div>
 
         <div className="flex w-full flex-wrap justify-evenly gap-2">
           <FormuleMB MBs={MBs} darkmode={darkMode} />
-          <FormuleMN MBs={MBs} darkmode={darkMode} />
+          <FormuleMN
+            MBs={MBs}
+            darkmode={darkMode}
+            selectedMBValue={selectedMBValue}
+            setSelectedMBValue={setSelectedMBValue}
+            selectedMBLabel={selectedMBLabel}
+            setSelectedMBLabel={setSelectedMBLabel}
+          />
           <FormuleIMC IMC={IMC} />
           <FormuleIMG IMG={IMG} gender={genderState} />
+          <div className="w-[450px]">
+            <PolarArea data={chartData} options={chartOptions} />
+          </div>
           <FormuleIMA IMA={IMA} gender={genderState} age={ageState} />
         </div>
+
+        <FormulesToPDF
+          form={values}
+          // TODO: add Inputs
+          patient={{
+            firstname: "Robert",
+            lastname: "DUPONT",
+          }}
+          data={{
+            IMC,
+            IMG,
+            IMA,
+            MBs,
+            selectedMB: {
+              name: selectedMBLabel,
+              value: selectedMBValue,
+            },
+            // TODO: add Select
+            selectedObjective: "Perte de poids",
+          }}
+        />
       </main>
     </>
   );

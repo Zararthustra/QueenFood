@@ -11,6 +11,13 @@ export { FormuleMB } from "./FormuleMB";
 export { FormuleIMA } from "./FormuleIMA";
 export { FormuleMN } from "./FormuleMN";
 
+// PDF
+export { FormulesToPDF } from "./FormulesToPDF";
+export { IMGTable } from "./PDF/IMGTable";
+export { IMCTable } from "./PDF/IMCTable";
+export { IMATable } from "./PDF/IMATable";
+export { HeaderPDF } from "./PDF/HeaderPDF";
+
 // Khayat
 export { KhayatItem } from "./KhayatItem";
 export { MicroNutrimentLevel } from "./MicroNutrimentLevel";

@@ -260,8 +260,32 @@ export const FormuleIMA = ({
               >
                 61 {"≥ 𝑥 ≤"} 79
               </td>
-              <td className={tdStyle}>13% {"≥ 𝑥 <"} 25%</td>
-              <td className={tdStyle}>24% {"≥ 𝑥 <"} 36%</td>
+              <td
+                className={
+                  tdStyle +
+                  highlightOnThreshold(
+                    gender === "male" ? 13 : 0,
+                    gender === "male" ? 25 : 0,
+                    61,
+                    79,
+                  )
+                }
+              >
+                13% {"≥ 𝑥 <"} 25%
+              </td>
+              <td
+                className={
+                  tdStyle +
+                  highlightOnThreshold(
+                    gender === "female" ? 24 : 0,
+                    gender === "female" ? 36 : 0,
+                    61,
+                    79,
+                  )
+                }
+              >
+                24% {"≥ 𝑥 <"} 36%
+              </td>
             </tr>
 
             {/* En surpoids */}
@@ -455,7 +479,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                25 {"<"} 𝑥
+                25% {"<"} 𝑥
               </td>
               <td
                 className={
@@ -468,7 +492,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                39 {"<"} 𝑥
+                39% {"<"} 𝑥
               </td>
             </tr>
             <tr>
@@ -492,7 +516,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                27 {"<"} 𝑥
+                27% {"<"} 𝑥
               </td>
               <td
                 className={
@@ -505,7 +529,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                40 {"<"} 𝑥
+                40% {"<"} 𝑥
               </td>
             </tr>
             <tr>
@@ -529,7 +553,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                30 {"<"} 𝑥
+                30% {"<"} 𝑥
               </td>
               <td
                 className={
@@ -542,7 +566,7 @@ export const FormuleIMA = ({
                   )
                 }
               >
-                42 {"<"} 𝑥
+                42% {"<"} 𝑥
               </td>
             </tr>
           </tbody>

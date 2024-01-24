@@ -8,6 +8,7 @@ export { default as NOVA3 } from "./img/NOVA3.png";
 export { default as NOVA4 } from "./img/NOVA4.png";
 export { default as NOVANULL } from "./img/NOVANULL.png";
 export { default as khayat_flan } from "./img/khayat_flan.jpg";
+export { default as background } from "./img/background.jpg";
 
 // Icons
 export { IconTemplate } from "./svg/IconTemplate";

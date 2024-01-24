@@ -51,6 +51,14 @@ beforeAll(() => {
     PolarArea: () => null,
   }));
 
+  // Mock react-pdf Components
+  vi.mock("@react-pdf/renderer", () => ({
+    PDFDownloadLink: () => null,
+    BlobProvider: () => null,
+    Font: { register: () => null },
+    StyleSheet: { create: () => null },
+  }));
+
   server.listen({ onUnhandledRequest: "error" });
 });
 //  Close server after all tests

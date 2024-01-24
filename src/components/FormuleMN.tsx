@@ -8,22 +8,31 @@ import {
   TooltipItem,
 } from "chart.js";
 import { Select } from "antd";
+import { useEffect } from "react";
 import { Bar } from "react-chartjs-2";
-import { useEffect, useState } from "react";
+
+interface IFormuleMNProps {
+  MBs: { value: number; name: string }[];
+  darkmode: boolean;
+  selectedMBValue: number;
+  setSelectedMBValue: (value: number) => void;
+  selectedMBLabel: string;
+  setSelectedMBLabel: (value: string) => void;
+}
 
 export const FormuleMN = ({
   MBs,
   darkmode,
-}: {
-  MBs: { value: number; name: string }[];
-  darkmode: boolean;
-}) => {
-  const [selectedMB, setSelectedMB] = useState<number>(MBs[0].value);
-  const MBPercentage = (percent: number) => (percent * selectedMB) / 100;
+  selectedMBValue,
+  setSelectedMBValue,
+  selectedMBLabel,
+  setSelectedMBLabel,
+}: IFormuleMNProps) => {
+  const MBPercentage = (percent: number) => (percent * selectedMBValue) / 100;
 
   // Rerender if MB has changed
   useEffect(() => {
-    setSelectedMB(MBs[0].value);
+    setSelectedMBValue(MBs[0].value);
   }, [MBs[0].value]);
 
   ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
@@ -75,6 +84,56 @@ export const FormuleMN = ({
     ],
   };
 
+  const chartOptions = {
+    scales: {
+      y: {
+        stacked: true,
+        grid: {
+          color: darkmode ? "#F3F4F619" : "#33415519",
+        },
+        ticks: {
+          color: darkmode ? "#F3F4F6" : "#334155",
+        },
+      },
+      x: {
+        stacked: true,
+        grid: {
+          color: darkmode ? "#F3F4F619" : "#33415519",
+        },
+        ticks: {
+          color: darkmode ? "#F3F4F6" : "#334155",
+        },
+      },
+    },
+    indexAxis: "y" as const,
+    elements: {
+      bar: {
+        borderWidth: 1,
+      },
+    },
+    color: darkmode ? "#F3F4F6" : "#334155",
+    responsive: true,
+    plugins: {
+      legend: {
+        position: "top" as const,
+      },
+      tooltip: {
+        mode: "index" as const,
+        callbacks: {
+          label: (tooltipItem: TooltipItem<"bar">) => {
+            const value = tooltipItem.formattedValue;
+            const percent = Math.round(
+              ((tooltipItem.raw as number) * 100) / selectedMBValue,
+            );
+            const label = tooltipItem.dataset.label;
+
+            return percent + "% de " + label + ": " + value + " Kcal";
+          },
+        },
+      },
+    },
+  };
+
   return (
     <div className="flex w-full max-w-[450px] flex-col">
       <h3 className="dark:text-slate-100">Ratios macro-nutritionnels</h3>
@@ -82,13 +141,17 @@ export const FormuleMN = ({
         <Select
           size="small"
           className="my-2"
-          disabled={!!!selectedMB}
-          // defaultValue={selectedMB}
-          value={selectedMB}
+          disabled={!!!selectedMBValue}
+          // defaultValue={selectedMBValue}
+          value={selectedMBValue}
           style={{ width: 230 }}
-          onChange={(value) => setSelectedMB(value)}
+          onChange={(_, option: any) => {
+            setSelectedMBLabel(option.key);
+            setSelectedMBValue(option.value);
+          }}
           options={MBs.map((mb, index) => ({
             value: mb.value,
+            key: mb.name,
             label: (
               <div key={index} className="flex items-center justify-between">
                 <p className="">{mb.name}</p>
@@ -100,58 +163,7 @@ export const FormuleMN = ({
           }))}
         />
 
-        <Bar
-          data={chartData}
-          options={{
-            scales: {
-              y: {
-                stacked: true,
-                grid: {
-                  color: darkmode ? "#F3F4F619" : "#33415519",
-                },
-                ticks: {
-                  color: darkmode ? "#F3F4F6" : "#334155",
-                },
-              },
-              x: {
-                stacked: true,
-                grid: {
-                  color: darkmode ? "#F3F4F619" : "#33415519",
-                },
-                ticks: {
-                  color: darkmode ? "#F3F4F6" : "#334155",
-                },
-              },
-            },
-            indexAxis: "y",
-            elements: {
-              bar: {
-                borderWidth: 1,
-              },
-            },
-            color: darkmode ? "#F3F4F6" : "#334155",
-            responsive: true,
-            plugins: {
-              legend: {
-                position: "top",
-              },
-              tooltip: {
-                mode: "index",
-                callbacks: {
-                  label: (tooltipItem: TooltipItem<"bar">) => {
-                    const value = tooltipItem.formattedValue;
-                    const percent = Math.round(
-                      ((tooltipItem.raw as number) * 100) / selectedMB,
-                    );
-                    const label = tooltipItem.dataset.label;
-
-                    return percent + "% de " + label + ": " + value + " Kcal";
-                  },
-                },
-              },
-            },
-          }}
-        />
+        <Bar data={chartData} options={chartOptions} />
         <p className="mt-2 self-end text-[10px]/4 text-slate-400">
           * Pas de source
         </p>
