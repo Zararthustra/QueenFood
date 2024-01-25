@@ -192,6 +192,10 @@
 .ant-input-search-button {
   @apply bg-slate-100;
 }
+/* Radio */
+.ant-radio-button-wrapper {
+  @apply px-[11px];
+}
 /* Empty */
 .ant-empty-description {
   @apply dark:text-slate-100;
@@ -205,7 +209,7 @@
 .ant-pagination .ant-pagination-item-active a {
   @apply dark:text-slate-800;
 }
-
+/* Collapse */
 .ant-collapse-header-text,
 .ant-collapse-extra,
 .ant-collapse-expand-icon {

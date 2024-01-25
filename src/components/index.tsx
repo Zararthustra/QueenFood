@@ -18,6 +18,10 @@ export { IMCTable } from "./PDF/IMCTable";
 export { IMATable } from "./PDF/IMATable";
 export { HeaderPDF } from "./PDF/HeaderPDF";
 
+// Forms
+export { FormulesForm } from "./forms/FormulesForm";
+export { PDFForm } from "./forms/PDFForm";
+
 // Khayat
 export { KhayatItem } from "./KhayatItem";
 export { MicroNutrimentLevel } from "./MicroNutrimentLevel";

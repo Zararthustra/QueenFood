@@ -320,7 +320,7 @@ export const FormulesToPDF = ({ form, patient, data }: IFormulesToPDFProps) => {
                 }
               >
                 <IconPDF />
-                <p>Télécharger le PDF</p>
+                <p>Télécharger le Rapport</p>
               </Button>
             )}
           </>
