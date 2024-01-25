@@ -130,10 +130,30 @@ export const Formules = () => {
       1.2 * imc + 0.23 * age - 10.8 * (gender === "male" ? 1 : 0) - 5.4;
     const ima = hip / (height * Math.sqrt(height)) - 18;
     let mb;
-    if (gender === "female")
-      mb = 9.74 * weight + 172.9 * height - 4.737 * age + 667.051;
-    if (gender === "male")
-      mb = 13.707 * weight + 492.3 * height - 6.673 * age + 77.607;
+    if (gender === "female") {
+      // Black & al.
+      if (age > 60 && imc > 25)
+        mb =
+          0.963 *
+          weight ** 0.48 *
+          height ** 0.5 *
+          age ** -0.13 *
+          (1000 / 4.1855);
+      // Roza & Shizgal
+      else mb = 9.74 * weight + 172.9 * height - 4.737 * age + 667.051;
+    }
+    if (gender === "male") {
+      // Black & al.
+      if (age > 60 && imc > 25)
+        mb =
+          1.083 *
+          weight ** 0.48 *
+          height ** 0.5 *
+          age ** -0.13 *
+          (1000 / 4.1855);
+      // Roza & Shizgal
+      else mb = 13.707 * weight + 492.3 * height - 6.673 * age + 77.607;
+    }
 
     // Set states
     if (mb) setMB(mb);
@@ -167,7 +187,7 @@ export const Formules = () => {
         <div className="flex gap-5">
           <div className="flex flex-col gap-10">
             <FormulesForm onSubmitHandler={onSubmitHandler} />
-            <PDFForm MBs={MBs} IMA={IMA} IMC={IMC} IMG={IMG} />
+            <PDFForm MBs={MBs} IMA={IMA} IMC={IMC} IMG={IMG} age={ageState} />
           </div>
           <img
             className="absolute left-0 top-0 z-[-1] h-[620px] w-full object-cover tlg:hidden"

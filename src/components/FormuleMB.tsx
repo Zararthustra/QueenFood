@@ -75,7 +75,11 @@ export const FormuleMB = ({
         <p className="mt-2 self-end text-[10px]/4 text-slate-400">
           * A M Roza, H M Shizgal, The Harris Benedict equation reevaluated:
           resting energy requirements and the body cell mass, The American
-          Journal of Clinical Nutrition, Volume 40, Issue 1, 1984
+          Journal of Clinical Nutrition, Volume 40, Issue 1, 1984.
+          <br />* + de 60ans & surpoids: Black, A.E., Coward, W.A., Cole, T.J.
+          and Prentice, A.M. (1996) Human energy expenditure in affluent
+          societies: An analysis of 574 doubly-labeled water measurements.
+          European Journal of Clinical Nutrition, 50, 72-92
         </p>
       </div>
     </div>

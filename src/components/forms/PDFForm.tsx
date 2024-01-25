@@ -11,9 +11,10 @@ interface IPDFFormProps {
   IMA: number;
   IMC: number;
   IMG: number;
+  age: number;
 }
 
-export const PDFForm = ({ MBs, IMA, IMC, IMG }: IPDFFormProps) => {
+export const PDFForm = ({ MBs, IMA, IMC, IMG, age }: IPDFFormProps) => {
   const labelStyle = "font-bold";
 
   const [PDFForm, setPDFForm] = useState<{
@@ -146,6 +147,7 @@ export const PDFForm = ({ MBs, IMA, IMC, IMG }: IPDFFormProps) => {
           patient={{
             firstname: PDFForm.firstname,
             lastname: PDFForm.lastname,
+            age: age,
           }}
           data={{
             IMC,

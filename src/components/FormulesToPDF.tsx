@@ -25,6 +25,7 @@ interface IFormulesToPDFProps {
   patient: {
     firstname: string;
     lastname: string;
+    age: number;
   };
   data: {
     IMC: number;
@@ -140,6 +141,7 @@ export const FormulesToPDF = ({ form, patient, data }: IFormulesToPDFProps) => {
       fontSize: "6px",
       marginTop: "5px",
       color: "#7b8695",
+      width: "270px",
     },
   });
 
@@ -245,10 +247,58 @@ export const FormulesToPDF = ({ form, patient, data }: IFormulesToPDFProps) => {
         <View style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
           <View style={{ display: "flex", flexDirection: "column" }}>
             <Text style={styles.h3}>Métabolisme Basal</Text>
-            <Text style={[styles.label, { color: "#21b1ff", fontWeight: 800 }]}>
-              Résultat: {data.MBs[0].value.toFixed(1)}
-            </Text>
+            <View style={{ width: "190px", marginVertical: "5px" }}>
+              {data.MBs.map((mb, index) => (
+                <View key={index} style={styles.row}>
+                  <Text
+                    style={[
+                      styles.label,
+                      {
+                        fontWeight:
+                          mb.name === data.selectedMB.name ? 800 : 600,
+                        color:
+                          mb.name === data.selectedMB.name
+                            ? "#17919A"
+                            : "#2f424b",
+                      },
+                    ]}
+                  >
+                    {mb.name} :
+                  </Text>
+                  <Text
+                    style={[
+                      styles.corpus,
+                      {
+                        fontWeight:
+                          mb.name === data.selectedMB.name ? 800 : 600,
+                        color:
+                          mb.name === data.selectedMB.name
+                            ? "#17919A"
+                            : "#2f424b",
+                      },
+                    ]}
+                  >
+                    {mb.value.toFixed(1)} Kcal
+                  </Text>
+                </View>
+              ))}
+            </View>
             <Image src={MBChartImage(data.MBs)} style={{ width: "270px" }} />
+            {patient.age > 60 ? (
+              <Text style={styles.source}>
+                * + de 60ans & surpoids: Black, A.E., Coward, W.A., Cole, T.J.
+                and Prentice, A.M. (1996) Human energy expenditure in affluent
+                societies: An analysis of 574 doubly-labeled water measurements.
+                European Journal of Clinical Nutrition, 50, 72-92
+              </Text>
+            ) : (
+              <Text style={styles.source}>
+                * A M Roza, H M Shizgal, The Harris Benedict equation
+                reevaluated: resting energy requirements and the body cell mass,
+                The American Journal of Clinical Nutrition, Volume 40, Issue 1,
+                1984.
+              </Text>
+            )}
           </View>
 
           {/* Ratios macro-nutritionnels */}
@@ -259,16 +309,16 @@ export const FormulesToPDF = ({ form, patient, data }: IFormulesToPDFProps) => {
             <Text style={styles.corpus}>
               Voici l'apport calorique journalier conseillé dans le cadre d'un
               métabolisme{" "}
-              <Text style={{ fontWeight: 600 }}>
+              <Text style={{ fontWeight: 600, color: "#17919A" }}>
                 {data.selectedMB.name.toLowerCase()}
               </Text>{" "}
               avec un objectif de{" "}
-              <Text style={{ fontWeight: 600 }}>
+              <Text style={{ fontWeight: 600, color: "#17919A" }}>
                 {data.selectedObjective.toLowerCase()}
               </Text>
               :
             </Text>
-            <View style={{ width: "130px", marginVertical: "10px" }}>
+            <View style={{ width: "130px", marginVertical: "5px" }}>
               <View style={styles.row}>
                 <Text style={styles.label}>Glucides :</Text>
                 <Text style={styles.corpus}>
