@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/Zararthustra/QueenFood/compare/v1.4.0...v1.5.0) (2024-01-25)
+
+
+### Features
+
+* **Formules:** add background image to fill empty space ([e6b04df](https://github.com/Zararthustra/QueenFood/commit/e6b04dfabd0f07b898ec74677fbd390331cd8e0a))
+* **Formules:** add Black & al formule if >60yo and obese, add MB data to pdf ([c3e07b8](https://github.com/Zararthustra/QueenFood/commit/c3e07b8e92fddd3630516573fdc7ef59b2603064))
+* **Formules:** generate PDF from Formules data ([d0bee51](https://github.com/Zararthustra/QueenFood/commit/d0bee5183be7bcdd6e973af2eb974f7f640016a9))
+* **FormulesMN:** add MN percentages into labels and MB variable inside a Select ([a702adc](https://github.com/Zararthustra/QueenFood/commit/a702adc5a1081c5e986108e42e162a388dd32440))
+* **Formules:** update layout & add PDF form ([7115886](https://github.com/Zararthustra/QueenFood/commit/7115886a3402a879f4cc2e58d0342c2b46c4347b))
+
+
+### Bug Fixes
+
+* make Formules children (forms) independant to avoid expensive rerenders that was slowing down reactivity ([ae44a13](https://github.com/Zararthustra/QueenFood/commit/ae44a133d2f5a1db2a9d1d82c36fd89f01c71eae))
+* make Formules children (forms) independant to avoid expensive rerenders that was slowing down reactivity ([7a72bf5](https://github.com/Zararthustra/QueenFood/commit/7a72bf5a75e321b9687cbe8884ab588110716740))
+
 ## [1.4.0](https://github.com/Zararthustra/QueenFood/compare/v1.3.0...v1.4.0) (2024-01-22)
 
 
