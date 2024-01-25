@@ -42,7 +42,7 @@ describe("Page Formules", () => {
 
     const genderButton = getByTestId("formules-form-gender-male");
     const inputAge = getByLabelText("Âge");
-    const inputHeight = getByLabelText("Taille (cm)");
+    const inputHeight = getByLabelText("Taille");
 
     fireEvent.click(genderButton);
     fireEvent.change(inputAge, { target: { value: 55 } });
@@ -74,9 +74,9 @@ describe("Page Formules", () => {
 
     const genderButton = getByTestId("formules-form-gender-male");
     const inputAge = getByLabelText("Âge");
-    const inputWeight = getByLabelText("Poids (kg)");
-    const inputHeight = getByLabelText("Taille (cm)");
-    const inputHip = getByLabelText("Tour de taille (cm)");
+    const inputWeight = getByLabelText("Poids");
+    const inputHeight = getByLabelText("Taille");
+    const inputHip = getByLabelText("Tour de taille");
 
     fireEvent.click(genderButton);
     fireEvent.change(inputAge, { target: { value: 55 } });
@@ -102,9 +102,9 @@ describe("Page Formules", () => {
 
     const genderButton = getByTestId("formules-form-gender-male");
     const inputAge = getByLabelText("Âge");
-    const inputWeight = getByLabelText("Poids (kg)");
-    const inputHeight = getByLabelText("Taille (cm)");
-    const inputHip = getByLabelText("Tour de taille (cm)");
+    const inputWeight = getByLabelText("Poids");
+    const inputHeight = getByLabelText("Taille");
+    const inputHip = getByLabelText("Tour de taille");
 
     fireEvent.click(genderButton);
     fireEvent.change(inputAge, { target: { value: 55 } });

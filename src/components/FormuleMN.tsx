@@ -8,26 +8,16 @@ import {
   TooltipItem,
 } from "chart.js";
 import { Select } from "antd";
-import { useEffect } from "react";
 import { Bar } from "react-chartjs-2";
+import { useEffect, useState } from "react";
 
 interface IFormuleMNProps {
   MBs: { value: number; name: string }[];
   darkmode: boolean;
-  selectedMBValue: number;
-  setSelectedMBValue: (value: number) => void;
-  selectedMBLabel: string;
-  setSelectedMBLabel: (value: string) => void;
 }
 
-export const FormuleMN = ({
-  MBs,
-  darkmode,
-  selectedMBValue,
-  setSelectedMBValue,
-  selectedMBLabel,
-  setSelectedMBLabel,
-}: IFormuleMNProps) => {
+export const FormuleMN = ({ MBs, darkmode }: IFormuleMNProps) => {
+  const [selectedMBValue, setSelectedMBValue] = useState<number>(MBs[0].value);
   const MBPercentage = (percent: number) => (percent * selectedMBValue) / 100;
 
   // Rerender if MB has changed
@@ -138,30 +128,30 @@ export const FormuleMN = ({
     <div className="flex w-full max-w-[450px] flex-col">
       <h3 className="dark:text-slate-100">Ratios macro-nutritionnels</h3>
       <div className="flex flex-col gap-2">
-        <Select
-          size="small"
-          className="my-2"
-          disabled={!!!selectedMBValue}
-          // defaultValue={selectedMBValue}
-          value={selectedMBValue}
-          style={{ width: 230 }}
-          onChange={(_, option: any) => {
-            setSelectedMBLabel(option.key);
-            setSelectedMBValue(option.value);
-          }}
-          options={MBs.map((mb, index) => ({
-            value: mb.value,
-            key: mb.name,
-            label: (
-              <div key={index} className="flex items-center justify-between">
-                <p className="">{mb.name}</p>
-                <p className="text-xs font-bold text-primary-500">
-                  {mb.value.toFixed(1)}
-                </p>
-              </div>
-            ),
-          }))}
-        />
+        <div className="flex flex-col">
+          <label htmlFor="metabolism">Métabolisme</label>
+          <Select
+            id="metabolism"
+            size="small"
+            disabled={!!!selectedMBValue}
+            // defaultValue={selectedMBValue}
+            value={selectedMBValue}
+            style={{ width: 230 }}
+            onChange={(value: number) => setSelectedMBValue(value)}
+            options={MBs.map((mb, index) => ({
+              value: mb.value,
+              key: mb.name,
+              label: (
+                <div key={index} className="flex items-center justify-between">
+                  <p className="">{mb.name}</p>
+                  <p className="text-xs font-bold text-primary-500">
+                    {!!mb.value ? mb.value.toFixed(1) : "𝑥"}
+                  </p>
+                </div>
+              ),
+            }))}
+          />
+        </div>
 
         <Bar data={chartData} options={chartOptions} />
         <p className="mt-2 self-end text-[10px]/4 text-slate-400">

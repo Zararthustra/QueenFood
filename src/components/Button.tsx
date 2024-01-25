@@ -29,7 +29,7 @@ export const Button = ({
     type={type}
     style={style}
     className={`
-    flex items-center justify-center gap-2
+    flex items-center justify-center gap-2 disabled:bg-zinc-300 disabled:opacity-50
       ${primary && "btn-primary"}
       ${secondary && "btn-secondary"}
       ${variant === "ok" && "btn-variant-ok"}

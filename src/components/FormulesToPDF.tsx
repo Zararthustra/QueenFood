@@ -5,14 +5,10 @@ import {
   Image,
   Document,
   StyleSheet,
-  BlobProvider,
   PDFDownloadLink,
   Font,
 } from "@react-pdf/renderer";
-import { useState } from "react";
 
-import { IFormulesForm } from "@interfaces/index";
-import { IMCGAChartImage, MBChartImage, MNChartImage } from "@data/index";
 import {
   Button,
   HeaderPDF,
@@ -20,6 +16,9 @@ import {
   IMCTable,
   IMGTable,
 } from "@components/index";
+import { IFormulesForm } from "@interfaces/index";
+import { IconError, IconPDF } from "@assets/index";
+import { IMCGAChartImage, MBChartImage, MNChartImage } from "@data/index";
 
 interface IFormulesToPDFProps {
   form: IFormulesForm;
@@ -297,31 +296,35 @@ export const FormulesToPDF = ({ form, patient, data }: IFormulesToPDFProps) => {
 
   return (
     <div className="">
-      {/* <BlobProvider document={<FormulesPDF />}>
-        {({ blob, url, error, loading }) => (
+      <PDFDownloadLink
+        document={<FormulesPDF />}
+        fileName={"RN_" + patient.firstname + patient.lastname + ".pdf"}
+      >
+        {({ error, loading }) => (
           <>
-            {loading && <p>Chargement du PDF...</p>}
-            {error && <p>Une erreur est survenue</p>}
-            {blob && url && (
-              <a
-                href={url}
-                target="_blank"
-                className="rounded bg-primary-500 p-2 text-zinc-100"
-                rel="noopener noreferrer"
+            {error ? (
+              <div className="bubble bubble--error mt-2">
+                <IconError className="shrink-0" />
+                <p>Une erreur est survenue lors de la génération du PDF</p>
+              </div>
+            ) : (
+              <Button
+                primary
+                loading={loading}
+                className="mt-2 w-full"
+                disabled={
+                  !!!patient.firstname ||
+                  !!!patient.lastname ||
+                  !!!data.selectedObjective ||
+                  !!!data.selectedMB.value
+                }
               >
-                Open PDF
-              </a>
+                <IconPDF />
+                <p>Télécharger le PDF</p>
+              </Button>
             )}
           </>
         )}
-      </BlobProvider> */}
-
-      {/* Add patient name to filename */}
-      <PDFDownloadLink
-        document={<FormulesPDF />}
-        fileName="RN_Robert_Dupont.pdf"
-      >
-        <Button primary>Télécharger le PDF</Button>
       </PDFDownloadLink>
     </div>
   );

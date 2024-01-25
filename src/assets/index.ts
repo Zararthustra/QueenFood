@@ -61,3 +61,4 @@ export { IconMale } from "./svg/IconMale";
 export { IconFemale } from "./svg/IconFemale";
 export { IconReset } from "./svg/IconReset";
 export { IconCalcul } from "./svg/IconCalcul";
+export { IconPDF } from "./svg/IconPDF";

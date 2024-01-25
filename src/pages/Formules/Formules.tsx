@@ -6,11 +6,11 @@ import {
   Legend,
 } from "chart.js";
 import { useFormik } from "formik";
-import { InputNumber, Radio } from "antd";
 import { PolarArea } from "react-chartjs-2";
 import { useContext, useState } from "react";
 import { number, object, string } from "yup";
 import { useNavigate } from "react-router-dom";
+import { Input, InputNumber, Radio, Select } from "antd";
 
 import {
   Button,
@@ -39,6 +39,23 @@ export const Formules = () => {
     ima: number;
     mb: number;
   } = JSON.parse(getLS("FormulesForm") || "{}");
+  const [PDFForm, setPDFForm] = useState<{
+    firstname: string;
+    lastname: string;
+    objective: string;
+    metabolism: {
+      value: number | undefined;
+      name: string;
+    };
+  }>({
+    firstname: "",
+    lastname: "",
+    objective: "",
+    metabolism: {
+      value: undefined,
+      name: "",
+    },
+  });
   const [ageState, setAgeState] = useState<number>(LSValues.age || 0);
   const [genderState, setGenderState] = useState<"male" | "female" | undefined>(
     LSValues.gender || undefined,
@@ -71,8 +88,6 @@ export const Formules = () => {
       name: "Extrêmement actif",
     },
   ];
-  const [selectedMBLabel, setSelectedMBLabel] = useState<string>(MBs[0].name);
-  const [selectedMBValue, setSelectedMBValue] = useState<number>(MBs[0].value);
   const [IMA, setIMA] = useState<number>(LSValues.ima || 0);
   const [IMC, setIMC] = useState<number>(LSValues.imc || 0);
   const [IMG, setIMG] = useState<number>(LSValues.img || 0);
@@ -80,11 +95,11 @@ export const Formules = () => {
   const { darkMode } = useContext<IAppContext>(AppContext);
   ChartJS.register(ArcElement, RadialLinearScale, Tooltip, Legend);
   const chartData = {
-    labels: ["IMC", "IMG", "IMA"],
+    labels: ["IMG", "IMA", "IMC"],
     datasets: [
       {
         data: [IMC, IMG, IMA],
-        backgroundColor: ["#ff218c79", "#ffd80079", "#21b1ff79"],
+        backgroundColor: ["#ffd80079", "#21b1ff79", "#ff218c79"],
         hoverOffset: 10,
         borderWidth: 0.5,
       },
@@ -192,6 +207,7 @@ export const Formules = () => {
       hip: number().required("Indiquez le tour de taille"),
     }),
   });
+
   return (
     <>
       <main
@@ -203,7 +219,7 @@ export const Formules = () => {
         <div className="flex flex-wrap justify-center gap-10">
           <form
             data-testid="formules-form"
-            className="mt-3 flex flex-col justify-between"
+            className="mt-3 flex w-full max-w-[300px] flex-col justify-between"
             onSubmit={handleSubmit}
           >
             <div className="flex flex-col justify-center gap-2">
@@ -295,12 +311,13 @@ export const Formules = () => {
               <div>
                 <div className={fieldStyle}>
                   <label className={labelStyle} htmlFor="weight">
-                    Poids (kg)
+                    Poids
                   </label>
                   <InputNumber
                     id="weight"
                     name="weight"
                     type="number"
+                    placeholder="cm"
                     status={touched?.weight && errors?.weight ? "error" : ""}
                     min={0}
                     onBlur={handleBlur}
@@ -322,12 +339,13 @@ export const Formules = () => {
               <div>
                 <div className={fieldStyle}>
                   <label className={labelStyle} htmlFor="height">
-                    Taille (cm)
+                    Taille
                   </label>
                   <InputNumber
                     id="height"
                     name="height"
                     type="number"
+                    placeholder="cm"
                     status={touched?.height && errors?.height ? "error" : ""}
                     min={0}
                     onBlur={handleBlur}
@@ -349,12 +367,13 @@ export const Formules = () => {
               <div>
                 <div className={fieldStyle}>
                   <label className={labelStyle} htmlFor="hip">
-                    Tour de taille (cm)
+                    Tour de taille
                   </label>
                   <InputNumber
                     id="hip"
                     name="hip"
                     type="number"
+                    placeholder="cm"
                     status={touched?.hip && errors?.hip ? "error" : ""}
                     min={0}
                     onBlur={handleBlur}
@@ -392,46 +411,152 @@ export const Formules = () => {
               </Button>
             </div>
           </form>
+
+          <form className="w-full max-w-[300px]">
+            <div className="flex gap-2">
+              {/* Firstname */}
+              <div className="w-full">
+                <label className={labelStyle} htmlFor="firstname">
+                  Prénom
+                </label>
+                <Input
+                  disabled={!!!Object.values(LSValues).length}
+                  id="firstname"
+                  name="firstname"
+                  onChange={(e) =>
+                    setPDFForm({ ...PDFForm, firstname: e.target.value })
+                  }
+                  value={PDFForm.firstname}
+                />
+              </div>
+              {/* Lastname */}
+              <div className="w-full">
+                <label className={labelStyle} htmlFor="lastname">
+                  Nom
+                </label>
+                <Input
+                  disabled={!!!Object.values(LSValues).length}
+                  id="lastname"
+                  name="lastname"
+                  onChange={(e) =>
+                    setPDFForm({ ...PDFForm, lastname: e.target.value })
+                  }
+                  value={PDFForm.lastname}
+                />
+              </div>
+            </div>
+
+            <div className="flex gap-2">
+              {/* Objective */}
+              <div className="w-full">
+                <label className={labelStyle} htmlFor="objective">
+                  Objectif
+                </label>
+                <Select
+                  disabled={!!!Object.values(LSValues).length}
+                  id="objective"
+                  className="w-full"
+                  value={PDFForm.objective}
+                  onChange={(value: string) =>
+                    setPDFForm({ ...PDFForm, objective: value })
+                  }
+                  options={[
+                    {
+                      label: "Prise de poids",
+                      value: "Prise de poids",
+                    },
+                    {
+                      label: "Maintien",
+                      value: "Maintien",
+                    },
+                    {
+                      label: "Perte de poids",
+                      value: "Perte de poids",
+                    },
+                    {
+                      label: "Sèche",
+                      value: "Sèche",
+                    },
+                  ]}
+                />
+              </div>
+
+              {/* Metabolism */}
+              <div className="w-full">
+                <label className={labelStyle} htmlFor="metabolism">
+                  Métabolisme
+                </label>
+                <Select
+                  disabled={!!!Object.values(LSValues).length}
+                  id="metabolism"
+                  className="w-full"
+                  value={PDFForm.metabolism.value}
+                  onChange={(_, option: any) =>
+                    setPDFForm({
+                      ...PDFForm,
+                      metabolism: {
+                        value: option.value,
+                        name: option.label,
+                      },
+                    })
+                  }
+                  options={MBs.map((mb) => ({
+                    value: mb.value,
+                    label: mb.name,
+                  }))}
+                />
+              </div>
+            </div>
+
+            <FormulesToPDF
+              form={values}
+              patient={{
+                firstname: PDFForm.firstname,
+                lastname: PDFForm.lastname,
+              }}
+              data={{
+                IMC,
+                IMG,
+                IMA,
+                MBs,
+                selectedMB: {
+                  name: PDFForm.metabolism.name,
+                  value: PDFForm.metabolism.value as number,
+                },
+                selectedObjective: PDFForm.objective,
+              }}
+            />
+          </form>
         </div>
 
-        <div className="flex w-full flex-wrap justify-evenly gap-2">
-          <FormuleMB MBs={MBs} darkmode={darkMode} />
-          <FormuleMN
-            MBs={MBs}
-            darkmode={darkMode}
-            selectedMBValue={selectedMBValue}
-            setSelectedMBValue={setSelectedMBValue}
-            selectedMBLabel={selectedMBLabel}
-            setSelectedMBLabel={setSelectedMBLabel}
-          />
-          <FormuleIMC IMC={IMC} />
-          <FormuleIMG IMG={IMG} gender={genderState} />
-          <div className="w-[450px]">
-            <PolarArea data={chartData} options={chartOptions} />
+        <div className="flex w-full max-w-[950px] flex-wrap justify-evenly gap-7">
+          <div className="flex w-full items-center gap-3">
+            <h1 className="text-zinc-600 dark:text-zinc-300">Métabolisme</h1>
+            <div className="mt-3 h-[3px] w-full bg-primary-200 dark:bg-primary-900" />
           </div>
-          <FormuleIMA IMA={IMA} gender={genderState} age={ageState} />
-        </div>
+          <div className="flex w-full flex-wrap justify-between gap-7 tlg:justify-center">
+            <FormuleMB MBs={MBs} darkmode={darkMode} />
+            <FormuleMN MBs={MBs} darkmode={darkMode} />
+          </div>
 
-        <FormulesToPDF
-          form={values}
-          // TODO: add Inputs
-          patient={{
-            firstname: "Robert",
-            lastname: "DUPONT",
-          }}
-          data={{
-            IMC,
-            IMG,
-            IMA,
-            MBs,
-            selectedMB: {
-              name: selectedMBLabel,
-              value: selectedMBValue,
-            },
-            // TODO: add Select
-            selectedObjective: "Perte de poids",
-          }}
-        />
+          <div className="flex w-full items-center gap-3">
+            <h1 className="text-zinc-600 dark:text-zinc-300">Indices</h1>
+            <div className="mt-3 h-[3px] w-full bg-primary-200 dark:bg-primary-900" />
+          </div>
+          <div className="flex w-full flex-wrap justify-between gap-7 tlg:justify-center">
+            <div className="flex flex-col gap-7">
+              <FormuleIMA IMA={IMA} gender={genderState} age={ageState} />
+              <FormuleIMG IMG={IMG} gender={genderState} />
+            </div>
+
+            <div className="flex w-full max-w-[450px] flex-col gap-7">
+              <FormuleIMC IMC={IMC} />
+              <div className="flex max-w-[450px] justify-center">
+                <PolarArea data={chartData} options={chartOptions} />
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </>
   );
