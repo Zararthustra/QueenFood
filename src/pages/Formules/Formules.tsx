@@ -5,10 +5,8 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import { useFormik } from "formik";
 import { PolarArea } from "react-chartjs-2";
 import { useContext, useState } from "react";
-import { number, object, string } from "yup";
 
 import {
   FormuleIMA,
@@ -20,6 +18,7 @@ import {
   PDFForm,
 } from "@components/index";
 import { IFormulesForm } from "@interfaces/index";
+import { backgroundFormules } from "@assets/index";
 import { getLS, setLS } from "@services/localStorageService";
 import AppContext, { IAppContext } from "@services/AppContext";
 
@@ -163,11 +162,18 @@ export const Formules = () => {
         data-testid="formules"
         className="mb-[50px] flex flex-col items-center gap-10 px-2 dark:text-slate-100"
       >
-        <h1 className="mt-5 text-center">Formules</h1>
+        <h1 className="mt-5 text-center dark:flg:text-zinc-900">Formules</h1>
 
-        <div className="flex flex-wrap justify-center gap-10">
-          <FormulesForm onSubmitHandler={onSubmitHandler} />
-          <PDFForm MBs={MBs} IMA={IMA} IMC={IMC} IMG={IMG} />
+        <div className="flex gap-5">
+          <div className="flex flex-col gap-10">
+            <FormulesForm onSubmitHandler={onSubmitHandler} />
+            <PDFForm MBs={MBs} IMA={IMA} IMC={IMC} IMG={IMG} />
+          </div>
+          <img
+            className="absolute left-0 top-0 z-[-1] h-[620px] w-full object-cover tlg:hidden"
+            src={backgroundFormules}
+            alt="fruits"
+          />
         </div>
 
         <div className="flex w-full max-w-[950px] flex-wrap justify-evenly gap-7">

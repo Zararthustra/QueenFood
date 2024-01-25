@@ -17,7 +17,7 @@ export const FormulesForm = ({
   const labelStyle = "font-bold";
   const errorStyle = "font-bold text-red-500 text-xs";
   const fieldStyle =
-    "flex gap-3 justify-between items-center dark:text-slate-100";
+    "flex gap-3 justify-between items-center dark:text-slate-100 dark:flg:text-zinc-900";
 
   const LSValues: IFormulesForm & {
     imc: number;

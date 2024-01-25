@@ -241,8 +241,8 @@ export const FormulesToPDF = ({ form, patient, data }: IFormulesToPDFProps) => {
           </View>
         </View>
 
+        {/* Métabolisme Basal */}
         <View style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
-          {/* Métabolisme Basal */}
           <View style={{ display: "flex", flexDirection: "column" }}>
             <Text style={styles.h3}>Métabolisme Basal</Text>
             <Text style={[styles.label, { color: "#21b1ff", fontWeight: 800 }]}>
@@ -257,7 +257,8 @@ export const FormulesToPDF = ({ form, patient, data }: IFormulesToPDFProps) => {
           >
             <Text style={styles.h3}>Ratios macro-nutritionnels</Text>
             <Text style={styles.corpus}>
-              Voici l'apport calorique conseillé dans le cadre d'un métabolisme{" "}
+              Voici l'apport calorique journalier conseillé dans le cadre d'un
+              métabolisme{" "}
               <Text style={{ fontWeight: 600 }}>
                 {data.selectedMB.name.toLowerCase()}
               </Text>{" "}
