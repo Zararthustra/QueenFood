@@ -190,7 +190,7 @@ export const Formules = () => {
             <PDFForm MBs={MBs} IMA={IMA} IMC={IMC} IMG={IMG} age={ageState} />
           </div>
           <img
-            className="absolute left-0 top-0 z-[-1] h-[620px] w-full object-cover tlg:hidden"
+            className="absolute left-0 top-0 z-[-1] h-[580px] w-full object-cover tlg:hidden"
             src={backgroundFormules}
             alt="fruits"
           />
