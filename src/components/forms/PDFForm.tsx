@@ -42,7 +42,7 @@ export const PDFForm = ({ MBs, IMA, IMC, IMG, age }: IPDFFormProps) => {
   } = JSON.parse(getLS('FormulesForm') || '{}');
 
   return (
-    <form className="w-full max-w-[300px] flg:text-zinc-900">
+    <form className="w-full max-w-[300px] text-zinc-900">
       <div className="flex gap-2">
         {/* Firstname */}
         <div className="w-full">
