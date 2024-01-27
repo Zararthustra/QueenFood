@@ -180,17 +180,17 @@ export const Formules = () => {
     <>
       <main
         data-testid="formules"
-        className="mb-[50px] flex flex-col items-center gap-10 px-2 dark:text-slate-100"
+        className="mb-[50px] flex flex-col items-center gap-2 px-2 dark:text-slate-100"
       >
-        <h1 className="mt-5 text-center dark:flg:text-zinc-900">Formules</h1>
+        <div className="relative flex w-full flex-col items-center gap-5 pb-5">
+          <h1 className="mt-5 text-center dark:flg:text-zinc-900">Formules</h1>
 
-        <div className="flex gap-5">
           <div className="flex flex-col gap-10">
             <FormulesForm onSubmitHandler={onSubmitHandler} />
             <PDFForm MBs={MBs} IMA={IMA} IMC={IMC} IMG={IMG} age={ageState} />
           </div>
           <img
-            className="absolute left-0 top-0 z-[-1] h-[580px] w-full object-cover tlg:hidden"
+            className="absolute left-0 top-0 z-[-1] h-[100%] w-full object-cover"
             src={backgroundFormules}
             alt="fruits"
           />
