@@ -13,7 +13,9 @@ export default defineConfig({
     VitePWA({
       // add this to cache all the imports
       workbox: {
-        globPatterns: ['**/*']
+        globPatterns: ['**/*'],
+        // 3mb
+        maximumFileSizeToCacheInBytes: 3000000
       },
       // add this to cache all the
       // static assets in the public folder

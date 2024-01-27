@@ -182,7 +182,7 @@ export const Formules = () => {
         data-testid="formules"
         className="mb-[50px] flex flex-col items-center gap-2 px-2 dark:text-slate-100">
         <div className="relative flex w-full flex-col items-center gap-5 pb-5">
-          <h1 className="mt-5 text-center dark:flg:text-zinc-900">Formules</h1>
+          <h1 className="mt-5 text-center dark:text-zinc-900">Formules</h1>
 
           <div className="flex flex-col gap-10">
             <FormulesForm onSubmitHandler={onSubmitHandler} />

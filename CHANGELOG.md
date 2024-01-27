@@ -1,8 +1,23 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See
-[standard-version](https://github.com/conventional-changelog/standard-version)
-for commit guidelines.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.6.0](https://github.com/Zararthustra/QueenFood/compare/v1.5.0...v1.6.0) (2024-01-27)
+
+
+### Features
+
+* **App:** update serviceworker when new version is available ([da23bb6](https://github.com/Zararthustra/QueenFood/commit/da23bb67a9e85cc2716e134b5a459aea6e084bbc))
+* **Linters:** add linters (eslint + prettier + import) ([f68c0e6](https://github.com/Zararthustra/QueenFood/commit/f68c0e6ad1c1b5325a8ca7584200dbd3b7627469))
+
+
+### Bug Fixes
+
+* assets cache ([05b1a37](https://github.com/Zararthustra/QueenFood/commit/05b1a37a7be97268fa3a315f1a371f086407a5f1))
+* blank screen on SW update ([a050fb3](https://github.com/Zararthustra/QueenFood/commit/a050fb3c039a57233315f2ac36a59cfd51e8d178))
+* Formules bg img ([dae22bd](https://github.com/Zararthustra/QueenFood/commit/dae22bdd097319b4db6dd3ed1a94b5f9b14d1680))
+* header image height ([8492a6b](https://github.com/Zararthustra/QueenFood/commit/8492a6b65937760de3b4c7a48de89bbe687c1756))
+* text color on darkmode over img bg ([005211e](https://github.com/Zararthustra/QueenFood/commit/005211e5ee5de91cdde31081d3e6a94a23fa52dc))
 
 ## [1.5.0](https://github.com/Zararthustra/QueenFood/compare/v1.4.0...v1.5.0) (2024-01-25)
 
