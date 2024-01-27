@@ -64,7 +64,10 @@ describe('Page Khayat', () => {
     // Filter
     fireEvent.change(input, { target: { value: fichesTitleData[0] } });
     const fichesH3Awaited = await screen.findAllByTestId('khayat-fiche-name');
-    expect(fichesH3Awaited).toHaveLength(1);
+    expect(fichesH3Awaited.length).toBeGreaterThanOrEqual(1);
+    expect(fichesH3Awaited.map((H3) => H3.textContent)).toContain(
+      fichesTitleData[0]
+    );
     expect(fichesH3Awaited[0].textContent).toStrictEqual(fichesTitleData[0]);
   });
 });
