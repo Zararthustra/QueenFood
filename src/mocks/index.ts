@@ -1,1 +1,1 @@
-export { categoriesMock, alimentsMock } from "./food";
+export { alimentsMock, categoriesMock } from './food';

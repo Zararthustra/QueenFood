@@ -1,21 +1,19 @@
-import { useEffect } from "react";
-import { useMediaQuery } from "react-responsive";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
+import { Link, useLocation } from 'react-router-dom';
+
+import { DarkModeToggle } from './DarkModeToggle';
 
 import {
+  IconFood,
+  IconFormula,
   IconHome,
   IconIntolerance,
-  IconOnOff,
-  IconFood,
-  IconSidebarClose,
-  IconSidebarOpen,
-  IconFormula,
   IconKhayat,
-  logo,
   IconLogo,
-} from "@assets/index";
-import { DarkModeToggle } from "./DarkModeToggle";
-import { clearLS } from "@services/localStorageService";
+  IconSidebarClose,
+  IconSidebarOpen
+} from '@assets/index';
 
 interface ISidebarProps {
   isOpenSidebar: boolean;
@@ -23,14 +21,8 @@ interface ISidebarProps {
 }
 
 export const Sidebar = ({ isOpenSidebar, setIsOpenSidebar }: ISidebarProps) => {
-  const navigate = useNavigate();
   const location = useLocation();
-  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
-
-  const handleLogout = () => {
-    clearLS();
-    navigate(0);
-  };
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
 
   useEffect(() => {
     if (isMobile) setIsOpenSidebar(false);
@@ -39,29 +31,29 @@ export const Sidebar = ({ isOpenSidebar, setIsOpenSidebar }: ISidebarProps) => {
   const items = [
     {
       icon: <IconHome width={32} height={32} className="shrink-0" />,
-      title: "Accueil",
-      link: "/",
+      title: 'Accueil',
+      link: '/'
     },
     {
       icon: <IconFormula width={32} height={32} className="shrink-0" />,
-      title: "Formules",
-      link: "/formules",
+      title: 'Formules',
+      link: '/formules'
     },
     {
       icon: <IconIntolerance width={32} height={32} className="shrink-0" />,
-      title: "Intolérances",
-      link: "/intolerances",
+      title: 'Intolérances',
+      link: '/intolerances'
     },
     {
       icon: <IconFood width={32} height={32} className="shrink-0" />,
-      title: "Aliments",
-      link: "/aliments",
+      title: 'Aliments',
+      link: '/aliments'
     },
     {
       icon: <IconKhayat width={32} height={32} className="shrink-0" />,
-      title: "Fiches Khayat",
-      link: "/fiches",
-    },
+      title: 'Fiches Khayat',
+      link: '/fiches'
+    }
   ];
 
   if (isMobile && !isOpenSidebar)
@@ -78,15 +70,13 @@ export const Sidebar = ({ isOpenSidebar, setIsOpenSidebar }: ISidebarProps) => {
     <aside
       className={
         isOpenSidebar
-          ? "sidebar sidebar--open shadow-md"
-          : "sidebar sidebar--closed shadow-md"
-      }
-    >
+          ? 'sidebar sidebar--open shadow-md'
+          : 'sidebar sidebar--closed shadow-md'
+      }>
       <header
         className={`flex items-center border-b-[1px] py-2 dark:border-gray-700 ${
-          isOpenSidebar ? "justify-between pr-4" : "justify-center"
-        }`}
-      >
+          isOpenSidebar ? 'justify-between pr-4' : 'justify-center'
+        }`}>
         {isOpenSidebar ? (
           <IconSidebarClose
             className="my-2 shrink-0 cursor-pointer text-primary-500"
@@ -110,16 +100,16 @@ export const Sidebar = ({ isOpenSidebar, setIsOpenSidebar }: ISidebarProps) => {
           <li key={index} className="">
             <Link
               className={`my-1 flex items-center rounded p-1 text-base hover:bg-gray-200 dark:hover:bg-gray-700 ${
-                isOpenSidebar ? "justify-between pr-4" : "justify-center"
+                isOpenSidebar ? 'justify-between pr-4' : 'justify-center'
               }
-              ${location.pathname === item.link ? "text-primary-500" : ""}`}
-              to={item.link}
-            >
+              ${location.pathname === item.link ? 'text-primary-500' : ''}`}
+              to={item.link}>
               {item.icon}
               {isOpenSidebar && (
                 <p
-                  className={location.pathname === item.link ? "font-bold" : ""}
-                >
+                  className={
+                    location.pathname === item.link ? 'font-bold' : ''
+                  }>
                   {item.title}
                 </p>
               )}
@@ -131,17 +121,15 @@ export const Sidebar = ({ isOpenSidebar, setIsOpenSidebar }: ISidebarProps) => {
       <footer className="fixed bottom-2">
         <div
           className={`
-          ${isOpenSidebar ? "w-[183px]" : "w-[35px]"} 
-          flex cursor-pointer items-center justify-center border-b-[1px] pb-2 text-base dark:border-gray-700`}
-        >
+          ${isOpenSidebar ? 'w-[183px]' : 'w-[35px]'} 
+          flex cursor-pointer items-center justify-center border-b-[1px] pb-2 text-base dark:border-gray-700`}>
           <DarkModeToggle />
         </div>
         <p
           className={`pt-2 text-xs text-gray-400 ${
-            isOpenSidebar ? "text-right" : ""
-          }`}
-        >
-          {isOpenSidebar ? "Version " + APP_VERSION : APP_VERSION}
+            isOpenSidebar ? 'text-right' : ''
+          }`}>
+          {isOpenSidebar ? 'Version ' + APP_VERSION : APP_VERSION}
         </p>
       </footer>
     </aside>

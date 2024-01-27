@@ -6,13 +6,13 @@ interface IProduct {
     carbohydrates_serving: number;
     carbohydrates_unit: string;
 
-    "energy-kcal_100g": number;
-    "energy-kcal_serving": number;
-    "energy-kcal_unit": string;
+    'energy-kcal_100g': number;
+    'energy-kcal_serving': number;
+    'energy-kcal_unit': string;
 
-    "energy-kj_100g": number;
-    "energy-kj_serving": number;
-    "energy-kj_unit": string;
+    'energy-kj_100g': number;
+    'energy-kj_serving': number;
+    'energy-kj_unit': string;
 
     fat_100g: number;
     fat_serving: number;
@@ -26,9 +26,9 @@ interface IProduct {
     salt_serving: number;
     salt_unit: string;
 
-    "saturated-fat_100g": number;
-    "saturated-fat_serving": number;
-    "saturated-fat_unit": string;
+    'saturated-fat_100g': number;
+    'saturated-fat_serving': number;
+    'saturated-fat_unit': string;
 
     sodium_100g: number;
     sodium_serving: number;
@@ -50,10 +50,10 @@ interface IProduct {
   serving_size: string;
   nova_group: number;
   nutrient_levels: {
-    fat: "low" | "moderate" | "high";
-    salt: "low" | "moderate" | "high";
-    "saturated-fat": "low" | "moderate" | "high";
-    sugars: "low" | "moderate" | "high";
+    fat: 'low' | 'moderate' | 'high';
+    salt: 'low' | 'moderate' | 'high';
+    'saturated-fat': 'low' | 'moderate' | 'high';
+    sugars: 'low' | 'moderate' | 'high';
   };
   nutrition_data_per: string;
   nutriscore: {

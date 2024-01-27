@@ -11,11 +11,11 @@ interface IKhayat {
     enfants: string;
   };
   énergie: {
-    "100g": string;
+    '100g': string;
     portion: string;
   };
   dépenses: string[];
-  nutriScore: "a" | "b" | "c" | "d" | "e";
+  nutriScore: 'a' | 'b' | 'c' | 'd' | 'e';
   nova: 1 | 2 | 3 | 4;
   avantages: string;
   inconvénients: string;
@@ -24,5 +24,5 @@ interface IKhayat {
     nutriments: string;
     valeur: number;
   }[];
-  micronutriments: "élevé" | "moyen" | "faible";
+  micronutriments: 'élevé' | 'moyen' | 'faible';
 }

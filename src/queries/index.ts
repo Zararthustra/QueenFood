@@ -1,18 +1,17 @@
 export {
+  useQueryRetrieveCategories,
+  useQueryRetrieveFoodByBarcode,
+  useQuerySearchFood
+} from './openFoodFacts.query';
+export {
   create,
+  remove,
   retrieveAll,
   retrieveOne,
   update,
-  remove,
   useMutationCreate,
-  useQueryRetrieveAll,
-  useQueryRetrieveOne,
-  useMutationUpdate,
   useMutationDelete,
-} from "./template.query";
-
-export {
-  useQuerySearchFood,
-  useQueryRetrieveCategories,
-  useQueryRetrieveFoodByBarcode,
-} from "./openFoodFacts.query";
+  useMutationUpdate,
+  useQueryRetrieveAll,
+  useQueryRetrieveOne
+} from './template.query';

@@ -1,14 +1,14 @@
-import { Input } from "antd";
-import { useState } from "react";
+import { useState } from 'react';
+import { Input } from 'antd';
 
-import { intolerances } from "@data/index";
-import { IconArrowRight } from "@assets/index";
+import { IconArrowRight } from '@assets/index';
+import { intolerances } from '@data/index';
 
 export const Intolerances = () => {
-  const [searchValue, setSearchValue] = useState<string>("");
+  const [searchValue, setSearchValue] = useState<string>('');
 
   const getHighlightedText = (text: string, highlight: string) => {
-    const tokens = text.split(new RegExp(`(${highlight})`, "gi"));
+    const tokens = text.split(new RegExp(`(${highlight})`, 'gi'));
     return (
       <span>
         {tokens.map((token, index) =>
@@ -16,7 +16,7 @@ export const Intolerances = () => {
             <mark key={index}>{token}</mark>
           ) : (
             token
-          ),
+          )
         )}
       </span>
     );
@@ -26,8 +26,7 @@ export const Intolerances = () => {
     <>
       <main
         data-testid="intolerances"
-        className="mb-[50px] flex flex-col items-center px-2"
-      >
+        className="mb-[50px] flex flex-col items-center px-2">
         <h1 className="my-5 text-center dark:text-slate-100">Intolérances</h1>
         <Input
           id="search"
@@ -47,7 +46,7 @@ export const Intolerances = () => {
                 item.description
                   .toLowerCase()
                   .includes(searchValue.toLowerCase()) ||
-                item.examples.toLowerCase().includes(searchValue.toLowerCase()),
+                item.examples.toLowerCase().includes(searchValue.toLowerCase())
             )
             .map((intolerance, index) => (
               <div key={index}>

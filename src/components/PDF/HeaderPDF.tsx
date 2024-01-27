@@ -1,7 +1,7 @@
-import { Text, View, Image, Styles } from "@react-pdf/renderer";
+import { Image, Styles, Text, View } from '@react-pdf/renderer';
 
-import { background } from "@assets/index";
-import { IFormulesForm } from "@interfaces/index";
+import { background } from '@assets/index';
+import { IFormulesForm } from '@interfaces/index';
 
 interface IHeaderPDFProps {
   styles: Styles;
@@ -18,24 +18,23 @@ export const HeaderPDF = ({ styles, form, patient }: IHeaderPDFProps) => {
       <Image
         src={background}
         style={{
-          width: "100%",
-          height: "360px",
-          position: "absolute",
-          objectFit: "cover",
+          width: '100%',
+          height: '360px',
+          position: 'absolute',
+          objectFit: 'cover'
         }}
       />
       <View
         style={{
-          fontSize: "32px",
+          fontSize: '32px',
           fontWeight: 800,
-          marginTop: "40px",
-          marginHorizontal: "45px",
-          alignSelf: "flex-end",
-          display: "flex",
-          alignItems: "center",
-          color: "#2f424b",
-        }}
-      >
+          marginTop: '40px',
+          marginHorizontal: '45px',
+          alignSelf: 'flex-end',
+          display: 'flex',
+          alignItems: 'center',
+          color: '#2f424b'
+        }}>
         <Text>Rapport</Text>
         <Text>Nutritionnel</Text>
       </View>
@@ -43,45 +42,42 @@ export const HeaderPDF = ({ styles, form, patient }: IHeaderPDFProps) => {
       {/* Labels */}
       <View
         style={{
-          width: "150px",
-          marginBottom: "40px",
-          marginHorizontal: "74px",
-          alignSelf: "flex-end",
+          width: '150px',
+          marginBottom: '40px',
+          marginHorizontal: '74px',
+          alignSelf: 'flex-end'
         }}
-        {...{ bookmark: "Informations" }}
-      >
+        {...{ bookmark: 'Informations' }}>
         <View
           style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "10px",
-            marginVertical: "40px",
-          }}
-        >
+            display: 'flex',
+            alignItems: 'center',
+            gap: '10px',
+            marginVertical: '40px'
+          }}>
           <View
             style={{
-              width: "100px",
-              height: "1px",
-              backgroundColor: "#a5c8d4",
+              width: '100px',
+              height: '1px',
+              backgroundColor: '#a5c8d4'
             }}
           />
           <View
             style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "center",
-              gap: "5px",
-              fontWeight: 600,
-            }}
-          >
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'center',
+              gap: '5px',
+              fontWeight: 600
+            }}>
             <Text style={styles.textInfo}>{patient.firstname}</Text>
             <Text style={styles.textInfo}>{patient.lastname}</Text>
           </View>
           <View
             style={{
-              width: "100px",
-              height: "1px",
-              backgroundColor: "#a5c8d4",
+              width: '100px',
+              height: '1px',
+              backgroundColor: '#a5c8d4'
             }}
           />
         </View>

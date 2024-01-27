@@ -1,14 +1,14 @@
 export const FormuleIMG = ({
   IMG,
-  gender,
+  gender
 }: {
   IMG: number;
-  gender?: "male" | "female";
+  gender?: 'male' | 'female';
 }) => {
-  const tdStyle = "px-1 text-center text-[11px]/4 ";
+  const tdStyle = 'px-1 text-center text-[11px]/4 ';
   const highlightOnThreshold = (low: number, high: number) => {
-    if (!!!IMG) return;
-    if (IMG >= low && IMG < high) return "font-extrabold text-[#ffd800]";
+    if (!IMG) return;
+    if (IMG >= low && IMG < high) return 'font-extrabold text-[#ffd800]';
     return;
   };
 
@@ -18,9 +18,8 @@ export const FormuleIMG = ({
       <div className="flex flex-col gap-2">
         <p
           data-testid="formules-result-img"
-          className="text-xl font-bold text-[#ffd800]"
-        >
-          Résultat: {IMG ? IMG.toFixed(1) : "𝑥"}
+          className="text-xl font-bold text-[#ffd800]">
+          Résultat: {IMG ? IMG.toFixed(1) : '𝑥'}
         </p>
 
         <table className="border-separate border-spacing-x-0 dark:text-slate-100">
@@ -34,77 +33,71 @@ export const FormuleIMG = ({
           <tbody>
             <tr>
               <td
-                className={highlightOnThreshold(0, gender === "male" ? 15 : 25)}
-              >
+                className={highlightOnThreshold(
+                  0,
+                  gender === 'male' ? 15 : 25
+                )}>
                 Trop maigre
               </td>
               <td
                 className={
                   tdStyle +
-                  (gender === "male" ? highlightOnThreshold(0, 15) : "")
-                }
-              >
-                𝑥 {"<"} 15%
+                  (gender === 'male' ? highlightOnThreshold(0, 15) : '')
+                }>
+                𝑥 {'<'} 15%
               </td>
               <td
                 className={
                   tdStyle +
-                  (gender === "female" ? highlightOnThreshold(0, 25) : "")
-                }
-              >
-                𝑥 {"<"} 25%
+                  (gender === 'female' ? highlightOnThreshold(0, 25) : '')
+                }>
+                𝑥 {'<'} 25%
               </td>
             </tr>
             <tr>
               <td
                 className={highlightOnThreshold(
-                  gender === "male" ? 15 : 25,
-                  gender === "male" ? 20 : 30,
-                )}
-              >
+                  gender === 'male' ? 15 : 25,
+                  gender === 'male' ? 20 : 30
+                )}>
                 Pourcentage normal
               </td>
               <td
                 className={
                   tdStyle +
-                  (gender === "male" ? highlightOnThreshold(15, 20) : "")
-                }
-              >
-                15% {"≥ 𝑥 ≤"} 20%
+                  (gender === 'male' ? highlightOnThreshold(15, 20) : '')
+                }>
+                15% {'≥ 𝑥 ≤'} 20%
               </td>
               <td
                 className={
                   tdStyle +
-                  (gender === "female" ? highlightOnThreshold(25, 30) : "")
-                }
-              >
-                25% {"≥ 𝑥 ≤"} 30%
+                  (gender === 'female' ? highlightOnThreshold(25, 30) : '')
+                }>
+                25% {'≥ 𝑥 ≤'} 30%
               </td>
             </tr>
             <tr>
               <td
                 className={highlightOnThreshold(
-                  gender === "male" ? 20 : 30,
-                  999,
-                )}
-              >
+                  gender === 'male' ? 20 : 30,
+                  999
+                )}>
                 Trop de graisse
               </td>
               <td
                 className={
                   tdStyle +
-                  (gender === "male" ? highlightOnThreshold(20, 999) : "")
-                }
-              >
-                20 {"<"} 𝑥
+                  (gender === 'male' ? highlightOnThreshold(20, 999) : '')
+                }>
+                20 {'<'} 𝑥
               </td>
               <td
                 className={
                   tdStyle +
-                  (gender === "female" ? highlightOnThreshold(30, 999) : "")
-                }
-              >
-                30 {"<"} 𝑥
+                  (gender === 'female' ? highlightOnThreshold(30, 999) : '')
+                }>
+                30 {'<'} 𝑥
               </td>
             </tr>
           </tbody>

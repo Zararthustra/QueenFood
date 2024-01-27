@@ -1,13 +1,14 @@
+import { useContext, useState } from 'react';
+import { PolarArea } from 'react-chartjs-2';
 import {
-  Chart as ChartJS,
   ArcElement,
-  RadialLinearScale,
-  Tooltip,
+  Chart as ChartJS,
   Legend,
-} from "chart.js";
-import { PolarArea } from "react-chartjs-2";
-import { useContext, useState } from "react";
+  RadialLinearScale,
+  Tooltip
+} from 'chart.js';
 
+import { backgroundFormules } from '@assets/index';
 import {
   FormuleIMA,
   FormuleIMC,
@@ -15,12 +16,11 @@ import {
   FormuleMB,
   FormuleMN,
   FormulesForm,
-  PDFForm,
-} from "@components/index";
-import { IFormulesForm } from "@interfaces/index";
-import { backgroundFormules } from "@assets/index";
-import { getLS, setLS } from "@services/localStorageService";
-import AppContext, { IAppContext } from "@services/AppContext";
+  PDFForm
+} from '@components/index';
+import { IFormulesForm } from '@interfaces/index';
+import AppContext, { IAppContext } from '@services/AppContext';
+import { getLS, setLS } from '@services/localStorageService';
 
 export const Formules = () => {
   const LSValues: IFormulesForm & {
@@ -28,39 +28,39 @@ export const Formules = () => {
     img: number;
     ima: number;
     mb: number;
-  } = JSON.parse(getLS("FormulesForm") || "{}");
+  } = JSON.parse(getLS('FormulesForm') || '{}');
 
   const [ageState, setAgeState] = useState<number>(LSValues.age || 0);
-  const [genderState, setGenderState] = useState<"male" | "female" | undefined>(
-    LSValues.gender || undefined,
+  const [genderState, setGenderState] = useState<'male' | 'female' | undefined>(
+    LSValues.gender || undefined
   );
 
   const [MB, setMB] = useState<number>(LSValues.mb || 0);
   const MBs: { value: number; name: string }[] = [
     {
       value: MB,
-      name: "Basal",
+      name: 'Basal'
     },
     {
       value: MB * 1.2,
-      name: "Sédentaire",
+      name: 'Sédentaire'
     },
     {
       value: MB * 1.375,
-      name: "Légèrement actif",
+      name: 'Légèrement actif'
     },
     {
       value: MB * 1.55,
-      name: "Actif",
+      name: 'Actif'
     },
     {
       value: MB * 1.725,
-      name: "Très actif",
+      name: 'Très actif'
     },
     {
       value: MB * 1.9,
-      name: "Extrêmement actif",
-    },
+      name: 'Extrêmement actif'
+    }
   ];
   const [IMA, setIMA] = useState<number>(LSValues.ima || 0);
   const [IMC, setIMC] = useState<number>(LSValues.imc || 0);
@@ -69,44 +69,44 @@ export const Formules = () => {
   const { darkMode } = useContext<IAppContext>(AppContext);
   ChartJS.register(ArcElement, RadialLinearScale, Tooltip, Legend);
   const chartData = {
-    labels: ["IMG", "IMA", "IMC"],
+    labels: ['IMG', 'IMA', 'IMC'],
     datasets: [
       {
         data: [IMC, IMG, IMA],
-        backgroundColor: ["#ffd80079", "#21b1ff79", "#ff218c79"],
+        backgroundColor: ['#ffd80079', '#21b1ff79', '#ff218c79'],
         hoverOffset: 10,
-        borderWidth: 0.5,
-      },
-    ],
+        borderWidth: 0.5
+      }
+    ]
   };
   const chartOptions = {
     scales: {
       r: {
         ticks: {
-          backdropColor: darkMode ? "#0F172A" : "#F8FAFC",
-          color: darkMode ? "white" : "black",
+          backdropColor: darkMode ? '#0F172A' : '#F8FAFC',
+          color: darkMode ? 'white' : 'black'
         },
         grid: {
           lineWidth: 0.5,
-          color: darkMode ? "#F3F4F6" : "#C1C1C1",
+          color: darkMode ? '#F3F4F6' : '#C1C1C1'
         },
         pointLabels: {
           display: true,
           centerPointLabels: true,
-          color: darkMode ? "#F3F4F6" : "#334155",
+          color: darkMode ? '#F3F4F6' : '#334155',
           font: {
-            size: 15,
-          },
-        },
-      },
+            size: 15
+          }
+        }
+      }
     },
     responsive: true,
     plugins: {
       legend: {
         display: false,
-        position: "top" as "top",
-      },
-    },
+        position: 'top' as const
+      }
+    }
   };
 
   const onSubmitHandler = async (values: IFormulesForm) => {
@@ -115,10 +115,10 @@ export const Formules = () => {
       age: values.age,
       weight: values.weight,
       height: values.height ? values.height / 100 : 0,
-      hip: values.hip,
+      hip: values.hip
     };
 
-    if (!!!weight || !!!height || !!!age || !!!gender || !!!hip) return;
+    if (!weight || !height || !age || !gender || !hip) return;
 
     // Set states
     setGenderState(gender);
@@ -127,10 +127,10 @@ export const Formules = () => {
     // Formules
     const imc = weight / height ** 2;
     const img =
-      1.2 * imc + 0.23 * age - 10.8 * (gender === "male" ? 1 : 0) - 5.4;
+      1.2 * imc + 0.23 * age - 10.8 * (gender === 'male' ? 1 : 0) - 5.4;
     const ima = hip / (height * Math.sqrt(height)) - 18;
     let mb;
-    if (gender === "female") {
+    if (gender === 'female') {
       // Black & al.
       if (age > 60 && imc > 25)
         mb =
@@ -142,7 +142,7 @@ export const Formules = () => {
       // Roza & Shizgal
       else mb = 9.74 * weight + 172.9 * height - 4.737 * age + 667.051;
     }
-    if (gender === "male") {
+    if (gender === 'male') {
       // Black & al.
       if (age > 60 && imc > 25)
         mb =
@@ -161,7 +161,7 @@ export const Formules = () => {
     setIMG(img);
     setIMA(ima);
     setLS(
-      "FormulesForm",
+      'FormulesForm',
       JSON.stringify({
         gender: values.gender,
         age: values.age,
@@ -171,8 +171,8 @@ export const Formules = () => {
         imc: imc,
         img: img,
         ima: ima,
-        mb: mb,
-      }),
+        mb: mb
+      })
     );
   };
 
@@ -180,8 +180,7 @@ export const Formules = () => {
     <>
       <main
         data-testid="formules"
-        className="mb-[50px] flex flex-col items-center gap-2 px-2 dark:text-slate-100"
-      >
+        className="mb-[50px] flex flex-col items-center gap-2 px-2 dark:text-slate-100">
         <div className="relative flex w-full flex-col items-center gap-5 pb-5">
           <h1 className="mt-5 text-center dark:flg:text-zinc-900">Formules</h1>
 

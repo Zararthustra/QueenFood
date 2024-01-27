@@ -1,12 +1,12 @@
-import { IIcon } from "@interfaces/index";
+import { IIcon } from '@interfaces/index';
 
 export const IconNutriScoreB = ({
   width = 50,
   height,
-  className = "",
+  className = '',
   style,
   color,
-  onClick,
+  onClick
 }: IIcon) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -15,9 +15,8 @@ export const IconNutriScoreB = ({
     onClick={onClick}
     className={className}
     style={style}
-    fill={color ?? "currentColor"}
-    viewBox="0 0 240 130"
-  >
+    fill={color ?? 'currentColor'}
+    viewBox="0 0 240 130">
     <path
       fill="#fff"
       d="M211.749-.003H27.394c-15.117 0-27.41 12.3-27.41 27.413v70.766c0 15.116 12.291 27.413 27.407 27.413h30.546a31.623 31.623 0 0 0 16.176 4.409h3.118c5.958 0 11.502-1.633 16.176-4.41h118.342c15.114 0 27.407-12.296 27.407-27.412v-70.77c0-15.11-12.293-27.409-27.407-27.409"

@@ -1,10 +1,10 @@
-import { useState } from "react";
-import { Input, Select } from "antd";
+import { useState } from 'react';
+import { Input, Select } from 'antd';
 
-import { IconPDF } from "@assets/index";
-import { IFormulesForm } from "@interfaces/index";
-import { getLS } from "@services/localStorageService";
-import { Button, FormulesToPDF } from "@components/index";
+import { IconPDF } from '@assets/index';
+import { Button, FormulesToPDF } from '@components/index';
+import { IFormulesForm } from '@interfaces/index';
+import { getLS } from '@services/localStorageService';
 
 interface IPDFFormProps {
   MBs: { value: number; name: string }[];
@@ -15,7 +15,7 @@ interface IPDFFormProps {
 }
 
 export const PDFForm = ({ MBs, IMA, IMC, IMG, age }: IPDFFormProps) => {
-  const labelStyle = "font-bold";
+  const labelStyle = 'font-bold';
 
   const [PDFForm, setPDFForm] = useState<{
     firstname: string;
@@ -26,20 +26,20 @@ export const PDFForm = ({ MBs, IMA, IMC, IMG, age }: IPDFFormProps) => {
       name: string;
     };
   }>({
-    firstname: "",
-    lastname: "",
-    objective: "",
+    firstname: '',
+    lastname: '',
+    objective: '',
     metabolism: {
       value: undefined,
-      name: "",
-    },
+      name: ''
+    }
   });
   const LSValues: IFormulesForm & {
     imc: number;
     img: number;
     ima: number;
     mb: number;
-  } = JSON.parse(getLS("FormulesForm") || "{}");
+  } = JSON.parse(getLS('FormulesForm') || '{}');
 
   return (
     <form className="w-full max-w-[300px] flg:text-zinc-900">
@@ -50,7 +50,7 @@ export const PDFForm = ({ MBs, IMA, IMC, IMG, age }: IPDFFormProps) => {
             Prénom
           </label>
           <Input
-            disabled={!!!Object.values(LSValues).length}
+            disabled={!Object.values(LSValues).length}
             id="firstname"
             name="firstname"
             onChange={(e) =>
@@ -65,7 +65,7 @@ export const PDFForm = ({ MBs, IMA, IMC, IMG, age }: IPDFFormProps) => {
             Nom
           </label>
           <Input
-            disabled={!!!Object.values(LSValues).length}
+            disabled={!Object.values(LSValues).length}
             id="lastname"
             name="lastname"
             onChange={(e) =>
@@ -82,7 +82,7 @@ export const PDFForm = ({ MBs, IMA, IMC, IMG, age }: IPDFFormProps) => {
             Objectif
           </label>
           <Select
-            disabled={!!!Object.values(LSValues).length}
+            disabled={!Object.values(LSValues).length}
             id="objective"
             className="w-full"
             value={PDFForm.objective}
@@ -91,21 +91,21 @@ export const PDFForm = ({ MBs, IMA, IMC, IMG, age }: IPDFFormProps) => {
             }
             options={[
               {
-                label: "Prise de poids",
-                value: "Prise de poids",
+                label: 'Prise de poids',
+                value: 'Prise de poids'
               },
               {
-                label: "Maintien",
-                value: "Maintien",
+                label: 'Maintien',
+                value: 'Maintien'
               },
               {
-                label: "Perte de poids",
-                value: "Perte de poids",
+                label: 'Perte de poids',
+                value: 'Perte de poids'
               },
               {
-                label: "Sèche",
-                value: "Sèche",
-              },
+                label: 'Sèche',
+                value: 'Sèche'
+              }
             ]}
           />
         </div>
@@ -116,7 +116,7 @@ export const PDFForm = ({ MBs, IMA, IMC, IMG, age }: IPDFFormProps) => {
             Métabolisme
           </label>
           <Select
-            disabled={!!!Object.values(LSValues).length}
+            disabled={!Object.values(LSValues).length}
             id="metabolism"
             className="w-full"
             value={PDFForm.metabolism.value}
@@ -125,13 +125,13 @@ export const PDFForm = ({ MBs, IMA, IMC, IMG, age }: IPDFFormProps) => {
                 ...PDFForm,
                 metabolism: {
                   value: option.value,
-                  name: option.label,
-                },
+                  name: option.label
+                }
               })
             }
             options={MBs.map((mb) => ({
               value: mb.value,
-              label: mb.name,
+              label: mb.name
             }))}
           />
         </div>
@@ -147,7 +147,7 @@ export const PDFForm = ({ MBs, IMA, IMC, IMG, age }: IPDFFormProps) => {
           patient={{
             firstname: PDFForm.firstname,
             lastname: PDFForm.lastname,
-            age: age,
+            age: age
           }}
           data={{
             IMC,
@@ -156,9 +156,9 @@ export const PDFForm = ({ MBs, IMA, IMC, IMG, age }: IPDFFormProps) => {
             MBs,
             selectedMB: {
               name: PDFForm.metabolism.name,
-              value: PDFForm.metabolism.value as number,
+              value: PDFForm.metabolism.value as number
             },
-            selectedObjective: PDFForm.objective,
+            selectedObjective: PDFForm.objective
           }}
         />
       ) : (

@@ -1,13 +1,14 @@
-import { setupServer } from "msw/node";
-import { cleanup } from "@testing-library/react";
-import { beforeAll, afterAll, afterEach, expect, vi } from "vitest";
-
 // Extend "expect" method with @testing-library/jest-dom methods like "toBeInTheDocument()"
-import * as matchers from "@testing-library/jest-dom/matchers";
-import "@testing-library/jest-dom";
-expect.extend(matchers);
+import '@testing-library/jest-dom';
 
-import { handlers } from "@mocks/api";
+import * as matchers from '@testing-library/jest-dom/matchers';
+import { cleanup } from '@testing-library/react';
+import { setupServer } from 'msw/node';
+import { afterAll, afterEach, beforeAll, expect, vi } from 'vitest';
+
+import { handlers } from '@mocks/api';
+
+expect.extend(matchers);
 
 // Mock server to catch API requests
 export const server = setupServer(...handlers);
@@ -38,28 +39,28 @@ beforeAll(() => {
         return store;
       },
       length: 0,
-      key(index: number): string | null {
+      key(): string | null {
         return null;
-      },
+      }
     };
   })();
   global.localStorage = localStorageMock;
 
   // Mock chartjs Components
-  vi.mock("react-chartjs-2", () => ({
+  vi.mock('react-chartjs-2', () => ({
     Bar: () => null,
-    PolarArea: () => null,
+    PolarArea: () => null
   }));
 
   // Mock react-pdf Components
-  vi.mock("@react-pdf/renderer", () => ({
+  vi.mock('@react-pdf/renderer', () => ({
     PDFDownloadLink: () => null,
     BlobProvider: () => null,
     Font: { register: () => null },
-    StyleSheet: { create: () => null },
+    StyleSheet: { create: () => null }
   }));
 
-  server.listen({ onUnhandledRequest: "error" });
+  server.listen({ onUnhandledRequest: 'error' });
 });
 //  Close server after all tests
 afterAll(() => server.close());

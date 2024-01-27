@@ -1,30 +1,30 @@
-import { useFormik } from "formik";
-import { InputNumber, Radio } from "antd";
-import { number, object, string } from "yup";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+import { InputNumber, Radio } from 'antd';
+import { useFormik } from 'formik';
+import { number, object, string } from 'yup';
 
-import { Button } from "@components/index";
-import { IFormulesForm } from "@interfaces/index";
-import { getLS, setLS } from "@services/localStorageService";
-import { IconCalcul, IconFemale, IconMale, IconReset } from "@assets/index";
+import { IconCalcul, IconFemale, IconMale, IconReset } from '@assets/index';
+import { Button } from '@components/index';
+import { IFormulesForm } from '@interfaces/index';
+import { getLS, setLS } from '@services/localStorageService';
 
 export const FormulesForm = ({
-  onSubmitHandler,
+  onSubmitHandler
 }: {
   onSubmitHandler: (values: IFormulesForm) => void;
 }) => {
   const navigate = useNavigate();
-  const labelStyle = "font-bold";
-  const errorStyle = "font-bold text-red-500 text-xs";
+  const labelStyle = 'font-bold';
+  const errorStyle = 'font-bold text-red-500 text-xs';
   const fieldStyle =
-    "flex gap-3 justify-between items-center dark:text-slate-100 dark:flg:text-zinc-900";
+    'flex gap-3 justify-between items-center dark:text-slate-100 dark:flg:text-zinc-900';
 
   const LSValues: IFormulesForm & {
     imc: number;
     img: number;
     ima: number;
     mb: number;
-  } = JSON.parse(getLS("FormulesForm") || "{}");
+  } = JSON.parse(getLS('FormulesForm') || '{}');
 
   const { errors, handleSubmit, setFieldValue, getFieldProps } = useFormik({
     initialValues: {
@@ -32,29 +32,28 @@ export const FormulesForm = ({
       gender: LSValues.gender,
       weight: LSValues.weight,
       height: LSValues.height,
-      hip: LSValues.hip,
+      hip: LSValues.hip
     },
     onSubmit: onSubmitHandler,
     validationSchema: object({
       age: number().required("Indiquez l'âge"),
-      gender: string().required("Indiquez le genre"),
-      weight: number().required("Indiquez le poids"),
-      height: number().required("Indiquez la taille"),
-      hip: number().required("Indiquez le tour de taille"),
-    }),
+      gender: string().required('Indiquez le genre'),
+      weight: number().required('Indiquez le poids'),
+      height: number().required('Indiquez la taille'),
+      hip: number().required('Indiquez le tour de taille')
+    })
   });
 
   return (
     <form
       data-testid="formules-form"
       className="mt-3 flex w-full max-w-[300px] flex-col justify-between"
-      onSubmit={handleSubmit}
-    >
+      onSubmit={handleSubmit}>
       <div className="flex flex-col justify-center gap-2">
         {/* Gender */}
         <div>
           <div className={fieldStyle}>
-            <label className={labelStyle + " flex w-full justify-between"}>
+            <label className={labelStyle + ' flex w-full justify-between'}>
               Genre
               <Radio.Group
                 id="gender"
@@ -64,12 +63,11 @@ export const FormulesForm = ({
                     label: (
                       <div
                         data-testid="formules-form-gender-male"
-                        className="flex h-full flex-col justify-center"
-                      >
+                        className="flex h-full flex-col justify-center">
                         <IconMale width={21} height={21} className="shrink-0" />
                       </div>
                     ),
-                    value: "male",
+                    value: 'male'
                   },
                   {
                     label: (
@@ -81,13 +79,13 @@ export const FormulesForm = ({
                         />
                       </div>
                     ),
-                    value: "female",
-                  },
+                    value: 'female'
+                  }
                 ]}
                 onChange={({ target: { value } }) => {
-                  setFieldValue("gender", value);
+                  setFieldValue('gender', value);
                 }}
-                value={getFieldProps("gender").value}
+                value={getFieldProps('gender').value}
                 optionType="button"
                 buttonStyle="solid"
               />
@@ -111,13 +109,13 @@ export const FormulesForm = ({
               name="age"
               type="number"
               placeholder="an"
-              status={errors?.age ? "error" : ""}
+              status={errors?.age ? 'error' : ''}
               min={0}
               onChange={(value: number | null) => {
-                if (!!!value || value < 0) return;
-                setFieldValue("age", value);
+                if (!value || value < 0) return;
+                setFieldValue('age', value);
               }}
-              value={getFieldProps("age").value}
+              value={getFieldProps('age').value}
             />
           </div>
           {errors?.age && (
@@ -138,13 +136,13 @@ export const FormulesForm = ({
               name="weight"
               type="number"
               placeholder="cm"
-              status={errors?.weight ? "error" : ""}
+              status={errors?.weight ? 'error' : ''}
               min={0}
               onChange={(value: number | null) => {
-                if (!!!value || value < 0) return;
-                setFieldValue("weight", value);
+                if (!value || value < 0) return;
+                setFieldValue('weight', value);
               }}
-              value={getFieldProps("weight").value}
+              value={getFieldProps('weight').value}
             />
           </div>
           {errors?.weight && (
@@ -165,13 +163,13 @@ export const FormulesForm = ({
               name="height"
               type="number"
               placeholder="cm"
-              status={errors?.height ? "error" : ""}
+              status={errors?.height ? 'error' : ''}
               min={0}
               onChange={(value: number | null) => {
-                if (!!!value || value < 0) return;
-                setFieldValue("height", value);
+                if (!value || value < 0) return;
+                setFieldValue('height', value);
               }}
-              value={getFieldProps("height").value}
+              value={getFieldProps('height').value}
             />
           </div>
           {errors?.height && (
@@ -192,13 +190,13 @@ export const FormulesForm = ({
               name="hip"
               type="number"
               placeholder="cm"
-              status={errors?.hip ? "error" : ""}
+              status={errors?.hip ? 'error' : ''}
               min={0}
               onChange={(value: number | null) => {
-                if (!!!value || value < 0) return;
-                setFieldValue("hip", value);
+                if (!value || value < 0) return;
+                setFieldValue('hip', value);
               }}
-              value={getFieldProps("hip").value}
+              value={getFieldProps('hip').value}
             />
           </div>
           {errors?.hip && (
@@ -218,10 +216,9 @@ export const FormulesForm = ({
           <Button
             variant="ko"
             onClick={() => {
-              setLS("FormulesForm", "{}");
+              setLS('FormulesForm', '{}');
               navigate(0);
-            }}
-          >
+            }}>
             <IconReset width={18} height={18} />
             Reset
           </Button>

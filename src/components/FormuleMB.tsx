@@ -1,16 +1,16 @@
+import { Bar } from 'react-chartjs-2';
 import {
-  Chart as ChartJS,
   BarElement,
   CategoryScale,
-  LinearScale,
-  Tooltip,
+  Chart as ChartJS,
   Legend,
-} from "chart.js";
-import { Bar } from "react-chartjs-2";
+  LinearScale,
+  Tooltip
+} from 'chart.js';
 
 export const FormuleMB = ({
   MBs,
-  darkmode,
+  darkmode
 }: {
   MBs: { value: number; name: string }[];
   darkmode: boolean;
@@ -20,45 +20,45 @@ export const FormuleMB = ({
     labels: MBs.map((mb) => mb.name),
     datasets: [
       {
-        label: "Kcal/jour",
+        label: 'Kcal/jour',
         data: MBs.map((mb) => mb.value),
-        borderColor: "#17919A",
-        backgroundColor: "#ace1e577",
-      },
-    ],
+        borderColor: '#17919A',
+        backgroundColor: '#ace1e577'
+      }
+    ]
   };
   const chartOptions = {
     scales: {
       y: {
         grid: {
-          color: darkmode ? "#F3F4F619" : "#33415519",
+          color: darkmode ? '#F3F4F619' : '#33415519'
         },
         ticks: {
-          color: darkmode ? "#F3F4F6" : "#334155",
-        },
+          color: darkmode ? '#F3F4F6' : '#334155'
+        }
       },
       x: {
         grid: {
-          color: darkmode ? "#F3F4F619" : "#33415519",
+          color: darkmode ? '#F3F4F619' : '#33415519'
         },
         ticks: {
-          color: darkmode ? "#F3F4F6" : "#334155",
-        },
-      },
+          color: darkmode ? '#F3F4F6' : '#334155'
+        }
+      }
     },
-    indexAxis: "y" as const,
+    indexAxis: 'y' as const,
     elements: {
       bar: {
-        borderWidth: 1,
-      },
+        borderWidth: 1
+      }
     },
-    color: darkmode ? "#F3F4F6" : "#334155",
+    color: darkmode ? '#F3F4F6' : '#334155',
     responsive: true,
     plugins: {
       legend: {
-        position: "top" as const,
-      },
-    },
+        position: 'top' as const
+      }
+    }
   };
 
   return (
@@ -67,9 +67,8 @@ export const FormuleMB = ({
       <div className="flex flex-col gap-2">
         <p
           data-testid="formules-result-mb"
-          className="text-xl font-bold text-primary-500"
-        >
-          Résultat: {MBs[0].value ? MBs[0].value.toFixed(1) : "𝑥"}
+          className="text-xl font-bold text-primary-500">
+          Résultat: {MBs[0].value ? MBs[0].value.toFixed(1) : '𝑥'}
         </p>
         <Bar data={chartData} options={chartOptions} />
         <p className="mt-2 self-end text-[10px]/4 text-slate-400">

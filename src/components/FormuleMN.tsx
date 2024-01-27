@@ -1,15 +1,15 @@
+import { useEffect, useState } from 'react';
+import { Bar } from 'react-chartjs-2';
+import { Select } from 'antd';
 import {
-  Chart as ChartJS,
   BarElement,
   CategoryScale,
+  Chart as ChartJS,
+  Legend,
   LinearScale,
   Tooltip,
-  Legend,
-  TooltipItem,
-} from "chart.js";
-import { Select } from "antd";
-import { Bar } from "react-chartjs-2";
-import { useEffect, useState } from "react";
+  TooltipItem
+} from 'chart.js';
 
 interface IFormuleMNProps {
   MBs: { value: number; name: string }[];
@@ -28,50 +28,50 @@ export const FormuleMN = ({ MBs, darkmode }: IFormuleMNProps) => {
   ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
   const chartData = {
     labels: [
-      "Prise de poids",
-      "Maintien",
-      "Perte de poids",
-      "Sèche",
+      'Prise de poids',
+      'Maintien',
+      'Perte de poids',
+      'Sèche'
       //   "Cétogène",
     ],
     datasets: [
       {
-        label: "Glucides",
+        label: 'Glucides',
         data: [
           MBPercentage(60),
           MBPercentage(55),
           MBPercentage(50),
-          MBPercentage(40),
+          MBPercentage(40)
           //   MBPercentage(45),
         ],
-        borderColor: "#F3BE00",
-        backgroundColor: "#F3BE0077",
+        borderColor: '#F3BE00',
+        backgroundColor: '#F3BE0077'
       },
       {
-        label: "Protéines",
+        label: 'Protéines',
         data: [
           MBPercentage(25),
           MBPercentage(30),
           MBPercentage(30),
-          MBPercentage(40),
+          MBPercentage(40)
           //   MBPercentage(25),
         ],
-        borderColor: "#FF5E07",
-        backgroundColor: "#FF5E0777",
+        borderColor: '#FF5E07',
+        backgroundColor: '#FF5E0777'
       },
       {
-        label: "Lipides",
+        label: 'Lipides',
         data: [
           MBPercentage(15),
           MBPercentage(15),
           MBPercentage(20),
-          MBPercentage(20),
+          MBPercentage(20)
           //   MBPercentage(30),
         ],
-        borderColor: "#FC003B",
-        backgroundColor: "#FC003B77",
-      },
-    ],
+        borderColor: '#FC003B',
+        backgroundColor: '#FC003B77'
+      }
+    ]
   };
 
   const chartOptions = {
@@ -79,49 +79,49 @@ export const FormuleMN = ({ MBs, darkmode }: IFormuleMNProps) => {
       y: {
         stacked: true,
         grid: {
-          color: darkmode ? "#F3F4F619" : "#33415519",
+          color: darkmode ? '#F3F4F619' : '#33415519'
         },
         ticks: {
-          color: darkmode ? "#F3F4F6" : "#334155",
-        },
+          color: darkmode ? '#F3F4F6' : '#334155'
+        }
       },
       x: {
         stacked: true,
         grid: {
-          color: darkmode ? "#F3F4F619" : "#33415519",
+          color: darkmode ? '#F3F4F619' : '#33415519'
         },
         ticks: {
-          color: darkmode ? "#F3F4F6" : "#334155",
-        },
-      },
+          color: darkmode ? '#F3F4F6' : '#334155'
+        }
+      }
     },
-    indexAxis: "y" as const,
+    indexAxis: 'y' as const,
     elements: {
       bar: {
-        borderWidth: 1,
-      },
+        borderWidth: 1
+      }
     },
-    color: darkmode ? "#F3F4F6" : "#334155",
+    color: darkmode ? '#F3F4F6' : '#334155',
     responsive: true,
     plugins: {
       legend: {
-        position: "top" as const,
+        position: 'top' as const
       },
       tooltip: {
-        mode: "index" as const,
+        mode: 'index' as const,
         callbacks: {
-          label: (tooltipItem: TooltipItem<"bar">) => {
+          label: (tooltipItem: TooltipItem<'bar'>) => {
             const value = tooltipItem.formattedValue;
             const percent = Math.round(
-              ((tooltipItem.raw as number) * 100) / selectedMBValue,
+              ((tooltipItem.raw as number) * 100) / selectedMBValue
             );
             const label = tooltipItem.dataset.label;
 
-            return percent + "% de " + label + ": " + value + " Kcal";
-          },
-        },
-      },
-    },
+            return percent + '% de ' + label + ': ' + value + ' Kcal';
+          }
+        }
+      }
+    }
   };
 
   return (
@@ -133,7 +133,7 @@ export const FormuleMN = ({ MBs, darkmode }: IFormuleMNProps) => {
           <Select
             id="metabolism"
             size="small"
-            disabled={!!!selectedMBValue}
+            disabled={!selectedMBValue}
             // defaultValue={selectedMBValue}
             value={selectedMBValue}
             style={{ width: 230 }}
@@ -145,10 +145,10 @@ export const FormuleMN = ({ MBs, darkmode }: IFormuleMNProps) => {
                 <div key={index} className="flex items-center justify-between">
                   <p className="">{mb.name}</p>
                   <p className="text-xs font-bold text-primary-500">
-                    {!!mb.value ? mb.value.toFixed(1) : "𝑥"}
+                    {mb.value ? mb.value.toFixed(1) : '𝑥'}
                   </p>
                 </div>
-              ),
+              )
             }))}
           />
         </div>

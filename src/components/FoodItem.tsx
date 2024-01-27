@@ -1,14 +1,14 @@
-import { useState } from "react";
+import { useState } from 'react';
 
+import { default_img, IconDetails, IconNutriScoreNull } from '@assets/index';
+import { Button, ModalFoodItem } from '@components/index';
+import { IProduct } from '@interfaces/index';
 import {
   getNovaGroupImg,
-  getNutriScoreSvg,
   getNutrientLevelColor,
-  labelShortener,
-} from "@utils/formatters";
-import { IProduct } from "@interfaces/index";
-import { Button, ModalFoodItem } from "@components/index";
-import { IconDetails, IconNutriScoreNull, default_img } from "@assets/index";
+  getNutriScoreSvg,
+  labelShortener
+} from '@utils/formatters';
 
 interface IFoodItemProps {
   product: IProduct;
@@ -38,20 +38,20 @@ export const FoodItem = ({ product }: IFoodItemProps) => {
             alt={
               product.product_name ||
               product.product_name_fr ||
-              "produit alimentaire"
+              'produit alimentaire'
             }
           />
         </div>
         <div className="w-full">
           <h2 className="text-xl/6">
             {labelShortener(
-              product.product_name_fr || product.product_name || "N/A",
-              28,
+              product.product_name_fr || product.product_name || 'N/A',
+              28
             )}
           </h2>
 
           <p className="text-base/4 font-bold text-slate-500 dark:text-slate-400">
-            {labelShortener(product.brands || "N/A", 23)}
+            {labelShortener(product.brands || 'N/A', 23)}
           </p>
 
           {/* Nutrient Levels */}
@@ -63,7 +63,7 @@ export const FoodItem = ({ product }: IFoodItemProps) => {
               </div>
               <div className="flex items-center gap-2">
                 {getNutrientLevelColor(
-                  product.nutrient_levels["saturated-fat"],
+                  product.nutrient_levels['saturated-fat']
                 )}
                 <p className="text-xs">Graisses saturées</p>
               </div>
@@ -84,20 +84,20 @@ export const FoodItem = ({ product }: IFoodItemProps) => {
           <div className="flex items-center justify-between">
             {getNovaGroupImg(product.nova_group, true)}
             {product.nutriscore ? (
-              (!["not-applicable", "unknown"].includes(
-                product.nutriscore["2023"].grade,
+              (!['not-applicable', 'unknown'].includes(
+                product.nutriscore['2023'].grade
               ) && (
                 <>
                   {getNutriScoreSvg(
-                    product.nutriscore["2023"].grade.toLowerCase(),
-                    50,
+                    product.nutriscore['2023'].grade.toLowerCase(),
+                    50
                   )}
                   {/* <p className="text-xs font-bold text-slate-400">2023</p> */}
                 </>
               )) ||
               getNutriScoreSvg(
-                product.nutriscore["2021"].grade.toLowerCase(),
-                50,
+                product.nutriscore['2021'].grade.toLowerCase(),
+                50
               )
             ) : (
               <IconNutriScoreNull />
@@ -105,8 +105,7 @@ export const FoodItem = ({ product }: IFoodItemProps) => {
             <Button
               className="py-1 text-xs"
               primary
-              onClick={() => setShowModal(true)}
-            >
+              onClick={() => setShowModal(true)}>
               <IconDetails width={15} height={15} />
               Détails
             </Button>

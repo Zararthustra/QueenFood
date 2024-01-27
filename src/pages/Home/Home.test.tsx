@@ -1,17 +1,18 @@
-import { expect, test, describe } from "vitest";
-import { MemoryRouter, Route, Routes } from "react-router-dom";
-import { fireEvent, render, screen } from "@testing-library/react";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { MemoryRouter, Route, Routes } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { fireEvent, render, screen } from '@testing-library/react';
+import { describe, expect, test } from 'vitest';
 
-import { Home } from "./Home";
-import { Food, Formules, Intolerances, Khayat } from "@pages/index";
+import { Home } from './Home';
 
-describe("Page Home", () => {
+import { Food, Formules, Intolerances, Khayat } from '@pages/index';
+
+describe('Page Home', () => {
   const setup = () => {
     const queryClient = new QueryClient();
     const utils = render(
       <QueryClientProvider client={queryClient}>
-        <MemoryRouter initialEntries={["/"]}>
+        <MemoryRouter initialEntries={['/']}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/aliments" element={<Food />} />
@@ -20,22 +21,22 @@ describe("Page Home", () => {
             <Route path="/intolerances" element={<Intolerances />} />
           </Routes>
         </MemoryRouter>
-      </QueryClientProvider>,
+      </QueryClientProvider>
     );
 
-    const main = screen.queryByTestId("home");
+    const main = screen.queryByTestId('home');
 
-    const formulesLink = screen.getByRole("link", {
-      name: "Formules et indices",
+    const formulesLink = screen.getByRole('link', {
+      name: 'Formules et indices'
     });
-    const alimentsLink = screen.getByRole("link", {
-      name: "Informations alimentaires",
+    const alimentsLink = screen.getByRole('link', {
+      name: 'Informations alimentaires'
     });
-    const intolerancesLink = screen.getByRole("link", {
-      name: "Liste des intolérances",
+    const intolerancesLink = screen.getByRole('link', {
+      name: 'Liste des intolérances'
     });
-    const khayatLink = screen.getByRole("link", {
-      name: "Fiches du Pr Khayat",
+    const khayatLink = screen.getByRole('link', {
+      name: 'Fiches du Pr Khayat'
     });
 
     return {
@@ -44,40 +45,40 @@ describe("Page Home", () => {
       formulesLink,
       alimentsLink,
       intolerancesLink,
-      ...utils,
+      ...utils
     };
   };
 
-  test("Is present in DOM", () => {
+  test('Is present in DOM', () => {
     const { main } = setup();
     expect(main).toBeInTheDocument();
   });
 
-  test("Link Formules", () => {
+  test('Link Formules', () => {
     const { formulesLink, queryByTestId } = setup();
     fireEvent.click(formulesLink);
-    const formulesPage = queryByTestId("formules");
+    const formulesPage = queryByTestId('formules');
     expect(formulesPage).toBeInTheDocument();
   });
 
-  test("Link Intolérances", () => {
+  test('Link Intolérances', () => {
     const { intolerancesLink, queryByTestId } = setup();
     fireEvent.click(intolerancesLink);
-    const intolerancesPage = queryByTestId("intolerances");
+    const intolerancesPage = queryByTestId('intolerances');
     expect(intolerancesPage).toBeInTheDocument();
   });
 
-  test("Link Aliments", () => {
+  test('Link Aliments', () => {
     const { alimentsLink, queryByTestId } = setup();
     fireEvent.click(alimentsLink);
-    const foodPage = queryByTestId("aliments");
+    const foodPage = queryByTestId('aliments');
     expect(foodPage).toBeInTheDocument();
   });
 
-  test("Link Khayat", () => {
+  test('Link Khayat', () => {
     const { khayatLink, queryByTestId } = setup();
     fireEvent.click(khayatLink);
-    const khayatPage = queryByTestId("khayat");
+    const khayatPage = queryByTestId('khayat');
     expect(khayatPage).toBeInTheDocument();
   });
 });

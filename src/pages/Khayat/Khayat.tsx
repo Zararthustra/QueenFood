@@ -1,41 +1,40 @@
-import { useState } from "react";
-import { Collapse, Input } from "antd";
-import { useMediaQuery } from "react-responsive";
+import { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
+import { Collapse, Input } from 'antd';
 
-import { khayatList } from "@data/index";
-import { KhayatItem } from "@components/index";
-import { labelShortener } from "@utils/formatters";
-import { IconCrown, IconCrownOutlined, IconDrink } from "@assets/index";
+import { IconCrown, IconCrownOutlined, IconDrink } from '@assets/index';
+import { KhayatItem } from '@components/index';
+import { khayatList } from '@data/index';
+import { labelShortener } from '@utils/formatters';
 
 export const Khayat = () => {
-  const [searchValue, setSearchValue] = useState<string>("");
-  const isMobile = useMediaQuery({ query: "(max-width: 450px)" });
+  const [searchValue, setSearchValue] = useState<string>('');
+  const isMobile = useMediaQuery({ query: '(max-width: 450px)' });
   const categories = [...new Set(khayatList.map((fiche) => fiche.catégorie))];
   const nutriSantéColors = [
-    "bg-[#df1c0d]",
-    "bg-[#EF454A]",
-    "bg-[#EC687A]",
-    "bg-[#D38CA5]",
-    "bg-[#C2A8C6]",
-    "bg-[#7BA6DB]",
-    "bg-[#81A9DC]",
-    "bg-[#7BA6DB]",
-    "bg-[#5F8AC5]",
-    "bg-[#352B64]",
+    'bg-[#df1c0d]',
+    'bg-[#EF454A]',
+    'bg-[#EC687A]',
+    'bg-[#D38CA5]',
+    'bg-[#C2A8C6]',
+    'bg-[#7BA6DB]',
+    'bg-[#81A9DC]',
+    'bg-[#7BA6DB]',
+    'bg-[#5F8AC5]',
+    'bg-[#352B64]'
   ];
   const nutriSantéDrinkColors = [
-    "bg-[#F0484F]",
-    "bg-[#D18AA3]",
-    "bg-[#8EB0DF]",
-    "bg-[#5574AE]",
+    'bg-[#F0484F]',
+    'bg-[#D18AA3]',
+    'bg-[#8EB0DF]',
+    'bg-[#5574AE]'
   ];
 
   return (
     <>
       <main
         data-testid="khayat"
-        className="mb-[50px] flex flex-col items-center px-2 dark:text-slate-100"
-      >
+        className="mb-[50px] flex flex-col items-center px-2 dark:text-slate-100">
         <h1 className="my-5 text-center ">Fiches du Pr Khayat</h1>
 
         <Input
@@ -63,7 +62,7 @@ export const Khayat = () => {
                         item.catégorie === categorie &&
                         item.titre
                           .toLowerCase()
-                          .includes(searchValue.toLowerCase()),
+                          .includes(searchValue.toLowerCase())
                     ).length
                   }
                 </p>
@@ -78,15 +77,14 @@ export const Khayat = () => {
                         item.catégorie === categorie &&
                         item.titre
                           .toLowerCase()
-                          .includes(searchValue.toLowerCase()),
+                          .includes(searchValue.toLowerCase())
                     )
                     .map((fiche, indexx) => ({
                       key: indexx + 1,
                       label: (
                         <h3
                           data-testid="khayat-fiche-name"
-                          className="mb-[3px]"
-                        >
+                          className="mb-[3px]">
                           {isMobile
                             ? labelShortener(fiche.titre, 30)
                             : fiche.titre}
@@ -104,17 +102,16 @@ export const Khayat = () => {
                           )}
                           <p
                             className={
-                              "rounded-full border-2 border-white px-[4px] py-[7px] text-xs font-bold text-white " +
+                              'rounded-full border-2 border-white px-[4px] py-[7px] text-xs font-bold text-white ' +
                               (fiche.boisson
                                 ? nutriSantéDrinkColors[fiche.nutriSanté - 1]
                                 : nutriSantéColors[fiche.nutriSanté - 1]) +
-                              (isMobile ? "" : " -tracking-[1px]")
-                            }
-                          >
+                              (isMobile ? '' : ' -tracking-[1px]')
+                            }>
                             {fiche.nutriSanté}
                           </p>
                         </div>
-                      ),
+                      )
                     }))
                 }
                 expandIcon={({ isActive }) =>

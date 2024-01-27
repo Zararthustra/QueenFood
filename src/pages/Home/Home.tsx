@@ -1,28 +1,27 @@
-import { Link } from "react-router-dom";
-import { useMediaQuery } from "react-responsive";
+import { useMediaQuery } from 'react-responsive';
+import { Link } from 'react-router-dom';
 
 import {
   IconFood,
   IconFormula,
   IconIntolerance,
   IconKhayat,
-  IconLogo,
-} from "@assets/index";
+  IconLogo
+} from '@assets/index';
 
 export const Home = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
   const linkStyle =
-    "flex flex-col items-center gap-4 border-[1px] border-slate-50 dark:border-slate-900 transition px-5 py-5 rounded" +
+    'flex flex-col items-center gap-4 border-[1px] border-slate-50 dark:border-slate-900 transition px-5 py-5 rounded' +
     (isMobile
-      ? " border-primary-200 dark:border-slate-700"
-      : " hover:border-primary-200 dark:hover:border-slate-700");
+      ? ' border-primary-200 dark:border-slate-700'
+      : ' hover:border-primary-200 dark:hover:border-slate-700');
 
   return (
     <>
       <main
         data-testid="home"
-        className="flex min-h-[80vh] flex-col items-center justify-evenly px-2 dark:text-slate-100"
-      >
+        className="flex min-h-[80vh] flex-col items-center justify-evenly px-2 dark:text-slate-100">
         <IconLogo
           className="shrink-0"
           width={isMobile ? 200 : 300}

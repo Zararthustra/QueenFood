@@ -1,12 +1,12 @@
-import { IIcon } from "@interfaces/index";
+import { IIcon } from '@interfaces/index';
 
 export const IconNutriScoreE = ({
   width = 50,
   height,
-  className = "",
+  className = '',
   style,
   color,
-  onClick,
+  onClick
 }: IIcon) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -15,9 +15,8 @@ export const IconNutriScoreE = ({
     onClick={onClick}
     className={className}
     style={style}
-    fill={color ?? "currentColor"}
-    viewBox="0 0 240 130"
-  >
+    fill={color ?? 'currentColor'}
+    viewBox="0 0 240 130">
     <defs>
       <clipPath id="a" clipPathUnits="userSpaceOnUse">
         <path d="M-576.406-131.683h841.89v595.276h-841.89z" />

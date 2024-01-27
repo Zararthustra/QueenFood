@@ -1,6 +1,6 @@
-import { useContext } from "react";
-import { Doughnut } from "react-chartjs-2";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import { useContext } from 'react';
+import { Doughnut } from 'react-chartjs-2';
+import { ArcElement, Chart as ChartJS, Legend, Tooltip } from 'chart.js';
 
 import {
   IconDepense,
@@ -8,12 +8,12 @@ import {
   IconIdea,
   IconPortion,
   IconThumbKO,
-  IconThumbOK,
-} from "@assets/index";
-import { IKhayat } from "@interfaces/index";
-import AppContext, { IAppContext } from "@services/AppContext";
-import { getNovaGroupImg, getNutriScoreSvg } from "@utils/formatters";
-import { MicroNutrimentLevel, NutriSanteScore } from "@components/index";
+  IconThumbOK
+} from '@assets/index';
+import { MicroNutrimentLevel, NutriSanteScore } from '@components/index';
+import { IKhayat } from '@interfaces/index';
+import AppContext, { IAppContext } from '@services/AppContext';
+import { getNovaGroupImg, getNutriScoreSvg } from '@utils/formatters';
 
 interface IKhayatItemProps {
   fiche: IKhayat;
@@ -21,19 +21,19 @@ interface IKhayatItemProps {
 export const KhayatItem = ({ fiche }: IKhayatItemProps) => {
   const { darkMode } = useContext<IAppContext>(AppContext);
   const tierStyle =
-    "w-full shadow-md px-4 bg-white dark:bg-slate-800 rounded-sm py-10 relative mt-7";
+    'w-full shadow-md px-4 bg-white dark:bg-slate-800 rounded-sm py-10 relative mt-7';
   const iconStyle =
-    "h-[70px] w-[70px] bg-white flex dark:bg-slate-800 items-center text-primary-500 dark:text-primary-300 justify-center rounded-full top-[-35px] left-[50%] translate-x-[-50%] absolute";
+    'h-[70px] w-[70px] bg-white flex dark:bg-slate-800 items-center text-primary-500 dark:text-primary-300 justify-center rounded-full top-[-35px] left-[50%] translate-x-[-50%] absolute';
   ChartJS.register(ArcElement, Tooltip, Legend);
   const colors = [
-    "#FFCB0F",
-    "#FF7024",
-    "#FF194F",
-    "#C02668",
-    "#381546",
-    "#95C92C",
-    "#26A699",
-    "#D60000",
+    '#FFCB0F',
+    '#FF7024',
+    '#FF194F',
+    '#C02668',
+    '#381546',
+    '#95C92C',
+    '#26A699',
+    '#D60000'
   ];
   const chartData = {
     labels: fiche.macronutriments.map((macro) => macro.nutriments),
@@ -41,9 +41,9 @@ export const KhayatItem = ({ fiche }: IKhayatItemProps) => {
       {
         data: fiche.macronutriments.map((macro) => macro.valeur),
         backgroundColor: fiche.macronutriments.map((_, index) => colors[index]),
-        hoverOffset: 10,
-      },
-    ],
+        hoverOffset: 10
+      }
+    ]
   };
 
   return (
@@ -92,7 +92,7 @@ export const KhayatItem = ({ fiche }: IKhayatItemProps) => {
               <p className="font-bold text-slate-600 dark:text-slate-400">
                 Pour 100g
               </p>
-              <p className="text-center">{fiche.énergie["100g"]}</p>
+              <p className="text-center">{fiche.énergie['100g']}</p>
             </div>
             <div>
               <p className="font-bold text-slate-600 dark:text-slate-400">
@@ -147,8 +147,8 @@ export const KhayatItem = ({ fiche }: IKhayatItemProps) => {
                 legend: {
                   title: {
                     display: true,
-                    text: "Pour 100 grammes",
-                    color: darkMode ? "#F3F4F6" : "#334155",
+                    text: 'Pour 100 grammes',
+                    color: darkMode ? '#F3F4F6' : '#334155'
                   },
                   labels: {
                     generateLabels: function (chart) {
@@ -163,13 +163,13 @@ export const KhayatItem = ({ fiche }: IKhayatItemProps) => {
                           text: `${label}: ${values[index]}g`,
                           fillStyle: colors[index],
                           borderRadius: 1,
-                          lineWidth: 0,
+                          lineWidth: 0
                         }));
-                      return [{ text: "error" }];
-                    },
-                  },
-                },
-              },
+                      return [{ text: 'error' }];
+                    }
+                  }
+                }
+              }
             }}
           />
         </div>

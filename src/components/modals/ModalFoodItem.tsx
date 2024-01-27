@@ -1,6 +1,6 @@
-import { Empty, Modal } from "antd";
+import { Empty, Modal } from 'antd';
 
-import { IProduct } from "@interfaces/index";
+import { IProduct } from '@interfaces/index';
 
 interface IModalFoodItemProps {
   product: IProduct;
@@ -10,32 +10,31 @@ interface IModalFoodItemProps {
 export const ModalFoodItem = ({
   product,
   showModal,
-  setShowModal,
+  setShowModal
 }: IModalFoodItemProps) => {
-  const rowStyle = "odd:bg-slate-100 dark:odd:bg-slate-800";
-  const cellStyle = "px-1";
+  const rowStyle = 'odd:bg-slate-100 dark:odd:bg-slate-800';
+  const cellStyle = 'px-1';
   const allergens = [
     ...new Set([
       ...product.allergens_tags,
       ...product.allergens_hierarchy,
-      ...product.allergens?.split(","),
-      ...(product.allergens_imported?.split(",") || ""),
-      ...product.allergens_from_ingredients?.split(","),
-    ]),
+      ...(product.allergens?.split(',') || ''),
+      ...(product.allergens_imported?.split(',') || ''),
+      ...(product.allergens_from_ingredients?.split(',') || '')
+    ])
   ];
 
   return (
     <Modal
-      title={product.product_name_fr || product.product_name || "N/A"}
-      styles={{ body: { maxHeight: "60vh", overflowY: "auto" } }}
+      title={product.product_name_fr || product.product_name || 'N/A'}
+      styles={{ body: { maxHeight: '60vh', overflowY: 'auto' } }}
       footer={false}
       open={showModal}
       onCancel={() => setShowModal(false)}
-      data-testid="aliments-aliments-details"
-    >
+      data-testid="aliments-aliments-details">
       {/* Infos Nutritionnelles */}
       <h3>Nutriments</h3>
-      {!!Object.keys(product.nutriments).length ? (
+      {Object.keys(product.nutriments).length ? (
         <table className="border-separate border-spacing-x-0 dark:text-slate-100">
           <thead>
             <tr>
@@ -44,40 +43,40 @@ export const ModalFoodItem = ({
               <th className="p-1">Pour 100g</th>
               {product.serving_quantity && (
                 <th className="p-1">
-                  Par portion ({product.serving_quantity || "no"}g)
+                  Par portion ({product.serving_quantity || 'no'}g)
                 </th>
               )}
             </tr>
           </thead>
           <tbody>
-            {(product.nutriments["energy-kcal_100g"] ||
-              product.nutriments["energy-kcal_unit"]) && (
+            {(product.nutriments['energy-kcal_100g'] ||
+              product.nutriments['energy-kcal_unit']) && (
               <tr className={rowStyle}>
                 <td className={cellStyle}>Énergie</td>
                 <td className={cellStyle}>
-                  {product.nutriments["energy-kcal_unit"]}
+                  {product.nutriments['energy-kcal_unit']}
                 </td>
                 <td className={cellStyle}>
-                  {product.nutriments["energy-kcal_100g"]}
+                  {product.nutriments['energy-kcal_100g']}
                 </td>
                 <td className={cellStyle}>
-                  {product.nutriments["energy-kcal_serving"]}
+                  {product.nutriments['energy-kcal_serving']}
                 </td>
               </tr>
             )}
 
-            {(product.nutriments["energy-kj_100g"] ||
-              product.nutriments["energy-kj_unit"]) && (
+            {(product.nutriments['energy-kj_100g'] ||
+              product.nutriments['energy-kj_unit']) && (
               <tr className={rowStyle}>
                 <td className={cellStyle}></td>
                 <td className={cellStyle}>
-                  {product.nutriments["energy-kj_unit"]}
+                  {product.nutriments['energy-kj_unit']}
                 </td>
                 <td className={cellStyle}>
-                  {product.nutriments["energy-kj_100g"]}
+                  {product.nutriments['energy-kj_100g']}
                 </td>
                 <td className={cellStyle}>
-                  {product.nutriments["energy-kj_serving"]}
+                  {product.nutriments['energy-kj_serving']}
                 </td>
               </tr>
             )}
@@ -91,18 +90,18 @@ export const ModalFoodItem = ({
               </tr>
             )}
 
-            {(product.nutriments["saturated-fat_100g"] ||
-              product.nutriments["saturated-fat_unit"]) && (
+            {(product.nutriments['saturated-fat_100g'] ||
+              product.nutriments['saturated-fat_unit']) && (
               <tr className={rowStyle}>
                 <td className={cellStyle}>Graisses Saturées</td>
                 <td className={cellStyle}>
-                  {product.nutriments["saturated-fat_unit"]}
+                  {product.nutriments['saturated-fat_unit']}
                 </td>
                 <td className={cellStyle}>
-                  {product.nutriments["saturated-fat_100g"]}
+                  {product.nutriments['saturated-fat_100g']}
                 </td>
                 <td className={cellStyle}>
-                  {product.nutriments["saturated-fat_serving"]}
+                  {product.nutriments['saturated-fat_serving']}
                 </td>
               </tr>
             )}
@@ -211,8 +210,8 @@ export const ModalFoodItem = ({
           product.ingredients.map((ingredient, index) => (
             <p className="tag" key={index}>
               {ingredient.text
-                .replaceAll(/\w\w:/gi, "")
-                .replaceAll("\u001f", "")
+                .replaceAll(/\w\w:/gi, '')
+                .replaceAll('\u001f', '')
                 .toLowerCase()}
             </p>
           ))
@@ -232,9 +231,9 @@ export const ModalFoodItem = ({
             (allergen, index) =>
               !!allergen && (
                 <p className="tag" key={index}>
-                  {allergen.replaceAll(/\w\w:/gi, "").toLowerCase()}
+                  {allergen.replaceAll(/\w\w:/gi, '').toLowerCase()}
                 </p>
-              ),
+              )
           )
         ) : (
           <Empty
@@ -248,11 +247,11 @@ export const ModalFoodItem = ({
       <h3 className="mb-2 mt-5">Traces</h3>
       <div className="flex flex-wrap gap-1">
         {!!product.traces && !!product.traces.length ? (
-          product.traces.split(",").map((trace, index) => (
+          product.traces.split(',').map((trace, index) => (
             <p className="tag" key={index}>
               {trace
-                .replaceAll(/\w\w:/gi, "")
-                .replaceAll("\u001f", "")
+                .replaceAll(/\w\w:/gi, '')
+                .replaceAll('\u001f', '')
                 .toLowerCase()}
             </p>
           ))

@@ -1,26 +1,25 @@
-import { Styles, Text, View } from "@react-pdf/renderer";
+import { Styles, Text, View } from '@react-pdf/renderer';
 
 interface IIMCTableProps {
   styles: Styles;
   IMC: number;
-  gender: "male" | "female";
 }
 
-export const IMCTable = ({ styles, IMC, gender }: IIMCTableProps) => {
+export const IMCTable = ({ styles, IMC }: IIMCTableProps) => {
   const highlightOnThreshold = (low: number, high: number) => {
-    if (!!!IMC) return {};
-    if (IMC >= low && IMC < high) return { color: "#ff218c", fontWeight: 800 };
+    if (!IMC) return {};
+    if (IMC >= low && IMC < high) return { color: '#ff218c', fontWeight: 800 };
     return {};
   };
 
   return (
     <View>
       <Text style={styles.h3}>Indice de Masse Corporelle</Text>
-      <Text style={[styles.label, { color: "#ff218c", fontWeight: 800 }]}>
+      <Text style={[styles.label, { color: '#ff218c', fontWeight: 800 }]}>
         Résultat: {IMC.toFixed(1)}
       </Text>
 
-      <View style={{ width: "270px" }}>
+      <View style={{ width: '270px' }}>
         {/* Head */}
         <View style={styles.row}>
           <Text style={styles.description3Col}></Text>
@@ -33,7 +32,7 @@ export const IMCTable = ({ styles, IMC, gender }: IIMCTableProps) => {
             Maigreur extrême
           </Text>
           <Text style={[styles.value3Col, highlightOnThreshold(0, 16.5)]}>
-            {"x < 16.5"}
+            {'x < 16.5'}
           </Text>
           <Text style={[styles.value3Col, highlightOnThreshold(0, 16.5)]}>
             Elevé
@@ -41,12 +40,11 @@ export const IMCTable = ({ styles, IMC, gender }: IIMCTableProps) => {
         </View>
         <View style={[styles.row, styles.text]}>
           <Text
-            style={[styles.description3Col, highlightOnThreshold(16.5, 18.5)]}
-          >
+            style={[styles.description3Col, highlightOnThreshold(16.5, 18.5)]}>
             Maigreur
           </Text>
           <Text style={[styles.value3Col, highlightOnThreshold(16.5, 18.5)]}>
-            {"16.5 ≥ x < 18.5"}
+            {'16.5 ≥ x < 18.5'}
           </Text>
           <Text style={[styles.value3Col, highlightOnThreshold(16.5, 18.5)]}>
             Accru
@@ -54,12 +52,11 @@ export const IMCTable = ({ styles, IMC, gender }: IIMCTableProps) => {
         </View>
         <View style={[styles.row, styles.text]}>
           <Text
-            style={[styles.description3Col, highlightOnThreshold(18.5, 25)]}
-          >
+            style={[styles.description3Col, highlightOnThreshold(18.5, 25)]}>
             Corpulence normale
           </Text>
           <Text style={[styles.value3Col, highlightOnThreshold(18.5, 25)]}>
-            {"18.5 ≥ x < 25"}
+            {'18.5 ≥ x < 25'}
           </Text>
           <Text style={[styles.value3Col, highlightOnThreshold(18.5, 25)]}>
             Faible
@@ -70,7 +67,7 @@ export const IMCTable = ({ styles, IMC, gender }: IIMCTableProps) => {
             Surpoids
           </Text>
           <Text style={[styles.value3Col, highlightOnThreshold(25, 30)]}>
-            {"25 ≥ x < 30"}
+            {'25 ≥ x < 30'}
           </Text>
           <Text style={[styles.value3Col, highlightOnThreshold(25, 30)]}>
             Accru
@@ -81,7 +78,7 @@ export const IMCTable = ({ styles, IMC, gender }: IIMCTableProps) => {
             Obésité modérée
           </Text>
           <Text style={[styles.value3Col, highlightOnThreshold(30, 35)]}>
-            {"30 ≥ x < 35"}
+            {'30 ≥ x < 35'}
           </Text>
           <Text style={[styles.value3Col, highlightOnThreshold(30, 35)]}>
             élevé
@@ -92,7 +89,7 @@ export const IMCTable = ({ styles, IMC, gender }: IIMCTableProps) => {
             Obésité sévère
           </Text>
           <Text style={[styles.value3Col, highlightOnThreshold(35, 40)]}>
-            {"35 ≥ x < 40"}
+            {'35 ≥ x < 40'}
           </Text>
           <Text style={[styles.value3Col, highlightOnThreshold(35, 40)]}>
             Très Elevé
@@ -103,7 +100,7 @@ export const IMCTable = ({ styles, IMC, gender }: IIMCTableProps) => {
             Obésité morbide
           </Text>
           <Text style={[styles.value3Col, highlightOnThreshold(40, 999)]}>
-            {"40 < x"}
+            {'40 < x'}
           </Text>
           <Text style={[styles.value3Col, highlightOnThreshold(40, 999)]}>
             Extrêmement élevé

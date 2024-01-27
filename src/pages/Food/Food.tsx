@@ -1,40 +1,39 @@
-import { useState } from "react";
-import { Input, Empty, Pagination } from "antd";
+import { useState } from 'react';
+import { Empty, Input, Pagination } from 'antd';
 
-import { labelShortener } from "@utils/formatters";
-import { Button, FoodItem } from "@components/index";
-import { IconCrown, IconError, IconInfo } from "@assets/index";
-import { useQueryRetrieveCategories, useQuerySearchFood } from "@queries/index";
+import { IconCrown, IconError, IconInfo } from '@assets/index';
+import { Button, FoodItem } from '@components/index';
+import { useQueryRetrieveCategories, useQuerySearchFood } from '@queries/index';
+import { labelShortener } from '@utils/formatters';
 
 export const Food = () => {
-  const [category, setCategory] = useState<string>("");
+  const [category, setCategory] = useState<string>('');
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [searchValue, setSearchValue] = useState<string>("");
+  const [searchValue, setSearchValue] = useState<string>('');
   const {
     data: categories,
     isError: errorCategories,
     refetch: refetchCategories,
-    isLoading: loadingCategories,
+    isLoading: loadingCategories
   } = useQueryRetrieveCategories();
   const {
     refetch,
     data: searchFood,
     isError: errorSearch,
     isSuccess: successSearch,
-    fetchStatus: searchStatus,
+    fetchStatus: searchStatus
   } = useQuerySearchFood({
     category,
-    page: currentPage,
+    page: currentPage
   });
 
   return (
     <>
       <main
         data-testid="aliments"
-        className="mb-[50px] flex flex-col items-center px-2"
-      >
+        className="mb-[50px] flex flex-col items-center px-2">
         <h1 className="my-5 text-center dark:text-slate-100">
-          Aliments {successSearch ? `(${searchFood.count})` : ""}
+          Aliments {successSearch ? `(${searchFood.count})` : ''}
         </h1>
 
         <Input
@@ -43,7 +42,7 @@ export const Food = () => {
           allowClear
           onChange={(e) => {
             setSearchValue(e.target.value);
-            setCategory("");
+            setCategory('');
           }}
           value={searchValue}
           className="mb-10 mt-5"
@@ -52,7 +51,7 @@ export const Food = () => {
         />
 
         {/* ========================================= Loading ========================================= */}
-        {searchStatus === "fetching" && (
+        {searchStatus === 'fetching' && (
           <div className="flex flex-col items-center">
             <IconCrown
               width={100}
@@ -104,15 +103,14 @@ export const Food = () => {
             <Button
               className="mb-5"
               onClick={() => refetchCategories()}
-              primary
-            >
+              primary>
               Réessayer
             </Button>
           </div>
         )}
 
         {/* ===================================== Category filter ===================================== */}
-        {!successSearch && searchStatus !== "fetching" && !!categories && (
+        {!successSearch && searchStatus !== 'fetching' && !!categories && (
           <>
             <div className="bubble--info flex items-center gap-2 rounded p-2">
               <IconInfo size={20} className="text-blue-700" />
@@ -128,7 +126,7 @@ export const Food = () => {
                       categories.filter((cat) =>
                         cat.name
                           .toLowerCase()
-                          .includes(searchValue.toLowerCase()),
+                          .includes(searchValue.toLowerCase())
                       ).length
                     }
                     )
@@ -138,7 +136,7 @@ export const Food = () => {
               <tbody>
                 {categories
                   .filter((cat) =>
-                    cat.name.toLowerCase().includes(searchValue.toLowerCase()),
+                    cat.name.toLowerCase().includes(searchValue.toLowerCase())
                   )
                   .map((cat) => (
                     <tr
@@ -148,8 +146,7 @@ export const Food = () => {
                         setSearchValue(cat.name);
                         setCurrentPage(1);
                       }}
-                      className="hover cursor-pointer transition-all hover:bg-slate-200  hover:text-primary-500"
-                    >
+                      className="hover cursor-pointer transition-all hover:bg-slate-200  hover:text-primary-500">
                       <td className="pb-1 pl-1 pr-1">{cat.products}</td>
                       <td className="pb-1 pl-2 pr-1">
                         {labelShortener(cat.name, 35)}
@@ -161,8 +158,8 @@ export const Food = () => {
           </>
         )}
         {categories &&
-          !!!categories.filter((cat) =>
-            cat.name.toLowerCase().includes(searchValue.toLowerCase()),
+          !categories.filter((cat) =>
+            cat.name.toLowerCase().includes(searchValue.toLowerCase())
           ).length && (
             <Empty
               data-testid="aliments-categories-empty"
@@ -172,7 +169,7 @@ export const Food = () => {
 
         {/* ========================================= Success ========================================= */}
         {successSearch &&
-          (!!searchFood.products.length ? (
+          (searchFood.products.length ? (
             <>
               <Pagination
                 className="mb-5"
@@ -188,8 +185,7 @@ export const Food = () => {
 
               <div
                 data-testid="aliments-aliments"
-                className="mt-2 flex flex-col gap-3 dark:text-slate-100"
-              >
+                className="mt-2 flex flex-col gap-3 dark:text-slate-100">
                 {searchFood.products.map((product, index) => (
                   <FoodItem key={index} product={product} />
                 ))}

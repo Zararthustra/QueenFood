@@ -1,23 +1,24 @@
-import { expect, test, describe } from "vitest";
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from '@testing-library/react';
+import { describe, expect, test } from 'vitest';
 
-import { Khayat } from "./Khayat";
-import { khayatList } from "@data/index";
+import { Khayat } from './Khayat';
 
-describe("Page Khayat", () => {
+import { khayatList } from '@data/index';
+
+describe('Page Khayat', () => {
   const setup = () => {
     const utils = render(<Khayat />);
 
-    const main = screen.queryByTestId("khayat");
-    const input = screen.getByTestId("khayat-input");
-    const fichesH3 = screen.queryAllByTestId("khayat-fiche-name");
-    const categoriesH2 = screen.queryAllByTestId("khayat-category-name");
+    const main = screen.queryByTestId('khayat');
+    const input = screen.getByTestId('khayat-input');
+    const fichesH3 = screen.queryAllByTestId('khayat-fiche-name');
+    const categoriesH2 = screen.queryAllByTestId('khayat-category-name');
 
     const { fichesTitleData, fichesCategoryData } = {
       fichesCategoryData: [
-        ...new Set(khayatList.map((fiche) => fiche.catégorie)),
+        ...new Set(khayatList.map((fiche) => fiche.catégorie))
       ],
-      fichesTitleData: khayatList.map((fiche) => fiche.titre),
+      fichesTitleData: khayatList.map((fiche) => fiche.titre)
     };
 
     return {
@@ -27,16 +28,16 @@ describe("Page Khayat", () => {
       categoriesH2,
       fichesTitleData,
       fichesCategoryData,
-      ...utils,
+      ...utils
     };
   };
 
-  test("Is present in DOM", () => {
+  test('Is present in DOM', () => {
     const { main } = setup();
     expect(main).toBeInTheDocument();
   });
 
-  test("Categories", () => {
+  test('Categories', () => {
     const { categoriesH2, fichesCategoryData } = setup();
 
     // Length
@@ -46,7 +47,7 @@ describe("Page Khayat", () => {
     expect(H2Values).toStrictEqual(fichesCategoryData);
   });
 
-  test("Fiches", () => {
+  test('Fiches', () => {
     const { fichesTitleData, fichesH3 } = setup();
 
     // Length
@@ -57,12 +58,12 @@ describe("Page Khayat", () => {
     expect(H3Values).toStrictEqual(fichesTitleData);
   });
 
-  test("Filter", async () => {
+  test('Filter', async () => {
     const { fichesTitleData, input } = setup();
 
     // Filter
     fireEvent.change(input, { target: { value: fichesTitleData[0] } });
-    const fichesH3Awaited = await screen.findAllByTestId("khayat-fiche-name");
+    const fichesH3Awaited = await screen.findAllByTestId('khayat-fiche-name');
     expect(fichesH3Awaited).toHaveLength(1);
     expect(fichesH3Awaited[0].textContent).toStrictEqual(fichesTitleData[0]);
   });
