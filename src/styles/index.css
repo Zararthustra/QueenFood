@@ -219,3 +219,7 @@
   display: flex;
   align-items: center !important;
 }
+/* Tabs */
+.ant-tabs-tab {
+  @apply dark:text-slate-100;
+}

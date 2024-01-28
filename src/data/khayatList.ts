@@ -2,138 +2,136 @@ import { IKhayat } from '@interfaces/index';
 
 export const khayatList: IKhayat[] = [
   {
-  "catégorie": "Goûter",
-  "titre": "Thé",
-  "boisson": true,
-  "nutriSanté": 3,
-  "portions": {
-    "seniors": "1 à 3 Tasses",
-    "adultes": "1 à 3 Tasses",
-    "enfants": "A éviter  "
-  },
-  "énergie": {
-    "100g": "0kcal",
-    "portion": "0kcal"
-  },
-  "dépenses": [
-    "Pas de calories donc pas d'équivalent dépenses."
-  ],
-  "nutriScore": "a",
-  "nova": 3,
-  "avantages": "Hydratation. Présence d'antioxydants.",
-  "inconvénients": "Attention à ne pas consommer trop de théine.",
-  "astuces": "Variez les provenances de vos thés pour bénéficier de toute la variété des antioxydants.",
-  "macronutriments": [
-    {
-      "nutriments": "Autres",
-      "valeur": 100
-    }
-  ],
-  "micronutriments": "faible"
-},
-  {
-  "catégorie": "Goûter",
-  "titre": "Cappuccino",
-  "boisson": true,
-  "nutriSanté": 3,
-  "portions": {
-    "seniors": "1 à 2 Tasses",
-    "adultes": "1 à 2 Tasses",
-    "enfants": "A éviter  "
-  },
-  "énergie": {
-    "100g": "20kcal",
-    "portion": "40kcal"
-  },
-  "dépenses": [
-    "10min de marche"
-  ],
-  "nutriScore": "a",
-  "nova": 3,
-  "avantages": "Plaisir du caféet du lait. Apports diversifiés : calcium, protéines, vitamine D",
-  "inconvénients": "Attention à ne pas consommer trop de caféine.",
-  "astuces": "Une gourmandise bien italienne que l'on peut accompagner, là aussi, de quelques biscuits. Le lait vous apporte de la douceur au moment du goûter.",
-  "macronutriments": [
-    {
-      "nutriments": "Autres",
-      "valeur": 95
+    catégorie: 'Goûter',
+    titre: 'Thé',
+    boisson: true,
+    nutriSanté: 3,
+    portions: {
+      seniors: '1 à 3 Tasses',
+      adultes: '1 à 3 Tasses',
+      enfants: 'A éviter  '
     },
-    {
-      "nutriments": "Glucides",
-      "valeur": 3
+    énergie: {
+      '100g': '0kcal',
+      portion: '0kcal'
     },
-    {
-      "nutriments": "Protéines",
-      "valeur": 2
-    }
-  ],
-  "micronutriments": "faible"
-},
+    dépenses: ["Pas de calories donc pas d'équivalent dépenses."],
+    nutriScore: 'a',
+    nova: 3,
+    avantages: "Hydratation. Présence d'antioxydants.",
+    inconvénients: 'Attention à ne pas consommer trop de théine.',
+    astuces:
+      'Variez les provenances de vos thés pour bénéficier de toute la variété des antioxydants.',
+    macronutriments: [
+      {
+        nutriments: 'Autres',
+        valeur: 100
+      }
+    ],
+    micronutriments: 'faible'
+  },
   {
-  "catégorie": "Goûter",
-  "titre": "Café (Sans Sucre)",
-  "boisson": true,
-  "nutriSanté": 3,
-  "portions": {
-    "seniors": "1 à 3 Tasses",
-    "adultes": "1 à 3 Tasses",
-    "enfants": "A éviter  "
-  },
-  "énergie": {
-    "100g": "0kcal",
-    "portion": "0kcal"
-  },
-  "dépenses": [
-    "Pas de calories donc pas d'équivalent dépenses"
-  ],
-  "nutriScore": "a",
-  "nova": 3,
-  "avantages": "Antifatigue et antimigraineux.",
-  "inconvénients": "Attention à ne pas consommer trop de caféine.",
-  "astuces": "Un petit coup de fouet bien utile! Accompagné de quelques biscuits sur le bord de la soucoupe d'un morceau de chocolat ou d'un spéculoos, le café n'en sera que plus agréable à déguster. ",
-  "macronutriments": [
-    {
-      "nutriments": "Autres",
-      "valeur": 100
-    }
-  ],
-  "micronutriments": "faible"
-},
-  {
-  "catégorie": "Goûter",
-  "titre": "Compote De Pommes (Sans Sucres Ajoutés)",
-  "boisson": false,
-  "nutriSanté": 8,
-  "portions": {
-    "seniors": "150g",
-    "adultes": "150g",
-    "enfants": "100g "
-  },
-  "énergie": {
-    "100g": "90kcal",
-    "portion": "135kcal"
-  },
-  "dépenses": [
-    "40min de marche",
-    "20min  de skate"
-  ],
-  "nutriScore": "a",
-  "nova": 1,
-  "avantages": "Tous les bénéfices des fruits (micronutriments,fibres). Facile à déguster pour les enfants.",
-  "inconvénients": "Ajout de sucres dans les versions industrielles. Satiété moins importante.",
-  "astuces": "Pour les compotes individuelles, vérifiez que la mention (sans sucres ajoutés) est présente. Attention à l'impact des emballages en gourde sur la planète! ",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 22
+    catégorie: 'Goûter',
+    titre: 'Cappuccino',
+    boisson: true,
+    nutriSanté: 3,
+    portions: {
+      seniors: '1 à 2 Tasses',
+      adultes: '1 à 2 Tasses',
+      enfants: 'A éviter  '
     },
-    {
-      "nutriments": "Autres",
-      "valeur": 78
-    }
-  ],
-  "micronutriments": "élevé"
-},
+    énergie: {
+      '100g': '20kcal',
+      portion: '40kcal'
+    },
+    dépenses: ['10min de marche'],
+    nutriScore: 'a',
+    nova: 3,
+    avantages:
+      'Plaisir du caféet du lait. Apports diversifiés : calcium, protéines, vitamine D',
+    inconvénients: 'Attention à ne pas consommer trop de caféine.',
+    astuces:
+      "Une gourmandise bien italienne que l'on peut accompagner, là aussi, de quelques biscuits. Le lait vous apporte de la douceur au moment du goûter.",
+    macronutriments: [
+      {
+        nutriments: 'Autres',
+        valeur: 95
+      },
+      {
+        nutriments: 'Glucides',
+        valeur: 3
+      },
+      {
+        nutriments: 'Protéines',
+        valeur: 2
+      }
+    ],
+    micronutriments: 'faible'
+  },
+  {
+    catégorie: 'Goûter',
+    titre: 'Café (Sans Sucre)',
+    boisson: true,
+    nutriSanté: 3,
+    portions: {
+      seniors: '1 à 3 Tasses',
+      adultes: '1 à 3 Tasses',
+      enfants: 'A éviter  '
+    },
+    énergie: {
+      '100g': '0kcal',
+      portion: '0kcal'
+    },
+    dépenses: ["Pas de calories donc pas d'équivalent dépenses"],
+    nutriScore: 'a',
+    nova: 3,
+    avantages: 'Antifatigue et antimigraineux.',
+    inconvénients: 'Attention à ne pas consommer trop de caféine.',
+    astuces:
+      "Un petit coup de fouet bien utile! Accompagné de quelques biscuits sur le bord de la soucoupe d'un morceau de chocolat ou d'un spéculoos, le café n'en sera que plus agréable à déguster. ",
+    macronutriments: [
+      {
+        nutriments: 'Autres',
+        valeur: 100
+      }
+    ],
+    micronutriments: 'faible'
+  },
+  {
+    catégorie: 'Goûter',
+    titre: 'Compote De Pommes (Sans Sucres Ajoutés)',
+    boisson: false,
+    nutriSanté: 8,
+    portions: {
+      seniors: '150g',
+      adultes: '150g',
+      enfants: '100g '
+    },
+    énergie: {
+      '100g': '90kcal',
+      portion: '135kcal'
+    },
+    dépenses: ['40min de marche', '20min  de skate'],
+    nutriScore: 'a',
+    nova: 1,
+    avantages:
+      'Tous les bénéfices des fruits (micronutriments,fibres). Facile à déguster pour les enfants.',
+    inconvénients:
+      'Ajout de sucres dans les versions industrielles. Satiété moins importante.',
+    astuces:
+      "Pour les compotes individuelles, vérifiez que la mention (sans sucres ajoutés) est présente. Attention à l'impact des emballages en gourde sur la planète! ",
+    macronutriments: [
+      {
+        nutriments: 'Glucides',
+        valeur: 22
+      },
+      {
+        nutriments: 'Autres',
+        valeur: 78
+      }
+    ],
+    micronutriments: 'élevé'
+  },
   {
     catégorie: 'Goûter',
     titre: 'Fruits Mixés',
