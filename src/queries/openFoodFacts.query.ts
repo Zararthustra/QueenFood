@@ -24,7 +24,7 @@ export const retrieveCategories = async (): Promise<
 };
 
 export const retrieveByBarCode = async (
-  barcode?: number
+  barcode?: string
 ): Promise<IOFFBarcode> => {
   const { data } = await axios.get(
     `https://world.openfoodfacts.net/api/v3/product/${barcode}`
@@ -76,7 +76,7 @@ export const useQueryRetrieveCategories = () => {
   });
 };
 
-export const useQueryRetrieveFoodByBarcode = (barcode?: number) => {
+export const useQueryRetrieveFoodByBarcode = (barcode?: string) => {
   const { notification } = App.useApp();
 
   return useQuery(
@@ -87,16 +87,18 @@ export const useQueryRetrieveFoodByBarcode = (barcode?: number) => {
       staleTime: 60_000 * 5,
       enabled: !!barcode,
       retry: false,
-      onError: (error: AxiosError) =>
-        notification.error(
-          toastObject(
-            'error',
-            'Impossible de récupérer les données',
-            `Une erreur est survenue : ${
-              error.response ? error.response.status : error.message
-            }`
-          )
-        )
+      onError: (error: AxiosError) => {
+        if (error.response?.status !== 404)
+          notification.error(
+            toastObject(
+              'error',
+              'Impossible de récupérer les données',
+              `Une erreur est survenue : ${
+                error.response ? error.response.status : error.message
+              }`
+            )
+          );
+      }
     }
   );
 };

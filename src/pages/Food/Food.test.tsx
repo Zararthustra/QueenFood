@@ -4,8 +4,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { App as AntApp } from 'antd';
 import { describe, expect, test, vi } from 'vitest';
 
-import { Food } from './Food';
-
+import { FoodSearch } from '@components/index';
 import { categoriesMock } from '@mocks/index';
 
 describe('Page Aliments', () => {
@@ -33,13 +32,13 @@ describe('Page Aliments', () => {
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
           <AntApp>
-            <Food />
+            <FoodSearch />
           </AntApp>
         </BrowserRouter>
       </QueryClientProvider>
     );
 
-    const main = screen.queryByTestId('aliments');
+    const main = screen.queryByTestId('aliments-search');
     const input = screen.getByTestId('aliments-input');
 
     return {

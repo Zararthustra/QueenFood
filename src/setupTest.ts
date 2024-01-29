@@ -46,6 +46,11 @@ beforeAll(() => {
   })();
   global.localStorage = localStorageMock;
 
+  // Testing purpose: Mock MediaDevices Components
+  vi.mock('react-media-devices', () => ({
+    useMediaDevices: () => ({ devices: null })
+  }));
+
   // Mock chartjs Components
   vi.mock('react-chartjs-2', () => ({
     Bar: () => null,

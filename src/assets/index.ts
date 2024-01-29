@@ -52,6 +52,7 @@ export { IconPDF } from './svg/IconPDF';
 export { IconPhone } from './svg/IconPhone';
 export { IconPortion } from './svg/IconPortion';
 export { IconReset } from './svg/IconReset';
+export { IconScan } from './svg/IconScan';
 export { IconSearch } from './svg/IconSearch';
 export { IconSidebarClose } from './svg/IconSidebarClose';
 export { IconSidebarOpen } from './svg/IconSidebarOpen';

@@ -1,11 +1,11 @@
 // Modals
 export { ModalFoodItem } from './modals/ModalFoodItem';
-export { ModalScanner } from './modals/ModalScanner';
 
 // Food
 export { FoodItem } from './FoodItem';
 export { FoodScan } from './FoodScan';
 export { FoodSearch } from './FoodSearch';
+export { ScannedProduct } from './ScannedProduct';
 
 // Formules
 export { FormuleIMA } from './FormuleIMA';

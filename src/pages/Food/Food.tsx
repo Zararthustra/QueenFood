@@ -1,5 +1,6 @@
 import { Tabs } from 'antd';
 
+import { IconScan, IconSearch } from '@assets/index';
 import { FoodScan } from '@components/FoodScan';
 import { FoodSearch } from '@components/FoodSearch';
 
@@ -13,10 +14,16 @@ export const Food = () => {
         <div className="w-full max-w-[500px]">
           <Tabs
             defaultActiveKey="1"
+            size="small"
             className="dark:text-slate-100"
             items={[
               {
-                label: <h2>Scan</h2>,
+                label: (
+                  <div className="flex items-center gap-2">
+                    <IconScan />
+                    <h2>Scan</h2>
+                  </div>
+                ),
                 key: '1',
                 children: (
                   <div className="flex flex-col items-center">
@@ -25,7 +32,12 @@ export const Food = () => {
                 )
               },
               {
-                label: <h2>Catégories</h2>,
+                label: (
+                  <div className="flex items-center gap-2">
+                    <IconSearch />
+                    <h2>Catégories</h2>
+                  </div>
+                ),
                 key: '2',
                 children: (
                   <div className="flex flex-col items-center">

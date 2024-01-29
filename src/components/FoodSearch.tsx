@@ -28,7 +28,9 @@ export const FoodSearch = () => {
   });
 
   return (
-    <>
+    <div
+      data-testid="aliments-search"
+      className="flex w-full flex-col items-center gap-2">
       <Input
         id="search"
         placeholder="Rechercher une catégorie"
@@ -38,7 +40,7 @@ export const FoodSearch = () => {
           setCategory('');
         }}
         value={searchValue}
-        className="mb-10 mt-5"
+        className="my-5"
         style={{ width: 220 }}
         data-testid="aliments-input"
       />
@@ -194,6 +196,6 @@ export const FoodSearch = () => {
         ) : (
           <Empty description="Aucun produit trouvé" />
         ))}
-    </>
+    </div>
   );
 };
