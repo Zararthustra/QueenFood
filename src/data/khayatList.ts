@@ -4,6 +4,7 @@ export const khayatList: IKhayat[] = [
   {
   "catégorie": "Dîner",
   "titre": "Soupe De Légumes A La Crème Ou Au Beurre",
+  "boisson": false,  
   "nutriSanté": 9,
   "portions": {
     "seniors": "250g ",
@@ -41,10 +42,11 @@ export const khayatList: IKhayat[] = [
     }
   ],
   "micronutriments": "élevé"
-}
+},
   {
   "catégorie": "Dîner",
   "titre": "Carottes Râpées",
+  "boisson": false,
   "nutriSanté": 9,
   "portions": {
     "seniors": "250g ",
@@ -82,6 +84,7 @@ export const khayatList: IKhayat[] = [
   {
   "catégorie": "Dîner",
   "titre": "Taboulé Semoule",
+  "boisson": false,
   "nutriSanté": 7,
   "portions": {
     "seniors": "150g Cuit ",
