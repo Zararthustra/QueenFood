@@ -1,8 +1,20 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See
-[standard-version](https://github.com/conventional-changelog/standard-version)
-for commit guidelines.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.7.0](https://github.com/Zararthustra/QueenFood/compare/v1.6.0...v1.7.0) (2024-01-29)
+
+
+### Features
+
+* **Food:** add barcode scanner ([7a4348d](https://github.com/Zararthustra/QueenFood/commit/7a4348dce7ee7bc39ee95dcf8a1ae9dfa1f528eb))
+* **Food:** add barcode scanner (stream, view, query) ([94db426](https://github.com/Zararthustra/QueenFood/commit/94db426818fd22854e808071031bcfb63793f1fe))
+* **Food:** test if scan works on https ([d036903](https://github.com/Zararthustra/QueenFood/commit/d03690366e8d9a46b6257604294cb9e648cde017))
+
+
+### Bug Fixes
+
+* Khayat filter test was too strict ([f5f4157](https://github.com/Zararthustra/QueenFood/commit/f5f4157b29b59c5512aff956f5e148074f809064))
 
 ## [1.6.0](https://github.com/Zararthustra/QueenFood/compare/v1.5.0...v1.6.0) (2024-01-27)
 
