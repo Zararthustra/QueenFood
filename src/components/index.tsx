@@ -1,5 +1,6 @@
 // Modals
 export { ModalFoodItem } from './modals/ModalFoodItem';
+export { ModalScanner } from './modals/ModalScanner';
 
 // Food
 export { FoodItem } from './FoodItem';
