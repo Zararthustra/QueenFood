@@ -175,7 +175,7 @@ export const FoodSearch = () => {
 
             <div
               data-testid="aliments-aliments"
-              className="mt-2 flex flex-col gap-3 dark:text-slate-100">
+              className="mt-2 flex flex-wrap justify-center gap-5 dark:text-slate-100">
               {searchFood.products.map((product, index) => (
                 <FoodItem key={index} product={product} />
               ))}

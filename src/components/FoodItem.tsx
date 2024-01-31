@@ -25,7 +25,7 @@ export const FoodItem = ({ product }: IFoodItemProps) => {
         setShowModal={setShowModal}
       />
 
-      <div className="flex w-full max-w-[500px] items-center gap-4 overflow-hidden">
+      <div className="flex w-full max-w-[370px] items-center gap-4 overflow-hidden">
         <div className="h-[110px] w-[130px]">
           <img
             className="h-full w-full object-cover object-center"

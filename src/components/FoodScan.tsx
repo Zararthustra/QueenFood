@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useMediaDevices } from 'react-media-devices';
 import { useZxing } from 'react-zxing';
 import { App, Empty } from 'antd';
@@ -13,7 +13,6 @@ export const FoodScan = () => {
   const { message } = App.useApp();
   const [data, setData] = useState<string | undefined>();
   const [isScanning, setIsScanning] = useState<boolean>(false);
-  const [selectedDevice, setSelectedDevice] = useState<string | null>();
 
   const constraints: MediaStreamConstraints = {
     video: true,
@@ -30,6 +29,12 @@ export const FoodScan = () => {
     isSuccess,
     isLoading
   } = useQueryRetrieveFoodByBarcode(data);
+  const [selectedDevice, setSelectedDevice] = useState<string | null>();
+
+  useEffect(() => {
+    if (videoDevices && videoDevices?.length > 0 && !selectedDevice)
+      setSelectedDevice(videoDevices?.at(-1)?.deviceId);
+  }, [videoDevices]);
 
   const { ref } = useZxing({
     onDecodeResult(result: any) {
@@ -44,7 +49,7 @@ export const FoodScan = () => {
     },
     onError(error) {
       if (!selectedDevice || !!data) return;
-      message.error(messageObject('error', 'Une erreur est survenue.'));
+      message.error(messageObject('error', error as string));
       console.log(error);
       setIsScanning(false);
     },
@@ -124,7 +129,7 @@ export const FoodScan = () => {
       <div className="relative">
         <video ref={ref} className="rounded" />
         {!!selectedDevice && (
-          <div className="absolute left-[50%] top-[50%] h-[100px] w-[250px] translate-x-[-50%] translate-y-[-50%] animate-pulse rounded border-[1px] border-dashed border-primary-500" />
+          <div className="absolute left-[50%] top-[50%] h-[100px] w-[250px] translate-x-[-50%] translate-y-[-50%] animate-pulse rounded border-[3px] border-dashed border-primary-500" />
         )}
       </div>
     </div>

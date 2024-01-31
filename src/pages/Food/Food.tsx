@@ -11,10 +11,11 @@ export const Food = () => {
         data-testid="aliments"
         className="mb-[50px] flex flex-col items-center px-2">
         <h1 className="my-5 text-center dark:text-slate-100">Aliments</h1>
-        <div className="w-full max-w-[500px]">
+        <div className="w-full">
           <Tabs
             defaultActiveKey="1"
             size="small"
+            centered
             className="dark:text-slate-100"
             items={[
               {

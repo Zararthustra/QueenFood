@@ -2,128 +2,127 @@ import { IKhayat } from '@interfaces/index';
 
 export const khayatList: IKhayat[] = [
   {
-  "catégorie": "Dîner",
-  "titre": "Soupe De Légumes A La Crème Ou Au Beurre",
-  "boisson": false,  
-  "nutriSanté": 9,
-  "portions": {
-    "seniors": "250g ",
-    "adultes": "250g",
-    "enfants": "200g"
+    catégorie: 'Dîner',
+    titre: 'Soupe De Légumes A La Crème Ou Au Beurre',
+    boisson: false,
+    nutriSanté: 9,
+    portions: {
+      seniors: '250g ',
+      adultes: '250g',
+      enfants: '200g'
+    },
+    énergie: {
+      '100g': '38kcal',
+      portion: '95kcal'
+    },
+    dépenses: ['30min de marche'],
+    nutriScore: 'a',
+    nova: 3,
+    avantages:
+      "Entrée parfaite, grâce à l'apport en nutriments lié aux légumes.",
+    inconvénients: 'Attention aux matières grasses (crème, huile, fromage).',
+    astuces:
+      'Un plat remis au goût du jour, mais attention aux versions industrielles souvent trop salées. Préparez-la avec les légumes de saison, en ajoutant une légère touche de crème, de beurre ou de fromage.',
+    macronutriments: [
+      {
+        nutriments: 'Glucides',
+        valeur: 4
+      },
+      {
+        nutriments: 'Autres',
+        valeur: 93
+      },
+      {
+        nutriments: 'Lipides',
+        valeur: 2
+      },
+      {
+        nutriments: 'Protéines',
+        valeur: 1
+      }
+    ],
+    micronutriments: 'élevé'
   },
-  "énergie": {
-    "100g": "38kcal",
-    "portion": "95kcal"
-  },
-  "dépenses": [
-    "30min de marche"
-  ],
-  "nutriScore": "a",
-  "nova": 3,
-  "avantages": "Entrée parfaite, grâce à l'apport en nutriments lié aux légumes.",
-  "inconvénients": "Attention aux matières grasses (crème, huile, fromage).",
-  "astuces": "Un plat remis au goût du jour, mais attention aux versions industrielles souvent trop salées. Préparez-la avec les légumes de saison, en ajoutant une légère touche de crème, de beurre ou de fromage.",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 4
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 93
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 2
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 1
-    }
-  ],
-  "micronutriments": "élevé"
-},
   {
-  "catégorie": "Dîner",
-  "titre": "Carottes Râpées",
-  "boisson": false,
-  "nutriSanté": 9,
-  "portions": {
-    "seniors": "250g ",
-    "adultes": "250g",
-    "enfants": "200g"
-  },
-  "énergie": {
-    "100g": "80kcal",
-    "portion": "200kcal"
-  },
-  "dépenses": [
-    "25min de marche"
-  ],
-  "nutriScore": "a",
-  "nova": 2,
-  "avantages": "Riche en fibres et en vitamines.",
-  "inconvénients": "Aucun.",
-  "astuces": "L'entrée consensuelle par excellence. Attention toutefois à la quantité de vinaigrette et à la dose d'huile.",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 6
+    catégorie: 'Dîner',
+    titre: 'Carottes Râpées',
+    boisson: false,
+    nutriSanté: 9,
+    portions: {
+      seniors: '250g ',
+      adultes: '250g',
+      enfants: '200g'
     },
-    {
-      "nutriments": "Autres",
-      "valeur": 88
+    énergie: {
+      '100g': '80kcal',
+      portion: '200kcal'
     },
-    {
-      "nutriments": "Lipides",
-      "valeur": 6
-    }
-  ],
-  "micronutriments": "élevé"
-},
+    dépenses: ['25min de marche'],
+    nutriScore: 'a',
+    nova: 2,
+    avantages: 'Riche en fibres et en vitamines.',
+    inconvénients: 'Aucun.',
+    astuces:
+      "L'entrée consensuelle par excellence. Attention toutefois à la quantité de vinaigrette et à la dose d'huile.",
+    macronutriments: [
+      {
+        nutriments: 'Glucides',
+        valeur: 6
+      },
+      {
+        nutriments: 'Autres',
+        valeur: 88
+      },
+      {
+        nutriments: 'Lipides',
+        valeur: 6
+      }
+    ],
+    micronutriments: 'élevé'
+  },
   {
-  "catégorie": "Dîner",
-  "titre": "Taboulé Semoule",
-  "boisson": false,
-  "nutriSanté": 7,
-  "portions": {
-    "seniors": "150g Cuit ",
-    "adultes": "210g Cuit",
-    "enfants": "150g Cuit"
+    catégorie: 'Dîner',
+    titre: 'Taboulé Semoule',
+    boisson: false,
+    nutriSanté: 7,
+    portions: {
+      seniors: '150g Cuit ',
+      adultes: '210g Cuit',
+      enfants: '150g Cuit'
+    },
+    énergie: {
+      '100g': '150kcal',
+      portion: '200kcal '
+    },
+    dépenses: ['1h de volley-ball', '1h de marche'],
+    nutriScore: 'c',
+    nova: 3,
+    avantages:
+      'Excellente source de nutriments grâce à la variété des ingrédients.',
+    inconvénients:
+      'Apporte principalement des glucides (car composé en majorité de céréales).',
+    astuces:
+      'Une excellente entrée, équilibrée, qui ne mérite pas un Nutri-Score C.',
+    macronutriments: [
+      {
+        nutriments: 'Glucides',
+        valeur: 20
+      },
+      {
+        nutriments: 'Autres',
+        valeur: 70
+      },
+      {
+        nutriments: 'Protéines',
+        valeur: 4
+      },
+      {
+        nutriments: 'Lipides',
+        valeur: 6
+      }
+    ],
+    micronutriments: 'élevé'
   },
-  "énergie": {
-    "100g": "150kcal",
-    "portion": "200kcal "
-  },
-  "dépenses": [
-    "1h de volley-ball",
-    "1h de marche"
-  ],
-  "nutriScore": "c",
-  "nova": 3,
-  "avantages": "Excellente source de nutriments grâce à la variété des ingrédients.",
-  "inconvénients": "Apporte principalement des glucides (car composé en majorité de céréales).",
-  "astuces": "Une excellente entrée, équilibrée, qui ne mérite pas un Nutri-Score C.",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 20
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 70
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 4
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 6
-    }
-  ],
-  "micronutriments": "élevé"
-},
   {
     catégorie: 'Goûter',
     titre: 'Thé',
