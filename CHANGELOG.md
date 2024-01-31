@@ -1,8 +1,13 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See
-[standard-version](https://github.com/conventional-changelog/standard-version)
-for commit guidelines.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [1.7.1](https://github.com/Zararthustra/QueenFood/compare/v1.7.0...v1.7.1) (2024-01-31)
+
+
+### Bug Fixes
+
+* default camera on Food mount, flex-wrap rows on FoodItems ([3ae43bf](https://github.com/Zararthustra/QueenFood/commit/3ae43bf29162dcfc315025f3d771698a7949f78c))
 
 ## [1.7.0](https://github.com/Zararthustra/QueenFood/compare/v1.6.0...v1.7.0) (2024-01-29)
 
