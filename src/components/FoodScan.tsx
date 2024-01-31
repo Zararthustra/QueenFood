@@ -31,6 +31,7 @@ export const FoodScan = () => {
   } = useQueryRetrieveFoodByBarcode(data);
   const [selectedDevice, setSelectedDevice] = useState<string | null>();
 
+  // Default device to last in videoDevices
   useEffect(() => {
     if (videoDevices && videoDevices?.length > 0 && !selectedDevice)
       setSelectedDevice(videoDevices?.at(-1)?.deviceId);
@@ -49,7 +50,7 @@ export const FoodScan = () => {
     },
     onError(error) {
       if (!selectedDevice || !!data) return;
-      message.error(messageObject('error', error as string));
+      message.error(messageObject('error', 'Erreur: ' + error));
       console.log(error);
       setIsScanning(false);
     },
