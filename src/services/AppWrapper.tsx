@@ -28,6 +28,14 @@ const AppWrapper = () => {
           <Outlet />
         </div>
       </div>
+      <footer className="flex flex-col items-center gap-2 bg-slate-100 py-20 dark:bg-slate-800 dark:text-slate-100">
+        <div>Tous droits réservés © 2024</div>
+        <a
+          href="mailto:arthmayer@outlook.fr"
+          className="text-blue-500 underline">
+          Contacter le développeur
+        </a>
+      </footer>
     </AppContext.Provider>
   );
 };
