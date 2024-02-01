@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.7.2](https://github.com/Zararthustra/QueenFood/compare/v1.7.1...v1.7.2) (2024-02-01)
+
+
+### Bug Fixes
+
+* add footer, upgrade precache size ([35fd44f](https://github.com/Zararthustra/QueenFood/commit/35fd44feb64364eecf7f0562f59db95ed8c3a206))
+* error thrown if scan error is not a string ([836ad76](https://github.com/Zararthustra/QueenFood/commit/836ad7611050d7ab39b4314d5bf82001b6d931fa))
+
 ### [1.7.1](https://github.com/Zararthustra/QueenFood/compare/v1.7.0...v1.7.1) (2024-01-31)
 
 

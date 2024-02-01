@@ -105,11 +105,11 @@
     top-0
     z-50
     overflow-hidden 
-    bg-gray-100 
+    bg-slate-100 
     px-2 
     text-center
     duration-150
-    dark:bg-gray-800
+    dark:bg-slate-800
     dark:text-white;
   }
   .sidebar--open {
