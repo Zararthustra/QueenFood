@@ -2,12 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### 1.7.3 (2024-02-02)
+### 1.7.4 (2024-02-02)
 
+### 1.7.3 (2024-02-02)
 
 ### Bug Fixes
 
-* add bump version to steps ([501d39e](https://github.com/Zararthustra/QueenFood/commit/501d39e4c41e0978eea18431a099fcee2e08981b))
+- add bump version to steps
+  ([501d39e](https://github.com/Zararthustra/QueenFood/commit/501d39e4c41e0978eea18431a099fcee2e08981b))
 
 ### [1.7.2](https://github.com/Zararthustra/QueenFood/compare/v1.7.1...v1.7.2) (2024-02-01)
 
