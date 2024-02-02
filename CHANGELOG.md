@@ -1,8 +1,24 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See
-[standard-version](https://github.com/conventional-changelog/standard-version)
-for commit guidelines.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.8.0](https://github.com/Zararthustra/QueenFood/compare/v1.7.2...v1.8.0) (2024-02-02)
+
+
+### Features
+
+* **CICD:** add bump version to steps ([0669342](https://github.com/Zararthustra/QueenFood/commit/066934237c226927bc331895f73bbeb2a373c4bf))
+* **CICD:** add bump version to steps ([8b5f549](https://github.com/Zararthustra/QueenFood/commit/8b5f5498d73e06caf1b03c65897485ee6299146d))
+* **CICD:** add bump version to steps ([99c3d74](https://github.com/Zararthustra/QueenFood/commit/99c3d740cb14fe1e455092c0c213e938eda61214))
+
+
+### Bug Fixes
+
+* add bump version to check-pr CI steps ([24764fb](https://github.com/Zararthustra/QueenFood/commit/24764fb06640145cdd437d93e797649ffb0d96a7))
+* add bump version to check-pr CI steps ([8e6242e](https://github.com/Zararthustra/QueenFood/commit/8e6242eca4bf54e797bdff7e472ee883b4c5b80e))
+* add bump version to steps ([501d39e](https://github.com/Zararthustra/QueenFood/commit/501d39e4c41e0978eea18431a099fcee2e08981b))
+* add logo on mobile ([91f0222](https://github.com/Zararthustra/QueenFood/commit/91f02225b7f51849fed591679bd4d13705acf602))
+* keep manual release mgmt ([258e749](https://github.com/Zararthustra/QueenFood/commit/258e7492e391eabbbea625e2b63db16a692f848a))
 
 ### 1.7.3 (2024-02-02)
 
