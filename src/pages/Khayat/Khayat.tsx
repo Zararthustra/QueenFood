@@ -2,7 +2,12 @@ import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Collapse, Input } from 'antd';
 
-import { IconCrown, IconCrownOutlined, IconDrink } from '@assets/index';
+import {
+  IconCrown,
+  IconCrownOutlined,
+  IconDrink,
+  IconInfo
+} from '@assets/index';
 import { KhayatItem } from '@components/index';
 import { khayatList } from '@data/index';
 import { labelShortener } from '@utils/formatters';
@@ -46,6 +51,20 @@ export const Khayat = () => {
           style={{ width: 220 }}
           data-testid="khayat-input"
         />
+
+        <div className="bubble bubble--info my-5 max-w-prose text-blue-800">
+          <IconInfo className="shrink-0" />
+          <p>
+            Ces fiches proviennent du livre{' '}
+            <a
+              className="font-bold underline"
+              href="https://www.fnac.com/a17650821/David-Khayat-Votre-meilleure-ordonnance-est-dans-votre-assiette">
+              L'ordonnance est dans votre assiette !
+            </a>{' '}
+            du Professeur David Khayat, Chef du service d'oncologie médicale de
+            l'Hôpital de la Pitié-Salpêtrière à Paris.
+          </p>
+        </div>
 
         <div className="flex w-full max-w-[650px] flex-col flex-wrap justify-center gap-5">
           {/* List categories */}
