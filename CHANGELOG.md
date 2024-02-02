@@ -2,20 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [1.7.2](https://github.com/Zararthustra/QueenFood/compare/v1.7.1...v1.7.2) (2024-02-01)
+### 1.7.3 (2024-02-02)
 
 
 ### Bug Fixes
 
-* add footer, upgrade precache size ([35fd44f](https://github.com/Zararthustra/QueenFood/commit/35fd44feb64364eecf7f0562f59db95ed8c3a206))
-* error thrown if scan error is not a string ([836ad76](https://github.com/Zararthustra/QueenFood/commit/836ad7611050d7ab39b4314d5bf82001b6d931fa))
+* add bump version to steps ([03c1f06](https://github.com/Zararthustra/QueenFood/commit/03c1f06f0c3dd9d5d742e13fb824291b5bbae1dd))
+
+### [1.7.2](https://github.com/Zararthustra/QueenFood/compare/v1.7.1...v1.7.2) (2024-02-01)
+
+### Bug Fixes
+
+- add footer, upgrade precache size
+  ([35fd44f](https://github.com/Zararthustra/QueenFood/commit/35fd44feb64364eecf7f0562f59db95ed8c3a206))
+- error thrown if scan error is not a string
+  ([836ad76](https://github.com/Zararthustra/QueenFood/commit/836ad7611050d7ab39b4314d5bf82001b6d931fa))
 
 ### [1.7.1](https://github.com/Zararthustra/QueenFood/compare/v1.7.0...v1.7.1) (2024-01-31)
 
-
 ### Bug Fixes
 
-* default camera on Food mount, flex-wrap rows on FoodItems ([3ae43bf](https://github.com/Zararthustra/QueenFood/commit/3ae43bf29162dcfc315025f3d771698a7949f78c))
+- default camera on Food mount, flex-wrap rows on FoodItems
+  ([3ae43bf](https://github.com/Zararthustra/QueenFood/commit/3ae43bf29162dcfc315025f3d771698a7949f78c))
 
 ## [1.7.0](https://github.com/Zararthustra/QueenFood/compare/v1.6.0...v1.7.0) (2024-01-29)
 
