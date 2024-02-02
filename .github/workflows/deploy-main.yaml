@@ -30,12 +30,12 @@ jobs:
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
+
       - name: Bump version
         uses: qzb/standard-version-action@v1.0.5
-        run: git push --follow-tags origin main
 
       - name: Push version
-        run: git push --follow-tags origin main
+        run: git push --force --follow-tags origin main
 
       - name: Deploy 🚀
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
