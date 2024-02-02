@@ -2,221 +2,214 @@ import { IKhayat } from '@interfaces/index';
 
 export const khayatList: IKhayat[] = [
   {
-  "catégorie": "Dîner",
-  "titre": "Pâtes Bolognaises",
-  "boisson": false,
-  "nutriSanté": 4,
-  "portions": {
-    "seniors": "250g",
-    "adultes": "300g",
-    "enfants": "250g"
+    catégorie: 'Dîner',
+    titre: 'Pâtes Bolognaises',
+    boisson: false,
+    nutriSanté: 4,
+    portions: {
+      seniors: '250g',
+      adultes: '300g',
+      enfants: '250g'
+    },
+    énergie: {
+      '100g': '150kcal',
+      portion: '450kcal '
+    },
+    dépenses: ['1h20 de volley -ball', '45min de tennis', '2h15 de marche'],
+    nutriScore: 'b',
+    nova: 3,
+    avantages: 'Plat complet et rassasiant.',
+    inconvénients: "Attention à l'impact planète dû à la présence de boeuf.",
+    astuces:
+      'Le plat pour les sportifs du quotidien! A alterner avec les pâtes carbonara en privilégiant les pâtes au blé complet.',
+    macronutriments: [
+      {
+        nutriments: 'Glucides',
+        valeur: 16
+      },
+      {
+        nutriments: 'Autres',
+        valeur: 69
+      },
+      {
+        nutriments: 'Protéines',
+        valeur: 7
+      },
+      {
+        nutriments: 'Lipides',
+        valeur: 8
+      }
+    ],
+    micronutriments: 'moyen'
   },
-  "énergie": {
-    "100g": "150kcal",
-    "portion": "450kcal "
-  },
-  "dépenses": [
-    "1h20 de volley -ball",
-    "45min de tennis",
-    "2h15 de marche"
-  ],
-  "nutriScore": "b",
-  "nova": 3,
-  "avantages": "Plat complet et rassasiant.",
-  "inconvénients": "Attention à l'impact planète dû à la présence de boeuf.",
-  "astuces": "Le plat pour les sportifs du quotidien! A alterner avec les pâtes carbonara en privilégiant les pâtes au blé complet.",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 16
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 69
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 7
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 8
-    }
-  ],
-  "micronutriments": "moyen"
-},
   {
-  "catégorie": "Dîner",
-  "titre": "Coucous",
-  "boisson": false,
-  "nutriSanté": 7,
-  "portions": {
-    "seniors": "250g",
-    "adultes": "300g",
-    "enfants": "300g"
+    catégorie: 'Dîner',
+    titre: 'Coucous',
+    boisson: false,
+    nutriSanté: 7,
+    portions: {
+      seniors: '250g',
+      adultes: '300g',
+      enfants: '300g'
+    },
+    énergie: {
+      '100g': '120kcal',
+      portion: '360kcal '
+    },
+    dépenses: ['30min de raquettes', "30min d'escalade"],
+    nutriScore: 'b',
+    nova: 3,
+    avantages:
+      'Plat équilibré par excellence (viande, semoule et légumes, comme les pois chiches).',
+    inconvénients:
+      'Attention à ne pas avoir la louche trop lourde dans les assiettes.',
+    astuces:
+      'Il faut bien calibrer les quantités de chacun des ingrédients et ne pas se resservir plusieurs fois (bien que la convivialité du plat nous y pousse).',
+    macronutriments: [
+      {
+        nutriments: 'Glucides',
+        valeur: 13
+      },
+      {
+        nutriments: 'Autres',
+        valeur: 75
+      },
+      {
+        nutriments: 'Protéines',
+        valeur: 6
+      },
+      {
+        nutriments: 'Lipides',
+        valeur: 6
+      }
+    ],
+    micronutriments: 'élevé'
   },
-  "énergie": {
-    "100g": "120kcal",
-    "portion": "360kcal "
-  },
-  "dépenses": [
-    "30min de raquettes",
-    "30min d'escalade"
-  ],
-  "nutriScore": "b",
-  "nova": 3,
-  "avantages": "Plat équilibré par excellence (viande, semoule et légumes, comme les pois chiches).",
-  "inconvénients": "Attention à ne pas avoir la louche trop lourde dans les assiettes.",
-  "astuces": "Il faut bien calibrer les quantités de chacun des ingrédients et ne pas se resservir plusieurs fois (bien que la convivialité du plat nous y pousse).",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 13
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 75
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 6
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 6
-    }
-  ],
-  "micronutriments": "élevé"
-},
   {
-  "catégorie": "Dîner",
-  "titre": "Quiche Lorraine",
-  "boisson": false,
-  "nutriSanté": 6,
-  "portions": {
-    "seniors": "120g",
-    "adultes": "120g",
-    "enfants": "100g"
+    catégorie: 'Dîner',
+    titre: 'Quiche Lorraine',
+    boisson: false,
+    nutriSanté: 6,
+    portions: {
+      seniors: '120g',
+      adultes: '120g',
+      enfants: '100g'
+    },
+    énergie: {
+      '100g': '300kcal',
+      portion: '360kcal'
+    },
+    dépenses: ['1h20 de jardinage', '1h40 de marche'],
+    nutriScore: 'c',
+    nova: 3,
+    avantages:
+      'Une recette maison facile à préparer et à adapter selon vos goûts (légumes, saumon, thon) pour la rendre plus légère.',
+    inconvénients: 'Apport en lipides important (crème, pâte, oeufs).',
+    astuces:
+      'En apéritif ou en collation, ce plat est assez riche mais, associé avec de la salade ou des crudités, il obtient un Nutri-Score A!',
+    macronutriments: [
+      {
+        nutriments: 'Glucides',
+        valeur: 22
+      },
+      {
+        nutriments: 'Autres',
+        valeur: 50
+      },
+      {
+        nutriments: 'Protéines',
+        valeur: 10
+      },
+      {
+        nutriments: 'Lipides',
+        valeur: 18
+      }
+    ],
+    micronutriments: 'moyen'
   },
-  "énergie": {
-    "100g": "300kcal",
-    "portion": "360kcal"
-  },
-  "dépenses": [
-    "1h20 de jardinage",
-    "1h40 de marche"
-  ],
-  "nutriScore": "c",
-  "nova": 3,
-  "avantages": "Une recette maison facile à préparer et à adapter selon vos goûts (légumes, saumon, thon) pour la rendre plus légère.",
-  "inconvénients": "Apport en lipides important (crème, pâte, oeufs).",
-  "astuces": "En apéritif ou en collation, ce plat est assez riche mais, associé avec de la salade ou des crudités, il obtient un Nutri-Score A!",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 22
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 50
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 10
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 18
-    }
-  ],
-  "micronutriments": "moyen"
-},
   {
-  "catégorie": "Dîner",
-  "titre": "Omelette",
-  "boisson": false,
-  "nutriSanté": 8,
-  "portions": {
-    "seniors": "200g",
-    "adultes": "200g",
-    "enfants": "100g"
+    catégorie: 'Dîner',
+    titre: 'Omelette',
+    boisson: false,
+    nutriSanté: 8,
+    portions: {
+      seniors: '200g',
+      adultes: '200g',
+      enfants: '100g'
+    },
+    énergie: {
+      '100g': '150kcal',
+      portion: '300kcal '
+    },
+    dépenses: ['1h30 de marche', '30min de badminton', '45min de musculation'],
+    nutriScore: 'c',
+    nova: 2,
+    avantages:
+      'Source de protéines du petit déjeuner au dîner. Rapide à cuisiner et pas chère.',
+    inconvénients: 'Attention à ne pas consommer plus de 6 oeufs par semaine.',
+    astuces:
+      'Les oeufs sont les meilleurs protéines animales! Et les garnitures sont nombreuses (champignons, jambon, poivrons). A associer avec de la salade pour composer un menu idéal!',
+    macronutriments: [
+      {
+        nutriments: 'Glucides',
+        valeur: 1
+      },
+      {
+        nutriments: 'Autres',
+        valeur: 76
+      },
+      {
+        nutriments: 'Protéines',
+        valeur: 11
+      },
+      {
+        nutriments: 'Lipides',
+        valeur: 12
+      }
+    ],
+    micronutriments: 'moyen'
   },
-  "énergie": {
-    "100g": "150kcal",
-    "portion": "300kcal "
-  },
-  "dépenses": [
-    "1h30 de marche",
-    "30min de badminton",
-    "45min de musculation"
-  ],
-  "nutriScore": "c",
-  "nova": 2,
-  "avantages": "Source de protéines du petit déjeuner au dîner. Rapide à cuisiner et pas chère.",
-  "inconvénients": "Attention à ne pas consommer plus de 6 oeufs par semaine.",
-  "astuces": "Les oeufs sont les meilleurs protéines animales! Et les garnitures sont nombreuses (champignons, jambon, poivrons). A associer avec de la salade pour composer un menu idéal!",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 1
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 76
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 11
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 12
-    }
-  ],
-  "micronutriments": "moyen"
-},
   {
-  "catégorie": "Dîner",
-  "titre": "Gaspacho",
-  "boisson": false,
-  "nutriSanté": 9,
-  "portions": {
-    "seniors": "250g",
-    "adultes": "250g",
-    "enfants": "200g"
+    catégorie: 'Dîner',
+    titre: 'Gaspacho',
+    boisson: false,
+    nutriSanté: 9,
+    portions: {
+      seniors: '250g',
+      adultes: '250g',
+      enfants: '200g'
+    },
+    énergie: {
+      '100g': '50kcal',
+      portion: '150kcal '
+    },
+    dépenses: ['40min de marche'],
+    nutriScore: 'a',
+    nova: 2,
+    avantages: 'Très hydratant et riche en micronutriments.',
+    inconvénients: "Attention à la quantité de sel et d'huile.",
+    astuces:
+      "Un version été des soupes, très agréable au moment de l'apéritif!",
+    macronutriments: [
+      {
+        nutriments: 'Glucides',
+        valeur: 4
+      },
+      {
+        nutriments: 'Autres',
+        valeur: 92
+      },
+      {
+        nutriments: 'Protéines',
+        valeur: 1
+      },
+      {
+        nutriments: 'Lipides',
+        valeur: 3
+      }
+    ],
+    micronutriments: 'élevé'
   },
-  "énergie": {
-    "100g": "50kcal",
-    "portion": "150kcal "
-  },
-  "dépenses": [
-    "40min de marche"
-  ],
-  "nutriScore": "a",
-  "nova": 2,
-  "avantages": "Très hydratant et riche en micronutriments.",
-  "inconvénients": "Attention à la quantité de sel et d'huile.",
-  "astuces": "Un version été des soupes, très agréable au moment de l'apéritif!",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 4
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 92
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 1
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 3
-    }
-  ],
-  "micronutriments": "élevé"
-},
   {
     catégorie: 'Dîner',
     titre: 'Soupe De Légumes A La Crème Ou Au Beurre',

@@ -24,11 +24,11 @@ const AppWrapper = () => {
           isOpenSidebar={isOpenSidebar}
           setIsOpenSidebar={setIsOpenSidebar}
         />
-        <div className={`w-full px-1 ${isMobile ? 'mt-10' : ''}`}>
+        <div className={`min-h-screen w-full px-1 ${isMobile ? 'mt-20' : ''}`}>
           <Outlet />
         </div>
       </div>
-      <footer className="flex flex-col items-center gap-2 bg-slate-100 py-20 dark:bg-slate-800 dark:text-slate-100">
+      <footer className="flex flex-col items-center gap-2 bg-slate-100 py-10 dark:bg-slate-800 dark:text-slate-100">
         <div>Tous droits réservés © 2024</div>
         <a
           href="mailto:arthmayer@outlook.fr"

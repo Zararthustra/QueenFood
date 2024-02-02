@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import { DarkModeToggle } from './DarkModeToggle';
 
@@ -21,6 +21,7 @@ interface ISidebarProps {
 }
 
 export const Sidebar = ({ isOpenSidebar, setIsOpenSidebar }: ISidebarProps) => {
+  const navigate = useNavigate();
   const location = useLocation();
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
 
@@ -51,18 +52,28 @@ export const Sidebar = ({ isOpenSidebar, setIsOpenSidebar }: ISidebarProps) => {
     },
     {
       icon: <IconKhayat width={32} height={32} className="shrink-0" />,
-      title: 'Fiches Khayat',
+      title: 'Fiches',
       link: '/fiches'
     }
   ];
 
   if (isMobile && !isOpenSidebar)
     return (
-      <div className="fixed z-50 w-full bg-slate-100 p-2 text-primary-500 dark:bg-slate-800">
+      <div className="fixed z-50 flex w-full items-center justify-between bg-slate-100 p-2 text-primary-500 opacity-90 dark:bg-slate-800">
         <IconSidebarOpen
           size={32}
           onClick={() => setIsOpenSidebar(!isOpenSidebar)}
         />
+        {location.pathname === '/' ? (
+          <div className="h-[50px] w-[50px]" />
+        ) : (
+          <IconLogo
+            className="mr-5 text-slate-950 dark:text-slate-100"
+            onClick={() => navigate('/')}
+            width={50}
+            height={50}
+          />
+        )}
       </div>
     );
 
