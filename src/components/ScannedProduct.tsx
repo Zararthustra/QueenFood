@@ -110,7 +110,7 @@ export const ScannedProduct = (scan: IOFFBarcode) => {
       {/* Infos Nutritionnelles */}
       <h3>Nutriments</h3>
       {Object.keys(product.nutriments).length ? (
-        <table className="w-full border-separate border-spacing-x-0 dark:text-slate-100">
+        <table className="w-full max-w-[500px] border-separate border-spacing-x-0 dark:text-slate-100">
           <thead>
             <tr>
               <th className="p-1 text-start"></th>
@@ -280,7 +280,7 @@ export const ScannedProduct = (scan: IOFFBarcode) => {
 
       {/* Ingrédients */}
       <h3 className="mb-2 mt-5">Ingrédients</h3>
-      <div className="flex flex-wrap gap-1">
+      <div className="flex w-full max-w-[500px] flex-wrap gap-1">
         {!!product.ingredients && !!product.ingredients.length ? (
           product.ingredients.map((ingredient, index) => (
             <p className="tag" key={index}>
@@ -300,7 +300,7 @@ export const ScannedProduct = (scan: IOFFBarcode) => {
 
       {/* Allergènes */}
       <h3 className="mb-2 mt-5">Allergènes</h3>
-      <div className="flex flex-wrap gap-1">
+      <div className="flex w-full max-w-[500px] flex-wrap gap-1">
         {!!allergens.length && !!allergens[0] ? (
           allergens.map(
             (allergen, index) =>
@@ -320,7 +320,7 @@ export const ScannedProduct = (scan: IOFFBarcode) => {
 
       {/* Traces */}
       <h3 className="mb-2 mt-5">Traces</h3>
-      <div className="flex flex-wrap gap-1">
+      <div className="flex w-full max-w-[500px] flex-wrap gap-1">
         {!!product.traces && !!product.traces.length ? (
           product.traces.split(',').map((trace, index) => (
             <p className="tag" key={index}>
