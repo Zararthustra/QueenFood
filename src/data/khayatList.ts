@@ -2,6 +2,135 @@ import { IKhayat } from '@interfaces/index';
 
 export const khayatList: IKhayat[] = [
   {
+  "catégorie": "Dîner",
+  "titre": "Raviolis",
+  "boisson": false,
+  "nutriSanté": 6,
+  "portions": {
+    "seniors": "250g",
+    "adultes": "300g",
+    "enfants": "250g"
+  },
+  "énergie": {
+    "100g": "100kcal",
+    "portion": "300kcal "
+  },
+  "dépenses": [
+    "1h40 de handball",
+    "1h3O de marche"
+  ],
+  "nutriScore": "c",
+  "nova": 4,
+  "avantages": "Tout dépend de la qualité des ingrédients (ici, de la pâte et de la garniture).",
+  "inconvénients": "Ultra-transformés lorsqu'ils sont vendus en boîte.",
+  "astuces": "Préférez une version artisanale, comme celle des ravioles d'Anne-Sophie Pic, à une version industrielle ultra-transformée. Veillez particulièrement à la qualité des ingrédients!",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 13
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 79
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 5
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 3
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Dîner",
+  "titre": "Lasagnes",
+  "boisson": false,
+  "nutriSanté": 5,
+  "portions": {
+    "seniors": "250g",
+    "adultes": "300g",
+    "enfants": "250g"
+  },
+  "énergie": {
+    "100g": "150kcal",
+    "portion": "450kcal "
+  },
+  "dépenses": [
+    "1h de danse aérobic",
+    "2h15 de marche"
+  ],
+  "nutriScore": "b",
+  "nova": 3,
+  "avantages": "Parfait dans sa version classique pour un repas de famille convivial, facile à faire, accessible et qui plaît à tous.",
+  "inconvénients": "Assez calorique dans sa version classique (tomate, fromage, viande et béchamel).",
+  "astuces": "A tester en version végétarienne (beaucoup plus légère) pour varier. A accompagner avec de la salade et des fruits (comme un carpaccio d'ananas!)",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 14
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 72
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 8
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 6
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Dîner",
+  "titre": "Pâtes Carbonara",
+  "boisson": false,
+  "nutriSanté": 5,
+  "portions": {
+    "seniors": "250g",
+    "adultes": "300g",
+    "enfants": "250g"
+  },
+  "énergie": {
+    "100g": "160kcal",
+    "portion": "500kcal "
+  },
+  "dépenses": [
+    "50min de judo",
+    "2h30 de marche"
+  ],
+  "nutriScore": "c",
+  "nova": 4,
+  "avantages": "Un plat équilibré et consensuel.",
+  "inconvénients": "Aucun, si ce n'est qu'il n'y a pas de version végétarienne. Un peu grasses (attention à la fréquence).",
+  "astuces": "Un peu plus calorique que les pâtes, à la bolognaise! Pour compléter votre dîner, privilégiez une salade et, en dessert, un fruit.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 16
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 69
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 6
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 9
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
     catégorie: 'Dîner',
     titre: 'Pâtes Bolognaises',
     boisson: false,
