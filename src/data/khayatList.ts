@@ -3,6 +3,222 @@ import { IKhayat } from '@interfaces/index';
 export const khayatList: IKhayat[] = [
   {
   "catégorie": "Dîner",
+  "titre": "Pommes Dauphine",
+  "boisson": false,
+  "nutriSanté": 4,
+  "portions": {
+    "seniors": "150g",
+    "adultes": "150g",
+    "enfants": "100g"
+  },
+  "énergie": {
+    "100g": "330kcal",
+    "portion": "495kcal (+ filet de poulet 645kcal)"
+  },
+  "dépenses": [
+    "2h30 de vélo",
+    "2h30 de marche"
+  ],
+  "nutriScore": "c",
+  "nova": 3,
+  "avantages": "Accompagnement parfait pour les menus de fêtes.",
+  "inconvénients": "Très caloriques malgré l'impression de légèreté.",
+  "astuces": "Délicieuses mais riches, les pommes dauphine doivent être réservées à des occasions exceptionnelles.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 35
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 42
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 3
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 20
+    }
+  ],
+  "micronutriments": "faible"
+},
+  {
+  "catégorie": "Dîner",
+  "titre": "Frite à L'Huile",
+  "boisson": false,
+  "nutriSanté": 4,
+  "portions": {
+    "seniors": "150g",
+    "adultes": "180g",
+    "enfants": "130g"
+  },
+  "énergie": {
+    "100g": "250kcal",
+    "portion": "450kcal (+ filet de poulet 600kcal)"
+  },
+  "dépenses": [
+    "45min de tennis",
+    "2h15 de marche"
+  ],
+  "nutriScore": "b",
+  "nova": 3,
+  "avantages": "Les frites donnent de l'énergie (présence de glucides complexes). Plaisir gustatif.",
+  "inconvénients": "Produit ultra-transformé (sauf si les frites sont faites maison). Présence d'additifs.",
+  "astuces": "Nutri-Score B voire A, mais avant la cuisson! Après un bain d'huile les frites deviennent D voire E. Notre score intègre ces éléments. Attention à l'accompagnement et au pourcentage de matière grasses.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 26
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 62.7
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 1.3
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 10
+    }
+  ],
+  "micronutriments": "faible"
+},
+  {
+  "catégorie": "Dîner",
+  "titre": "Pommes De Terre Rissolées Maison",
+  "boisson": false,
+  "nutriSanté": 5,
+  "portions": {
+    "seniors": "150g",
+    "adultes": "150g",
+    "enfants": "100g"
+  },
+  "énergie": {
+    "100g": "270kcal",
+    "portion": "400kcal (+ filet de poulet 550kcal)"
+  },
+  "dépenses": [
+    "1h de footing",
+    "2h de marche"
+  ],
+  "nutriScore": "b",
+  "nova": 2,
+  "avantages": "Plus les morceaux sont gros, moins ils absorbent les matières grasses.",
+  "inconvénients": "Les matières grasses qui donnent aux pommes de terre leur couleur dorée et leur goût délicieux poussent le consommateur à l'excès.",
+  "astuces": "N'ajoutez pas de matière grasse dans la poêle ou vous faites cuire vos pommes de terre! Attention à bien contrôler les portions.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 35
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 50
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 3
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 12
+    }
+  ],
+  "micronutriments": "faible"
+},
+  {
+  "catégorie": "Dîner",
+  "titre": "Pizza Végétarienne",
+  "boisson": false,
+  "nutriSanté": 4,
+  "portions": {
+    "seniors": "1 pizza",
+    "adultes": "1 pizza",
+    "enfants": "1/2 pizza"
+  },
+  "énergie": {
+    "100g": "170kcal",
+    "portion": "680kcal "
+  },
+  "dépenses": [
+    "45min de raquettes",
+    "45min d'escalade",
+    "3h20 de marche"
+  ],
+  "nutriScore": "b",
+  "nova": 3,
+  "avantages": "Pizza plus équilibré que les autres grâce à sa garniture plus végétale.",
+  "inconvénients": "Portions beaucoup trop importantes.",
+  "astuces": "Si possible, ajoutez du fromage pour les protéines et le calcium. A associer avec de la salade et en déssert, choisissez un fruits.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 14
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 69
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 10
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 7
+    }
+  ],
+  "micronutriments": "élevé"
+},
+  {
+  "catégorie": "Dîner",
+  "titre": "Pizza 4 Fromages",
+  "boisson": false,
+  "nutriSanté": 1,
+  "portions": {
+    "seniors": "1 pizza",
+    "adultes": "1 pizza",
+    "enfants": "1/2 pizza"
+  },
+  "énergie": {
+    "100g": "250kcal",
+    "portion": "1000kcal "
+  },
+  "dépenses": [
+    "2h30 de jogging ",
+    "5h de marche"
+  ],
+  "nutriScore": "d",
+  "nova": 3,
+  "avantages": "Plat facile. Apport de lycopène, plus assimilable cuit, grâce à la sauce tomate.",
+  "inconvénients": "Garniture très riche et très grasse, au détriment des légumes. Valeur calorique considérable.",
+  "astuces": "Attention aux calories (en raison des portions XXL servies en restaurant)! Les pizzas de grande surface sont souvent moins caloriques mais plus ultra-transformées!",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 25
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 53
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 11
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 11
+    }
+  ],
+  "micronutriments": "élevé"
+},
+  {
+  "catégorie": "Dîner",
   "titre": "Pizza Margherita",
   "boisson": false,
   "nutriSanté": 1,
