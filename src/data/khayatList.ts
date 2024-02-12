@@ -3,6 +3,267 @@ import { IKhayat } from '@interfaces/index';
 export const khayatList: IKhayat[] = [
   {
   "catégorie": "Dîner",
+  "titre": "Pizza Margherita",
+  "boisson": false,
+  "nutriSanté": 1,
+  "portions": {
+    "seniors": "1 pizza",
+    "adultes": "1 pizza",
+    "enfants": "1/2 pizza"
+  },
+  "énergie": {
+    "100g": "230kcal",
+    "portion": "920kcal "
+  },
+  "dépenses": [
+    "1h50 de tennis",
+    "4h40 de marche"
+  ],
+  "nutriScore": "c",
+  "nova": 3,
+  "avantages": "Plat familial assez équilibré. La sauce tomate apporte du lycopène, plus assimilable cuit.",
+  "inconvénients": "Portions trop généreuses en restauration.",
+  "astuces": "A accompagner de salade, de la roquette par exemple, et de quelques fruits en dessert.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 25
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 55
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 10
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 10
+    }
+  ],
+  "micronutriments": "élevé"
+},
+  {
+  "catégorie": "Dîner",
+  "titre": "Boeuf Bourguignon",
+  "boisson": false,
+  "nutriSanté": 4,
+  "portions": {
+    "seniors": "250g",
+    "adultes": "300g",
+    "enfants": "250g"
+  },
+  "énergie": {
+    "100g": "100kcal",
+    "portion": "300kcal "
+  },
+  "dépenses": [
+    "1h de raquettes",
+    "1h30 de marche"
+  ],
+  "nutriScore": "c",
+  "nova": 3,
+  "avantages": "Un plat qui peut être bien équilibré grâce à la garniture (carottes).",
+  "inconvénients": "Attention à l'impact planète élevé.",
+  "astuces": "Symbole de la cuisine mijotée française, ce plat mythique réapparaît peu à peu sur les cartes des restaurants bistronomiques! L'accompagnement parfait et équilibré: les tagliatelles!",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 11
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 79
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 7
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 3
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Dîner",
+  "titre": "Blanquette De Veau",
+  "boisson": false,
+  "nutriSanté": 7,
+  "portions": {
+    "seniors": "250g",
+    "adultes": "300g",
+    "enfants": "250g"
+  },
+  "énergie": {
+    "100g": "110kcal",
+    "portion": "330kcal "
+  },
+  "dépenses": [
+    "1h de roller",
+    "1h de kayak",
+    "1h30 de marche"
+  ],
+  "nutriScore": "c",
+  "nova": 3,
+  "avantages": "Très équilibré.",
+  "inconvénients": "La réalisation de ce plat reste complexe.",
+  "astuces": "La plat français par excellence! A consommer après une entrée de crudités, et avant des fruits en dessert.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 14
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 78
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 3
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 5
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Dîner",
+  "titre": "Gratin Dauphinois",
+  "boisson": false,
+  "nutriSanté": 6,
+  "portions": {
+    "seniors": "200g",
+    "adultes": "250g",
+    "enfants": "200g"
+  },
+  "énergie": {
+    "100g": "110kcal",
+    "portion": "275kcal "
+  },
+  "dépenses": [
+    "1h de volley-ball",
+    "2h20 de marche",
+    "25min de natation"
+  ],
+  "nutriScore": "c",
+  "nova": 3,
+  "avantages": "Plat qui rassasie sans être trop calorique.",
+  "inconvénients": "Teneur en glucides (pomme de terre) et en lipides (fromage, crème) élevée.",
+  "astuces": "Idéal pour accompagner de la viande ou du poisson! A déguster avec une salade verte ",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 11
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 81
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 3
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 5
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Dîner",
+  "titre": "Saucisses Lentilles ou Chou",
+  "boisson": false,
+  "nutriSanté": 5,
+  "portions": {
+    "seniors": "300g",
+    "adultes": "300g",
+    "enfants": "200g"
+  },
+  "énergie": {
+    "100g": "160kcal",
+    "portion": "480kcal "
+  },
+  "dépenses": [
+    "45min de tennis",
+    "2h20 de marche"
+  ],
+  "nutriScore": "a",
+  "nova": 4,
+  "avantages": "Un duo qui devient un plat équilibré!",
+  "inconvénients": "Veillez à la qualité des saucisses: de préférence fabriquées artinasalement ou sans nitrites.",
+  "astuces": "Un plat traditionnel, équilibré et délicieux! Soyez raisonnables avec la saucisse.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 8
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 60
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 10
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 9
+    }
+  ],
+  "micronutriments": "élevé"
+},
+  {
+  "catégorie": "Dîner",
+  "titre": "Tartiflette",
+  "boisson": false,
+  "nutriSanté": 3,
+  "portions": {
+    "seniors": "250g",
+    "adultes": "300g",
+    "enfants": "250g"
+  },
+  "énergie": {
+    "100g": "160kcal",
+    "portion": "640kcal "
+  },
+  "dépenses": [
+    "45min de raquettes",
+    "45min de ski",
+    "3h15 de marche"
+  ],
+  "nutriScore": "e",
+  "nova": 3,
+  "avantages": "Plat convivial, à réserver aux périodes de froid.",
+  "inconvénients": "Riche en lipides (fromage) et en glucides (pommes de terre). Plat très calorique et salé.",
+  "astuces": "Pensez à bien vous hydrater. L'accompagnement d'une salade verte donne un peu de fraîcheur.",
+  "macronutriments": [
+    {
+      "nutriments": "Glucides",
+      "valeur": 13
+    },
+    {
+      "nutriments": "Autres",
+      "valeur": 73
+    },
+    {
+      "nutriments": "Protéines",
+      "valeur": 5
+    },
+    {
+      "nutriments": "Lipides",
+      "valeur": 9
+    }
+  ],
+  "micronutriments": "moyen"
+},
+  {
+  "catégorie": "Dîner",
   "titre": "Raviolis",
   "boisson": false,
   "nutriSanté": 6,
