@@ -48,8 +48,7 @@ export const HeaderPDF = ({ styles, form, patient }: IHeaderPDFProps) => {
           marginBottom: '40px',
           marginHorizontal: '74px',
           alignSelf: 'flex-end'
-        }}
-        {...{ bookmark: 'Informations' }}>
+        }}>
         <View
           style={{
             display: 'flex',
