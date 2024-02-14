@@ -1,5 +1,4 @@
 // Images
-export { default as background } from './img/background.jpg';
 export { default as backgroundFormules } from './img/background_formules.jpg';
 export { default as default_img } from './img/default_img.jpg';
 export { default as khayat_flan } from './img/khayat_flan.jpg';

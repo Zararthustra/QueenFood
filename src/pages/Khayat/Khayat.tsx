@@ -59,7 +59,8 @@ export const Khayat = () => {
             <a
               target="_blank"
               className="font-bold underline"
-              href="https://www.fnac.com/a17650821/David-Khayat-Votre-meilleure-ordonnance-est-dans-votre-assiette">
+              href="https://www.fnac.com/a17650821/David-Khayat-Votre-meilleure-ordonnance-est-dans-votre-assiette"
+              rel="noreferrer">
               L'ordonnance est dans votre assiette !
             </a>{' '}
             du Professeur David Khayat, Chef du service d'oncologie médicale de
