@@ -1,5 +1,6 @@
 import { Image, Styles, Text, View } from '@react-pdf/renderer';
 
+import { background } from '@assets/index';
 import { IFormulesForm } from '@interfaces/index';
 
 interface IHeaderPDFProps {
@@ -15,18 +16,13 @@ export const HeaderPDF = ({ styles, form, patient }: IHeaderPDFProps) => {
   return (
     <>
       <Image
-        src={{
-          uri: '/background.jpg',
-          method: 'GET',
-          headers: { 'Cache-Control': 'no-cache' },
-          body: ''
+        src={background}
+        style={{
+          width: '100%',
+          height: '360px',
+          position: 'absolute',
+          objectFit: 'cover'
         }}
-        // style={{
-        //   width: '100%',
-        //   height: '360px',
-        //   position: 'absolute',
-        //   objectFit: 'cover'
-        // }}
       />
       <View
         style={{
