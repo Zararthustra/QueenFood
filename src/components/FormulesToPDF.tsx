@@ -167,9 +167,7 @@ export const FormulesToPDF = ({ form, patient, data }: IFormulesToPDFProps) => {
       <Page size="A4" orientation="portrait" style={styles.page}>
         {/* Header */}
         <HeaderPDF styles={styles} form={form} patient={patient} />
-      </Page>
 
-      <Page size="A4" orientation="portrait" style={styles.page}>
         {/* Indices */}
         <View {...{ bookmark: 'Indices' }}>
           <View

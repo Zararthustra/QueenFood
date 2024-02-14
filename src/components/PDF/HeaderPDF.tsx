@@ -15,15 +15,17 @@ interface IHeaderPDFProps {
 export const HeaderPDF = ({ styles, form, patient }: IHeaderPDFProps) => {
   return (
     <>
-      <Image
-        src={background}
-        style={{
-          width: '100%',
-          height: '360px',
-          position: 'absolute',
-          objectFit: 'cover'
-        }}
-      />
+      {!!background && (
+        <Image
+          src={background}
+          style={{
+            width: '100%',
+            height: '360px',
+            position: 'absolute',
+            objectFit: 'cover'
+          }}
+        />
+      )}
       <View
         style={{
           fontSize: '32px',
