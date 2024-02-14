@@ -15,7 +15,12 @@ export const HeaderPDF = ({ styles, form, patient }: IHeaderPDFProps) => {
   return (
     <>
       <Image
-        src={window.location.origin + '/background.jpg'}
+        src={{
+          uri: '/background.jpg',
+          method: 'GET',
+          headers: { 'Cache-Control': 'no-cache' },
+          body: ''
+        }}
         style={{
           width: '100%',
           height: '360px',

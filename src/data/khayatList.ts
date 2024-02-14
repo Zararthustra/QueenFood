@@ -2,611 +2,595 @@ import { IKhayat } from '@interfaces/index';
 
 export const khayatList: IKhayat[] = [
   {
-  "catégorie": "Dîner",
-  "titre": "Pommes Dauphine",
-  "boisson": false,
-  "nutriSanté": 4,
-  "portions": {
-    "seniors": "150g",
-    "adultes": "150g",
-    "enfants": "100g"
+    catégorie: 'Dîner',
+    titre: 'Pommes Dauphine',
+    boisson: false,
+    nutriSanté: 4,
+    portions: {
+      seniors: '150g',
+      adultes: '150g',
+      enfants: '100g'
+    },
+    énergie: {
+      '100g': '330kcal',
+      portion: '495kcal (+ filet de poulet 645kcal)'
+    },
+    dépenses: ['2h30 de vélo', '2h30 de marche'],
+    nutriScore: 'c',
+    nova: 3,
+    avantages: 'Accompagnement parfait pour les menus de fêtes.',
+    inconvénients: "Très caloriques malgré l'impression de légèreté.",
+    astuces:
+      'Délicieuses mais riches, les pommes dauphine doivent être réservées à des occasions exceptionnelles.',
+    macronutriments: [
+      {
+        nutriments: 'Glucides',
+        valeur: 35
+      },
+      {
+        nutriments: 'Autres',
+        valeur: 42
+      },
+      {
+        nutriments: 'Protéines',
+        valeur: 3
+      },
+      {
+        nutriments: 'Lipides',
+        valeur: 20
+      }
+    ],
+    micronutriments: 'faible'
   },
-  "énergie": {
-    "100g": "330kcal",
-    "portion": "495kcal (+ filet de poulet 645kcal)"
-  },
-  "dépenses": [
-    "2h30 de vélo",
-    "2h30 de marche"
-  ],
-  "nutriScore": "c",
-  "nova": 3,
-  "avantages": "Accompagnement parfait pour les menus de fêtes.",
-  "inconvénients": "Très caloriques malgré l'impression de légèreté.",
-  "astuces": "Délicieuses mais riches, les pommes dauphine doivent être réservées à des occasions exceptionnelles.",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 35
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 42
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 3
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 20
-    }
-  ],
-  "micronutriments": "faible"
-},
   {
-  "catégorie": "Dîner",
-  "titre": "Frite à L'Huile",
-  "boisson": false,
-  "nutriSanté": 4,
-  "portions": {
-    "seniors": "150g",
-    "adultes": "180g",
-    "enfants": "130g"
+    catégorie: 'Dîner',
+    titre: "Frite à L'Huile",
+    boisson: false,
+    nutriSanté: 4,
+    portions: {
+      seniors: '150g',
+      adultes: '180g',
+      enfants: '130g'
+    },
+    énergie: {
+      '100g': '250kcal',
+      portion: '450kcal (+ filet de poulet 600kcal)'
+    },
+    dépenses: ['45min de tennis', '2h15 de marche'],
+    nutriScore: 'b',
+    nova: 3,
+    avantages:
+      "Les frites donnent de l'énergie (présence de glucides complexes). Plaisir gustatif.",
+    inconvénients:
+      "Produit ultra-transformé (sauf si les frites sont faites maison). Présence d'additifs.",
+    astuces:
+      "Nutri-Score B voire A, mais avant la cuisson! Après un bain d'huile les frites deviennent D voire E. Notre score intègre ces éléments. Attention à l'accompagnement et au pourcentage de matière grasses.",
+    macronutriments: [
+      {
+        nutriments: 'Glucides',
+        valeur: 26
+      },
+      {
+        nutriments: 'Autres',
+        valeur: 62.7
+      },
+      {
+        nutriments: 'Protéines',
+        valeur: 1.3
+      },
+      {
+        nutriments: 'Lipides',
+        valeur: 10
+      }
+    ],
+    micronutriments: 'faible'
   },
-  "énergie": {
-    "100g": "250kcal",
-    "portion": "450kcal (+ filet de poulet 600kcal)"
-  },
-  "dépenses": [
-    "45min de tennis",
-    "2h15 de marche"
-  ],
-  "nutriScore": "b",
-  "nova": 3,
-  "avantages": "Les frites donnent de l'énergie (présence de glucides complexes). Plaisir gustatif.",
-  "inconvénients": "Produit ultra-transformé (sauf si les frites sont faites maison). Présence d'additifs.",
-  "astuces": "Nutri-Score B voire A, mais avant la cuisson! Après un bain d'huile les frites deviennent D voire E. Notre score intègre ces éléments. Attention à l'accompagnement et au pourcentage de matière grasses.",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 26
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 62.7
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 1.3
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 10
-    }
-  ],
-  "micronutriments": "faible"
-},
   {
-  "catégorie": "Dîner",
-  "titre": "Pommes De Terre Rissolées Maison",
-  "boisson": false,
-  "nutriSanté": 5,
-  "portions": {
-    "seniors": "150g",
-    "adultes": "150g",
-    "enfants": "100g"
+    catégorie: 'Dîner',
+    titre: 'Pommes De Terre Rissolées Maison',
+    boisson: false,
+    nutriSanté: 5,
+    portions: {
+      seniors: '150g',
+      adultes: '150g',
+      enfants: '100g'
+    },
+    énergie: {
+      '100g': '270kcal',
+      portion: '400kcal (+ filet de poulet 550kcal)'
+    },
+    dépenses: ['1h de footing', '2h de marche'],
+    nutriScore: 'b',
+    nova: 2,
+    avantages:
+      'Plus les morceaux sont gros, moins ils absorbent les matières grasses.',
+    inconvénients:
+      "Les matières grasses qui donnent aux pommes de terre leur couleur dorée et leur goût délicieux poussent le consommateur à l'excès.",
+    astuces:
+      "N'ajoutez pas de matière grasse dans la poêle ou vous faites cuire vos pommes de terre! Attention à bien contrôler les portions.",
+    macronutriments: [
+      {
+        nutriments: 'Glucides',
+        valeur: 35
+      },
+      {
+        nutriments: 'Autres',
+        valeur: 50
+      },
+      {
+        nutriments: 'Protéines',
+        valeur: 3
+      },
+      {
+        nutriments: 'Lipides',
+        valeur: 12
+      }
+    ],
+    micronutriments: 'faible'
   },
-  "énergie": {
-    "100g": "270kcal",
-    "portion": "400kcal (+ filet de poulet 550kcal)"
-  },
-  "dépenses": [
-    "1h de footing",
-    "2h de marche"
-  ],
-  "nutriScore": "b",
-  "nova": 2,
-  "avantages": "Plus les morceaux sont gros, moins ils absorbent les matières grasses.",
-  "inconvénients": "Les matières grasses qui donnent aux pommes de terre leur couleur dorée et leur goût délicieux poussent le consommateur à l'excès.",
-  "astuces": "N'ajoutez pas de matière grasse dans la poêle ou vous faites cuire vos pommes de terre! Attention à bien contrôler les portions.",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 35
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 50
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 3
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 12
-    }
-  ],
-  "micronutriments": "faible"
-},
   {
-  "catégorie": "Dîner",
-  "titre": "Pizza Végétarienne",
-  "boisson": false,
-  "nutriSanté": 4,
-  "portions": {
-    "seniors": "1 pizza",
-    "adultes": "1 pizza",
-    "enfants": "1/2 pizza"
+    catégorie: 'Dîner',
+    titre: 'Pizza Végétarienne',
+    boisson: false,
+    nutriSanté: 4,
+    portions: {
+      seniors: '1 pizza',
+      adultes: '1 pizza',
+      enfants: '1/2 pizza'
+    },
+    énergie: {
+      '100g': '170kcal',
+      portion: '680kcal '
+    },
+    dépenses: ['45min de raquettes', "45min d'escalade", '3h20 de marche'],
+    nutriScore: 'b',
+    nova: 3,
+    avantages:
+      'Pizza plus équilibré que les autres grâce à sa garniture plus végétale.',
+    inconvénients: 'Portions beaucoup trop importantes.',
+    astuces:
+      'Si possible, ajoutez du fromage pour les protéines et le calcium. A associer avec de la salade et en déssert, choisissez un fruits.',
+    macronutriments: [
+      {
+        nutriments: 'Glucides',
+        valeur: 14
+      },
+      {
+        nutriments: 'Autres',
+        valeur: 69
+      },
+      {
+        nutriments: 'Protéines',
+        valeur: 10
+      },
+      {
+        nutriments: 'Lipides',
+        valeur: 7
+      }
+    ],
+    micronutriments: 'élevé'
   },
-  "énergie": {
-    "100g": "170kcal",
-    "portion": "680kcal "
-  },
-  "dépenses": [
-    "45min de raquettes",
-    "45min d'escalade",
-    "3h20 de marche"
-  ],
-  "nutriScore": "b",
-  "nova": 3,
-  "avantages": "Pizza plus équilibré que les autres grâce à sa garniture plus végétale.",
-  "inconvénients": "Portions beaucoup trop importantes.",
-  "astuces": "Si possible, ajoutez du fromage pour les protéines et le calcium. A associer avec de la salade et en déssert, choisissez un fruits.",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 14
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 69
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 10
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 7
-    }
-  ],
-  "micronutriments": "élevé"
-},
   {
-  "catégorie": "Dîner",
-  "titre": "Pizza 4 Fromages",
-  "boisson": false,
-  "nutriSanté": 1,
-  "portions": {
-    "seniors": "1 pizza",
-    "adultes": "1 pizza",
-    "enfants": "1/2 pizza"
+    catégorie: 'Dîner',
+    titre: 'Pizza 4 Fromages',
+    boisson: false,
+    nutriSanté: 1,
+    portions: {
+      seniors: '1 pizza',
+      adultes: '1 pizza',
+      enfants: '1/2 pizza'
+    },
+    énergie: {
+      '100g': '250kcal',
+      portion: '1000kcal '
+    },
+    dépenses: ['2h30 de jogging ', '5h de marche'],
+    nutriScore: 'd',
+    nova: 3,
+    avantages:
+      'Plat facile. Apport de lycopène, plus assimilable cuit, grâce à la sauce tomate.',
+    inconvénients:
+      'Garniture très riche et très grasse, au détriment des légumes. Valeur calorique considérable.',
+    astuces:
+      'Attention aux calories (en raison des portions XXL servies en restaurant)! Les pizzas de grande surface sont souvent moins caloriques mais plus ultra-transformées!',
+    macronutriments: [
+      {
+        nutriments: 'Glucides',
+        valeur: 25
+      },
+      {
+        nutriments: 'Autres',
+        valeur: 53
+      },
+      {
+        nutriments: 'Protéines',
+        valeur: 11
+      },
+      {
+        nutriments: 'Lipides',
+        valeur: 11
+      }
+    ],
+    micronutriments: 'élevé'
   },
-  "énergie": {
-    "100g": "250kcal",
-    "portion": "1000kcal "
-  },
-  "dépenses": [
-    "2h30 de jogging ",
-    "5h de marche"
-  ],
-  "nutriScore": "d",
-  "nova": 3,
-  "avantages": "Plat facile. Apport de lycopène, plus assimilable cuit, grâce à la sauce tomate.",
-  "inconvénients": "Garniture très riche et très grasse, au détriment des légumes. Valeur calorique considérable.",
-  "astuces": "Attention aux calories (en raison des portions XXL servies en restaurant)! Les pizzas de grande surface sont souvent moins caloriques mais plus ultra-transformées!",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 25
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 53
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 11
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 11
-    }
-  ],
-  "micronutriments": "élevé"
-},
   {
-  "catégorie": "Dîner",
-  "titre": "Pizza Margherita",
-  "boisson": false,
-  "nutriSanté": 1,
-  "portions": {
-    "seniors": "1 pizza",
-    "adultes": "1 pizza",
-    "enfants": "1/2 pizza"
+    catégorie: 'Dîner',
+    titre: 'Pizza Margherita',
+    boisson: false,
+    nutriSanté: 1,
+    portions: {
+      seniors: '1 pizza',
+      adultes: '1 pizza',
+      enfants: '1/2 pizza'
+    },
+    énergie: {
+      '100g': '230kcal',
+      portion: '920kcal '
+    },
+    dépenses: ['1h50 de tennis', '4h40 de marche'],
+    nutriScore: 'c',
+    nova: 3,
+    avantages:
+      'Plat familial assez équilibré. La sauce tomate apporte du lycopène, plus assimilable cuit.',
+    inconvénients: 'Portions trop généreuses en restauration.',
+    astuces:
+      'A accompagner de salade, de la roquette par exemple, et de quelques fruits en dessert.',
+    macronutriments: [
+      {
+        nutriments: 'Glucides',
+        valeur: 25
+      },
+      {
+        nutriments: 'Autres',
+        valeur: 55
+      },
+      {
+        nutriments: 'Protéines',
+        valeur: 10
+      },
+      {
+        nutriments: 'Lipides',
+        valeur: 10
+      }
+    ],
+    micronutriments: 'élevé'
   },
-  "énergie": {
-    "100g": "230kcal",
-    "portion": "920kcal "
-  },
-  "dépenses": [
-    "1h50 de tennis",
-    "4h40 de marche"
-  ],
-  "nutriScore": "c",
-  "nova": 3,
-  "avantages": "Plat familial assez équilibré. La sauce tomate apporte du lycopène, plus assimilable cuit.",
-  "inconvénients": "Portions trop généreuses en restauration.",
-  "astuces": "A accompagner de salade, de la roquette par exemple, et de quelques fruits en dessert.",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 25
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 55
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 10
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 10
-    }
-  ],
-  "micronutriments": "élevé"
-},
   {
-  "catégorie": "Dîner",
-  "titre": "Boeuf Bourguignon",
-  "boisson": false,
-  "nutriSanté": 4,
-  "portions": {
-    "seniors": "250g",
-    "adultes": "300g",
-    "enfants": "250g"
+    catégorie: 'Dîner',
+    titre: 'Boeuf Bourguignon',
+    boisson: false,
+    nutriSanté: 4,
+    portions: {
+      seniors: '250g',
+      adultes: '300g',
+      enfants: '250g'
+    },
+    énergie: {
+      '100g': '100kcal',
+      portion: '300kcal '
+    },
+    dépenses: ['1h de raquettes', '1h30 de marche'],
+    nutriScore: 'c',
+    nova: 3,
+    avantages:
+      'Un plat qui peut être bien équilibré grâce à la garniture (carottes).',
+    inconvénients: "Attention à l'impact planète élevé.",
+    astuces:
+      "Symbole de la cuisine mijotée française, ce plat mythique réapparaît peu à peu sur les cartes des restaurants bistronomiques! L'accompagnement parfait et équilibré: les tagliatelles!",
+    macronutriments: [
+      {
+        nutriments: 'Glucides',
+        valeur: 11
+      },
+      {
+        nutriments: 'Autres',
+        valeur: 79
+      },
+      {
+        nutriments: 'Protéines',
+        valeur: 7
+      },
+      {
+        nutriments: 'Lipides',
+        valeur: 3
+      }
+    ],
+    micronutriments: 'moyen'
   },
-  "énergie": {
-    "100g": "100kcal",
-    "portion": "300kcal "
-  },
-  "dépenses": [
-    "1h de raquettes",
-    "1h30 de marche"
-  ],
-  "nutriScore": "c",
-  "nova": 3,
-  "avantages": "Un plat qui peut être bien équilibré grâce à la garniture (carottes).",
-  "inconvénients": "Attention à l'impact planète élevé.",
-  "astuces": "Symbole de la cuisine mijotée française, ce plat mythique réapparaît peu à peu sur les cartes des restaurants bistronomiques! L'accompagnement parfait et équilibré: les tagliatelles!",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 11
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 79
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 7
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 3
-    }
-  ],
-  "micronutriments": "moyen"
-},
   {
-  "catégorie": "Dîner",
-  "titre": "Blanquette De Veau",
-  "boisson": false,
-  "nutriSanté": 7,
-  "portions": {
-    "seniors": "250g",
-    "adultes": "300g",
-    "enfants": "250g"
+    catégorie: 'Dîner',
+    titre: 'Blanquette De Veau',
+    boisson: false,
+    nutriSanté: 7,
+    portions: {
+      seniors: '250g',
+      adultes: '300g',
+      enfants: '250g'
+    },
+    énergie: {
+      '100g': '110kcal',
+      portion: '330kcal '
+    },
+    dépenses: ['1h de roller', '1h de kayak', '1h30 de marche'],
+    nutriScore: 'c',
+    nova: 3,
+    avantages: 'Très équilibré.',
+    inconvénients: 'La réalisation de ce plat reste complexe.',
+    astuces:
+      'La plat français par excellence! A consommer après une entrée de crudités, et avant des fruits en dessert.',
+    macronutriments: [
+      {
+        nutriments: 'Glucides',
+        valeur: 14
+      },
+      {
+        nutriments: 'Autres',
+        valeur: 78
+      },
+      {
+        nutriments: 'Protéines',
+        valeur: 3
+      },
+      {
+        nutriments: 'Lipides',
+        valeur: 5
+      }
+    ],
+    micronutriments: 'moyen'
   },
-  "énergie": {
-    "100g": "110kcal",
-    "portion": "330kcal "
-  },
-  "dépenses": [
-    "1h de roller",
-    "1h de kayak",
-    "1h30 de marche"
-  ],
-  "nutriScore": "c",
-  "nova": 3,
-  "avantages": "Très équilibré.",
-  "inconvénients": "La réalisation de ce plat reste complexe.",
-  "astuces": "La plat français par excellence! A consommer après une entrée de crudités, et avant des fruits en dessert.",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 14
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 78
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 3
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 5
-    }
-  ],
-  "micronutriments": "moyen"
-},
   {
-  "catégorie": "Dîner",
-  "titre": "Gratin Dauphinois",
-  "boisson": false,
-  "nutriSanté": 6,
-  "portions": {
-    "seniors": "200g",
-    "adultes": "250g",
-    "enfants": "200g"
+    catégorie: 'Dîner',
+    titre: 'Gratin Dauphinois',
+    boisson: false,
+    nutriSanté: 6,
+    portions: {
+      seniors: '200g',
+      adultes: '250g',
+      enfants: '200g'
+    },
+    énergie: {
+      '100g': '110kcal',
+      portion: '275kcal '
+    },
+    dépenses: ['1h de volley-ball', '2h20 de marche', '25min de natation'],
+    nutriScore: 'c',
+    nova: 3,
+    avantages: 'Plat qui rassasie sans être trop calorique.',
+    inconvénients:
+      'Teneur en glucides (pomme de terre) et en lipides (fromage, crème) élevée.',
+    astuces:
+      'Idéal pour accompagner de la viande ou du poisson! A déguster avec une salade verte ',
+    macronutriments: [
+      {
+        nutriments: 'Glucides',
+        valeur: 11
+      },
+      {
+        nutriments: 'Autres',
+        valeur: 81
+      },
+      {
+        nutriments: 'Protéines',
+        valeur: 3
+      },
+      {
+        nutriments: 'Lipides',
+        valeur: 5
+      }
+    ],
+    micronutriments: 'moyen'
   },
-  "énergie": {
-    "100g": "110kcal",
-    "portion": "275kcal "
-  },
-  "dépenses": [
-    "1h de volley-ball",
-    "2h20 de marche",
-    "25min de natation"
-  ],
-  "nutriScore": "c",
-  "nova": 3,
-  "avantages": "Plat qui rassasie sans être trop calorique.",
-  "inconvénients": "Teneur en glucides (pomme de terre) et en lipides (fromage, crème) élevée.",
-  "astuces": "Idéal pour accompagner de la viande ou du poisson! A déguster avec une salade verte ",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 11
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 81
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 3
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 5
-    }
-  ],
-  "micronutriments": "moyen"
-},
   {
-  "catégorie": "Dîner",
-  "titre": "Saucisses Lentilles ou Chou",
-  "boisson": false,
-  "nutriSanté": 5,
-  "portions": {
-    "seniors": "300g",
-    "adultes": "300g",
-    "enfants": "200g"
+    catégorie: 'Dîner',
+    titre: 'Saucisses Lentilles ou Chou',
+    boisson: false,
+    nutriSanté: 5,
+    portions: {
+      seniors: '300g',
+      adultes: '300g',
+      enfants: '200g'
+    },
+    énergie: {
+      '100g': '160kcal',
+      portion: '480kcal '
+    },
+    dépenses: ['45min de tennis', '2h20 de marche'],
+    nutriScore: 'a',
+    nova: 4,
+    avantages: 'Un duo qui devient un plat équilibré!',
+    inconvénients:
+      'Veillez à la qualité des saucisses: de préférence fabriquées artinasalement ou sans nitrites.',
+    astuces:
+      'Un plat traditionnel, équilibré et délicieux! Soyez raisonnables avec la saucisse.',
+    macronutriments: [
+      {
+        nutriments: 'Glucides',
+        valeur: 8
+      },
+      {
+        nutriments: 'Autres',
+        valeur: 60
+      },
+      {
+        nutriments: 'Protéines',
+        valeur: 10
+      },
+      {
+        nutriments: 'Lipides',
+        valeur: 9
+      }
+    ],
+    micronutriments: 'élevé'
   },
-  "énergie": {
-    "100g": "160kcal",
-    "portion": "480kcal "
-  },
-  "dépenses": [
-    "45min de tennis",
-    "2h20 de marche"
-  ],
-  "nutriScore": "a",
-  "nova": 4,
-  "avantages": "Un duo qui devient un plat équilibré!",
-  "inconvénients": "Veillez à la qualité des saucisses: de préférence fabriquées artinasalement ou sans nitrites.",
-  "astuces": "Un plat traditionnel, équilibré et délicieux! Soyez raisonnables avec la saucisse.",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 8
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 60
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 10
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 9
-    }
-  ],
-  "micronutriments": "élevé"
-},
   {
-  "catégorie": "Dîner",
-  "titre": "Tartiflette",
-  "boisson": false,
-  "nutriSanté": 3,
-  "portions": {
-    "seniors": "250g",
-    "adultes": "300g",
-    "enfants": "250g"
+    catégorie: 'Dîner',
+    titre: 'Tartiflette',
+    boisson: false,
+    nutriSanté: 3,
+    portions: {
+      seniors: '250g',
+      adultes: '300g',
+      enfants: '250g'
+    },
+    énergie: {
+      '100g': '160kcal',
+      portion: '640kcal '
+    },
+    dépenses: ['45min de raquettes', '45min de ski', '3h15 de marche'],
+    nutriScore: 'e',
+    nova: 3,
+    avantages: 'Plat convivial, à réserver aux périodes de froid.',
+    inconvénients:
+      'Riche en lipides (fromage) et en glucides (pommes de terre). Plat très calorique et salé.',
+    astuces:
+      "Pensez à bien vous hydrater. L'accompagnement d'une salade verte donne un peu de fraîcheur.",
+    macronutriments: [
+      {
+        nutriments: 'Glucides',
+        valeur: 13
+      },
+      {
+        nutriments: 'Autres',
+        valeur: 73
+      },
+      {
+        nutriments: 'Protéines',
+        valeur: 5
+      },
+      {
+        nutriments: 'Lipides',
+        valeur: 9
+      }
+    ],
+    micronutriments: 'moyen'
   },
-  "énergie": {
-    "100g": "160kcal",
-    "portion": "640kcal "
-  },
-  "dépenses": [
-    "45min de raquettes",
-    "45min de ski",
-    "3h15 de marche"
-  ],
-  "nutriScore": "e",
-  "nova": 3,
-  "avantages": "Plat convivial, à réserver aux périodes de froid.",
-  "inconvénients": "Riche en lipides (fromage) et en glucides (pommes de terre). Plat très calorique et salé.",
-  "astuces": "Pensez à bien vous hydrater. L'accompagnement d'une salade verte donne un peu de fraîcheur.",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 13
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 73
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 5
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 9
-    }
-  ],
-  "micronutriments": "moyen"
-},
   {
-  "catégorie": "Dîner",
-  "titre": "Raviolis",
-  "boisson": false,
-  "nutriSanté": 6,
-  "portions": {
-    "seniors": "250g",
-    "adultes": "300g",
-    "enfants": "250g"
+    catégorie: 'Dîner',
+    titre: 'Raviolis',
+    boisson: false,
+    nutriSanté: 6,
+    portions: {
+      seniors: '250g',
+      adultes: '300g',
+      enfants: '250g'
+    },
+    énergie: {
+      '100g': '100kcal',
+      portion: '300kcal '
+    },
+    dépenses: ['1h40 de handball', '1h3O de marche'],
+    nutriScore: 'c',
+    nova: 4,
+    avantages:
+      'Tout dépend de la qualité des ingrédients (ici, de la pâte et de la garniture).',
+    inconvénients: "Ultra-transformés lorsqu'ils sont vendus en boîte.",
+    astuces:
+      "Préférez une version artisanale, comme celle des ravioles d'Anne-Sophie Pic, à une version industrielle ultra-transformée. Veillez particulièrement à la qualité des ingrédients!",
+    macronutriments: [
+      {
+        nutriments: 'Glucides',
+        valeur: 13
+      },
+      {
+        nutriments: 'Autres',
+        valeur: 79
+      },
+      {
+        nutriments: 'Protéines',
+        valeur: 5
+      },
+      {
+        nutriments: 'Lipides',
+        valeur: 3
+      }
+    ],
+    micronutriments: 'moyen'
   },
-  "énergie": {
-    "100g": "100kcal",
-    "portion": "300kcal "
-  },
-  "dépenses": [
-    "1h40 de handball",
-    "1h3O de marche"
-  ],
-  "nutriScore": "c",
-  "nova": 4,
-  "avantages": "Tout dépend de la qualité des ingrédients (ici, de la pâte et de la garniture).",
-  "inconvénients": "Ultra-transformés lorsqu'ils sont vendus en boîte.",
-  "astuces": "Préférez une version artisanale, comme celle des ravioles d'Anne-Sophie Pic, à une version industrielle ultra-transformée. Veillez particulièrement à la qualité des ingrédients!",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 13
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 79
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 5
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 3
-    }
-  ],
-  "micronutriments": "moyen"
-},
   {
-  "catégorie": "Dîner",
-  "titre": "Lasagnes",
-  "boisson": false,
-  "nutriSanté": 5,
-  "portions": {
-    "seniors": "250g",
-    "adultes": "300g",
-    "enfants": "250g"
+    catégorie: 'Dîner',
+    titre: 'Lasagnes',
+    boisson: false,
+    nutriSanté: 5,
+    portions: {
+      seniors: '250g',
+      adultes: '300g',
+      enfants: '250g'
+    },
+    énergie: {
+      '100g': '150kcal',
+      portion: '450kcal '
+    },
+    dépenses: ['1h de danse aérobic', '2h15 de marche'],
+    nutriScore: 'b',
+    nova: 3,
+    avantages:
+      'Parfait dans sa version classique pour un repas de famille convivial, facile à faire, accessible et qui plaît à tous.',
+    inconvénients:
+      'Assez calorique dans sa version classique (tomate, fromage, viande et béchamel).',
+    astuces:
+      "A tester en version végétarienne (beaucoup plus légère) pour varier. A accompagner avec de la salade et des fruits (comme un carpaccio d'ananas!)",
+    macronutriments: [
+      {
+        nutriments: 'Glucides',
+        valeur: 14
+      },
+      {
+        nutriments: 'Autres',
+        valeur: 72
+      },
+      {
+        nutriments: 'Protéines',
+        valeur: 8
+      },
+      {
+        nutriments: 'Lipides',
+        valeur: 6
+      }
+    ],
+    micronutriments: 'moyen'
   },
-  "énergie": {
-    "100g": "150kcal",
-    "portion": "450kcal "
-  },
-  "dépenses": [
-    "1h de danse aérobic",
-    "2h15 de marche"
-  ],
-  "nutriScore": "b",
-  "nova": 3,
-  "avantages": "Parfait dans sa version classique pour un repas de famille convivial, facile à faire, accessible et qui plaît à tous.",
-  "inconvénients": "Assez calorique dans sa version classique (tomate, fromage, viande et béchamel).",
-  "astuces": "A tester en version végétarienne (beaucoup plus légère) pour varier. A accompagner avec de la salade et des fruits (comme un carpaccio d'ananas!)",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 14
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 72
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 8
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 6
-    }
-  ],
-  "micronutriments": "moyen"
-},
   {
-  "catégorie": "Dîner",
-  "titre": "Pâtes Carbonara",
-  "boisson": false,
-  "nutriSanté": 5,
-  "portions": {
-    "seniors": "250g",
-    "adultes": "300g",
-    "enfants": "250g"
+    catégorie: 'Dîner',
+    titre: 'Pâtes Carbonara',
+    boisson: false,
+    nutriSanté: 5,
+    portions: {
+      seniors: '250g',
+      adultes: '300g',
+      enfants: '250g'
+    },
+    énergie: {
+      '100g': '160kcal',
+      portion: '500kcal '
+    },
+    dépenses: ['50min de judo', '2h30 de marche'],
+    nutriScore: 'c',
+    nova: 4,
+    avantages: 'Un plat équilibré et consensuel.',
+    inconvénients:
+      "Aucun, si ce n'est qu'il n'y a pas de version végétarienne. Un peu grasses (attention à la fréquence).",
+    astuces:
+      'Un peu plus calorique que les pâtes, à la bolognaise! Pour compléter votre dîner, privilégiez une salade et, en dessert, un fruit.',
+    macronutriments: [
+      {
+        nutriments: 'Glucides',
+        valeur: 16
+      },
+      {
+        nutriments: 'Autres',
+        valeur: 69
+      },
+      {
+        nutriments: 'Protéines',
+        valeur: 6
+      },
+      {
+        nutriments: 'Lipides',
+        valeur: 9
+      }
+    ],
+    micronutriments: 'moyen'
   },
-  "énergie": {
-    "100g": "160kcal",
-    "portion": "500kcal "
-  },
-  "dépenses": [
-    "50min de judo",
-    "2h30 de marche"
-  ],
-  "nutriScore": "c",
-  "nova": 4,
-  "avantages": "Un plat équilibré et consensuel.",
-  "inconvénients": "Aucun, si ce n'est qu'il n'y a pas de version végétarienne. Un peu grasses (attention à la fréquence).",
-  "astuces": "Un peu plus calorique que les pâtes, à la bolognaise! Pour compléter votre dîner, privilégiez une salade et, en dessert, un fruit.",
-  "macronutriments": [
-    {
-      "nutriments": "Glucides",
-      "valeur": 16
-    },
-    {
-      "nutriments": "Autres",
-      "valeur": 69
-    },
-    {
-      "nutriments": "Protéines",
-      "valeur": 6
-    },
-    {
-      "nutriments": "Lipides",
-      "valeur": 9
-    }
-  ],
-  "micronutriments": "moyen"
-},
   {
     catégorie: 'Dîner',
     titre: 'Pâtes Bolognaises',
