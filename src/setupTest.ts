@@ -54,7 +54,8 @@ beforeAll(() => {
   // Mock chartjs Components
   vi.mock('react-chartjs-2', () => ({
     Bar: () => null,
-    PolarArea: () => null
+    PolarArea: () => null,
+    Doughnut: () => null
   }));
 
   // Mock react-pdf Components
