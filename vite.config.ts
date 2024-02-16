@@ -29,7 +29,7 @@ export default defineConfig({
         scope: '/',
         start_url: '/',
         short_name: 'Queen Food',
-        description: 'Queen Food, un assistant pour les nutritionnistes',
+        description: 'Queen Food, un assistant pour les diététiciens',
         name: 'Queen Food',
         icons: [
           {

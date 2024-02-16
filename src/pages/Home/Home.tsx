@@ -27,7 +27,7 @@ export const Home = () => {
           width={isMobile ? 200 : 300}
           height={isMobile ? 200 : 300}
         />
-        <h1 className="text-center">L'assistant des nutritionnistes</h1>
+        <h1 className="text-center">L'assistant des diététiciens</h1>
 
         <div className="mt-5 flex flex-wrap justify-center gap-3">
           <div className="flex flex-col gap-3">
