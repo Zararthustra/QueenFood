@@ -42,7 +42,7 @@ export const ModalFoodItem = ({
 
   const data100g = [
     product.nutriments.carbohydrates_100g && {
-      nutriment: 'Glucides (carbohydrates)',
+      nutriment: 'Glucides',
       value: product.nutriments.carbohydrates_100g
     },
     product.nutriments.fat_100g && {
@@ -126,15 +126,20 @@ export const ModalFoodItem = ({
       data-testid="aliments-aliments-details">
       {/* Infos Nutritionnelles */}
       <h3>Nutriments</h3>
+
+      <div className="my-5">
+        <Doughnut data={chartData100g} options={chartOptions} />
+      </div>
+
       {Object.keys(product.nutriments).length ? (
-        <table className="border-separate border-spacing-x-0 dark:text-slate-100">
+        <table className="w-full border-separate border-spacing-x-0 dark:text-slate-100">
           <thead>
             <tr>
               <th className="p-1"></th>
-              <th className="p-1">Unité</th>
-              <th className="p-1">Pour 100g</th>
+              <th className="py-1">Unité</th>
+              <th className="py-1">Pour 100g</th>
               {product.serving_quantity && (
-                <th className="p-1">
+                <th className="py-1">
                   Par portion ({product.serving_quantity}g)
                 </th>
               )}
@@ -186,7 +191,7 @@ export const ModalFoodItem = ({
               product.nutriments['saturated-fat_unit']) && (
               <tr className={rowStyle}>
                 <td className={cellStyle}>
-                  <i className="text-xs">dont graisses saturées</i>
+                  <i className="text-xs">dont saturées</i>
                 </td>
                 <td className={cellStyle}>
                   {product.nutriments['saturated-fat_unit']}
@@ -240,7 +245,7 @@ export const ModalFoodItem = ({
             {(product.nutriments.carbohydrates_100g ||
               product.nutriments.carbohydrates_unit) && (
               <tr className={rowStyle}>
-                <td className={cellStyle}>Glucides (carbohydrates)</td>
+                <td className={cellStyle}>Glucides</td>
                 <td className={cellStyle}>
                   {product.nutriments.carbohydrates_unit}
                 </td>
@@ -298,11 +303,6 @@ export const ModalFoodItem = ({
           description="Pas d'information nutritionnelle"
         />
       )}
-
-      {/* Chart */}
-      <div className="my-5">
-        <Doughnut data={chartData100g} options={chartOptions} />
-      </div>
 
       {/* Ingrédients */}
       <h3 className="mb-2 mt-5">Ingrédients</h3>

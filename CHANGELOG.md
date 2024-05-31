@@ -1,28 +1,40 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See
+[standard-version](https://github.com/conventional-changelog/standard-version)
+for commit guidelines.
 
 ## [1.9.0](https://github.com/Zararthustra/QueenFood/compare/v1.8.0...v1.9.0) (2024-02-15)
 
-
 ### Features
 
-* **Food:** add doughnut chart in fooditem for better viz ([c8c9f3b](https://github.com/Zararthustra/QueenFood/commit/c8c9f3b8cedececf8ba0faec0c8893b51753ad8d))
-
+- **Food:** add doughnut chart in fooditem for better viz
+  ([c8c9f3b](https://github.com/Zararthustra/QueenFood/commit/c8c9f3b8cedececf8ba0faec0c8893b51753ad8d))
 
 ### Bug Fixes
 
-* add khayat source ([890f4c3](https://github.com/Zararthustra/QueenFood/commit/890f4c3aa3a151cfee618d9bf06082ac97dd2f03))
-* add khayat source ([b61ee5a](https://github.com/Zararthustra/QueenFood/commit/b61ee5ab483888ca189eda595e73b9137868399a))
-* component max width ([ab6bab0](https://github.com/Zararthustra/QueenFood/commit/ab6bab04d019b75e52af86d7b47d6b50f5d2d52d))
-* header img was not rendered in some devices/browsers ([de9de8d](https://github.com/Zararthustra/QueenFood/commit/de9de8d5879e34624f6ca238d0d7cef0f9ef8673))
-* header img was not rendered in some devices/browsers ([854016c](https://github.com/Zararthustra/QueenFood/commit/854016cadf2ad6675a6c064194185b13a771fcac))
-* img truthy condition ([40d526a](https://github.com/Zararthustra/QueenFood/commit/40d526a44dc25a27e0a55366f48ccc24733a6856))
-* remove bookmark ([ce80be3](https://github.com/Zararthustra/QueenFood/commit/ce80be3975e8c9e1d654f70db7f0327de82621f6))
-* removing header children component ([00629a3](https://github.com/Zararthustra/QueenFood/commit/00629a3c284632c87cd664d935eed39b4a6de6b2))
-* rollback to origin solution ([6303047](https://github.com/Zararthustra/QueenFood/commit/63030475c8823975230d5ce4cd2dc7c4f8991a23))
-* split pages ([08418bf](https://github.com/Zararthustra/QueenFood/commit/08418bf8df83aab82ff14cf5d6b4693f09ddad1f))
-* test without styling ([41ec9fe](https://github.com/Zararthustra/QueenFood/commit/41ec9febdc4e7128bcc0f6ec30d5b5d3895b6fda))
+- add khayat source
+  ([890f4c3](https://github.com/Zararthustra/QueenFood/commit/890f4c3aa3a151cfee618d9bf06082ac97dd2f03))
+- add khayat source
+  ([b61ee5a](https://github.com/Zararthustra/QueenFood/commit/b61ee5ab483888ca189eda595e73b9137868399a))
+- component max width
+  ([ab6bab0](https://github.com/Zararthustra/QueenFood/commit/ab6bab04d019b75e52af86d7b47d6b50f5d2d52d))
+- header img was not rendered in some devices/browsers
+  ([de9de8d](https://github.com/Zararthustra/QueenFood/commit/de9de8d5879e34624f6ca238d0d7cef0f9ef8673))
+- header img was not rendered in some devices/browsers
+  ([854016c](https://github.com/Zararthustra/QueenFood/commit/854016cadf2ad6675a6c064194185b13a771fcac))
+- img truthy condition
+  ([40d526a](https://github.com/Zararthustra/QueenFood/commit/40d526a44dc25a27e0a55366f48ccc24733a6856))
+- remove bookmark
+  ([ce80be3](https://github.com/Zararthustra/QueenFood/commit/ce80be3975e8c9e1d654f70db7f0327de82621f6))
+- removing header children component
+  ([00629a3](https://github.com/Zararthustra/QueenFood/commit/00629a3c284632c87cd664d935eed39b4a6de6b2))
+- rollback to origin solution
+  ([6303047](https://github.com/Zararthustra/QueenFood/commit/63030475c8823975230d5ce4cd2dc7c4f8991a23))
+- split pages
+  ([08418bf](https://github.com/Zararthustra/QueenFood/commit/08418bf8df83aab82ff14cf5d6b4693f09ddad1f))
+- test without styling
+  ([41ec9fe](https://github.com/Zararthustra/QueenFood/commit/41ec9febdc4e7128bcc0f6ec30d5b5d3895b6fda))
 
 ## [1.8.0](https://github.com/Zararthustra/QueenFood/compare/v1.7.2...v1.8.0) (2024-02-02)
 
