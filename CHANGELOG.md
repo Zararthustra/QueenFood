@@ -1,8 +1,18 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See
-[standard-version](https://github.com/conventional-changelog/standard-version)
-for commit guidelines.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.10.0](https://github.com/Zararthustra/QueenFood/compare/v1.9.0...v1.10.0) (2024-05-31)
+
+
+### Features
+
+* **ScannedProduct:** add chart ([b09f2f1](https://github.com/Zararthustra/QueenFood/commit/b09f2f1755d6a7a8a6398ccae56712d6a90bd6ef))
+
+
+### Bug Fixes
+
+* subtitle ([b3943f0](https://github.com/Zararthustra/QueenFood/commit/b3943f02a0055ece8edf80d849a1c8368e20553b))
 
 ## [1.9.0](https://github.com/Zararthustra/QueenFood/compare/v1.8.0...v1.9.0) (2024-02-15)
 
